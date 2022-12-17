@@ -45,6 +45,7 @@ ACTOR IDMArachnoshredder : IDMArachnotron
 	PulseMiniAtk:
 		ARSH G 1 Bright A_CustomMissile("ArachnoPulseBall",19,4)
 		ARSH J 2 Bright
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON)
 		ARSH K 1 Bright A_CustomMissile("MonsterMiniMissile",frandom(46,49),frandom(19,23))
 		ARSH L 2 Bright
 		TNT1 A 0 A_SpidRefire
@@ -69,6 +70,7 @@ ACTOR IDMArachnoshredder : IDMArachnotron
 	LaserMiniAtk:
 		ARSH G 1 Bright A_CustomMissile("ArachnoLaserShot",19,4)
 		ARSH J 2 Bright
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON)
 		ARSH K 1 Bright A_CustomMissile("MonsterMiniMissile",frandom(46,49),frandom(19,23))
 		ARSH L 2 Bright
 		TNT1 A 0 A_SpidRefire

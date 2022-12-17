@@ -1,0 +1,62 @@
+ACTOR IDMPowerupTrail : PowerSpeed
+/* The after-image effect for most powerups which don't utilize the
+   Powerup.Colormap property.*/
+{
+	-INVENTORY.INVBAR
+	+CLIENTSIDEONLY
+	Powerup.Duration -20
+	Inventory.Amount 1
+	Inventory.MaxAmount 10
+	Speed 1.0
+}
+
+ACTOR IDMPowerupTrail10 : IDMPowerupTrail
+{
+	Powerup.Duration -10
+}
+
+ACTOR PowerRageInvulnerable : PowerInvulnerable
+{
+	Inventory.Icon "INVULN1"
+}
+
+ACTOR PowerPickupProtection : PowerRageInvulnerable
+{
+	+INVENTORY.ADDITIVETIME
+}
+
+ACTOR PickupProtection : PowerupGiver
+{
+	-INVENTORY.INVBAR
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	Powerup.Color "White", 0.125
+	Powerup.Type PickupProtection
+	Powerup.Duration 35
+}
+
+ACTOR PowerNothing : Powerup
+{}
+
+ACTOR OKSphere : CustomInventory
+{
+	+FLOAT
+	+FLOATBOB
+	-INVENTORY.INVBAR
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "Ok..."
+	Inventory.PickupSound "misc/bonus_pkup"
+	Tag "OK Sphere...(Does nothing. Just don't use this.)"
+	//$Category Powerups
+	States
+	{
+	Spawn:
+	  OKSP A 35 Bright
+	  OKSP B 10 Bright
+	  Loop
+	Pickup:
+	  TNT1 A 0 A_Print("\n\n\n\n\n\n\n\n\nOk...")
+	  Stop
+	}
+}

@@ -1,0 +1,56 @@
+// Strength / Weapon Upgrade
+
+ACTOR PowerIDMWeaponLevel2 : PowerWeaponLevel2
+{
+	Inventory.Icon "STRENG1"
+}
+
+ACTOR StrengthSphere : CustomInventory 10070
+{
+	+COUNTITEM
+	+FLOAT
+	+FLOATBOB
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupMessage "Strength!"
+	Inventory.PickupSound "misc/p_pkup"
+	Inventory.PickupAnnouncerEntry "strength"
+	Inventory.RespawnTics 4200
+	Tag "Strength Sphere"
+	//$Category Powerups
+	States
+	{
+	Spawn:
+	  BERS ABCDEFGHHGFEDCBA 5 Bright
+	  Loop
+	Pickup:
+	  TNT1 A 0 A_JumpIfInventory("PowerRageInvulnerable",1,"NoProt")
+	  TNT1 A 0 A_GiveInventory("PickupProtection")
+	NoProt:
+	  TNT1 A 0 A_Print("\n\n\n\n\n\nStrength!\n\n\n\n200 Health!\nYour weapons are powered up!")
+	  TNT1 A 0 Healthing(200,200)
+	  TNT1 A 0 A_GiveInventory("StrengthSphereLevel2")
+	  TNT1 A 0 A_GiveInventory("StrengthPowerupTrail")
+	  Stop
+	}
+}
+
+ACTOR StrengthSphereLevel2 : PowerupGiver
+{
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+	Powerup.Type IDMWeaponLevel2
+	Powerup.Color "White", 0.125
+	Powerup.Duration -30
+}
+
+ACTOR StrengthPowerupTrail : PowerSpeed
+{
+	+CLIENTSIDEONLY
+	-INVENTORY.INVBAR
+	Powerup.Duration -30
+	Inventory.Amount 1
+	Inventory.MaxAmount 10
+	Speed 1.0
+}

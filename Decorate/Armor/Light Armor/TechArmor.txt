@@ -1,0 +1,72 @@
+// Tech Armor
+
+ACTOR TechArmor : CustomInventory 10064
+{
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "Tech Armor!"
+  Inventory.PickupSound ""
+  Inventory.RespawnTics 1050
+  Tag "Tech Armor"
+  //$Category Health and Armor
+  States
+  {
+  Spawn:
+    ARM4 A -1 Bright
+    Stop
+  Pickup:
+    TNT1 A 0 A_JumpIfArmorType("TechArmorProtection","Ammo",200)
+    TNT1 A 0 A_JumpIfArmorType("BulletArmorProtection","Ammo",200)
+    TNT1 A 0 A_JumpIfArmorType("FragArmorProtection","Ammo",200)
+    TNT1 A 0 A_JumpIfArmorType("IDMYellowArmor","Ammo",200)
+    TNT1 A 0 A_JumpIfArmorType("IDMBlueArmor","Ammo",200)
+    TNT1 A 0 A_JumpIfArmorType("IDMRedArmor","Ammo",200)
+    TNT1 A 0 A_JumpIfArmorType("PurpleArmor","Ammo",200)
+    TNT1 A 0 A_JumpIfArmorType("SuperArmor","Ammo",200)
+	TNT1 A 0 A_PlaySound("misc/powarmor_pkup",CHAN_ITEM)
+    TNT1 A 0 A_GiveInventory("TechArmorProtection")
+    TNT1 A 0 A_GiveInventory("Cell",40)
+	Stop
+  Ammo:
+	TNT1 A 0 A_PlaySound("misc/ammo_pkup",CHAN_ITEM)
+    TNT1 A 0 A_GiveInventory("Cell",40)
+    Stop
+  }
+}
+
+ACTOR TechArmorProtection : BasicArmorPickup
+{
+  Radius 20
+  Height 16
+  Inventory.PickupSound ""
+  Inventory.PickupMessage ""
+  Inventory.Icon "ARM4A0"
+  Armor.SavePercent 83.3333
+  Armor.SaveAmount 200
+  DamageFactor "Ice", 0.2
+  DamageFactor "Plasma", 0.2
+  DamageFactor "HitPlasma", 0.2
+  DamageFactor "Pulse", 0.2
+  DamageFactor "GreenFire", 0.2
+  DamageFactor "Blaster", 0.2
+  DamageFactor "Railgun", 0.2
+  DamageFactor "BFG", 0.2
+  DamageFactor "BFGSplash", 0.2
+  DamageFactor "BFG10k", 0.2
+  DamageFactor "RedPlasma", 0.2
+  States
+  {
+  Spawn:
+    ARM4 A -1 Bright
+    Stop
+  }
+}
+
+ACTOR TechArmorBonus : BasicArmorBonus
+{
+	Armor.SavePercent 83.3333
+	Armor.SaveAmount 100
+	Armor.MaxSaveAmount 200
+	Armor.MaxBonus 100
+	Armor.MaxBonusMax 100
+}

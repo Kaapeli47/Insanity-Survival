@@ -1,0 +1,6 @@
+ACTOR PlayerStartingArmor : BasicArmorPickup
+{
+	Inventory.Icon "ARM1A0"
+	Armor.SavePercent 66.6667
+	Armor.SaveAmount 100
+}

@@ -1,0 +1,106 @@
+// Extreme death random monster spawner
+
+ACTOR XDeathMonsterSpawner : RandomSpawner
+{
+	DropItem "IDMZombieman", 256, 10
+	DropItem "IDMYellowboyZombie", 256, 10
+	DropItem "IDMMachinegunGuy", 256, 10
+	DropItem "IDMShotgunGuy", 256, 10
+	DropItem "IDMChainsawZombie", 256, 10
+	DropItem "IDMRocketguy", 256, 10
+	DropItem "IDMHeavyMachinegunGuy", 256, 10
+	DropItem "IDMKamikaziGuy", 256, 10
+	DropItem "IDMRailgunGuy", 256, 10
+	DropItem "IDMNailborg", 256, 10
+	DropItem "IDMChaingunGuy", 256, 10
+	DropItem "IDMChaingunGuy2", 256, 10
+	DropItem "IDMPlasmagunGuy", 256, 10
+	DropItem "IDMSuperShotgunGuy", 256, 10
+	DropItem "IDMChaingunMajor", 256, 10
+	DropItem "IDMDoomImp", 256, 10
+	DropItem "IDMVoidImp", 256, 10
+	DropItem "IDMSmallImp", 256, 10
+	DropItem "IDMImpAbomination", 256, 10
+	DropItem "IDMSuperImp", 256, 10
+	DropItem "IDMFlyingImp", 256, 10
+	DropItem "IDMSuperFlyingImp", 256, 10
+	DropItem "IDMCatharsi", 256, 10
+	DropItem "IDMMummy", 256, 10
+	DropItem "IDMHereticImp", 256, 10
+	DropItem "IDMFireDemon", 256, 10
+	DropItem "IDMDarkImp", 256, 10
+	DropItem "IDMSmallDarkImp", 256, 10
+	DropItem "IDMDarkDevil", 256, 10
+	DropItem "IDMDevil", 256, 10
+	DropItem "IDMSuperDevil", 256, 10
+	DropItem "IDMStoneImp", 256, 10
+	DropItem "IDMCyberImp", 256, 10
+	DropItem "IDMIceGuy", 256, 10
+	DropItem "IDMRocketImp", 256, 10
+	DropItem "IDMDemon", 256
+	DropItem "IDMBloodDemon", 256, 10
+	DropItem "IDMStoneImp", 256, 10
+	DropItem "IDMClink", 256, 10
+	DropItem "IDMEttin", 256, 10
+	DropItem "IDMCentaur", 256, 10
+	DropItem "IDMMeleeRevenant", 256, 10
+	DropItem "IDMSpectre", 256, 10
+	DropItem "IDMGhostGuardian", 256, 10
+	DropItem "IDMMummyGhost", 256, 10
+	DropItem "IDMKnightGhost", 256, 10
+	DropItem "IDMLostSoul", 256, 10
+	DropItem "IDMHereticImp", 256, 10
+	DropItem "IDMFireDemon", 256, 10
+	DropItem "IDMCacoDemon", 256, 10
+	DropItem "IDMCacoLantern", 256, 10
+	DropItem "IDMAbaddon", 256, 10
+	DropItem "IDMAgathoDemon", 256, 10
+	DropItem "IDMPainElemental", 256, 10
+	DropItem "IDMPlasmaElemental", 256, 10
+	DropItem "IDMWizard", 256, 10
+	DropItem "IDMBishop", 256, 10
+	DropItem "IDMWraith", 256, 10
+	DropItem "IDMRevenant", 256, 10
+	DropItem "IDMBeast", 256, 10
+	DropItem "IDMSnake", 256, 10
+	DropItem "IDMKnight", 256, 10
+	DropItem "IDMCentaurLeader", 256, 10
+	DropItem "IDMBaronOfHell", 256, 10
+	DropItem "IDMCyberBaron", 256, 10
+	DropItem "IDMBelphegor", 256, 10
+	DropItem "IDMHellKnight", 256, 10
+	DropItem "IDMCybruiser", 256, 10
+	DropItem "IDMHellWarrior", 256, 10
+	DropItem "IDMDemon1", 256, 10
+	DropItem "IDMDemon2", 256, 10
+	DropItem "IDMSatyr", 256, 10
+	DropItem "IDMArachnotron", 256, 10
+	DropItem "IDMArachnotronMK2", 256, 10
+	DropItem "IDMRailArachnotron", 256, 10
+	DropItem "IDMNailArachnotron", 256, 10
+	DropItem "IDMBarachnotron", 256, 10
+	DropItem "IDMZombieMissileTank", 256, 10
+	DropItem "IDMZombiePlasmaTank", 256, 10
+	DropItem "IDMFatso", 256, 10
+	DropItem "IDMHectebus", 256, 10
+	DropItem "IDMIronLich", 256, 10
+	DropItem "IDMFlyingFatso", 256, 10
+	DropItem "IDMPlasmaFatso", 256, 10
+	DropItem "IDMPainElemental", 256, 10
+	DropItem "IDMPlasmaElemental", 256, 10
+	DropItem "IDMTorturedSoul", 256, 10
+	DropItem "IDMInferno", 256, 10
+	DropItem "IDMDragon", 256, 10
+	DropItem "IDMArchvile", 256, 10
+	// Bosses
+/*	DropItem "IDMCyberdemon", 256, 2
+	DropItem "IDMMinotaur", 256, 2
+	DropItem "IDMSorcerer1", 256, 2
+	DropItem "IDMHeresiarch", 256, 2
+	DropItem "IDMSpidermastermind", 256, 2
+	DropItem "IDMBronzeSpidermind", 256, 2
+	DropItem "IDMSorcerer1", 256, 2
+	DropItem "IDMHeresiarch", 256, 2 */
+}
+
+	

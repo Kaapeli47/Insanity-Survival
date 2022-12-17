@@ -1,0 +1,89 @@
+/// Abaddon
+
+ACTOR IDMAbaddon : IDMCacolantern
+{
+	SpawnID 220
+	Health 800
+	Speed 12
+	PainChance 40
+	Obituary "%o was smitten by an abaddon."
+	HitObituary "%o became food for an abaddon."
+	Bloodcolor "Red"
+	Tag "Abaddon"
+	DropItem "IDMHealthBonusPickup", 64
+	DropItem "IDMArmorBonusPickup", 64
+	DropItem "Clip", 64, 20
+	DropItem "Clip", 32, 20
+	DropItem "ClipBox", 16, 50
+	DropItem "Shell", 64, 4
+	DropItem "Shell", 32, 20
+	DropItem "ShellBox", 16, 10
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketAmmo", 32, 1
+	DropItem "RocketBox", 16, 5
+	DropItem "Cell", 32, 20
+	DropItem "Cell", 16, 20
+	DropItem "Cellpack", 8, 100
+	DropItem "IDMMana", 8
+	DropItem "IDMMana", 8
+	DropItem "IDMMaceAmmo", 8
+	DropItem "IDMMaceAmmo", 8
+	DropItem "IDMCatAmmo", 8
+	DropItem "IDMCatAmmo", 8
+	DropItem "IDMGas", 8
+	DropItem "IDMGas", 8
+	States
+	{
+	Spawn:
+		HED3 A 10 A_Look
+		Loop
+	See:
+		HED3 A 3 A_Chase
+		Loop
+	Pain:
+		HED3 F 3
+		HED3 F 3 A_Pain
+		HED3 E 6
+		Goto See
+	Missile:
+		HED3 BC 5 A_FaceTarget
+		HED3 D 5 BRIGHT A_BasicAttack (12, "None", "IDMAbaddonBall", 32)
+		HED3 BC 5 A_FaceTarget
+		HED3 D 5 BRIGHT A_BasicAttack (12, "None", "IDMAbaddonBall", 32)
+		Goto See
+	Death:
+		HED3 G 8 A_NoBlocking
+		HED3 H 8 A_Scream
+		HED3 IJK 8
+		HED3 L -1 A_SetFloorClip
+		Stop
+	Raise:
+		HED3 L 8 A_UnSetFloorClip
+		HED3 KJIHG 8
+		Goto See
+	}
+}
+
+ACTOR IDMAbaddonBall
+{
+	SpawnID 221
+	Radius 6
+	Height 8
+	Speed 20
+	Damage 10
+	Projectile
+	+RANDOMIZE
+	RenderStyle Add
+	SeeSound "caco/attack"
+	DeathSound "caco/shotx"
+	DamageType "Fire"
+	States
+	{
+	Spawn:
+		BAL3 AB 4 BRIGHT
+		Loop
+	Death:
+		BAL3 CDE 6 BRIGHT
+		Stop
+	}
+}

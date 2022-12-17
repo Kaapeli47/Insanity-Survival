@@ -1,0 +1,58 @@
+ACTOR IDMDarkCacodemon : IDMCacodemon
+{
+	Health 600
+	Tag	"Dark Cacodemon"
+	Obituary "%o was phased by a dark cacodemon."
+	HitObituary "%o became dinner for a dark cacodemon."
+	States
+	{
+	Spawn:
+		DHED A 10 A_Look
+		Loop
+	See:
+		DHED A 3 A_Chase
+		Loop
+	Missile:
+		DHED BC 5 A_FaceTarget
+		DHED D 5 BRIGHT A_BasicAttack (9, "None", "IDMDarkCacodemonBall", 32)
+		TNT1 A 0 A_Jump(128,"See")
+		DHED BC 5 A_FaceTarget
+		DHED D 5 BRIGHT A_BasicAttack (9, "None", "IDMDarkCacodemonBall", 32)
+		DHED BC 5 A_FaceTarget
+		DHED D 5 BRIGHT A_BasicAttack (9, "None", "IDMDarkCacodemonBall", 32)
+		Goto See
+	Pain:
+		DHED F 3
+		DHED F 3 A_Pain
+		DHED E 6
+		Goto See
+	Death:
+		DHED G 8 A_NoBlocking
+		DHED H 8 A_Scream
+		DHED IJK 8
+		DHED L -1 A_SetFloorClip
+		Stop
+	Raise:
+		DHED L 8 A_UnSetFloorClip
+		DHED KJIHG 8
+		Goto See
+	}
+}
+
+ACTOR IDMDarkCacodemonBall : IDMCacodemonBall
+{
+	Damage 10
+	DamageType "Plasma"
+	Speed 15
+	States
+	{
+	Spawn:
+		BAL9 AB 4 BRIGHT
+		Loop
+	Death:
+		BAL9 C 6 Bright
+		TNT1 A 0 A_SetTranslucent(0.5)
+		BAL9 DE 6 Bright
+		Stop
+	}
+}

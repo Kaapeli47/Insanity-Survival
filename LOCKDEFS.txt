@@ -1,0 +1,149 @@
+Clearlocks
+
+Lock 1 Doom
+{
+	IDMRedCard
+	Message "$PD_REDC"
+	RemoteMessage "$PD_REDCO"
+	Mapcolor 255 0 0
+	LockedSound "misc/card_try"
+}
+
+Lock 2 Doom
+{
+	IDMBlueCard
+	Message "$PD_BLUEC"
+	RemoteMessage "$PD_BLUECO"
+	Mapcolor 0 0 255
+	LockedSound "misc/card_try"
+}
+
+Lock 3 Doom
+{
+	IDMYellowCard
+	Message "$PD_YELLOWC"
+	RemoteMessage "$PD_YELLOWCO"
+	Mapcolor 255 255 0
+	LockedSound "misc/card_try"
+}
+
+Lock 4 Doom
+{
+	IDMRedSkull
+	Message "$PD_REDS"
+	RemoteMessage "$PD_REDSO"
+	Mapcolor 255 0 0
+	LockedSound "misc/skull_try"
+}
+
+Lock 5 Doom
+{
+	IDMBlueSkull
+	Message "$PD_BLUES"
+	RemoteMessage "$PD_BLUESO"
+	Mapcolor 0 0 255
+	LockedSound "misc/skull_try"
+}
+
+Lock 6 Doom
+{
+	IDMYellowSkull
+	Message "$PD_YELLOWS"
+	RemoteMessage "$PD_YELLOWSO"
+	Mapcolor 255 255 0
+	LockedSound "misc/skull_try"
+}
+
+Lock 129 Doom
+{
+	Any { IDMRedCard IDMRedSkull }
+	Message "$PD_REDK"
+	RemoteMessage "$PD_REDO"
+	Mapcolor 255 0 0
+	LockedSound "misc/key_try"
+}
+
+
+Lock 130 Doom
+{
+	Any { IDMBlueCard IDMBlueSkull }
+	Message "$PD_BLUEK"
+	RemoteMessage "$PD_BLUEO"
+	Mapcolor 0 0 255
+	LockedSound "misc/key_try"
+}
+
+Lock 131 Doom
+{
+	Any { IDMYellowCard IDMYellowSkull }
+	Message "$PD_YELLOWK"
+	RemoteMessage "$PD_YELLOWO"
+	Mapcolor 255 255 0
+	LockedSound "misc/key_try"
+}
+
+Lock 132 Doom
+{
+	Any { IDMRedCard IDMRedSkull }
+	Message "$PD_REDK"
+	RemoteMessage "$PD_REDO"
+	Mapcolor 255 0 0
+	LockedSound "misc/key_try"
+}
+
+Lock 133 Doom
+{
+	Any { IDMBlueCard IDMBlueSkull }
+	Message "$PD_BLUEK"
+	RemoteMessage "$PD_BLUEO"
+	Mapcolor 0 0 255
+	LockedSound "misc/key_try"
+}
+
+Lock 134 Doom
+{
+	Any { IDMYellowCard IDMYellowSkull }
+	Message "$PD_YELLOWK"
+	RemoteMessage "$PD_YELLOWO"
+	Mapcolor 255 255 0
+	LockedSound "misc/key_try"
+}
+
+Lock 100
+{
+	Message "$PD_ANY"
+	RemoteMessage "$PD_ANYOBJ"
+	Mapcolor 128 128 255
+	LockedSound "misc/key_try"
+}
+
+Lock 228
+{
+	Message "$PD_ANY"
+	RemoteMessage "$PD_ANYOBJ"
+	Mapcolor 128 128 255
+	LockedSound "misc/key_try"
+}
+
+Lock 229 Doom
+{
+	Any { IDMBlueCard IDMBlueSkull }
+	Any { IDMYellowCard IDMYellowSkull }
+	Any { IDMRedCard IDMRedSkull }
+	Message "$PD_ALL3"
+	RemoteMessage "$PD_ALL3O"
+	LockedSound "misc/key_try"
+}
+
+Lock 101 Doom
+{
+	IDMBlueCard 
+	IDMBlueSkull
+	IDMYellowCard 
+	IDMYellowSkull
+	IDMRedCard 
+	IDMRedSkull
+	Message "$PD_ALL6"
+	RemoteMessage "$PD_ALL6O"
+	LockedSound "misc/key_try"
+}

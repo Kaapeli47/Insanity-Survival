@@ -1,0 +1,543 @@
+// ------------------
+// --- Doom Items ---
+// ------------------
+
+
+// Health bonus
+
+object IDMHealthBonusPickup
+{
+    frame BON1 { light HEALTHPOTION }
+}
+
+
+// Armor bonus
+
+object IDMArmorBonusPickup
+{
+    frame BON2 { light ARMORBONUS }
+}
+
+
+/// Light Armor
+
+// Yellow armor
+
+Pulselight YELLOWARMOR
+{
+    Color 0.6 0.4 0.0
+    Size 32
+	SecondarySize 48
+	Interval 1.0
+	Offset 0 16 0
+}
+
+object IDMYellowArmor
+{
+    frame ARMY { light YELLOWARMOR }
+}
+
+
+// Bullet Armor
+
+Pulselight BULLETARMOR
+{
+    Color 0.0 0.5 0.0
+    Size 32
+	SecondarySize 48
+	Interval 1.0
+	Offset 0 16 0
+}
+
+object BulletArmor
+{
+	frame ARMBA { light BULLETARMOR }
+}
+
+
+// Frag Armor
+
+Pulselight FRAGARMOR
+{
+    Color 0.5 0.0 0.0
+    Size 32
+	SecondarySize 48
+	Interval 1.0
+	Offset 0 16 0
+}
+
+object FragArmor
+{
+	frame ARMAA { light FRAGARMOR }
+}
+
+
+// Tech Armor
+
+Pulselight TECHARMOR
+{
+    Color 0.5 0.5 0.5
+    Size 32
+	SecondarySize 48
+	Interval 1.0
+	Offset 0 16 0
+}
+
+object TechArmor
+{
+	frame ARM4 { light TECHARMOR }
+}
+
+
+/// Heavy Armor
+
+// Blue Armor
+
+Pulselight BLUEARMOR
+{
+    Color 0.0 0.0 0.5
+    Size 32
+	SecondarySize 48
+	Interval 1.0
+	Offset 0 16 0
+}
+
+
+object IDMBlueArmor
+{
+	frame ARM2 { light BLUEARMOR }
+}
+
+
+// Red Armor
+
+Pulselight REDARMOR
+{
+    Color 0.5 0.0 0.0
+    Size 32
+	SecondarySize 48
+	Interval 1.0
+	Offset 0 16 0
+}
+
+object IDMRedArmor
+{
+    frame ARM3 { light REDARMOR }
+}
+
+
+// Purple Armor
+
+Pulselight PURPLEARMOR
+{
+    Color 0.5 0.0 0.5
+    Size 32
+	SecondarySize 48
+	Interval 1.0
+	Offset 0 16 0
+}
+
+object PurpleArmor
+{
+	frame ARM5 { light PURPLEARMOR }
+}
+
+
+// Soul Sphere
+
+object IDMSoulSphere
+{
+    frame SOUL { light SOULSPHERE }
+}
+
+
+// Mega Sphere
+
+pulselight MEGASPHERE
+{
+    Color 0.7 0.59 0.51
+    Size 48
+    SecondarySize 60
+    Interval 1.0
+    Offset 0 16 0
+}
+
+object IDMMegaSphere
+{
+    frame MEGA { light MEGASPHERE }
+}
+
+
+// Time Freeze
+
+Pulselight TIMEFREEZESPHERE
+{
+	Color 0.8 0.8 0.8
+	Size 48
+	SecondarySize 60
+	Interval 1.0
+	Offset 0 16 0
+}
+
+Object IDMTimeFreeze
+{
+	frame TIME { light TIMEFREEZESPHERE }
+}
+
+// Doom Sphere
+
+PulseLight DOOMSPHERE
+{
+	Color 1.0 0.0 0.0
+	Size 48
+	SecondarySize 60
+	Interval 1.0
+	Offset 0 16 0
+}
+
+Object IDMDoomSphere
+{
+	frame DOOM { light DOOMSPHERE }
+}
+
+
+
+// Rage
+
+pointlight RAGESPHERE1
+{
+    Color 1.0 0.5 0.0
+    Size 16
+    Offset 0 16 0
+}
+
+pointlight RAGESPHERE2
+{
+    Color 1.0 0.5 0.0
+    Size 24
+    Offset 0 16 0
+}
+
+pointlight RAGESPHERE3
+{
+    Color 1.0 0.5 0.0
+    Size 32
+    Offset 0 16 0
+}
+
+pointlight RAGESPHERE4
+{
+    Color 1.0 0.333 0.0
+    Size 40
+    Offset 0 16 0
+}
+
+Object RageSphere
+{
+	frame BLDS { light DOOMSPHERE }
+	frame BLDSA { light RAGESPHERE1 }
+	frame BLDSB { light RAGESPHERE2 }
+	frame BLDSC { light RAGESPHERE3 }
+	frame BLDSD { light RAGESPHERE4 }
+}
+
+
+// Resistance
+
+pulselight BIOSPHERE
+{
+    Color 0.0 1.0 0.0
+    Size 48
+	SecondarySize 60
+	Interval 1.0
+    Offset 0 16 0
+}
+
+object ResistSphere
+{
+    frame BIOS { light BIOSPHERE }
+}
+
+object ResistSphere2
+{
+    frame BIO2 { light DOOMSPHERE }
+}
+
+pulselight BIOSPHERE2
+{
+    Color 0.0 1.0 1.4
+    Size 48
+	SecondarySize 60
+	Interval 1.0
+    Offset 0 16 0
+}
+
+object ResistSphere3
+{
+    frame BIO3 { light BIOSPHERE2 }
+}
+
+
+// Regeneration Sphere
+
+PulseLight REGENSPHERE
+{
+	Color 1.0 0.0 0.0
+	Size 48
+	SecondarySize 60
+	Interval 1.0
+	Offset 0 16 0
+}
+
+Object RegenSphere
+{
+	frame REGN { light RegenSphere }
+}
+
+
+// Haste Sphere
+
+PulseLight HASTESPHERE
+{
+	Color 1.0 1.0 0.0
+	Size 48
+	SecondarySize 60
+	Interval 1.0
+	Offset 0 16 0
+}
+
+Object HasteSphere
+{
+	frame HAST { light HasteSphere }
+}
+
+
+// Guard Sphere
+
+PulseLight GUARDSPHERE
+{
+	Color 0.1 0.5 0.0
+	Size 48
+	SecondarySize 60
+	Interval 1.0
+	Offset 0 16 0
+}
+
+object IDMGuardSphere
+{
+	frame GARD { light GUARDSPHERE }
+}
+
+/*
+// Reflection Sphere
+
+PULSELIGHT ReflectSphere
+{
+	Color 1.0 0.5 0.0
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+}
+
+object ReflectSphere
+{
+	frame LFSS { light REFLECTSPHERE }
+}
+*/
+
+// Strength Sphere
+
+pulselight StrengthSphere1
+{
+	Color 0.6 0.6 0.6
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+	Subtractive 1
+}
+
+pulselight StrengthSphere2
+{
+	Color 0.4 0.4 0.4
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+	Subtractive 1
+}
+
+pulselight StrengthSphere3
+{
+	Color 0.2 0.2 0.2
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+	Subtractive 1
+}
+
+pulselight StrengthSphere4
+{
+	Color 0.1 0.1 0.1
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+	Subtractive 1
+}
+
+pulselight StrengthSphere5
+{
+	Color 0.1 0.075 0.05
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+}
+
+pulselight StrengthSphere6
+{
+	Color 0.2 0.15 0.1
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+}
+
+pulselight StrengthSphere7
+{
+	Color 0.4 0.3 0.2
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+}
+
+pulselight StrengthSphere8
+{
+	Color 0.8 0.6 0.4
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+}
+
+pulselight StrengthSphere9
+{
+	Color 1.2 0.9 0.6
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+}
+
+object StrengthSphere
+{
+    frame BERSA { light StrengthSphere1 }
+    frame BERSB { light StrengthSphere2 }
+    frame BERSC { light StrengthSphere3 }
+    frame BERSD { light StrengthSphere4 }
+    frame BERSE { light StrengthSphere5 }
+    frame BERSF { light StrengthSphere6 }
+    frame BERSG { light StrengthSphere7 }
+    frame BERSH { light StrengthSphere8 }
+    frame BERSI { light StrengthSphere9 }
+}
+
+
+// Prosperity Sphere
+
+pulselight ProsperitySphere
+{
+	Color 0.4 0.2 0.0
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+}
+
+object ProsperitySphere
+{
+	frame AMSP { light ProsperitySphere }
+}
+
+
+// Spread Sphere
+
+pulselight SpreadSphere
+{
+	Color 1.0 0.0 0.0
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+}
+
+pointlight SpreadSphere1
+{
+	Color 0.75 0.25 0.0
+	Offset 0 16 0
+	Size 16
+}
+
+pointlight SpreadSphere2
+{
+	Color 0.7 0.3 0.0
+	Offset 0 16 0
+	Size 24
+}
+
+pointlight SpreadSphere3
+{
+	Color 0.65 0.35 0.0
+	Offset 0 16 0
+	Size 32
+}
+
+pointlight SpreadSphere4
+{
+	Color 0.6 0.4 0.0
+	Offset 0 16 0
+	Size 40
+}
+
+object SpreadSphere
+{
+	frame SPRD	{ light SpreadSphere  }
+	frame SPRDA { light SpreadSphere1 }
+	frame SPRDB { light SpreadSphere2 }
+	frame SPRDC { light SpreadSphere3 }
+	frame SPRDD { light SpreadSphere4 }
+}
+
+pulselight DrainSphere
+{
+	Color 0.34 0.64 0.89
+	Interval 1.0
+	Offset 0 16 0
+	SecondarySize 60
+	Size 48
+}
+
+object DrainSphere
+{
+	frame DRAN	{ light DrainSphere }
+}
+
+// TurboSphere
+
+pulselight TURBOSPHERE
+{
+    color 0.8 0.3 0.0
+    size 48
+    secondarySize 60
+    interval 1.0
+    offset 0 16 0
+}
+
+object IDMTurboSphere
+{
+    frame TURB { light TURBOSPHERE }
+}

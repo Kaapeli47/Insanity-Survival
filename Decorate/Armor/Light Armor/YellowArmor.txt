@@ -1,0 +1,23 @@
+// Yellow Armor
+
+ACTOR IDMYellowArmor : BasicArmorPickup 10061
+{
+	Radius 20
+	Height 16
+	Inventory.PickupMessage "Yellow armor!"
+	Inventory.PickupSound "misc/armor_pkup"
+	Inventory.Icon "ARMYA0"
+	Inventory.RespawnTics 1050
+	Armor.SavePercent 50
+	Armor.SaveAmount 200
+	DamageFactor "Normal", 0.5
+	Tag "Yellow Armor"
+	//$Category Health and Armor
+	States
+	{
+	Spawn:
+      ARMY A 6
+      ARMY B 6 Bright
+      Loop
+	}
+}

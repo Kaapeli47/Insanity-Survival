@@ -1,0 +1,115 @@
+/// Cacodemon
+
+ACTOR IDMCacodemon : Cacodemon
+{
+	Health 400
+	Radius 31
+	Height 56
+	Mass 800
+	Speed 8
+	PainChance 128
+	Monster
+	Species "Cacodemon"
+	+DONTHURTSPECIES
+	+DONTHARMSPECIES
+	+FLOAT
+	+NOGRAVITY
+	SeeSound "caco/sight"
+	PainSound "caco/pain"
+	DeathSound "caco/death"
+	ActiveSound "caco/active"
+	Obituary "$OB_CACO"
+	HitObituary "$OB_CACOHIT"
+	BloodColor "Blue"
+	Tag "Cacodemon"
+	DropItem "IDMHealthBonusPickup", 64
+	DropItem "IDMArmorBonusPickup", 64
+	DropItem "Clip", 64, 20
+	DropItem "Clip", 16, 20
+	DropItem "ClipBox", 8, 50
+	DropItem "Shell", 64, 4
+	DropItem "Shell", 16, 20
+	DropItem "ShellBox", 8, 10
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketAmmo", 16, 1
+	DropItem "RocketBox", 8, 5
+	DropItem "Cell", 32, 20
+	DropItem "Cell", 8, 20
+	DropItem "Cellpack", 4, 100
+	DropItem "IDMMana", 4
+	DropItem "IDMMana", 4
+	DropItem "IDMMaceAmmo", 4
+	DropItem "IDMMaceAmmo", 4
+	DropItem "IDMCatAmmo", 4
+	DropItem "IDMCatAmmo", 4
+	DropItem "IDMGas", 4
+	DropItem "IDMGas", 4
+	States
+	{
+	Spawn:
+		HEAD A 10 A_Look
+		Loop
+	See:
+		HEAD A 3 A_Chase
+		Loop
+	Missile:
+		HEAD B 5 A_FaceTarget
+		HEAD C 5 A_FaceTarget
+		HEAD D 5 BRIGHT A_HeadAttack
+		Goto See
+	Pain:
+		HEAD F 3
+		HEAD F 3 A_Pain
+		HEAD E 6
+		Goto See
+	Death:
+		TNT1 A 0 A_Jump(1,"Death.Doppel")
+	Death.Massacre:
+		HEAD G 8 A_NoBlocking
+		HEAD H 8 A_Scream
+		HEAD IJK 8
+		HEAD L -1 A_SetFloorClip
+		Stop
+	Death.Doppel:
+		HEAD G 1 A_Scream
+		HEAD GGGGGGGGG 1 A_FadeOut(0.05)
+		TNT1 A 0 A_Playsound("doppel/morph2",CHAN_BODY,1,0,0.5)
+		DOP2 T 2 Bright A_SetTranslucent(0.25)
+		DOP2 SRQPO 2 Bright
+		DOP2 NMLKJIHGFEDCB 2 Bright A_Fadein(0.05)
+		TNT1 A 0 A_NoBlocking
+		DOP2 A 1 A_SpawnItemEx("IDMDoppelganger",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+		Stop
+	Raise:
+		HEAD L 8 A_UnSetFloorClip
+		HEAD KJIHG 8
+		Goto See
+	}
+}
+
+// Cacodemon plasma ball
+
+ACTOR IDMCacodemonBall : CacodemonBall replaces CacodemonBall
+{
+	Radius 6
+	Height 8
+	Speed 15
+	FastSpeed 20
+	Damage 5
+	Projectile 
+	+RANDOMIZE
+	RenderStyle Add
+	Alpha 1
+	SeeSound "caco/attack"
+	DeathSound "caco/shotx"
+	DamageType "Fire"
+	States
+	{
+	Spawn:
+		BAL2 AB 4 BRIGHT
+		Loop
+	Death:
+		BAL2 CDE 6 BRIGHT
+		Stop
+	}
+}

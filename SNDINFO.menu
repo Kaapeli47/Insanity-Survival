@@ -1,0 +1,67 @@
+// Menu sounds
+
+menu/backup			DSMENDIS
+menu/prompt			DSMENU
+menu/cursor			DSMCURS
+menu/change			DSMENCHG
+menu/invalid		dsoof
+menu/dismiss		DSMENDIS
+menu/choose			DSMENSLC
+menu/clear			DSMENDIS
+
+$random menu/activate {gib1 gib3 gib7 gib9 gib12 gib17 gib18 gib20 gib26
+gib27 gib28 gib30 gib31 gib42 gib46 gib54 gib59 gib79 gib85 gib86 gib97 gib100
+gib103 gib116 gib117 gib118 gib119 gib120 gib121 gib122 gib126 gib127 gib128
+gib129 gib130 gib150 gib152 gib158 gib159 gib161 gib180 gib182 gib191 gib230
+gib231 gib235 gib236 gib237 gib239 gib241 gib242 gib243 gib246 gib250 gib252
+gib254 gib255 gib258 gib264 gib265 gib273 gib274 gib275 gib288 gib290 gib291
+gib292 gib304 gib305 gib306 gib307 gib308 gib309 gib312 gib315 gib318 gib321
+gib326 gib331 gib336 gib337 gib344 gib345 gib358 gib359 gib362 gib381 gib386
+gib389 gib392 gib393 gib395 gib396 gib397 gib398 gib409 gib410 gib436 gib437
+gib438 gib439 gib440 gib446 gib448 gib449 gib450 gib456 gib460 gib489 gib499
+gib510 gib512 gib551 gib556 gib564 gib566 gib568 gib569 gib575 gib579 gib594
+gib603 gib604 gib605 gib609 gib613 gib615 gib620 gib624 gib626 gib630 gib632
+gib637 gib642 gib643 gib644 gib652 gib654 gib659 gib660 gib672 gib674 gib677
+gib683 gib694 gib695 gib697 gib701 gib703 gib704 gib705 gib706 gib711 gib712
+gib717 gib727 gib728 gib731 gib733 gib746 gib748 gib756 gib782 gib788 gib796
+gib817 gib822 gib833 gib834 gib854 gib855 gib864 gib874 gib876 gib900 gib901
+gib902 gib903 gib905 gib906 gib907 gib908 gib909 gib910 gib913 gib918 gib920
+gib930 gib931 gib936 gib937 gib938 gib942 gib943 gib944 gib945 gib947 gib952
+gib956 gib960 gib964 gib966 gib983 gib994 gib995 gib997 gib1001 gib1002 gib1004
+gib1005 gib1008 gib1010 gib1015 gib1016 gib1033 gib1042 gib1043 gib1048 gib1055
+gib1056 gib1057 gib1058 gib1059 gib1062 gib1070 gib1073 gib1077 gib1082 gib1084
+gib1087 gib1091 gib1092 gib1095 gib1115}
+
+
+// Quitting sounds
+
+$random menu/quit1 {gib2 gib5 gib10 gib14 gib21 gib25 gib29 gib35 gib45 gib50
+gib51 gib66 gib68 gib72 gib77 gib83 gib87 gib92 gib93 gib94 gib95 gib101 gib110
+gib112 gib139 gib143 gib147 gib154 gib156 gib181 gib185 gib194 gib197 gib199
+gib200 gib209 gib211 gib213 gib232 gib238 gib240 gib247 gib248 gib259 gib260
+gib261 gib262 gib263 gib282 gib295 gib296 gib297 gib299 gib302 gib303 gib314
+gib323 gib327 gib332 gib341 gib342 gib343 gib346 gib348 gib356 gib364 gib366
+gib367 gib373 gib384 gib387 gib416 gib432 gib434 gib444 gib445 gib464 gib465
+gib470 gib471 gib472 gib477 gib479 gib480 gib481 gib482 gib484 gib494 gib497
+gib501 gib503 gib515 gib539 gib545 gib547 gib549 gib558 gib565 gib581 gib588
+gib589 gib597 gib598 gib602 gib611 gib614 gib617 gib618 gib619 gib638 gib646
+gib649 gib650 gib653 gib655 gib657 gib662 gib665 gib668 gib670 gib671 gib673
+gib680 gib681 gib684 gib686 gib690 gib691 gib700 gib700 gib716 gib722 gib724
+gib739 gib740 gib745 gib749 gib750 gib752 gib755 gib757 gib758 gib760 gib772
+gib774 gib775 gib776 gib786 gib802 gib805 gib808 gib809 gib810 gib827 gib832
+gib836 gib841 gib842 gib857 gib861 gib865 gib868 gib871 gib872 gib874 gib879
+gib889 gib898 gib911 gib912 gib916 gib922 gib923 gib928 gib929 gib933 gib934
+gib935 gib941 gib963 gib965 gib969 gib974 gib976 gib977 gib980 gib984 gib988
+gib992 gib993 gib996 gib1009 gib1014 gib1023 gib1025 gib1026 gib1031 gib1034
+gib1037 gib1039 gib1040 gib1051 gib1052 gib1053 gib1063 gib1064 gib1066 gib1070
+gib1071 gib1072 gib1075 gib1076 gib1081 gib1083 gib1085 gib1088 gib1093 gib1094
+gib1096 gib1098 gib1098 gib1100 gib1103 gib1104 gib1106 gib1108 gib1113 gib1119}
+
+$alias menu/quit2 menu/quit1
+
+$alias	intermission/tick 			weapons/chainsawhit
+$alias	intermission/cooptotal		*gibbed
+$alias	intermission/nextstage		menu/choose
+$alias	intermission/paststats		menu/activate
+$alias	intermission/pastcoopstats	menu/activate
+$alias	intermission/pastdmstats	*gibbed

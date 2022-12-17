@@ -1,0 +1,61 @@
+ACTOR IDMPlasmaCyberDemon : IDMCyberDemon
+{
+	Tag "Plasma Cyberdemon"
+	Obituary "%o was spazzed by a plasma cyberdemon."
+	States
+	{
+	Spawn:
+		PLCY AB 10 A_Look
+		Loop
+	See:
+		PLCY A 3 A_Hoof
+		PLCY ABB 3 A_Chase
+		PLCY C 3 A_Metal
+		PLCY CDD 3 A_Chase
+		Loop
+	Missile:
+		PLCY E 6 A_FaceTarget
+		TNT1 A 0 A_Jump(128,"IonAtk")
+	PlasmaAtk:
+		PLCY FFFFFFFFFFFF 1 Bright A_CustomMissile("MonsterPlasmaBall",56,-25,random(-5,5))
+		PLCY E 12 A_FaceTarget
+		PLCY FFFFFFFFFFFF 1 Bright A_CustomMissile("MonsterPlasmaBall",56,-25,random(-5,5))
+		PLCY E 12 A_FaceTarget
+		PLCY FFFFFFFFFFFF 1 Bright A_CustomMissile("MonsterPlasmaBall",56,-25,random(-5,5))
+		Goto See
+	IonAtk:
+		TNT1 A 0 A_Playsound("weapons/ionblasf",CHAN_WEAPON,1,0,0.5)
+		PLCY F 4 Bright A_CustomMissile("MonsterIonBall",56,-25)
+		TNT1 A 0 A_Playsound("weapons/ionblasf",CHAN_WEAPON,1,0,0.5)
+		PLCY F 4 Bright A_CustomMissile("MonsterIonBall",56,-25)
+		TNT1 A 0 A_Playsound("weapons/ionblasf",CHAN_WEAPON,1,0,0.5)
+		PLCY F 4 Bright A_CustomMissile("MonsterIonBall",56,-25)
+		PLCY E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/ionblasf",CHAN_WEAPON,1,0,0.5)
+		PLCY F 4 Bright A_CustomMissile("MonsterIonBall",56,-25)
+		TNT1 A 0 A_Playsound("weapons/ionblasf",CHAN_WEAPON,1,0,0.5)
+		PLCY F 4 Bright A_CustomMissile("MonsterIonBall",56,-25)
+		TNT1 A 0 A_Playsound("weapons/ionblasf",CHAN_WEAPON,1,0,0.5)
+		PLCY F 4 Bright A_CustomMissile("MonsterIonBall",56,-25)
+		PLCY E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/ionblasf",CHAN_WEAPON,1,0,0.5)
+		PLCY F 4 Bright A_CustomMissile("MonsterIonBall",56,-25)
+		TNT1 A 0 A_Playsound("weapons/ionblasf",CHAN_WEAPON,1,0,0.5)
+		PLCY F 4 Bright A_CustomMissile("MonsterIonBall",56,-25)
+		TNT1 A 0 A_Playsound("weapons/ionblasf",CHAN_WEAPON,1,0,0.5)
+		PLCY F 4 Bright A_CustomMissile("MonsterIonBall",56,-25)
+		Goto See
+	Pain:
+		PLCY G 15 A_Pain
+		Goto See
+	Death:
+		PLCY H 10 Bright
+		PLCY I 10 Bright A_Scream
+		PLCY JKL 10 Bright
+		PLCY M 10 Bright A_NoBlocking
+		PLCY NO 10 Bright
+		PLCY P 30 Bright
+		PLCY P -1 A_BossDeath
+		Stop
+	}
+}

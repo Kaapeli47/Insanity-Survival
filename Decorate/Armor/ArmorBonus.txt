@@ -1,0 +1,61 @@
+ACTOR IDMArmorBonusPickup : CustomInventory replaces ArmorBonus 10069
+{
+	Radius 20
+	Height 16
+	Inventory.PickupMessage "Armor bonus."
+	Inventory.PickupSound "misc/bonus_pkup"
+	Inventory.RespawnTics 2100
+	//$Category Health and Armor
+	//$Sprite BON2A0
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+	States
+	{
+	Spawn:
+      BON2 ABCDDCB 6
+      Loop
+	Pickup:
+	  TNT1 A 0 A_JumpIfArmorType("SuperArmor","Superarmorbonus")
+	  TNT1 A 0 A_JumpIfArmorType("IDMBlueArmor","Heavyarmorbonus")
+	  TNT1 A 0 A_JumpIfArmorType("IDMRedArmor","Heavyarmorbonus")
+	  TNT1 A 0 A_JumpIfArmorType("PurpleArmor","Heavyarmorbonus")
+	  TNT1 A 0 A_GiveInventory("IDMArmorBonus",1)
+	  Stop
+	Heavyarmorbonus:
+	  TNT1 A 0 A_GiveInventory("IDMHeavyArmorBonus",1)
+	  Stop
+	SuperArmorBonus:
+	  TNT1 A 0 A_GiveInventory("IDMSuperArmorBonus",1)
+	  Stop
+	}
+}
+
+ACTOR IDMArmorbonus : BasicArmorBonus
+{ 
+	Inventory.Icon "ARM1A0"
+	Armor.SaveAmount 2
+	Armor.SavePercent 66.6667
+	Armor.MaxSaveAmount 300
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+}
+
+ACTOR IDMHeavyArmorbonus : BasicArmorBonus
+{
+	Inventory.Icon "ARM1A0"
+	Armor.SaveAmount 3
+	Armor.SavePercent 66.6667
+	Armor.MaxSaveAmount 300
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+}
+
+ACTOR IDMSuperArmorbonus : BasicArmorBonus
+{ 
+	Inventory.Icon "ARM1A0"
+	Armor.SaveAmount 5
+	Armor.SavePercent 66.6667
+	Armor.MaxSaveAmount 300
+	+COUNTITEM
+	+INVENTORY.ALWAYSPICKUP
+}

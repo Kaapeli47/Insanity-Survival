@@ -1,0 +1,275 @@
+/// decorate/world.txt by Kaapeli47
+
+/// World ///
+
+ACTOR IDMActor : Actor replaces Actor
+{
+	States
+	{
+	Ice:
+    "####" "#" 1 A_GenericFreezeDeath
+    "####" "#" 1 A_IceGuyDie
+	}
+}
+
+DamageType Falling
+{
+	Factor 1.0
+	ReplaceFactor
+}
+
+ACTOR IDMExplosiveBarrel : ExplosiveBarrel replaces ExplosiveBarrel
+{
+  Health 20
+  Radius 10
+  Height 42
+  Mass 10
+  +SOLID
+  +SHOOTABLE
+  +ACTIVATEMCROSS
+  +DONTGIB
+  -NOBLOOD
+  +NOICEDEATH
+  -OLDRADIUSDMG
+  +EXTREMEDEATH
+  DeathSound "world/barrelx"
+  Obituary "%o was blown up by %k."
+  BloodColor "Green"
+  Tag "Explosive Barrel"
+  States
+  {
+  Spawn:
+    BAR1 AB 6
+    Loop
+  Death:
+  XDeath:
+    BEXP A 5 Bright
+    BEXP B 5 Bright A_Scream
+    BEXP CCCCC 1 Bright A_Explode(random(50,150),128,1,0)
+    BEXP DDDDD 1 Bright A_Explode(random(100,300),128,1,0)
+    BEXP EEEEEEEE 1 Bright A_Explode(random(25,75),128,1,0)
+    TNT1 A 1050 Bright A_BarrelDestroy
+    TNT1 A 5 A_Respawn
+    Wait
+  }
+}
+
+ACTOR IDMBulletPuff : BulletPuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +ALLOWPARTICLES
+  +RANDOMIZE
+  +PUFFONACTORS
+  +SKYEXPLODE
+  +CLIENTSIDEONLY
+  AttackSound "misc/ricochet"
+  Seesound "misc/bullethit"
+  RenderStyle Translucent
+  DamageType "Bullet"
+  Alpha 0.7
+  VSpeed 0
+  States
+  {
+  Spawn:
+  See:
+	TNT1 A 0
+	TNT1 A 0 A_Jump(256,"See1","See2","See3","See4")
+  See1:
+    PUFF A 3 Bright
+    PUFF BCD 2
+	Stop
+  See2:
+    BPUF A 3 Bright
+    BPUF BCD 2
+	Stop
+  See3:
+    PUFY A 3 Bright
+    PUFY BCD 2
+	Stop
+  See4:
+    FPUF A 3 Bright
+    FPUF BCD 2
+	Stop
+  XDeath:
+	TNT1 A 1
+	Stop
+  }
+}
+
+ACTOR IDMShotPuff : IDMBulletPuff
+{
+  AttackSound "misc/shotricochet"
+  Seesound "misc/shothit"
+}
+
+ACTOR FistHitPuff : IDMBulletPuff
+{
+  +PUFFONACTORS
+  SeeSound "weapons/punch"
+  ActiveSound "silent"
+  AttackSound "weapons/pwall"
+  DamageType "Punch"
+  States
+  {
+  Spawn:
+	PUFF CD 3
+    Stop
+  }
+}
+
+ACTOR IDMExplosion
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +ALLOWPARTICLES
+  +RANDOMIZE
+  +PUFFONACTORS
+  +SKYEXPLODE
+  +PUFFGETSOWNER
+  +EXTREMEDEATH
+  DamageType "Rocket"
+  Alpha 0.8
+  Renderstyle Add
+  Obituary "%o joined %k's big fireball sendoff."
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_Playsound("weapons/rocklx",CHAN_VOICE,1.0)
+	TNT1 A 0 A_SetScale(1.75)
+	MISL B 8 Bright A_Explode(256,256,0,0,192)
+	MISL C 6 Bright
+	MISL D 4 Bright
+	Stop
+  }
+}
+
+ACTOR ExtremePuff : IDMBulletPuff
+{
+	Seesound "misc/crit"
+	+EXTREMEDEATH
+	DamageType "Extreme"
+}
+
+ACTOR ExtremeShotPuff : IDMShotPuff
+{
+	Seesound "misc/shotcrit"
+	+EXTREMEDEATH
+	DamageType "Extreme"
+}
+
+ACTOR IDMSuperPuff : IDMBulletPuff
+{
+	+EXTREMEDEATH
+	DamageType "Extreme"
+}
+
+ACTOR IDMSuperShotPuff : IDMShotPuff
+{
+	+EXTREMEDEATH
+	DamageType "Extreme"
+}
+
+ACTOR ChainsawPuff : IDMBulletPuff
+{
+	Seesound "weapons/chainsawhit"
+	Damagetype "Saw"
+}
+
+ACTOR PiercePuff : IDMBulletPuff
+{
+	+PIERCEARMOR
+}
+
+ACTOR RailPuff : BulletPuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +ALWAYSPUFF
+  +ALLOWPARTICLES
+  +RANDOMIZE
+  +CLIENTSIDEONLY
+  RenderStyle Translucent
+  Alpha 1
+  DamageType "Railgun"
+  States
+  {
+  Spawn:
+  See:
+	RPUF A 0
+    RPUF A 3 A_Playsound("weapons/railhit",0.5)
+    RPUF B 3
+    Stop
+  XDeath:
+	RPUF A 0
+    RPUF A 3 A_Playsound("weapons/railhit",0.5)
+    RPUF B 3
+    Stop
+  }
+}
+
+
+/// Teleport & spawn effects
+
+ACTOR IDMTeleportFog : TeleportFog replaces TeleportFog
+{
+  +NOBLOCKMAP
+  +NOTELEPORT
+  +NOGRAVITY
+  +CLIENTSIDEONLY
+  RenderStyle Add
+  States
+  {
+  Spawn:
+    TFOG ABCDEFGHIJ 4 Bright
+    Stop
+  }
+}
+
+ACTOR PlayerTeleportFog : IDMTeleportFog
+{
+	SeeSound "player/teleport"
+}
+
+ACTOR IDMItemFog : ItemFog replaces ItemFog
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +CLIENTSIDEONLY
+  States
+  {
+  Spawn:
+    IFOG ABCDE 5 Bright
+    Stop
+  }
+}
+
+ACTOR BloodSplatter2 : BloodSplatter
+{
+  Mass 5
+  States
+  {
+  Spawn:
+    BLUD C 8 A_Jump(128,1)
+	BLUD BA 8
+    Stop
+  Death:
+    BLUD A 6
+    Stop
+  }
+}
+
+ACTOR BloodSplatter3 : BloodSplatter
+{
+  Mass 5
+  States
+  {
+  Spawn:
+	BLUD BA 6
+    Stop
+  Death:
+    BLUD A 6
+    Stop
+  }
+}

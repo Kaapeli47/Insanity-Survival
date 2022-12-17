@@ -1,0 +1,103 @@
+ACTOR IDMDivineShadow : IDMArchvile
+{
+	BloodColor "Green"
+	Obituary "%o was disintegrated by a divine shadow."
+	Species "Archvile"
+	Tag "Divine Shadow"
+	+DONTHURTSPECIES
+	+DONTHARMSPECIES
+	States
+	{
+	Spawn:
+	  DIVI AB 10 A_Look
+	  Loop
+	See:
+	  DIVI AABBCCDDEEFF 2 A_VileChase
+	  Loop
+	Missile:
+	  TNT1 A 0 A_Jump(192, "BaronAtk","BigBaronAtk","PlasmaAtk")
+	  DIVI G 4 Bright A_PlaySound("weapons/bfgf")
+	  DIVI HIJKLMNO 4 Bright A_FaceTarget
+	  DIVI N 4 Bright A_CustomMissile("MonsterBFGBall",32)
+	  DIVI P 4 Bright
+	  Goto See
+	BaronAtk:
+	  DIVI G 4 Bright A_VileStart
+	  DIVI HIJKLMNO 4 Bright A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("IDMBaronBall",32)
+	  DIVI O 2 Bright A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("IDMBaronBall",32)
+	  DIVI O 2 Bright A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("IDMBaronBall",32)
+	  DIVI O 2 Bright A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("IDMBaronBall",32)
+	  DIVI O 2 Bright A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("IDMBaronBall",32)
+	  DIVI O 2 Bright A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("IDMBaronBall",32)
+	  DIVI O 2 Bright A_FaceTarget
+	  Goto See
+	BigBaronAtk:
+	  DIVI G 4 Bright A_VileStart
+	  DIVI HIJKLMNO 4 Bright A_FaceTarget
+	  DIVI N 3 Bright A_CustomMissile("IDMBigBaronBall",32)
+	  DIVI O 3 Bright A_FaceTarget
+	  DIVI N 3 Bright A_CustomMissile("IDMBigBaronBall",32)
+	  DIVI O 3 Bright A_FaceTarget
+	  DIVI N 3 Bright A_CustomMissile("IDMBigBaronBall",32)
+	  DIVI O 3 Bright A_FaceTarget
+	  DIVI N 3 Bright A_CustomMissile("IDMBigBaronBall",32)
+	  DIVI O 3 Bright A_FaceTarget
+	  DIVI P 16 Bright
+	  Goto See
+	PlasmaAtk:
+	  DIVI G 4 Bright A_VileStart
+	  DIVI HIJKLMNO 4 Bright A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI O 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI O 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI O 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI O 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI O 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI O 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI O 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI N 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  TNT1 A 0 A_FaceTarget
+	  DIVI O 2 Bright A_CustomMissile("ArachnoPulseBall",32)
+	  DIVI P 18 Bright
+	  Goto See
+	Heal:
+	  DIVI "[" 30 Bright
+	  Goto See
+	Pain:
+	  DIVI Q 5
+	  DIVI Q 5 A_Pain
+	  Goto See
+	Death:
+	  DIVI R 7 A_Scream
+	  DIVI S 7 A_NoBlocking
+	  DIVI TUVWXY 7
+	  DIVI Z -1
+	  stop
+	}
+}

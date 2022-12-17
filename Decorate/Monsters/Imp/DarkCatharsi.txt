@@ -1,0 +1,91 @@
+ACTOR IDMDarkCatharsi : IDMCatharsi
+{
+  Health 150
+  Tag "Dark Catharsi"
+  Obituary "%o was disrupted by a dark catharsi."
+  States
+  {
+  Spawn:
+    DCTH AB 10 A_Look
+    Loop
+  See:
+    DCTH AABBCCDD 3 A_Chase
+    Loop
+  Missile:
+    DCTH E 4
+    DCTH E 10 A_FaceTarget
+    DCTH F 3 Bright A_CustomMissile("ArachnoPulseBall", 35, 8, random(-8,8))
+    DCTH E 3 A_FaceTarget
+    DCTH F 3 Bright A_CustomMissile("ArachnoPulseBall", 35, 8, random(-8,8))
+    DCTH E 3 A_FaceTarget
+    Goto See
+  MissileEnd:
+	DCTH E 10
+	Goto See
+  Pain:
+    DCTH G 3
+    DCTH G 3 A_Pain
+    Goto See
+  Death:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+    DCTH H 5
+    DCTH I 5 A_Scream
+    DCTH J 5 A_NoBlocking
+    DCTH J 0 A_SpawnItem("IDMDarkCatharsiDetonator", 0, 30)
+    DCTH KLM 5
+    DCTH N -1
+    Stop
+  XDeath:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+  XDeath.Massacre:
+    DCTH O 5
+    DCTH P 5 A_XScream
+    DCTH Q 5 A_NoBlocking
+    DCTH RSTU 5
+    DCTH V -1
+    Stop
+  XDeath.Resurrector:
+    DCTH O 5
+    DCTH P 5 A_XScream
+	TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+	TNT1 A 0 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+    DCTH Q 5 A_NoBlocking
+    DCTH RSTU 5
+    DCTH V -1
+    Stop
+  Raise:
+    DCTH NMLKJIH 5
+    Goto See
+  }
+}
+
+ACTOR IDMDarkCatharsiDetonator : IDMCatharsiDetonator
+{
+  Tag "Dark Catharsi Detonator"
+  Obituary "%o was stunned by a dark catharsi's detonator."
+  States
+  {
+  Spawn:
+    THRM A 4 A_PlaySound("catharsi/thermtick")
+    THRM B 16
+    THRM A 4 A_PlaySound("catharsi/thermtick")
+    THRM B 16
+    THRM A 4 A_PlaySound("catharsi/thermtick")
+    THRM B 16
+    THRM A 4 A_PlaySound("catharsi/thermtick")
+    THRM B 16
+    THRM A 4 A_PlaySound("catharsi/thermtick")
+    THRM B 16
+    SDFB B 0 A_CustomMissile("ArachnoPulseBall", 4, 2, 0)
+    SDFB B 0 A_CustomMissile("ArachnoPulseBall", 4, 2, 40)
+    SDFB B 0 A_CustomMissile("ArachnoPulseBall", 4, 2, 80)
+    SDFB B 0 A_CustomMissile("ArachnoPulseBall", 4, 2, 120)
+    SDFB B 0 A_CustomMissile("ArachnoPulseBall", 4, 2, 160)
+    SDFB B 0 A_CustomMissile("ArachnoPulseBall", 4, 2, 200)
+    SDFB B 0 A_CustomMissile("ArachnoPulseBall", 4, 2, 240)
+    SDFB B 0 A_CustomMissile("ArachnoPulseBall", 4, 2, 280)
+    SDFB B 0 A_CustomMissile("ArachnoPulseBall", 4, 2, 320)
+    SDFB B 0 A_Die
+	Goto Death
+  }
+}

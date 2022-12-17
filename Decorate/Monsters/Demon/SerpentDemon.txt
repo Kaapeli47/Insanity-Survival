@@ -1,0 +1,50 @@
+/// Serpent Demon
+
+ACTOR IDMSerpentDemon : IDMBloodDemon
+{
+	Mass 250
+	Speed 12
+	Tag "Serpent Demon"
+	Obituary "%o was ashed by a serpent demon."
+	HitObituary "%o was masticated by a serpent demon."
+	MissileType "IDMDemon1FX1"
+	MissileHeight 32
+	MeleeThreshold 320
+	MinMissileChance 248
+	States
+	{
+	Spawn:
+		NDEM AB 10 A_Look
+		Loop
+	See:
+		NDEM AABBCCDD 2 Fast A_Chase
+		Loop
+	Missile:
+		NDEM EEF 5 A_FaceTarget
+		NDEM F 10 A_MissileAttack
+		Goto See
+	Melee:
+		NDEM E 5 Fast A_FaceTarget
+		NDEM F 6 Fast A_FaceTarget
+		NDEM G 7 Fast A_CustomMeleeAttack(random(1,10)*6,none,none,"Punch",true)
+		Goto See
+	Pain:
+		NDEM H 2 Fast
+		NDEM H 2 Fast A_Pain
+		Goto See
+	Death:
+	XDeath:
+	XDeath.Massacre:
+		NDEM I 8
+		NDEM J 8 A_Scream
+		NDEM K 4
+		NDEM L 4 A_NoBlocking
+		NDEM M 4
+		NDEM N -1
+		Stop
+	Raise:
+		NDEM N 5
+		NDEM MLKJI 5
+		Goto See
+	}
+}

@@ -1,0 +1,43 @@
+// Soulsphere
+
+ACTOR IDMSoulsphere : CustomInventory 10071
+{
+  +COUNTITEM
+  +FLOAT
+  +FLOATBOB
+  +INVENTORY.AUTOACTIVATE
+  -INVENTORY.INVBAR
+  +INVENTORY.ALWAYSPICKUP
+  +SUPERHEALTH
+  Inventory.RespawnTics 2100
+  Inventory.PickupMessage "Soulsphere!"
+  Inventory.PickupSound "misc/p_pkup"
+  Inventory.PickupAnnouncerEntry "soulsphere"
+  Tag "Soulsphere"
+  //$Category Powerups
+  States
+  {
+  Spawn:
+    SOUL ABCDCB 6 Bright
+    Loop
+  Pickup:
+	TNT1 A 0 A_Print("\n\n\n\n\n\n\nSoulsphere!\n\n\n\n300 Health!\n\nHealth pickups are doubled\nand heal up to 300 Health!",4)
+	TNT1 A 0 A_GiveInventory("SoulSphereHealth")
+	TNT1 A 0 A_GiveInventory("PowerSoul")
+	Stop
+  }
+}
+
+ACTOR SoulSphereHealth : Health
+{
+  Inventory.Amount 300
+  Inventory.MaxAmount 300
+  +INVENTORY.ALWAYSPICKUP
+  -INVENTORY.INVBAR
+}
+
+ACTOR PowerSoul : PowerStrength
+{
+	-INVENTORY.INVBAR
+	Powerup.Color 0, 0, 255, 0.5
+}

@@ -1,0 +1,70 @@
+/// Baby Cacodemon
+
+ACTOR IDMBabyCacodemon : IDMCacodemon
+{
+    health 200
+    Radius 18
+    Height 36
+    Mass 200
+    Speed 10
+    PainChance 176
+	Tag "Baby Cacodemon"
+	Obituary "%o was zapped by a baby cacodemon."
+	HitObituary "%o was nibbled by a baby cacodemon."
+    seesound "babycaco/sight"
+    painsound "babycaco/pain"
+    deathsound "babycaco/death"
+    activesound "babycaco/active"
+    attacksound "babycaco/melee"
+	+MISSILEMORE
+	+MISSILEEVENMORE
+    States
+    {
+    Spawn:
+        BABH A 10 A_Look
+        loop
+    See:
+        BABH A 3 A_Chase
+        loop
+    Melee:
+    Missile:
+        BABH AB 5 A_FaceTarget
+        BABH C 5 BRIGHT A_CustomComboAttack("IDMBabyCacodemonBall",16,10*random(1,4),"babycaco/melee","Punch")
+        goto see
+    Pain:
+		BABH E 3
+		BABH E 3 A_Pain
+		BABH D 6
+	Goto See
+    Death:
+        BABH F 7
+        BABH G 7 A_Scream
+        BABH H 7
+        BABH I 7
+        BABH J 7 A_Fall
+        BABH K 7
+        BABH L -1
+        stop
+    Raise:
+		BABH LKJIHGF 5
+        Goto See
+    }
+}
+
+ACTOR IDMBabyCacodemonBall : IDMCacodemonBall
+{
+	radius 3
+	height 4
+	speed 12
+	FastSpeed 15
+	damage 3
+	states
+	{
+	spawn:
+		BBHB AB 3 bright
+		goto spawn
+	death:
+		BBHB CDE 6 bright
+		stop
+	}
+}

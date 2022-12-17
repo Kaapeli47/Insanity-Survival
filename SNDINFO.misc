@@ -1,0 +1,434 @@
+/// Miscellaneous sounds
+
+// Explosive Barrel
+
+world/barrelx DSBARREL
+world/shadap DSSHADAP
+
+$attenuation world/barrelx 0.75
+
+$pitchshiftrange 0
+
+// Pingas Head
+
+misc/pingas DSPINGAS
+$attenuation misc/pingas 0.75
+$volume misc/pingas 1.0
+
+// Arnold Head
+
+misc/arnoldshutup DSSHUTUP
+$limit misc/arnoldshutup 0
+$attenuation misc/arnoldshutup 0.5
+
+// Shannon Head
+
+misc/booch DSBOOCH
+$limit misc/booch 0
+$attenuation misc/booch 0.75
+
+// Jim Carrey Head
+
+misc/annoying DSEEERGH
+$limit misc/annoying 0
+$attenuation misc/annoying 0.5
+
+// KEKW Head
+
+$random misc/kekw {kekw1 kekw2 kekw3 kekw4 kekw5 kekw6 kekw7 kekw8 kekw9 kekw10
+kekw11 kekw12}
+
+kekw1 DSKEKW1
+kekw2 DSKEKW2
+kekw3 DSKEKW3
+kekw4 DSKEKW4
+kekw5 DSKEKW5
+kekw6 DSKEKW6
+kekw7 DSKEKW7
+kekw8 DSKEKW8
+kekw9 DSKEKW9
+kekw10 DSKEKW10
+kekw11 DSKEKW11
+kekw12 DSKEKW12
+
+$limit misc/kekw 0
+$attenuation misc/kekw 0.8
+
+// Scientist Head
+
+$random misc/sciscream {sciscr1 sciscr2 sciscr3 sciscr4 sciscr5 sciscr6 sciscr7
+sciscr8 sciscr9 sciscr10}
+
+sciscr1 DSHLSC1
+sciscr2 DSHLSC2
+sciscr3 DSHLSC3
+sciscr4 DSHLSC4
+sciscr5 DSHLSC5
+sciscr6 DSHLSC6
+sciscr7 DSHLSC7
+sciscr8 DSHLSC8
+sciscr9 DSHLSC9
+sciscr10 DSHLSC10
+
+$limit misc/sciscream 0
+$attenuation misc/sciscream 0.8
+
+// Dispenser
+
+$random misc/yeehaw {yeehaw1 yeehaw2 yeehaw3 yeehaw4 yeehaw5 yeehaw6}
+
+yeehaw1 DSYEHAW1
+yeehaw2 DSYEHAW2
+yeehaw3 DSYEHAW3
+yeehaw4 DSYEHAW4
+yeehaw5 DSYEHAW5
+yeehaw6 DSYEHAW6
+
+$limit misc/yeehaw 0
+$attenuation misc/yeehaw 0.8
+
+misc/dispenser DSDSPLNC
+$limit misc/dispenser 0
+misc/dispdeath DSDSPEXP
+$limit misc/dispdeath 0
+misc/engihurr DSHURRRR
+$limit misc/engihurr 0
+
+// Sparta Head
+
+misc/sparta DSSPARTA
+$volume misc/sparta 0.5
+
+$random misc/spartaloop {spartaloop1 spartaloop2}
+
+spartaloop1 DSSPRTA1
+spartaloop2 DSSPRTA2
+
+$limit misc/spartaloop 0
+$attenuation misc/spartaloop 0.5
+
+// Graf Zahl Head
+
+misc/graf DSGRAF
+$limit misc/graf 0
+$attenuation misc/graf 0.5
+
+$random misc/grafbnc {grafbnc1 grafbnc2 grafbnc3}
+grafbnc1 DSGRAFB1
+grafbnc2 DSGRAFB2
+grafbnc3 DSGRAFB3
+$limit misc/grafbnc 0
+$attenuation misc/grafbnc 0.5
+
+misc/grafhit DSGRAFDT
+$limit misc/grafhit 0
+$attenuation misc/grafhit 0.5
+
+$random misc/grafloop {grafloop1 grafloop2}
+grafloop1 DSGRAFLP
+grafloop2 DSGRAFL2
+
+$limit misc/grafloop 0
+$attenuation misc/graf 0.5
+
+// Pootis Head
+
+misc/pootis DSPOOTIS
+$limit misc/pootis 0
+misc/poot DSPOOT
+$limit misc/poot 0
+$random misc/hwgyell {hwgyell1 hwgyell2 hwgyell3}
+hwgyell1 DSGTSPEC
+hwgyell2 DSGTSPC1
+hwgyell3 DSGTSP10
+$limit misc/hwgyell 0
+$attenuation misc/hwgyell 0.5
+
+// ASDF Heads
+
+misc/oooooo DSOOOOOO
+$limit misc/oooooo 0
+misc/aaaaaa DSAAAAAA
+$limit misc/aaaaaa 0
+
+// John Cena Head
+
+misc/cena DSCENA
+$volume misc/cena 0.4
+$limit misc/cena 0
+$attenuation misc/cena 0.85
+
+// Gaben Head
+
+misc/gaben DSGABEN
+$limit misc/gaben 0
+$volume misc/gaben 0.8
+misc/gabenloop DSGABENL
+$limit misc/gabenloop 0
+$attenuation misc/gabenloop 0.5
+
+// Ainsley Head
+
+misc/yeaboi DSYEABOI
+$limit misc/yeaboi 0
+$attenuation misc/yeaboi 0.75
+misc/rub DSRUB
+$limit misc/rub 0
+$attenuation misc/rub 0.5
+
+// Cacoward
+
+$alias idmcaco/sight caco/sight
+$alias idmcaco/death caco/death
+$limit idmcaco/sight 0
+$limit idmcaco/death 0
+
+// Alex Jones
+
+$random misc/alexjones { ajones1 ajones2 ajones3 ajones4 ajones5 }
+ajones1 DSALEXJ1
+ajones2 DSALEXJ2
+ajones3 DSALEXJ3
+ajones4 DSALEXJ4
+ajones5 DSALEXJ5
+
+$limit misc/alexjones 0
+
+// Schutzstaffel
+
+wolfss/shoot DSSSATK
+wolfss/shoot1 DSSSATK1
+wolfss/shoot2 DSSSATK2
+wolfss/shoot3 DSSSATK3
+
+$limit wolfss/sight 0
+$limit wolfss/death 0
+
+$limit wolfss/shoot 0
+$limit wolfss/shoot1 0
+$limit wolfss/shoot2 0
+$limit wolfss/shoot3 0
+
+// Communist Tim Curry
+
+misc/sbaysce DSSBAYSC
+$limit misc/sbaysce 0
+
+// Nokia 3310
+
+$random misc/nokia {nokia1 nokia2 nokia3 nokia4 nokia5 nokia6 nokia7 nokia8
+nokia9 nokia10 nokia11 nokia12 nokia13 nokia14}
+
+nokia1 DSNOKIA1
+nokia2 DSNOKIA2
+nokia3 DSNOKIA3
+nokia4 DSNOKIA4
+nokia5 DSNOKIA5
+nokia6 DSNOKIA6
+nokia7 DSNOKIA7
+nokia8 DSNOKIA8
+nokia9 DSNOKIA9
+nokia10 DSNOKI10
+nokia11 DSNOKI11
+nokia12 DSNOKI12
+nokia13 DSNOKI13
+nokia14 DSNOKI14
+
+$limit misc/nokia 10
+
+// BIMSNESS
+
+misc/bimsness DSBIMSNS
+$limit misc/bimsness 0
+misc/bimsness2 DSBIMSN2
+$limit misc/bimsness2 0
+
+// HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+$random misc/haa {haa1 haa2 haa3 haa4}
+haa1 DSHAA1
+haa2 DSHAA2
+haa3 DSHAA3
+haa4 DSHAA4
+
+// Chat
+
+$pitchshiftrange 0
+
+misc/chat DSRADIO
+misc/chat2 DSTINK
+
+// Pickups
+
+misc/health_pkup DSHPPKUP
+$limit misc/health_pkup 0
+
+misc/regen DSREGEN
+misc/drain DSDRAIN
+
+misc/armor_pkup DSARMPKP
+$limit misc/armor_pkup 0
+
+misc/suparmor_pkup DSSUPARM
+$limit misc/suparmor_pkup 0
+
+misc/ammarmor_pkup DSAMMARM
+$limit misc/ammarmor_pkup 0
+
+misc/powarmor_pkup DSPOWARM
+$limit misc/powarmor_pkup 0
+
+misc/bonus_pkup DSBHAPKP
+$limit misc/bonus_pkup 0
+
+misc/ammo_pkup DSAMPKP
+$limit misc/ammo_pkup 0
+
+misc/mana_pkup DSMANA
+$limit misc/mana_pkup 0
+
+misc/armhit DSARMHIT
+$limit misc/armhit 0
+$volume misc/armhit 0.8
+$attenuation misc/armhit 0.75
+
+misc/qdmg DSQUAD
+$limit misc/qdmg 0
+
+misc/qdmg2 DSQUAD2
+$limit misc/qdmg2 0
+
+misc/quad_pkup DSQDPKUP
+$limit misc/quad_pkup 0
+
+misc/p_pkup DSGETPOW
+$limit misc/p_pkup 0
+
+misc/timefreeze DSTIMEFR
+misc/wearoff DSWROFF
+misc/demotimefreeze DSTIMFR2
+
+// Teleport
+
+$random misc/teleport {misc/teleport1 misc/teleport2 misc/teleport3
+misc/teleport4 misc/teleport5 misc/teleport6 misc/teleport7
+misc/teleport8}
+
+misc/teleport1 DSTELEP1
+misc/teleport2 DSTELEP2
+misc/teleport3 DSTELEP3
+misc/teleport4 DSTELEP4
+misc/teleport5 DSTELEP5
+misc/teleport6 DSTELEP6
+misc/teleport7 DSTELEP7
+misc/teleport8 DSTELEP8
+
+$limit misc/teleport 16
+$attenuation misc/teleport 0.5
+
+// Keys
+
+misc/skull_pkup DSSKLKEY
+misc/card_pkup DSKEYCRD
+
+$attenuation misc/skull_pkup 0
+$attenuation misc/card_pkup 0
+
+misc/skull_try DSSKLTRY
+misc/card_try DSCRDTRY
+misc/key_try DSKEYTRY
+
+// Llama medal third person sound
+
+misc/llama DSLLAMA
+$attenuation misc/llama 0.5
+$limit misc/llama 0
+
+// Spam medal third person sound
+
+misc/spam DSSPAM
+$attenuation misc/spam 0.5
+$limit misc/spam 0
+
+// Game startup
+
+misc/startupdone STARTUP
+misc/impkup DSIMPKUP
+$limit misc/impkup 0
+
+// Game startup loading screen
+
+$alias StartupTick weapons/chainsawhit
+
+$volume StartupTick 0.25
+
+$limit StartupTick 1
+
+// Impact sounds
+
+$pitchshiftrange 4
+
+$random misc/ricochet { ric1 ric2 ric3 ric4 ric5 ric6 ric7 ric8 ric9 ric10 ric11
+ric12 ric13 ric14 ric15 ric16 ric17 ric18 ric19 ric20 ric21 ric22 ric23 ric24 
+ric25}
+ric1 DSRCHET1
+ric2 DSRCHET2
+ric3 DSRCHET3
+ric4 DSRCHET4
+ric5 DSRCHET5
+ric6 DSRCHET6
+ric7 DSRCHET7
+ric8 DSRCHET8
+ric9 DSRCHET9
+ric10 DSRCHT10
+ric11 DSRCHT11
+ric12 DSRCHT12
+ric13 DSRCHT13
+ric14 DSRCHT14
+ric15 DSRCHT15
+ric16 DSRCHT16
+ric17 DSRCHT17
+ric18 DSRCHT18
+ric19 DSRCHT19
+ric20 DSRCHT20
+ric21 DSRCHT21
+ric22 DSRCHT22
+ric23 DSRCHT23
+ric24 DSRCHT24
+ric25 DSRCHT25
+$volume misc/ricochet 0.5
+$limit misc/ricochet 10
+
+$alias misc/shotricochet misc/ricochet
+$volume misc/shotricochet 0.12
+$limit misc/shotricochet 10
+
+// Body impact sounds
+
+$random misc/bullethit {bullethit1 bullethit2 bullethit3 bullethit4 bullethit5}
+bullethit1 DSBLHIT1
+bullethit2 DSBLHIT2
+bullethit3 DSBLHIT3
+bullethit4 DSBLHIT4
+bullethit5 DSBLHIT5
+$volume misc/bullethit 0.5
+$limit misc/bullethit 10
+
+$alias misc/shothit misc/bullethit
+$volume misc/shothit 0.125
+$limit misc/shothit 10
+
+// Critical impact sounds (Doomsphere)
+
+$random misc/crit {crit1 crit2 crit3 crit4 crit5}
+crit1 DSCRIT1
+crit2 DSCRIT2
+crit3 DSCRIT3
+crit4 DSCRIT4
+crit5 DSCRIT5
+
+$limit misc/crit 10
+
+$alias misc/shotcrit misc/crit
+$volume misc/shotcrit 0.5
+$limit misc/shotcrit 10

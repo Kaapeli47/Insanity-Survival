@@ -1,0 +1,322 @@
+// Rage
+
+
+ACTOR RageSphere : CustomInventory 10073
+{
+  +FLOAT
+  +FLOATBOB
+  +COUNTITEM
+  +INVENTORY.AUTOACTIVATE
+  +INVENTORY.ALWAYSPICKUP
+  -INVENTORY.INVBAR
+  Inventory.PickupSound "misc/p_pkup"
+  Inventory.PickupMessage "RAGE!"
+  Inventory.PickupAnnouncerEntry "rage"
+  Inventory.RespawnTics 4200
+  Tag "Rage Sphere"
+  //$Category Powerups
+  States
+  {
+  Spawn:
+    BLDS ABCD 6 Bright
+    Loop
+  Pickup:
+	TNT1 A 0 A_TakeInventory("PowerPickupProtection")
+	TNT1 A 0 A_GiveInventory("RageSphereInvulnerable")
+	TNT1 A 0 A_GiveInventory("RageSphereIcon")
+	TNT1 A 0 A_Print("\n\nRAGE!!")
+	TNT1 A 0 A_Jump(8,"Major")
+	TNT1 A 0 A_Jump(64,"Medium1","Medium2","Medium3","Medium4","Medium5","Medium6","Medium7","Medium8","Medium9","Medium10","Medium11","Medium12","Medium13","Medium14","Medium15","Medium16","Medium17","Medium18","Medium19","Medium20","Medium21","Medium22","Medium23","Medium24","Medium25","Medium26","Medium27","Medium28")
+	TNT1 A 0 A_Jump(256, "Minor1", "Minor2", "Minor3", "Minor4", "Minor5")
+	Stop
+  Minor1:
+	TNT1 A 0 A_GiveInventory("RageSphereDoubleFire")
+	TNT1 A 0 A_GiveInventory("RageSphereSpeed")
+	Stop
+  Minor2:
+	TNT1 A 0 A_GiveInventory("RageSphereRegeneration")
+	Stop
+  Minor3:
+	TNT1 A 0 A_GiveInventory("RageSphereStrength")
+	Stop
+  Minor4:
+	TNT1 A 0 A_GiveInventory("RageSphereQuadDamage")
+	TNT1 A 0 A_GiveInventory("DoomSphereIcon")
+	Stop
+  Minor5:
+	TNT1 A 0 A_GiveInventory("RageSphereInfiniteAmmo")
+	Stop
+  Minor6:
+	TNT1 A 0 A_GiveInventory("RageSphereSpread")
+	Stop
+  Minor7:
+	TNT1 A 0 A_GiveInventory("RageSphereDrain")
+	Stop
+  Minor8:
+	TNT1 A 0 A_GiveInventory("RageSphereTurbo")
+	Stop
+  Medium1:
+	TNT1 A 0 A_GiveInventory("RageSphereDoubleFire")
+	TNT1 A 0 A_GiveInventory("RageSphereSpeed")
+	TNT1 A 0 A_GiveInventory("RageSphereRegeneration")
+	Stop
+  Medium2:
+	TNT1 A 0 A_GiveInventory("RageSphereDoubleFire")
+	TNT1 A 0 A_GiveInventory("RageSphereSpeed")
+	TNT1 A 0 A_GiveInventory("RageSphereStrength")
+	Stop
+  Medium3:
+	TNT1 A 0 A_GiveInventory("RageSphereDoubleFire")
+	TNT1 A 0 A_GiveInventory("RageSphereSpeed")
+	TNT1 A 0 A_GiveInventory("RageSphereQuadDamage")
+	TNT1 A 0 A_GiveInventory("DoomSphereIcon")
+	Stop
+  Medium4:
+	TNT1 A 0 A_GiveInventory("RageSphereDoubleFire")
+	TNT1 A 0 A_GiveInventory("RageSphereSpeed")
+	TNT1 A 0 A_GiveInventory("RageSphereInfiniteAmmo")
+	Stop
+  Medium5:
+	TNT1 A 0 A_GiveInventory("RageSphereRegeneration")
+	TNT1 A 0 A_GiveInventory("RageSphereStrength")
+	Stop
+  Medium6:
+	TNT1 A 0 A_GiveInventory("RageSphereRegeneration")
+	TNT1 A 0 A_GiveInventory("RageSphereQuadDamage")
+	TNT1 A 0 A_GiveInventory("DoomSphereIcon")
+	Stop
+  Medium7:
+	TNT1 A 0 A_GiveInventory("RageSphereRegeneration")
+	TNT1 A 0 A_GiveInventory("RageSphereInfiniteAmmo")
+	Stop
+  Medium8:
+	TNT1 A 0 A_GiveInventory("RageSphereStrength")
+	TNT1 A 0 A_GiveInventory("RageSphereQuadDamage")
+	TNT1 A 0 A_GiveInventory("DoomSphereIcon")
+	Stop
+  Medium9:
+	TNT1 A 0 A_GiveInventory("RageSphereStrength")
+	TNT1 A 0 A_GiveInventory("RageSphereInfiniteAmmo")
+	Stop
+  Medium10:
+	TNT1 A 0 A_GiveInventory("RageSphereQuadDamage")
+	TNT1 A 0 A_GiveInventory("DoomSphereIcon")
+	TNT1 A 0 A_GiveInventory("RageSphereInfiniteAmmo")
+	Stop
+  Medium11:
+	TNT1 A 0 A_GiveInventory("RageSphereDoubleFire")
+	TNT1 A 0 A_GiveInventory("RageSphereSpeed")
+	TNT1 A 0 A_GiveInventory("RageSphereSpread")
+	Stop
+  Medium12:
+	TNT1 A 0 A_GiveInventory("RageSphereDoubleFire")
+	TNT1 A 0 A_GiveInventory("RageSphereSpeed")
+	TNT1 A 0 A_GiveInventory("RageSphereDrain")
+	Stop
+  Medium13:
+	TNT1 A 0 A_GiveInventory("RageSphereDoubleFire")
+	TNT1 A 0 A_GiveInventory("RageSphereSpeed")
+	TNT1 A 0 A_GiveInventory("RageSphereTurbo")
+	Stop
+  Medium14:
+	TNT1 A 0 A_GiveInventory("RageSphereRegeneration")
+	TNT1 A 0 A_GiveInventory("RageSphereSpread")
+	Stop
+  Medium15:
+	TNT1 A 0 A_GiveInventory("RageSphereRegeneration")
+	TNT1 A 0 A_GiveInventory("RageSphereDrain")
+	Stop
+  Medium16:
+	TNT1 A 0 A_GiveInventory("RageSphereRegeneration")
+	TNT1 A 0 A_GiveInventory("RageSphereTurbo")
+	Stop
+  Medium17:
+	TNT1 A 0 A_GiveInventory("RageSphereStrength")
+	TNT1 A 0 A_GiveInventory("RageSphereSpread")
+	Stop
+  Medium18:
+	TNT1 A 0 A_GiveInventory("RageSphereStrength")
+	TNT1 A 0 A_GiveInventory("RageSphereDrain")
+	Stop
+  Medium19:
+	TNT1 A 0 A_GiveInventory("RageSphereStrength")
+	TNT1 A 0 A_GiveInventory("RageSphereTurbo")
+	Stop
+  Medium20:
+	TNT1 A 0 A_GiveInventory("RageSphereQuadDamage")
+	TNT1 A 0 A_GiveInventory("DoomSphereIcon")
+	TNT1 A 0 A_GiveInventory("RageSphereSpread")
+	Stop
+  Medium21:
+	TNT1 A 0 A_GiveInventory("RageSphereQuadDamage")
+	TNT1 A 0 A_GiveInventory("DoomSphereIcon")
+	TNT1 A 0 A_GiveInventory("RageSphereDrain")
+	Stop
+  Medium22:
+	TNT1 A 0 A_GiveInventory("RageSphereQuadDamage")
+	TNT1 A 0 A_GiveInventory("DoomSphereIcon")
+	TNT1 A 0 A_GiveInventory("RageSphereTurbo")
+	Stop
+  Medium23:
+	TNT1 A 0 A_GiveInventory("RageSphereInfiniteAmmo")
+	TNT1 A 0 A_GiveInventory("RageSphereSpread")
+	Stop
+  Medium24:
+	TNT1 A 0 A_GiveInventory("RageSphereInfiniteAmmo")
+	TNT1 A 0 A_GiveInventory("RageSphereDrain")
+	Stop
+  Medium25:
+	TNT1 A 0 A_GiveInventory("RageSphereInfiniteAmmo")
+	TNT1 A 0 A_GiveInventory("RageSphereTurbo")
+	Stop
+  Medium26:
+	TNT1 A 0 A_GiveInventory("RageSphereSpread")
+	TNT1 A 0 A_GiveInventory("RageSphereDrain")
+	Stop
+  Medium27:
+	TNT1 A 0 A_GiveInventory("RageSphereSpread")
+	TNT1 A 0 A_GiveInventory("RageSphereTurbo")
+	Stop
+  Medium28:
+	TNT1 A 0 A_GiveInventory("RageSphereDrain")
+	TNT1 A 0 A_GiveInventory("RageSphereTurbo")
+	Stop
+  Major:
+	TNT1 A 0 A_GiveInventory("RageSphereDoubleFire")
+	TNT1 A 0 A_GiveInventory("RageSphereSpeed")
+	TNT1 A 0 A_GiveInventory("RageSphereRegeneration")
+	TNT1 A 0 A_GiveInventory("RageSphereStrength")
+	TNT1 A 0 A_GiveInventory("RageSphereQuadDamage")
+	TNT1 A 0 A_GiveInventory("DoomSphereIcon")
+	TNT1 A 0 A_GiveInventory("RageSphereInfiniteAmmo")
+	TNT1 A 0 A_GiveInventory("RageSphereSpread")
+	TNT1 A 0 A_GiveInventory("RageSphereDrain")
+	TNT1 A 0 A_GiveInventory("RageSphereTurbo")
+	Stop
+  }
+}
+
+ACTOR RageSphereIcon : Powerup
+{
+	Inventory.Icon "RAGESP1"
+	Powerup.Duration -30
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereReflection : PowerupGiver
+{
+	Powerup.Type "Reflection"
+	Inventory.MaxAmount 0
+	Powerup.Duration -30
+	Inventory.PickupMessage ""
+	Inventory.PickupSound ""
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereQuadDamage : PowerupGiver
+{
+	Powerup.Type "QuadDamage"
+	Inventory.MaxAmount 0
+	Powerup.Duration -30
+	Inventory.PickupMessage ""
+	Inventory.PickupSound ""
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereInvulnerable : PowerupGiver
+{
+	Powerup.Type "RageInvulnerable"
+	Powerup.Duration -30
+	Powerup.ColorMap 1.5,0.75,0.0
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereDoubleFire : PowerupGiver
+{
+	Powerup.Type "PowerDoubleFiringSpeed"
+	Powerup.Duration -30
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereSpeed : PowerupGiver
+{
+	Powerup.Type "IDMSpeed"
+	Powerup.Duration -30
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereHighJump : PowerupGiver
+{
+	Powerup.Type "PowerHighJump"
+	Powerup.Duration -30
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereRegeneration : PowerupGiver
+{
+	Powerup.Type "IDMRegeneration"
+	Powerup.Strength 25
+	Powerup.Duration -30
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereStrength : PowerupGiver
+{
+	Powerup.Type "IDMWeaponLevel2"
+	Powerup.Duration -30
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereInfiniteAmmo : PowerupGiver
+{
+	Powerup.Duration -30
+	Powerup.Type "IDMInfiniteAmmo"
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereSpread : PowerupGiver
+{
+	Powerup.Duration -30
+	Powerup.Type "IDMSpread"
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereDrain : PowerupGiver
+{
+	Powerup.Duration -30
+	Powerup.Type "IDMDrain"
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR RageSphereTurbo : PowerupGiver
+{
+	Powerup.Duration -30
+	Powerup.Type "IDMTurbo"
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}

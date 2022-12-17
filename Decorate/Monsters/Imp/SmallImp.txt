@@ -1,0 +1,90 @@
+/// Small Imp
+
+Actor IDMSmallImp : IDMDoomImp
+{
+	Radius 18
+	Height 50
+	Scale 0.9
+    Health 50
+	GibHealth 50
+    Speed 12
+	Tag "Small Imp"
+    Obituary "%o was burned by a small imp."
+    HitObituary "%o was slashed by a small imp."
+	+MISSILEEVENMORE
+    States
+    {
+    Spawn:
+	  TRO3 AB 10 A_Look
+	  Loop
+    See:
+	  TRO3 AABBCCDD 3 A_Chase
+	  Loop
+    Melee:
+    Missile:
+	  TRO3 EF 6 A_FaceTarget
+	  TRO3 G 5 A_CustomComboAttack("IDMSmallImpBall",32,2*random(1,8),"imp/melee")
+	  Goto See
+    Pain:
+	  TRO3 H 2
+	  TRO3 H 2 A_Pain
+	  Goto See
+    Death:
+	  TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+	  TRO3 I 8
+	  TRO3 J 8 A_Scream
+	  TRO3 K 6
+	  TRO3 L 6 A_Fall
+	  TRO3 M -1
+	  Stop
+    XDeath:
+	  TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+	XDeath.Massacre:
+	  TROO N 5
+	  TROO O 5 A_XScream
+	  TROO P 5
+	  TROO Q 5 A_Fall
+	  TROO RST 5
+	  TROO U -1
+	  Stop
+	XDeath.Resurrector:
+	  TROO N 5
+	  TROO O 5 A_XScream
+	  TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+	  TROO P 5 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+	  TROO Q 5 A_NoBlocking
+	  TROO RST 5
+	  TROO U -1
+	  Stop
+    Raise:
+	  TRO3 ML 8
+	  TRO3 KJI 6
+	  Goto See
+    }
+}
+
+Actor IDMSmallImpBall
+{
+    Radius 8
+    Height 6
+    Speed 15
+	FastSpeed 20
+    Damage 2
+    Scale 0.75
+    PROJECTILE
+	+RANDOMIZE
+    RenderStyle Add
+    Alpha 0.67
+    SeeSound "imp/attack"
+    DeathSound "imp/shotx"
+    Decal DoomImpScorch
+    States
+    {
+    Spawn:
+	  BAL1 AB 4 bright
+	  Loop
+	Death:
+	  BAL1 CDE 6 bright
+	  Stop
+    }   
+}

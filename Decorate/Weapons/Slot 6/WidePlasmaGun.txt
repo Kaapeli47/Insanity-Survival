@@ -1,0 +1,163 @@
+ACTOR WidePlasmaGun : IDMPlasmagun
+{
+  Radius 40
+  Weapon.SelectionOrder 50
+  Weapon.AmmoGive 100
+  Weapon.AmmoUse 6
+  Weapon.Sisterweapon "WidePlasmaGunLevel2"
+  Inventory.PickupMessage "W I D E Plasma Gun! (Slot 6)"
+  Tag "W I D E Plasma Gun"
+  +INVENTORY.INTERHUBSTRIP
+  +WEAPON.BFG
+  +WEAPON.NOLMS
+  States
+  {
+  Spawn:
+    WIPL A -1 Bright
+	Stop
+  Ready:
+    WPLS A 1 A_WeaponReady
+    Loop
+  Deselect:
+    WPLS A 0 A_Lower
+    WPLS A 0 A_Lower
+    WPLS A 1 A_Lower
+    Loop
+  Select:
+	TNT1 A 0 A_PlaySound("weapons/wswitch",CHAN_WEAPON)
+  Sloop:
+    WPLS A 0 A_Raise
+    WPLS A 0 A_Raise
+    WPLS A 1 A_Raise
+    Loop
+  Fire:
+	WPLS A 0 A_GunFlash
+	TNT1 A 0 A_Recoil(1)
+	WPLS A 0 A_JumpIfInventory("PowerQuadDamage",1,"Quad")
+  Normal:
+	WPLS A 1 A_FireCustomMissile("WidePlasmaBall",frandom(-10,10),0)
+	WPLS A 1 A_FireCustomMissile("WidePlasmaBall",frandom(-10,10),0)
+    WPLS A 1 A_FireCustomMissile("WidePlasmaBall",frandom(-10,10),1)
+    TNT1 A 0 A_ReFire
+	WPLS B 0 A_GunFlash("Flash2")
+    WPLS B 20
+    Goto Ready
+  Quad:
+	TNT1 A 0 A_Playsound("misc/qdmg2",CHAN_5)
+	WPLS A 1 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-10,10),0)
+	WPLS A 1 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-10,10),0)
+	WPLS A 1 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-10,10),1)
+    TNT1 A 0 A_ReFire
+	WPLS B 0 A_GunFlash("Flash2")
+    WPLS B 20
+    Goto Ready
+  Flash:
+    WPLF A 1 Bright A_Light1
+    WPLF B 1 Bright A_Light1
+	WPLS A 1 Bright A_Light1
+    WPLF A 1 Bright A_Light1
+    Goto LightDone
+  Flash2:
+    WPLS B 5 Bright
+	Goto LightDone
+  }
+}
+
+ACTOR WidePlasmaGunLevel2 : WidePlasmaGun
+{
+  Weapon.AmmoUse 4
+  Weapon.Sisterweapon "WidePlasmaGun"
+  +POWERED_UP
+  +WEAPON.CHEATNOTWEAPON
+  States
+  {
+  Ready:
+    WPL2 A 1 A_WeaponReady
+    Loop
+  Deselect:
+    WPL2 A 1 A_Lower
+    Loop
+  Select:
+	TNT1 A 0 A_PlaySound("weapons/wswitch",CHAN_WEAPON)
+  Sloop:
+    WPL2 A 1 A_Raise
+    Loop
+  Fire:
+	WPL2 A 0 A_GunFlash
+	TNT1 A 0 A_Recoil(1)
+	WPL2 A 0 A_JumpIfInventory("PowerQuadDamage",1,"Quad")
+  Normal:
+	TNT1 A 0 A_FireCustomMissile("WidePlasmaBall",frandom(-15,15),0)
+	TNT1 A 0 A_FireCustomMissile("WidePlasmaBall",frandom(-15,15),0)
+	WPL2 A 1 A_FireCustomMissile("WidePlasmaBall",frandom(-15,15),0)
+	TNT1 A 0 A_FireCustomMissile("WidePlasmaBall",frandom(-15,15),0)
+	TNT1 A 0 A_FireCustomMissile("WidePlasmaBall",frandom(-15,15),0)
+	WPL2 A 1 A_FireCustomMissile("WidePlasmaBall",frandom(-15,15),0)
+	TNT1 A 0 A_FireCustomMissile("WidePlasmaBall",frandom(-15,15),0)
+	TNT1 A 0 A_FireCustomMissile("WidePlasmaBall",frandom(-15,15),0)
+    WPL2 A 1 A_FireCustomMissile("WidePlasmaBall",frandom(-15,15),1)
+    TNT1 A 0 A_ReFire
+	WPL2 B 0 A_GunFlash("Flash2")
+    WPL2 B 20
+    Goto Ready
+  Quad:
+	TNT1 A 0 A_Playsound("misc/qdmg2",CHAN_5)
+	TNT1 A 0 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-15,15),0)
+	TNT1 A 0 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-15,15),0)
+	WPL2 A 1 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-15,15),0)
+	TNT1 A 0 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-15,15),0)
+	TNT1 A 0 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-15,15),0)
+	WPL2 A 1 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-15,15),0)
+	TNT1 A 0 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-15,15),0)
+	TNT1 A 0 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-15,15),0)
+	WPL2 A 1 A_FireCustomMissile("ExtremeWidePlasmaBall",frandom(-15,15),1)
+    TNT1 A 0 A_ReFire
+	WPL2 B 0 A_GunFlash("Flash2")
+    WPL2 B 20
+    Goto Ready
+  Flash:
+    WP2F A 1 Bright A_Light1
+    WP2F B 1 Bright A_Light1
+	WPL2 A 1 Bright A_Light1
+    WP2F A 1 Bright A_Light1
+    Goto LightDone
+  Flash2:
+    WPL2 B 5 Bright
+	Goto LightDone
+  }
+}
+
+ACTOR WidePlasmaBall : IDMPlasmaBall
+{
+	Radius 18
+	Height 8
+	Scale 2.0
+	XScale 4.0
+	Speed 25
+	Damage 25
+	+EXTREMEDEATH
+	Obituary "%o was spread over a W I D E area by %k's W I D E Plasma Gun."
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  PLSS AAABBBAAABBB 1 Bright A_Explode(10*random(1,8),32,0,0,32)
+	  Loop
+	Death:
+	  TNT1 A 0
+	  PLSE A 0 A_Explode(random(10,50),64,0,1,64)
+	  PLSE A 4 Bright A_Playsound("weapons/plasmax",0,0.25)
+	  PLSE BCDE 3 Bright
+	  Stop
+	}
+}
+
+ACTOR ExtremeWidePlasmaBall : WidePlasmaBall
+{
+	States
+	{
+	XDeath:
+		TNT1 A 0 A_Playsound("misc/crit",CHAN_AUTO)
+		Goto Death
+	}
+}

@@ -1,0 +1,277 @@
+// BFG10K (Skulltag)
+
+ACTOR IDMBFG10K : IDMWeapon
+{
+  Radius 20
+  Height 20
+  Weapon.Selectionorder 50
+  Weapon.AmmoUse 10
+  Weapon.AmmoGive 200
+  Weapon.AmmoType "Cell"
+  Weapon.Kickback 100
+  //Weapon.PreferredSkin "BFG10KMarine"
+  Weapon.Sisterweapon "BFG10KLevel2"
+  Inventory.Pickupmessage "BFG10K! (Slot 7)"
+  Tag "BFG10K"
+  +INVENTORY.INTERHUBSTRIP
+  +WEAPON.BFG
+  +WEAPON.EXPLOSIVE
+  +WEAPON.NOLMS
+  States
+  {
+  Spawn:
+    BFG2 A -1 Bright
+    Stop
+  Ready:
+    BG2G A 0 A_PlaySound ("weapons/bfg10kidle")
+    BG2G AAABBBCCCDDD 1 Bright A_WeaponReady
+    Loop
+  Deselect:
+    BG2G O 1 A_Lower
+    Loop
+  Select:
+	TNT1 A 0 A_PlaySound("weapons/wswitch",CHAN_WEAPON)
+  Sloop:
+    BG2G O 1 A_Raise
+    Loop
+  Fire:
+    BG2G E 16 Bright A_PlaySound ("weapons/bfg10kf",CHAN_WEAPON)
+    BG2G F 4 Bright
+    BG2G G 2 Bright
+    BG2G H 2 Bright
+    BG2G I 2 Bright
+    BG2G J 2 Bright
+    Goto Hold
+  Quad:
+    TNT1 A 0 A_Playsound("misc/qdmg2",CHAN_5,1)
+	Goto Hold+1
+  Hold:
+	TNT1 A 0 A_JumpIfInventory("PowerQuadDamage",1,"Quad")
+    BG2G K 2 Bright A_GunFlash
+	TNT1 A 0 Bright A_PlaySound ("weapons/bfg10kf2",CHAN_7)
+    BG2G L 2 Bright A_FireBullets(0,0,1,160,"IDMBFG10kShot")
+    BG2G M 2 Bright
+	TNT1 A 0 A_JumpIfNoAmmo("NoAmmo")
+    BG2G N 2 Bright A_ReFire
+    BG2G O 33 Bright A_PlaySound ("weapons/bfg10kcool",CHAN_WEAPON)
+    Goto Ready
+  NoAmmo:
+    BG2G N 2 Bright
+    BG2G O 33 Bright A_PlaySound ("weapons/bfg10kcool",CHAN_WEAPON)
+	TNT1 A 0 A_CheckReload
+	Goto Ready
+  Flash:
+    TNT1 A 2 Bright A_Light1
+    TNT1 A 3 Bright
+    Goto LightDone
+  }
+}
+
+ACTOR BFG10KLevel2 : IDMBFG10K
+{
+  Weapon.Sisterweapon "IDMBFG10K"
+  Weapon.AmmoUse 100
+  +POWERED_UP
+  States
+  {
+  Quad:
+    TNT1 A 0 A_Playsound("misc/qdmg",CHAN_AUTO,1)
+	Goto Fire+1
+  Fire:
+	TNT1 A 0 A_JumpIfInventory("PowerQuadDamage",1,"Quad")
+    BG2G E 16 Bright A_PlaySound("weapons/bfg10kf",CHAN_WEAPON)
+    BG2G F 4 Bright
+    BG2G G 2 Bright
+    BG2G H 2 Bright
+    BG2G I 2 Bright
+    BG2G J 2 Bright
+    BG2G K 2 Bright A_GunFlash
+	TNT1 A 0 Bright A_PlaySound ("weapons/bfg10kf2",CHAN_7)
+    BG2G L 2 Bright A_FireCustomMissile("BFG10KBall",0,1)
+    BG2G M 2 Bright
+    BG2G N 2 Bright
+    BG2G O 43 Bright A_PlaySound("weapons/bfg10kcool",CHAN_WEAPON)
+	TNT1 A 0 A_Refire("Fire")
+    Goto Ready
+  }
+}
+
+// BFG10K Puffs & Projectiles
+
+ACTOR IDMBFG10kShot
+{
+  Radius 11
+  Height 8
+  Speed 20
+  Damage 160
+  DamageType BFG10k
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +ACTIVATEIMPACT
+  +ACTIVATEPCROSS
+  -NOTELEPORT 
+  +PUFFONACTORS
+  +PUFFGETSOWNER
+  +EXTREMEDEATH
+  Renderstyle Add
+  Alpha 0.75
+  SeeSound "weapons/bfg10kx"
+  AttackSound "weapons/bfg10kx"
+  Obituary "%o was blasted by %k's BFG10K."
+  Decal BFGLightning
+  States
+  {
+  Spawn:
+    BFE1 A 0
+    BFE1 A 3 Bright A_Explode(240,160,0)
+    BFE1 BCDEF 3 Bright
+    Stop
+  }
+}
+
+ACTOR BFG10KBall : BFGBall
+{
+  Radius 16
+  Height 12
+  Damage 240
+  Speed 40
+  Obituary "%o was blasted by %k's BFG10K."
+  Damagetype BFG10K
+  Scale 1.5
+  Decal BFGLightning
+  +EXTREMEDEATH
+  +SKYEXPLODE
+  States
+  {
+  Spawn:
+    BFS1 AB 2 Bright
+    Loop
+  Death:
+    BFE1 A 8 Bright
+	TNT1 A 0 A_Explode(240,240,0)
+	TNT1 A 0 A_SetAngle(180)
+	BFE1 BBBB 2 Bright A_CustomMissile("BFG10KBall2",0,0,random(0,360),CMF_TRACKOWNER|CMF_AIMDIRECTION,random(-180,180))
+	BFE1 C 8 Bright
+	BFE1 D 8 Bright
+	BFE1 E 8 Bright
+	BFE1 F 8 Bright
+	Stop
+  }
+}
+
+
+ACTOR BFG10KBall2 : BFG10KBall
+{
+  Radius 11
+  Height 8
+  Damage 240
+  Speed 200
+  Scale 1.5
+  Decal BFGLightning
+  +EXTREMEDEATH
+  States
+  {
+  Spawn:
+    BFS1 AB 2 Bright
+    Loop
+  Death:
+    BFE1 A 8 Bright
+	TNT1 A 0 A_Explode(240,240,0)
+	TNT1 A 0 A_SetAngle(180)
+	BFE1 BBBB 2 Bright A_CustomMissile("BFG10KBall3",0,0,random(0,360),CMF_TRACKOWNER|CMF_AIMDIRECTION,random(-180,180))
+	BFE1 C 8 Bright
+	BFE1 D 8 Bright
+	BFE1 E 8 Bright
+	BFE1 F 8 Bright
+	Stop
+	Stop
+  }
+}
+  
+
+ACTOR BFG10KBall3 : BFG10KBall
+{
+  Damage 240
+  Speed 200
+  Scale 1.5
+  Decal BFGLightning
+  +EXTREMEDEATH
+  States
+  {
+  Spawn:
+    BFS1 AB 2 Bright
+    Loop
+  Death:
+    BFE1 A 8 Bright
+	TNT1 A 0 A_Explode(240,240,0)
+	TNT1 A 0 A_SetAngle(180)
+	BFE1 BBBB 2 Bright A_CustomMissile("BFG10KBall4",0,0,random(0,360),CMF_TRACKOWNER|CMF_AIMDIRECTION,random(-180,180))
+	BFE1 C 8 Bright
+	BFE1 D 8 Bright
+	BFE1 E 8 Bright
+	BFE1 F 8 Bright
+	Stop
+	Stop
+  }
+}
+
+ACTOR BFG10KBall4 : BFG10KBall
+{
+  Damage 240
+  Speed 200
+  Scale 1.5
+  Decal BFGLightning
+  +EXTREMEDEATH
+  States
+  {
+  Spawn:
+    BFS1 AB 2 Bright
+    Loop
+  Death:
+    BFE1 A 8 Bright
+	TNT1 A 0 A_Explode(240,240,0)
+	TNT1 A 0 A_SetAngle(180)
+	BFE1 BBBB 2 Bright A_CustomMissile("BFG10KBall5",0,0,random(0,360),CMF_TRACKOWNER|CMF_AIMDIRECTION,random(-180,180))
+	BFE1 C 8 Bright
+	BFE1 D 8 Bright
+	BFE1 E 8 Bright
+	BFE1 F 8 Bright
+	Stop
+	Stop
+  }
+}
+
+ACTOR BFG10KBall5 : BFG10KBall
+{
+  Damage 240
+  Speed 200
+  Scale 1.5
+  Decal BFGLightning
+  +EXTREMEDEATH
+  States
+  {
+  Spawn:
+    BFS1 AB 2 Bright
+    Loop
+  Death:
+	TNT1 A 0 A_Jump(128,"Death2")
+    BFE1 A 8 Bright
+	TNT1 A 0 A_Explode(240,240,0)
+	TNT1 A 0 A_SetAngle(180)
+	BFE1 B 8 Bright A_CustomMissile("BFG10KBall5",0,0,random(0,360),CMF_TRACKOWNER|CMF_AIMDIRECTION,random(-180,180))
+	BFE1 C 8 Bright
+	BFE1 D 8 Bright
+	BFE1 E 8 Bright
+	BFE1 F 8 Bright
+	Stop
+  Death2:
+    BFE1 A 8 Bright
+	TNT1 A 0 A_Explode(240,240,0)
+	BFE1 B 8 Bright
+	BFE1 C 8 Bright
+	BFE1 D 8 Bright
+	BFE1 E 8 Bright
+	BFE1 F 8 Bright
+	Stop
+  }
+}

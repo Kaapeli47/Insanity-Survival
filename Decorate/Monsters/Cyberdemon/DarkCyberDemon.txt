@@ -1,0 +1,77 @@
+/// Cyberdemon
+
+ACTOR IDMDarkCyberdemon : IDMCyberdemon
+{
+	Obituary "%o was liquidated by a dark cyberdemon."
+	Tag "Dark Cyberdemon"
+	States
+	{
+	Spawn:
+		DCYB AB 10 A_Look
+		Loop
+	See:
+		DCYB A 3 A_Hoof
+		DCYB ABB 3 A_Chase
+		DCYB C 3 A_Metal
+		DCYB CDD 3 A_Chase
+		Loop
+	Missile:
+		DCYB E 6 A_FaceTarget
+		TNT1 A 0 A_Jump(256,"PlasmaAtk","LaserAtk","BigBaronAtk","BFGAtk")
+	PlasmaAtk:
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		DCYB F 3 Bright A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		DCYB F 9 Bright A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		DCYB E 12 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		DCYB F 3 Bright A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		DCYB F 9 Bright A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		DCYB E 12 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		DCYB F 3 Bright A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		TNT1 A 0 A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		DCYB F 9 Bright A_CustomMissile("ArachnoPulseBall",56,-25,random(-10,10))
+		Goto See
+	LaserAtk:
+		DCYB FFFFFF 2 Bright A_CustomMissile("ArachnoLaserShot",56,-25,random(-3,3))
+		DCYB E 12 A_FaceTarget
+		DCYB FFFFFF 2 Bright A_CustomMissile("ArachnoLaserShot",56,-25,random(-3,3))
+		DCYB E 12 A_FaceTarget
+		DCYB FFFFFF 2 Bright A_CustomMissile("ArachnoLaserShot",56,-25,random(-3,3))
+		Goto See
+	BigBaronAtk:
+		DCYB FFFF 3 Bright A_CustomMissile("IDMBigBaronBall",56,-25,random(-10,10))
+		DCYB E 12 A_FaceTarget
+		DCYB FFFF 3 Bright A_CustomMissile("IDMBigBaronBall",56,-25,random(-10,10))
+		DCYB E 12 A_FaceTarget
+		DCYB FFFF 3 Bright A_CustomMissile("IDMBigBaronBall",56,-25,random(-10,10))
+		Goto See
+	BFGAtk:
+		DCYB E 12 A_Playsound("weapons/bfgf",CHAN_BODY,1,0,0.5)
+		DCYB E 12 A_FaceTarget
+		DCYB E 6 A_FaceTarget
+		DCYB F 6 Bright A_FaceTarget
+		DCYB F 6 Bright A_CustomMissile("MonsterBFGBall",48,-25)
+		Goto See	
+	Pain:
+		DCYB G 15 A_Pain
+		Goto See
+	Death:
+		DCYB H 10 Bright
+		DCYB I 10 Bright A_Scream
+		DCYB JKL 10 Bright
+		DCYB M 10 Bright A_NoBlocking
+		DCYB NO 10 Bright
+		DCYB P 30 Bright
+		DCYB P -1 A_BossDeath
+		Stop
+	}
+}

@@ -1,0 +1,12 @@
+ACTOR ArchvileRandomSpawner : RandomSpawner replaces Archvile
+{
+	DropItem "IDMArchvile", 256, 175
+	DropItem "IDMDivineShadow", 256, 150
+	DropItem "IDMDarkvile", 256, 150
+	DropItem "IDMStealthArchvile", 256, 125
+	DropItem "IDMScorchVile", 256, 150
+	DropItem "IDMDiabolist", 256, 100
+	DropItem "IDMMiniVile", 256, 100
+	DropItem "IDMArchHealer", 256, 100
+	//DropItem "IDMResurrector", 256, 125
+}

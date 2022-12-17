@@ -1,0 +1,252 @@
+// Powerup Spawners
+
+ACTOR PowerupSpawner1 : RandomSpawner
+{
+	DropItem "IDMDoomSphere", 256, 10
+	DropItem "IDMGuardSphere", 256, 10
+	DropItem "IDMMegaSphere", 256, 10
+	DropItem "StrengthSphere", 256, 10
+	DropItem "HasteSphere", 256, 10
+	DropItem "ProsperitySphere", 256, 10
+	DropItem "RageSphere", 256, 10
+	DropItem "SpreadSphere", 256, 10
+	DropItem "DrainSphere", 256, 10
+	DropItem "IDMTimeFreeze", 256, 1
+}
+
+ACTOR PowerupSpawner2 : RandomSpawner
+{
+	DropItem "IDMDoomSphere", 256, 10
+	DropItem "IDMGuardSphere", 256, 10
+	DropItem "IDMMegaSphere", 256, 10
+	DropItem "StrengthSphere", 256, 10
+	DropItem "IDMSoulSphere", 256, 10
+	DropItem "RegenSphere", 256, 10
+	DropItem "HasteSphere", 256, 10
+	DropItem "ProsperitySphere", 256, 10
+	DropItem "RageSphere", 256, 10
+	DropItem "SpreadSphere", 256, 10
+	DropItem "DrainSphere", 256, 10
+	//DropItem "IDMTurboSphere", 256, 10
+	DropItem "IDMTimeFreeze", 256, 1
+}
+
+ACTOR PowerupSpawner3 : RandomSpawner
+{
+	DropItem "IDMDoomSphere", 256, 10
+	DropItem "IDMGuardSphere", 256, 10
+	DropItem "IDMMegaSphere", 256, 10
+	DropItem "StrengthSphere", 256, 10
+	DropItem "IDMSoulSphere", 256, 10
+	DropItem "RegenSphere", 256, 10
+	DropItem "HasteSphere", 256, 10
+	DropItem "ProsperitySphere", 256, 10
+	DropItem "RageSphere", 256, 10
+	DropItem "SpreadSphere", 256, 10
+	DropItem "DrainSphere", 256, 10
+	//DropItem "IDMTurboSphere", 256, 10
+	DropItem "IDMTimeFreeze", 256, 1
+}
+
+ACTOR PowerupSpawner4 : RandomSpawner
+{
+	DropItem "IDMDoomSphere", 256, 10
+	DropItem "IDMGuardSphere", 256, 10
+	DropItem "IDMMegaSphere", 256, 10
+	DropItem "StrengthSphere", 256, 10
+	DropItem "IDMSoulSphere", 256, 10
+	DropItem "RegenSphere", 256, 10
+	DropItem "HasteSphere", 256, 10
+	DropItem "ProsperitySphere", 256, 10
+	DropItem "RageSphere", 256, 10
+	DropItem "SpreadSphere", 256, 10
+	DropItem "DrainSphere", 256, 10
+	//DropItem "IDMTurboSphere", 256, 10
+	DropItem "IDMTimeFreeze", 256, 1
+}
+
+ACTOR PowerupSpawner5 : RandomSpawner
+{
+	DropItem "RageSphere", 256, 99
+	DropItem "IDMTimeFreeze", 256, 1
+}
+
+ACTOR PowerupSpawner6 : RandomSpawner
+{
+	DropItem "IDMDoomSphere"
+	DropItem "RageSphere"
+	DropItem "IDMSoulSphere"
+	DropItem "IDMMegaSphere"
+	DropItem "RegenSphere"
+	DropItem "HasteSphere"
+	DropItem "IDMGuardSphere"
+	DropItem "StrengthSphere"
+	DropItem "ProsperitySphere"
+	DropItem "SpreadSphere"
+	DropItem "DrainSphere"
+	//DropItem "IDMTurboSphere"
+	DropItem "IDMTimeFreeze", 256, 1
+}
+
+ACTOR PowerupSpawner7 : RandomSpawner
+{
+	DropItem "StrengthSphere", 256, 3
+	DropItem "IDMDoomSphere", 256, 3
+	DropItem "RageSphere", 256, 3
+	DropItem "IDMGuardSphere", 256, 1
+	DropItem "HasteSphere", 256, 1
+	DropItem "ProsperitySphere", 256, 1
+	DropItem "SpreadSphere", 256, 1
+	DropItem "DrainSphere", 256, 1
+	//DropItem "IDMTurboSphere", 256, 1
+	DropItem "IDMTimeFreeze", 256, 1
+}
+
+ACTOR PowerupSpawner8 : RandomSpawner
+{
+	DropItem "ResistSphere"
+	DropItem "ResistSphere2"
+	DropItem "ResistSphere3"
+}
+
+ACTOR PowerupSpawner9 : RandomSpawner
+{
+	DropItem "StrengthSphere", 256, 3
+	DropItem "IDMDoomSphere", 256, 3
+	DropItem "RageSphere", 256, 3
+	DropItem "IDMGuardSphere", 256, 1
+	DropItem "HasteSphere", 256, 1
+	DropItem "ProsperitySphere", 256, 1
+	DropItem "SpreadSphere", 256, 1
+	DropItem "DrainSphere", 256, 1
+	//DropItem "IDMTurboSphere", 256, 1
+	DropItem "IDMTimeFreeze", 256, 1
+}
+
+ACTOR PowerupSpawnActor1 : CustomInventory replaces Megasphere
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("PowerupSpawner1")
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR PowerupSpawnActor2 : CustomInventory replaces Blursphere
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("PowerupSpawner2")
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+/*
+ACTOR PowerupSpawnActor3 : CustomInventory replaces Infrared
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("PowerupSpawner3")
+	  TNT1 A -1
+	  Stop
+	}
+}
+*/
+
+ACTOR PowerupSpawnActor4 : CustomInventory replaces Soulsphere
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("PowerupSpawner4")
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR PowerupSpawnActor5 : CustomInventory replaces InvulnerabilitySphere
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("PowerupSpawner5")
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR PowerupSpawnActor6 : CustomInventory replaces Allmap
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("PowerupSpawner6")
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR PowerupSpawnActor7 : CustomInventory replaces Berserk
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("PowerupSpawner7")
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR PowerupSpawnActor8 : CustomInventory replaces RadSuit
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("PowerupSpawner8")
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR PowerupSpawnActor9 : CustomInventory replaces Infrared
+{
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("PowerupSpawner9")
+	  TNT1 A -1
+	  Stop
+	}
+}

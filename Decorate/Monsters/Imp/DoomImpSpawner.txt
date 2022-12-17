@@ -1,0 +1,31 @@
+/// Imp Spawn
+
+ACTOR DoomImpRandomSpawner : RandomSpawner replaces DoomImp
+{
+	DropItem "IDMDoomImp", 256, 5
+	DropItem "IDMVoidImp", 256, 5
+	DropItem "IDMSmallImp", 256, 5
+	DropItem "IDMImpAbomination", 256, 5
+	DropItem "IDMTurboImp", 256, 2
+	DropItem "IDMSuperImp", 256, 4
+	DropItem "IDMDevil", 256, 4
+	DropItem "IDMSuperDevil", 256, 4
+	DropItem "IDMFlyingImp", 256, 5
+	DropItem "IDMSuperFlyingImp", 256, 4
+	DropItem "IDMDarkImp", 256, 4
+	DropItem "IDMSmallDarkImp", 256, 4
+	DropItem "IDMDarkDevil", 256, 3
+	DropItem "IDMCatharsi", 256, 4
+	DropItem "IDMDarkCatharsi", 256, 3
+	DropItem "IDMStoneImp", 256, 3
+	DropItem "IDMCyberImp", 256, 3
+	DropItem "IDMRocketImp", 256, 3
+	DropItem "IDMHellion", 256, 4
+	DropItem "IDMVileApprentice", 256, 3
+	DropItem "IDMHereticImp", 256, 5
+	DropItem "IDMHereticDarkImp", 256, 4
+	DropItem "IDMPlagueImp", 256, 5
+	DropItem "IDMMummy", 256, 4
+	DropItem "IDMFireDemon", 256, 5
+	DropItem "IDMIceGuy", 256, 4
+}

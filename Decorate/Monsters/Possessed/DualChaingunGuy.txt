@@ -1,0 +1,80 @@
+/// Double Chaingunner
+
+Actor IDMChaingunGuy2
+{
+  Obituary "%o was double penetrated by a double chaingunner."
+  Health 90
+  GibHealth 90
+  Radius 20
+  Height 56
+  Mass 100
+  Speed 8
+  PainChance 150
+  SeeSound "chainguy/sight"
+  AttackSound "weapons/chngun"
+  PainSound "chainguy/pain"
+  DeathSound "chainguy/death"
+  ActiveSound "chainguy/active"
+  DamageType "Bullet"
+  Tag "Double Chaingunner"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  Dropitem "IDMChaingun", 256
+  Dropitem "IDMChaingun", 64
+  DropItem "Clip", 16, 20
+  DropItem "Shell", 32, 4
+  DropItem "RocketAmmo", 32, 1
+  DropItem "Cell", 8, 20
+  Monster
+  +FloorClip
+  +MISSILEMORE
+  States
+  {
+  Spawn:
+    DPOS AB 10 A_Look
+    Loop
+  See:
+    DPOS AABBCCDD 3 A_Chase
+    Loop
+  Missile:
+    DPOS E 10 A_FaceTarget
+	DPOS E 4 BRIGHT A_CustomBulletAttack(30, 0, 2, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+	DPOS F 4 BRIGHT A_CustomBulletAttack(30, 0, 2, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+	DPOS E 4 BRIGHT A_CustomBulletAttack(30, 0, 2, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+	DPOS F 4 BRIGHT A_CustomBulletAttack(30, 0, 2, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+    TNT1 A 0 A_CPosRefire
+    Goto Missile+1
+  Pain:
+    DPOS G 2
+    DPOS G 2 A_Pain
+    Goto See
+  Death:
+    DPOS H 5
+    DPOS I 5 A_Scream
+    DPOS J 5 A_NoBlocking
+    DPOS KLM 5
+    DPOS N -1
+    Stop
+  XDeath:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+  XDeath.Massacre:
+    DPOS O 5
+    DPOS P 5 A_XScream
+    DPOS Q 5 A_NoBlocking
+    DPOS RS 5
+    DPOS T -1
+    Stop
+  XDeath.Resurrector:
+    DPOS O 5
+    DPOS P 5 A_XScream
+	TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+	TNT1 A 0 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+    DPOS Q 5 A_NoBlocking
+    DPOS RS 5
+    DPOS T -1
+    Stop
+  Raise:
+    DPOS NMLKJIH 5
+    Goto See
+  }
+}

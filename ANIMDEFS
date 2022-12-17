@@ -1,0 +1,135 @@
+/// Powerup timers
+
+// Invulnerability
+
+texture optional INVULN1
+pic INVULN1 tics 6
+pic INVULN2 tics 6
+pic INVULN3 tics 6
+pic INVULN4 tics 6
+
+// Rage
+
+texture optional RAGESP1
+pic RAGESP1 tics 6
+pic RAGESP2 tics 6
+pic RAGESP3 tics 6
+pic RAGESP4 tics 6
+
+texture optional BLARA1
+pic BLARA1 tics 6
+pic BLARA2 tics 6
+pic BLARA3 tics 6
+pic BLARA4 tics 6
+
+// Time Freeze
+
+texture optional TIMESP1
+pic TIMESP1 tics 5
+pic TIMESP2 tics 5
+pic TIMESP3 tics 5
+pic TIMESP4 tics 5
+
+// DoomSphere
+
+texture optional DOOMSP1
+pic DOOMSP1 tics 10
+pic DOOMSP2 tics 15
+pic DOOMSP3 tics 8
+pic DOOMSP4 tics 6
+
+// Resistance
+
+texture optional GRESIS1
+pic GRESIS1 tics 28
+pic GRESIS2 tics 14
+
+texture optional BRESIS1
+pic BRESIS1 tics 28
+pic BRESIS2 tics 14
+
+// Regeneration
+
+texture optional REGNSP1
+pic REGNSP1 tics 6
+pic REGNSP2 tics 6
+pic REGNSP3 tics 6
+pic REGNSP4 tics 6
+
+// Haste
+
+texture optional HASTSP1
+pic HASTSP1 tics 15
+pic HASTSP2 tics 10
+pic HASTSP3 tics 10
+pic HASTSP2 tics 10
+
+// Guard Sphere
+
+texture optional GARDSP1
+pic GARDSP1 tics 6
+pic GARDSP2 tics 6
+pic GARDSP3 tics 6
+pic GARDSP4 tics 6
+
+// Reflection
+
+texture optional REFLSP1
+pic REFLSP1 tics 6
+pic REFLSP2 tics 6
+pic REFLSP3 tics 6
+pic REFLSP4 tics 6
+pic REFLSP3 tics 6
+pic REFLSP2 tics 6
+
+// Strength
+
+texture optional STRENG1
+pic STRENG1 tics 10
+pic STRENG2 tics 5
+pic STRENG3 tics 5
+pic STRENG4 tics 5
+pic STRENG5 tics 5
+pic STRENG6 tics 5
+pic STRENG7 tics 5
+pic STRENG8 tics 10
+pic STRENG7 tics 5
+pic STRENG6 tics 5
+pic STRENG5 tics 5
+pic STRENG4 tics 5
+pic STRENG3 tics 5
+pic STRENG2 tics 5
+
+// Prosperity
+
+texture optional PROSSP1
+pic PROSSP1 tics 6
+pic PROSSP2 tics 6
+pic PROSSP3 tics 6
+pic PROSSP4 tics 6
+
+// Spread
+
+texture optional SPRDSP1
+pic SPRDSP1 tics 15
+pic SPRDSP2 tics 5
+pic SPRDSP3 tics 5
+pic SPRDSP4 tics 5
+pic SPRDSP2 tics 5
+
+// Drain
+
+texture optional DRANSP1
+pic DRANSP1 tics 6
+pic DRANSP2 tics 6
+pic DRANSP3 tics 6
+pic DRANSP4 tics 6
+
+// Turbosphere
+
+texture optional TURBSP1
+pic TURBSP1 tics 3
+pic TURBSP2 tics 3
+pic TURBSP3 tics 3
+pic TURBSP4 tics 3
+

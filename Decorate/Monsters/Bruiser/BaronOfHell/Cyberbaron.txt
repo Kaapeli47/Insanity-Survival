@@ -1,0 +1,85 @@
+/// Cyberbaron
+
+ACTOR IDMCyberbaron : IDMBaronofhell
+{
+  obituary "%o was splayed by a cyber baron."
+  hitobituary "%o was ripped to shreds by a cyber baron."
+  Tag "Cyber Baron"
+  seesound "cbaron/sight"
+  painsound "cbaron/pain"
+  deathsound "cbaron/death"
+  activesound "cbaron/active"
+  DamageFactor "Rocket", 0.75
+  DamageFactor "Grenade", 0.75
+  DamageFactor "Fire", 0.75
+  DamageFactor "GreenFire", 0.75
+  DamageFactor "PlayerRocket", 0.75
+  DamageFactor "PlayerGrenade", 0.75
+  states
+  {
+  Spawn:
+    CBOS AB 10 A_Look
+    loop
+  See:
+    CBOS A 3 A_chase
+    CBOS A 3 A_chase   
+    CBOS B 0 A_playsound("cbaron/metal")
+    CBOS BB 3 A_chase
+    CBOS CC 3 A_chase
+    CBOS D 3 A_chase
+    CBOS D 3 A_playsound("cbaron/hoof")
+    loop
+  Melee:
+    CBOS PQ 8 A_FaceTarget
+    CBOS R 8 A_BruisAttack
+    Goto See
+  Missile:
+	TNT1 A 0 A_Jump(32,"SeekerAtk")
+	TNT1 A 0 A_Jump(160,"RocketAtk","MiniAtk")
+  BaronAtk:
+    CBOS PQ 8 A_FaceTarget
+	TNT1 A 0 A_Jump(128,"BigBaronAtk")
+    CBOS R 8 A_CustomComboAttack("IDMBaronBall", 32, 10 * random(1, 8), "baron/melee")
+    Goto See   
+  BigBaronAtk:
+    CBOS R 8 A_CustomComboAttack("IDMBigBaronBall", 32, 10 * random(1, 8), "baron/melee")
+    Goto See   
+  RocketAtk:
+    CBOS EE 8 A_FaceTarget
+	TNT1 A 0 A_Playsound("Weapons/rlfire",CHAN_WEAPON)
+    CBOS F 8 Bright A_CustomMissile("MonsterRocket",27,16,0)
+    CBOS E 8 A_FaceTarget
+    Goto See
+  SeekerAtk:
+    CBOS EE 8 A_FaceTarget
+	TNT1 A 0 A_Playsound("weapons/heatseekerf",CHAN_WEAPON)
+    CBOS F 8 Bright A_CustomMissile("MonsterSeekerMissile",27,16,0)
+    CBOS E 8 A_FaceTarget
+    Goto See
+  MiniAtk:
+    CBOS EE 8 A_FaceTarget
+    CBOS F 3 Bright A_CustomMissile("MonsterMiniMissile",27,16,0)
+    CBOS E 3 A_FaceTarget
+    CBOS F 3 Bright A_CustomMissile("MonsterMiniMissile",27,16,0)
+    CBOS E 3 A_FaceTarget
+    CBOS F 3 Bright A_CustomMissile("MonsterMiniMissile",27,16,0)
+    CBOS E 3 A_FaceTarget
+    CBOS F 3 Bright A_CustomMissile("MonsterMiniMissile",27,16,0)
+    CBOS E 8 A_FaceTarget
+    goto See   
+  Pain:
+    CBOS H 2
+    CBOS H 2 A_Pain
+    goto See
+  Death:
+  Death.Massacre:
+    CBOS I 8
+    CBOS J 8 A_Scream
+    CBOS K 8 bright A_Playsound("weapons/rocklx")
+    CBOS L 8 bright A_NoBlocking
+    CBOS M 8 bright
+    CBOS N 8 bright
+    CBOS O -1
+    stop
+   }
+}

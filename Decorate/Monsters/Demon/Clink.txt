@@ -1,0 +1,70 @@
+/// Sabreclaw
+
+ACTOR IDMClink : Clink
+{
+  Health 200
+  Radius 20
+  Height 56
+  Mass 800
+  Speed 10
+  PainChance 32
+  Meleerange 54
+  Monster
+  Species "Demon"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  +NOBLOOD
+  +FLOORCLIP
+  SeeSound "clink/sight"
+  AttackSound "clink/attack"
+  PainSound "clink/pain"
+  DeathSound "clink/death"
+  ActiveSound "clink/active"
+  Obituary "$OB_CLINK"
+  Tag "Sabreclaw"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 48, 20
+  DropItem "Shell", 48, 4
+  DropItem "RocketAmmo", 48, 1
+  DropItem "Cell", 24, 20
+  DropItem "IDMMana", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMGas", 4
+  States
+  {
+  Spawn:
+    CLNK AB 10 A_Look
+    Loop
+  See:
+    CLNK A 2 Fast A_Chase
+    CLNK A 1 A_Chase
+	CLNK B 2 Fast A_Chase
+	CLNK B 1 A_Chase
+	CLNK C 2 Fast A_Chase
+	CLNK C 1 A_Chase
+	CLNK D 2 Fast A_Chase
+	CLNK D 1 A_Chase
+    Loop
+  Melee:
+    CLNK E 5 Fast A_FaceTarget
+    CLNK F 4 Fast A_FaceTarget
+    CLNK G 7 Fast A_CustomMeleeAttack(random[ClinkAttack](1,10)*6, "clink/attack", "clink/attack")
+    Goto See
+  Pain:
+    CLNK H 3
+    CLNK H 3 A_Pain
+    Goto See
+  Death:
+    CLNK IJ 6 Bright
+    CLNK K 5 Bright A_Scream
+    CLNK L 5 Bright A_NoBlocking
+    CLNK MN 5 Bright
+    CLNK O -1
+    Stop
+  Raise:
+    CLNK NMLKJI 5
+	Goto See
+  }
+}

@@ -1,0 +1,36 @@
+/// Two-Headed Chaingunner
+
+ACTOR IDMTwoHeadedChaingunGuy : IDMChaingunGuy
+{
+	Health 100
+	GibHealth 100
+	Tag "Two-Headed Chaingunner"
+	Obituary "%o was perforated by a two-headed chaingunner."
+	+MISSILEMORE
+	States
+	{
+	Spawn:
+		XPOS AB 10 A_Look
+		Loop
+	See:
+		XPOS AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		XPOS E 10 A_FaceTarget
+		XPOS F 0 A_PlaySound("chainguy/attack", CHAN_WEAPON)
+		XPOS F 4 BRIGHT A_CustomBulletAttack(22.5, 0, 1, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+		XPOS E 0 A_PlaySound("chainguy/attack", CHAN_WEAPON)
+		XPOS E 4 BRIGHT A_CustomBulletAttack(22.5, 0, 1, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+		XPOS F 1 Bright A_CPosRefire
+		Goto Missile+1
+	Pain:
+		XPOS G 2
+		XPOS G 2 A_Pain
+		Goto See
+	Raise:
+		CPOS N 5
+		CPOS MLKJIH 5
+		Goto See
+	}
+}
+	

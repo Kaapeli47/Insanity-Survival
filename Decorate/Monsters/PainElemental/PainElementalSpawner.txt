@@ -1,0 +1,14 @@
+ACTOR PainElementalRandomSpawner : RandomSpawner replaces PainElemental
+{
+	DropItem "IDMPainElemental", 256, 3
+	DropItem "IDMPlasmaElemental", 256, 3
+	DropItem "IDMTorturedSoul", 256, 3
+	DropItem "IDMInferno", 256, 3
+	DropItem "IDMDefiler", 256, 3
+	DropItem "IDMHellfireElemental", 256, 3
+	DropItem "IDMFirebluElemental", 256, 3
+	DropItem "IDMPhaseElemental", 256, 3
+	DropItem "IDMDragon", 256, 2
+	DropItem "IDMAfrit", 256, 2
+	DropItem "IDMCacoMother", 256, 2
+}

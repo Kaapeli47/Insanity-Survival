@@ -1,0 +1,33 @@
+/// Baron of Hell Spawn
+
+ACTOR BaronRandomSpawner : RandomSpawner replaces BaronOfHell
+{
+	DropItem "IDMBaronOfHell", 256, 100
+	DropItem "IDMTycoonOfHell", 256, 100
+	DropItem "IDMHellsFury", 256, 100
+	DropItem "IDMCyberBaron", 256, 100
+	DropItem "IDMHeresyLord", 256, 100
+	DropItem "IDMHellFireBaron", 256, 75
+	DropItem "IDMDemon3", 256, 75
+	DropItem "IDMHeresyBaron", 256, 50
+	DropItem "IDMBelphegor", 256, 50
+	DropItem "IDMSuperCybruiser", 256, 50
+	DropItem "IDMBruiserDemon", 256, 50
+	DropItem "IDMArchonOfHell", 256, 50
+	DropItem "IDMTerminator", 256, 50
+	DropItem "IDMDisintegrator", 256, 50
+}
+
+ACTOR HellKnightRandomSpawner : RandomSpawner replaces HellKnight
+{
+	DropItem "IDMHellKnight", 256, 200
+	DropItem "IDMHellSquire", 256, 100
+	DropItem "IDMHellWarrior", 256, 100
+	DropItem "IDMCybruiser", 256, 100
+	DropItem "IDMCybruiser2", 256, 100
+	DropItem "IDMSatyr", 256, 100
+	DropItem "IDMHeresyLord", 256, 50
+	DropItem "IDMDemon1", 256, 100
+	DropItem "IDMDemon2", 256, 100
+	DropItem "IDMDemon3", 256, 50
+}

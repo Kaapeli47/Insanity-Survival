@@ -1,0 +1,15 @@
+ACTOR CyberdemonRandomSpawner : RandomSpawner replaces Cyberdemon
+{
+	DropItem "IDMCyberdemon"
+	DropItem "IDMDarkCyberdemon"
+	DropItem "IDMInsanityCyberdemon"
+	DropItem "IDMCyberDecimator"
+	DropItem "IDMCyberAnnihilator"
+	DropItem "IDMHellfireCyberdemon"
+	DropItem "IDMPlasmaCyberdemon"
+	DropItem "IDMMinotaur"
+	DropItem "IDMSorcerer1"
+	DropItem "IDMAgonyElemental"
+	DropItem "IDMHeresiarch"
+	DropItem "IDMKorax"
+}

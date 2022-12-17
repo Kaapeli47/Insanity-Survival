@@ -1,0 +1,57 @@
+ACTOR IDMTurboImp : IDMDoomImp
+{
+	Speed 12
+	+MISSILEEVENMORE
+	Tag "Turbo Imp"
+	HitObituary "%o was slashed by a turbo imp."
+	Obituary "%o was burned by a turbo imp."
+	States
+	{
+	Spawn:
+		TROO AB 5 A_Look
+		Loop
+	See:
+		TROO ABCD 1 A_Chase
+		Loop
+	Melee:
+	Missile:
+		TROO EF 2 A_FaceTarget
+		TROO G 2 A_CustomComboAttack("IDMDoomImpBall", 32, 3, "imp/melee")
+		Goto See
+	Pain:
+		TROO H 1
+		TROO H 1 A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+		TROO I 2
+		TROO J 2 A_Scream
+		TROO K 2
+		TROO L 2 A_NoBlocking
+		TROO M -1
+		Stop
+	XDeath:
+		TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+	XDeath.Massacre:
+		TROO N 2
+		TROO O 2 A_XScream
+		TROO P 2
+		TROO Q 2 A_NoBlocking
+		TROO RST 2
+		TROO U -1
+		Stop
+	XDeath.Resurrector:
+		TROO N 2
+		TROO O 2 A_XScream
+		TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+		TROO P 2 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+		TROO Q 2 A_NoBlocking
+		TROO RST 2
+		TROO U -1
+		Stop
+	Raise:
+		TROO MLKJI 2
+		Goto See
+	}
+}
+	

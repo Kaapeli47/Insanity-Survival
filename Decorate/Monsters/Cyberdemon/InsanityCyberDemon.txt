@@ -1,0 +1,197 @@
+ACTOR IDMInsanityCyberDemon : IDMCyberdemon
+{
+	Tag "Insanity Cyberdemon"
+	Obituary "%o was discombobulated by an insanity cyberdemon."
+	States
+	{
+	Spawn:
+	  INCY AB 10 A_Look
+	  Loop
+	See:
+	  INCY A 3 A_Hoof
+	  INCY ABB 3 A_Chase
+	  INCY C 3 A_Metal
+	  INCY CDD 3 A_Chase
+	  Loop
+	Missile:
+	  TNT1 A 0 A_Jump(192,"LaserAtk","PlasmaAtk","UnmAtk")
+	  TNT1 A 0 A_JumpIfCloser(320,"CloseMissile")
+	  TNT1 A 0 A_Jump(256,"RocketAtk","SeekerAtk","MiniAtk")
+	CloseMissile:
+	  TNT1 A 0 A_Jump(256,"RocketAtk","GrenadeAtk","SeekerAtk","MiniAtk")
+	RocketAtk:
+	  INCY E 6 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/rlfire",CHAN_WEAPON,1,0,0.5)
+	  INCY F 12 Bright A_CustomMissile("MonsterRocket",48)
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/rlfire",CHAN_WEAPON,1,0,0.5)
+	  INCY F 12 Bright A_CustomMissile("MonsterRocket",48)
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/rlfire",CHAN_WEAPON,1,0,0.5)
+	  INCY F 12 Bright A_CustomMissile("MonsterRocket",48)
+	  Goto See
+	GrenadeAtk:
+	  INCY E 6 A_FaceTarget
+	  INCY F 12 Bright A_CustomMissile("MonsterGrenade",48)
+	  INCY EEE 4 A_FaceTarget
+	  INCY F 12 Bright A_CustomMissile("MonsterGrenade",48)
+	  INCY EEE 4 A_FaceTarget
+	  INCY F 12 Bright A_CustomMissile("MonsterGrenade",48)
+	  Goto See
+	SeekerAtk:
+	  INCY E 6 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/heatseekerf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 12 Bright A_CustomMissile("MonsterSeekerMissile",48)
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/heatseekerf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 12 Bright A_CustomMissile("MonsterSeekerMissile",48)
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/heatseekerf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 12 Bright A_CustomMissile("MonsterSeekerMissile",48)
+	  Goto See
+	GRifleAtk:
+	  INCY E 6 A_FaceTarget
+	  TNT1 A 0 A_Playsound("Weapons/ShannonFire",CHAN_WEAPON,1,0,0.5)
+	  INCY F 12 Bright A_CustomMissile("MonsterGRifleGrenade",48)
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_Playsound("Weapons/ShannonFire",CHAN_WEAPON,1,0,0.5)
+	  INCY F 12 Bright A_CustomMissile("MonsterGRifleGrenade",48)
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_Playsound("Weapons/ShannonFire",CHAN_WEAPON,1,0,0.5)
+	  INCY F 12 Bright A_CustomMissile("MonsterGRifleGrenade",48)
+	  Goto See
+	MiniAtk:
+	  INCY E 6 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 3 Bright A_CustomMissile("MonsterMiniMissile",48)
+	  INCY E 3 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 3 Bright A_CustomMissile("MonsterMiniMissile",48)
+	  INCY E 3 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 3 Bright A_CustomMissile("MonsterMiniMissile",48)
+	  INCY E 3 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 3 Bright A_CustomMissile("MonsterMiniMissile",48)
+	  INCY E 3 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 3 Bright A_CustomMissile("MonsterMiniMissile",48)
+	  INCY E 3 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 3 Bright A_CustomMissile("MonsterMiniMissile",48)
+	  INCY E 3 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 3 Bright A_CustomMissile("MonsterMiniMissile",48)
+	  INCY E 3 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+	  INCY F 3 Bright A_CustomMissile("MonsterMiniMissile",48)
+	  Goto See
+	LaserAtk:
+	  INCY E 6 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  TNT1 A 0 A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  INCY Q 2 Bright A_CustomMissile("MonsterLaserShot",56,-25,random(-5,5))
+	  Goto See
+	PlasmaAtk:
+	  INCY E 6 A_FaceTarget
+	  TNT1 A 0 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY Q 3 Bright A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY Q 3 Bright A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY Q 6 Bright A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY Q 3 Bright A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY Q 3 Bright A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY Q 6 Bright A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY Q 3 Bright A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY Q 3 Bright A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_FaceTarget
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  TNT1 A 0 A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  INCY Q 6 Bright A_CustomMissile("InsanityPlasmaBall",56,-25,random(-10,10))
+	  Goto See
+	UnmAtk:
+	  TNT1 A 0 A_Playsound("weapons/unmakerchrg",CHAN_WEAPON,1,0,0.5)
+	  INCY EEE 4 A_FaceTarget
+	  INCY EEEE 4 Bright A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/unmakerfire",CHAN_WEAPON,1,0,0.5)
+	  INCY Q 12 Bright A_CustomMissile("MonsterUnmakerRay",56,-25,angle,CMF_ABSOLUTEANGLE)
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/unmakerfire",CHAN_WEAPON,1,0,0.5)
+	  INCY Q 12 Bright A_CustomMissile("MonsterUnmakerRay",56,-25,angle,CMF_ABSOLUTEANGLE)
+	  INCY EEE 4 A_FaceTarget
+	  TNT1 A 0 A_Playsound("weapons/unmakerfire",CHAN_WEAPON,1,0,0.5)
+	  INCY Q 12 Bright A_CustomMissile("MonsterUnmakerRay",56,-25,angle,CMF_ABSOLUTEANGLE)
+	  Goto See
+	Pain:
+	  INCY G 15 A_Pain
+	  Goto See
+	Death:
+	  INCY H 10 Bright
+	  INCY I 10 Bright A_Scream
+	  INCY JKL 10 Bright
+	  INCY M 10 Bright A_NoBlocking
+	  INCY NO 10 Bright
+	  INCY P 30 Bright
+	  INCY P -1 A_BossDeath
+	  Stop
+	}
+}

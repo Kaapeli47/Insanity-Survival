@@ -1,0 +1,86 @@
+ACTOR IDMPlagueImp : IDMHereticImp
+{
+  Health 75
+  GibHealth 75
+  Tag "Plague Gargoyle"
+  Obituary "%o was poisoned by a plague gargoyle."
+  States
+  {
+  Spawn:
+    PLIM ABCB 10 A_Look
+    Loop
+  See:
+    PLIM AABBCCBB 3 A_Chase
+    Loop
+  Melee:
+    PLIM DE 4 A_FaceTarget
+    PLIM F 4 A_CustomMeleeAttack(random[ImpMeAttack](5,12), "himp/attack", "himp/attack")
+    Goto See
+  Missile:
+	TNT1 A 0 A_Jump(64,"ChargeAtk")
+    PLIM DE 4 A_FaceTarget
+    PLIM F 4 A_CustomComboAttack("IDMPlagueShot", 32, random[ImpMsAttack2](5,12), "himp/leaderattack")
+    Goto See
+  ChargeAtk:
+    PLIM A 10 A_FaceTarget
+    PLIM B 6 A_SkullAttack(12)
+    PLIM CBAB 6
+    Goto ChargeAtk+2
+  Pain:
+    PLIM G 3
+    PLIM G 3 A_Pain
+    Goto See
+  Death:
+    PLIM G 4 A_ImpDeath
+    PLIM H 5
+    Wait
+  XDeath:
+	PLIM S 1 A_ImpXDeath1
+    PLIM S 4 A_Gravity
+    Wait
+  Crash:
+	TNT1 A 0 A_NoBlocking
+    PLIM I 7 A_ImpExplode
+    PLIM J 7 A_Scream
+    PLIM K 7
+    PLIM L -1
+    Stop
+  XCrash:
+    PLIM T 5 A_XScream
+	PLIM U 5
+    PLIM V 5
+    PLIM W 5
+    PLIM X 5
+    PLIM Y 5
+    PLIM Z -1
+    Stop
+  Raise:
+    PLIM L 0
+    PLIM L 0 A_RemoveChildren
+    PLIM LKJIHG 6
+    Goto See
+  }
+}
+
+ACTOR IDMPlagueShot
+{
+   Radius 8
+   Height 8
+   Speed 16
+   Damage 3
+   PoisonDamage 12
+   PROJECTILE
+   +THRUGHOST
+   scale 0.5
+   DeathSound "monster/plagueBall"
+   Obituary "%o was poisoned by a plague imp"
+   States
+   {
+   Spawn:
+      FVUL AAABBB 1 Bright
+      loop
+   Death:
+      FVUL CDEF 4 Bright
+      stop
+   }
+}

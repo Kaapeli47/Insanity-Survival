@@ -1,0 +1,76 @@
+ACTOR IDMPhaseElemental : IDMPainElemental
+{
+	Health 750
+	Tag "Phase Elemental"
+	Obituary "%o was shifted by a phase elemental."
+	Renderstyle Translucent
+	Alpha 0.2
+	States
+	{
+	Spawn:
+	  PHEM AB 10 A_Look
+	  Loop
+	See:
+	  PHEM AABBCCBB 3 A_Chase
+	  Loop
+	Missile:
+	  TNT1 A 0 A_FaceTarget
+	  PHEM DDDDD 1 Bright A_FadeIn(0.075)
+	  TNT1 A 0 A_FaceTarget
+	  PHEM EEEEE 1 Bright A_FadeIn(0.075)
+	  PHEM FFFFFF 3 Bright A_CustomMissile("IDMPhaseBall",26)
+	  PHEM EEEDDD 1 bright A_FadeOut(0.125)
+	  Goto See
+	Pain:
+	  TNT1 A 0 A_SetTranslucent(0.95)
+	  PHEM GGGGG 1 Bright A_FadeOut(0.0625)
+	  TNT1 A 0 A_Pain
+	  PHEM GGGGG 1 Bright A_FadeOut(0.0625)
+	  Goto See
+	Death:
+	  PHEM H 8 BRIGHT A_SetTranslucent(0.95)
+	  PHEM I 8 BRIGHT A_Scream
+	  PHEM JK 8 BRIGHT
+	  TNT1 AAAAAAAAAAAAAAAA 0 A_CustomMissile("IDMPhaseBall",32,0,random(0,359),2,random(-15,15))
+	  PHEM L 8 BRIGHT
+	  PHEM M 8 BRIGHT
+	  Stop
+	}
+}
+
+ACTOR IDMPhaseBall : ArachnoPulseBall
+{
+	Speed 20
+	Damage 2
+	RenderStyle Translucent
+	+RANDOMIZE
+	+SKYEXPLODE
+	+SEEKERMISSILE
+	Seesound "weapons/plsrf"
+	DeathSound "weapons/pulsex"
+	DamageType "Plasma"
+	Alpha 0.8
+	Decal Phasescorch
+	States
+	{
+	Spawn:
+		PHBL AB 2 Bright
+		TNT1 A 0 A_Jump(128,"SpawnLoop2")
+	SpawnLoop:
+		TNT1 A 0 A_SeekerMissile(2,10)
+		PHBL AA 1 Bright A_Weave(frandom(3,9),0,frandom(0,3),0)
+		TNT1 A 0 A_SeekerMissile(2,10)
+		PHBL BB 1 Bright A_Weave(frandom(3,9),0,frandom(0,3),0)
+		Loop
+	SpawnLoop2:
+		TNT1 A 0 A_SeekerMissile(2,10)
+		PHBL AA 1 Bright A_Weave(frandom(3,9),0,frandom(-3,0),0)
+		TNT1 A 0 A_SeekerMissile(2,10)
+		PHBL BB 1 Bright A_Weave(frandom(3,9),0,frandom(-3,0),0)
+		Loop
+	Death:
+		PHBX A 4 Bright
+		PHBX BCDE 3 Bright
+		Stop
+  }
+}

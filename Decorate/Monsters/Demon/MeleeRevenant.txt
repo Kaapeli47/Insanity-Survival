@@ -1,0 +1,72 @@
+/// Melee Revenant
+
+ACTOR IDMMeleeRevenant
+{
+  Health 200
+  Radius 20
+  Height 56
+  Mass 800
+  Speed 12
+  Scale 0.825
+  PainChance 100
+  Monster
+  MeleeThreshold 196
+  Species "Demon"
+  +DONTHARMSPECIES
+  +DONTHURTSPECIES
+  +MISSILEMORE
+  +FLOORCLIP
+  +ALWAYSFAST
+  SeeSound "skeleton/sight"
+  PainSound "skeleton/pain"
+  DeathSound "skeleton/death"
+  ActiveSound "skeleton/active"
+  MeleeSound "skeleton/melee"
+  HitObituary "%o was punched by a melee revenant."
+  Tag "Melee Revenant"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 48, 20
+  DropItem "Shell", 48, 4
+  DropItem "RocketAmmo", 48, 1
+  DropItem "Cell", 24, 20
+  DropItem "IDMMana", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMGas", 4
+  States
+  {
+  Spawn:
+    ZKEL AB 10 A_Look
+    Loop
+  See:
+    ZKEL AABBCCDDEEFF 2 A_Chase
+    Loop
+  Melee:
+	ZKEL G 1 A_FaceTarget
+	ZKEL G 6 A_SkelWhoosh
+	ZKEL H 0 A_FaceTarget
+	ZKEL H 2 A_Recoil(-4)
+	ZKEL H 0 A_FaceTarget
+	ZKEL H 2 A_Recoil(-5)
+	ZKEL H 0 A_FaceTarget
+	ZKEL H 2 A_Recoil(-5)
+	ZKEL I 6 A_SkelFist
+	Goto See
+  Pain:
+    ZKEL L 5
+    ZKEL L 5 A_Pain
+    Goto See
+  Death:
+    ZKEL LM 7
+    ZKEL N 7 A_Scream
+    ZKEL O 7 A_NoBlocking
+    ZKEL P 7
+    ZKEL Q -1
+    Stop
+  Raise:
+    ZKEL Q 5
+    ZKEL PONML 5
+    Goto See
+  }
+}

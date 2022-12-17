@@ -1,0 +1,92 @@
+ACTOR IDMAfrit
+{
+	Radius 24
+	Height 56
+	Health 1500
+	Mass 1000
+	Speed 10
+	Painchance 64
+	Tag "Afrit"
+	Obituary "%o was scorched by an afrit."
+	SeeSound "afrit/sight"
+	PainSound "baron/pain"
+	DeathSound "afrit/death"
+	ActiveSound "baron/active"
+	DamageFactor "Rocket", 0.75
+	DamageFactor "Grenade", 0.75
+	DamageFactor "Fire", 0.75
+	DamageFactor "GreenFire", 0.75
+	DamageFactor "PlayerRocket", 0.75
+	DamageFactor "PlayerGrenade", 0.75
+	Monster
+	Species "PainElemental"
+	+BOSS
+	+DONTHURTSPECIES
+	+DONTHARMSPECIES
+	+FLOAT
+	+NOGRAVITY
+	DropItem "IDMHealthBonusPickup", 128
+	DropItem "IDMArmorBonusPickup", 128
+	DropItem "Clip", 64, 20
+	DropItem "Clip", 64, 20
+	DropItem "ClipBox", 32, 50
+	DropItem "Shell", 64, 4
+	DropItem "Shell", 64, 4
+	DropItem "ShellBox", 32, 10
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketBox", 32, 5
+	DropItem "Cell", 32, 20
+	DropItem "Cell", 32, 20
+	DropItem "Cellpack", 16, 100
+	DropItem "IDMMana", 16
+	DropItem "IDMMana", 16
+	DropItem "IDMMaceAmmo", 16
+	DropItem "IDMMaceAmmo", 16
+	DropItem "IDMCatAmmo", 16
+	DropItem "IDMCatAmmo", 16
+	DropItem "IDMGas", 16
+	DropItem "IDMGas", 16
+    States
+    {
+    Spawn:
+        FRIT AB 10 Bright A_Look
+        Loop
+    See:
+        FRIT ABCD 3 Bright A_Chase
+        Loop
+    Pain:
+        FRIT H 8 Bright
+        Goto See
+    Missile:
+        FRIT EF 6 Bright A_FaceTarget
+		TNT1 A 0 A_Jump(128,"SoulAtk")
+        FRIT G 1 Bright A_FatAttack1
+        FRIT G 1 Bright A_FatAttack2
+        FRIT G 1 Bright A_FatAttack3
+        FRIT G 1 Bright A_FaceTarget
+        FRIT G 1 Bright A_SkelMissile
+        FRIT G 1 Bright A_SkelMissile
+        FRIT G 8 Bright A_SkelMissile
+        Goto See
+	SoulAtk:
+		FRIT G 4 Bright A_PainAttack("IDMLostSoul")
+		FRIT G 4 Bright A_PainAttack("IDMForgottenSoul")
+		FRIT G 4 Bright A_PainAttack("IDMLostSoul")
+		FRIT G 4 Bright A_PainAttack("IDMForgottenSoul")
+		Goto See
+	Pain:
+		FRIT H 2 Bright
+		FRIT H 2 Bright A_Pain
+		Goto See
+    Death:
+        FRIT I 5 Bright
+        FRIT J 5 Bright A_Scream
+        FRIT K 5 Bright
+        FRIT L 5 Bright A_NoBlocking
+        FRIT MNOPQ 4 Bright
+        FRIT R 4 Bright A_BossDeath
+        FRIT R 1 Bright
+        Stop
+    }
+}

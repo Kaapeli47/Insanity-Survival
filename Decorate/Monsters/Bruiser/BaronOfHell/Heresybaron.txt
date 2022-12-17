@@ -1,0 +1,90 @@
+/// Heresy Baron
+
+ACTOR IDMHeresyBaron : IDMHeresyLord
+{
+	Health 1250
+	Mass 2000
+	Tag "Heresy Baron"
+    Obituary "%o was annihilated by a heresy baron."
+	SeeSound "baron/sight"
+	PainSound "baron/pain"
+	DeathSound "baron/death"
+	ActiveSound "baron/active"
+	DropItem "IDMHealthBonusPickup", 128
+	DropItem "IDMArmorBonusPickup", 128
+	DropItem "Clip", 64, 20
+	DropItem "Clip", 64, 20
+	DropItem "ClipBox", 32, 50
+	DropItem "Shell", 64, 4
+	DropItem "Shell", 64, 20
+	DropItem "ShellBox", 32, 10
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketBox", 32, 5
+	DropItem "Cell", 64, 20
+	DropItem "Cell", 64, 20
+	DropItem "Cellpack", 16, 100
+	DropItem "IDMMana", 16
+	DropItem "IDMMana", 16
+	DropItem "IDMMaceAmmo", 16
+	DropItem "IDMMaceAmmo", 16
+	DropItem "IDMCatAmmo", 16
+	DropItem "IDMCatAmmo", 16
+	DropItem "IDMGas", 16
+	DropItem "IDMGas", 16
+    States
+    {
+    Spawn:
+        BOHS AB 10 A_Look
+        Loop
+    See:
+        BOHS AABBCCDD 4 A_Chase
+        Loop
+    Missile:
+        BOHS E 0 A_Jump(85,"BurstAtk")
+        BOHS E 0 A_Jump(128,"RapidAtk")
+        BOHS E 8 A_FaceTarget
+        BOHS F 8 A_FaceTarget
+        BOHS G 8 A_CustomMissile("IDMBigBaronBall", 32)
+		TNT1 A 0 A_Jump(64,"Missile")
+        Goto See
+	BurstAtk:
+        BOHS E 8 A_FaceTarget
+        BOHS F 8 A_FaceTarget
+        BOHS G 0 A_Custommissile ("IDMBigBaronBall", 32, 0, 8)
+        BOHS G 0 A_Custommissile ("IDMBigBaronBall", 32, 0, 0)
+        BOHS G 8 A_Custommissile ("IDMBigBaronBall", 32, 0, -8)
+		TNT1 A 0 A_Jump(64,"Missile")
+        Goto See
+	RapidAtk:
+        BOHS E 8 A_FaceTarget
+        BOHS F 8 A_FaceTarget
+        BOHS G 0 A_Custommissile ("IDMBigBaronBall", 32, 0, -20)
+        BOHS G 8 A_Custommissile ("IDMBigBaronBall", 32, 0, 0)
+        BOHS E 8 A_FaceTarget
+        BOHS F 8 A_FaceTarget
+        BOHS G 0 A_Custommissile ("IDMBigBaronBall", 32, 0, 20)
+        BOHS G 8 A_Custommissile ("IDMBigBaronBall", 32, 0, 0)
+        BOHS E 8 A_FaceTarget
+        BOHS F 8 A_FaceTarget
+        BOHS G 0 A_Custommissile ("IDMBigBaronBall", 32, 0, -12)
+        BOHS G 8 A_Custommissile ("IDMBigBaronBall", 32, 0, 12)
+		TNT1 A 0 A_Jump(64,"Missile")
+        Goto See
+    Pain:
+        BOHS H 5
+        BOHS H 5 A_Pain
+        Goto See
+    Death:
+	Death.Massacre:
+        BOHS I 8
+        BOHS J 8 A_Scream
+        BOHS K 8 A_Fall
+        BOHS LMN 8
+        BOHS O -1
+        Stop
+    Raise:
+        BOHS ONMLKJI 5
+        Goto See
+    }
+}

@@ -1,0 +1,1442 @@
+// ------------------
+// -- Doom Weapons --
+// ------------------
+
+
+// Puffs
+
+object IDMBulletPuff
+{
+    frame PUFFA { light BPUFF1 }
+    frame BPUFA { light BPUFF1 }
+    frame PUFYA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+    frame BPUFB { light BPUFF2 }
+    frame PUFYB { light BPUFF2 }
+}
+
+object IDMShotPuff
+{
+    frame PUFFA { light BPUFF1 }
+    frame BPUFA { light BPUFF1 }
+    frame PUFYA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+    frame BPUFB { light BPUFF2 }
+    frame PUFYB { light BPUFF2 }
+}
+
+object ExtremePuff
+{
+    frame PUFFA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+}
+
+object ExtremeShotPuff
+{
+    frame PUFFA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+}
+
+object IDMSuperPuff
+{
+    frame PUFFA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+}
+
+object IDMSuperShotPuff
+{
+    frame PUFFA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+}
+
+object ChainsawPuff
+{
+    frame PUFFA { light BPUFF1 }
+    frame BPUFA { light BPUFF1 }
+    frame PUFYA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+    frame BPUFB { light BPUFF2 }
+    frame PUFYB { light BPUFF2 }
+}
+
+object KnifePuff
+{
+    frame PUFFA { light BPUFF1 }
+    frame BPUFA { light BPUFF1 }
+    frame PUFYA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+    frame BPUFB { light BPUFF2 }
+    frame PUFYB { light BPUFF2 }
+}
+
+
+// Nails
+
+object Nail
+{
+    frame PUFFA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+}
+
+object BigNail
+{
+    frame PUFFA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+}
+
+object Screw
+{
+    frame PUFFA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+}
+
+object ExtremeNail
+{
+    frame PUFFA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+}
+
+object ExtremeBigNail
+{
+    frame PUFFA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+}
+
+object ExtremeScrew
+{
+    frame PUFFA { light BPUFF1 }
+    frame PUFFB { light BPUFF2 }
+}
+
+
+// Rockets
+
+object IDMRocket
+{
+    frame MISLA { light ROCKET    }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+object ExtremeRocket
+{
+    frame MISLA { light ROCKET    }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+object BigRocket
+{
+    frame MISLA { light ROCKET    }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+object ExtremeBigRocket
+{
+    frame MISLA { light ROCKET    }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+object HeatSeekerMissile
+{
+    frame HMISA { light ROCKET    }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+object ExtremeHeatSeekerMissile
+{
+    frame MISLA { light ROCKET    }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+object IDMMinimissile
+{
+	frame MICR  { light GRENADE    }
+    frame MISLB { light GRENADE_X1 }
+    frame MISLC { light GRENADE_X2 }
+    frame MISLD { light GRENADE_X3 }
+}
+
+object DevastatorRocket
+{
+    frame MNSS { light GRENADE    }
+    frame GRNEA { light ROCKET_X1 }
+    frame GRNEB { light ROCKET_X1 }
+    frame GRNEC { light GRENADE_X1 }
+    frame GRNED { light GRENADE_X1 }
+    frame GRNEE { light GRENADE_X2 }
+    frame GRNEF { light GRENADE_X2 }
+    frame GRNEG { light GRENADE_X3 }
+    frame GRNEH { light GRENADE_X3 }
+    frame GRNEI { light IMPBALL_X3 }
+    frame GRNEJ { light IMPBALL_X3 }
+    frame GRNEK { light IMPBALL_X2 }
+    frame GRNEL { light IMPBALL_X2 }
+    frame GRNEM { light IMPBALL_X1 }
+    frame GRNEN { light IMPBALL_X1 }
+}
+
+object ExplosivePuff
+{
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+	
+
+// Grenade
+
+object IDMGrenade
+{
+    frame SGRN  { light GRENADE    }
+    frame MISLB { light GRENADE_X1 }
+    frame MISLC { light GRENADE_X2 }
+    frame MISLD { light GRENADE_X3 }
+}
+
+object ExtremeGrenade
+{
+    frame SGRN { light GRENADE    }
+    frame MISLB { light GRENADE_X1 }
+    frame MISLC { light GRENADE_X2 }
+    frame MISLD { light GRENADE_X3 }
+}
+
+object MushroomGrenade
+{
+    frame SGRN { light GRENADE    }
+    frame MISLB { light GRENADE_X1 }
+    frame MISLC { light GRENADE_X2 }
+    frame MISLD { light GRENADE_X3 }
+}
+
+Object IDMMushroom
+{
+    frame MANFA { light IMPBALL   }
+    frame MANFB { light IMPBALL   }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+Object IDMGrenadeMushroom
+{
+    frame MANFA { light IMPBALL   }
+    frame MANFB { light IMPBALL   }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+object GRifleGrenade
+{
+    frame GRND  { light GRENADE    }
+    frame MISLB { light GRENADE_X1 }
+    frame MISLC { light GRENADE_X2 }
+    frame MISLD { light GRENADE_X3 }
+}
+
+object ExtremeGRifleGrenade
+{
+    frame GRND  { light GRENADE    }
+    frame MISLB { light GRENADE_X1 }
+    frame MISLC { light GRENADE_X2 }
+    frame MISLD { light GRENADE_X3 }
+}
+
+object ClusterGrenade
+{
+    frame GRND  { light GRENADE    }
+    frame MISLB { light GRENADE_X1 }
+    frame MISLC { light GRENADE_X2 }
+    frame MISLD { light GRENADE_X3 }
+}
+
+object IDMSmallGrenade
+{
+    frame SGRN  { light GRENADE    }
+    frame MISLB { light GRENADE_X1 }
+    frame MISLC { light GRENADE_X2 }
+    frame MISLD { light GRENADE_X3 }
+}
+
+
+object ExtremeSmallGrenade
+{
+    frame SGRN  { light GRENADE    }
+    frame MISLB { light GRENADE_X1 }
+    frame MISLC { light GRENADE_X2 }
+    frame MISLD { light GRENADE_X3 }
+}
+
+
+// Plasma
+
+object IDMPlasmaBall
+{
+    frame PLSSA { light PLASMABALL }
+    frame PLSSB { light PLASMABALL }
+    frame PLSEA { light PLASMA_X1 }
+    frame PLSEB { light PLASMA_X2 }
+    frame PLSEC { light PLASMA_X2 }
+    frame PLSED { light PLASMA_X3 }
+    frame PLSEE { light PLASMA_X4 }
+}
+
+object ExtremePlasmaBall
+{
+    frame PLSSA { light PLASMABALL }
+    frame PLSSB { light PLASMABALL }
+    frame PLSEA { light PLASMA_X1 }
+    frame PLSEB { light PLASMA_X2 }
+    frame PLSEC { light PLASMA_X2 }
+    frame PLSED { light PLASMA_X3 }
+    frame PLSEE { light PLASMA_X4 }
+}
+
+
+object BigPlasmaBall
+{
+    frame PLSSA { light PLASMABALL }
+    frame PLSSB { light PLASMABALL }
+    frame PLSEA { light PLASMA_X1 }
+    frame PLSEB { light PLASMA_X2 }
+    frame PLSEC { light PLASMA_X2 }
+    frame PLSED { light PLASMA_X3 }
+    frame PLSEE { light PLASMA_X4 }
+}
+
+object ExtremeBigPlasmaBall
+{
+    frame PLSSA { light PLASMABALL }
+    frame PLSSB { light PLASMABALL }
+    frame PLSEA { light PLASMA_X1 }
+    frame PLSEB { light PLASMA_X2 }
+    frame PLSEC { light PLASMA_X2 }
+    frame PLSED { light PLASMA_X3 }
+    frame PLSEE { light PLASMA_X4 }
+}
+
+object IDMPlasmaBall2
+{
+    frame PLSSA { light PLASMABALL }
+    frame PLSSB { light PLASMABALL }
+    frame PLSEA { light PLASMA_X1 }
+    frame PLSEB { light PLASMA_X2 }
+    frame PLSEC { light PLASMA_X2 }
+    frame PLSED { light PLASMA_X3 }
+    frame PLSEE { light PLASMA_X4 }
+}
+
+
+object ExtremePlasmaBall2
+{
+    frame PLSSA { light PLASMABALL }
+    frame PLSSB { light PLASMABALL }
+    frame PLSEA { light PLASMA_X1 }
+    frame PLSEB { light PLASMA_X2 }
+    frame PLSEC { light PLASMA_X2 }
+    frame PLSED { light PLASMA_X3 }
+    frame PLSEE { light PLASMA_X4 }
+}
+
+
+object BigPlasmaBall2
+{
+    frame PLSSA { light PLASMABALL }
+    frame PLSSB { light PLASMABALL }
+    frame PLSEA { light PLASMA_X1 }
+    frame PLSEB { light PLASMA_X2 }
+    frame PLSEC { light PLASMA_X2 }
+    frame PLSED { light PLASMA_X3 }
+    frame PLSEE { light PLASMA_X4 }
+}
+
+object BigPlasmaBall2
+{
+    frame PLSSA { light PLASMABALL }
+    frame PLSSB { light PLASMABALL }
+    frame PLSEA { light PLASMA_X1 }
+    frame PLSEB { light PLASMA_X2 }
+    frame PLSEC { light PLASMA_X2 }
+    frame PLSED { light PLASMA_X3 }
+    frame PLSEE { light PLASMA_X4 }
+}
+
+object PulseBall
+{
+    frame APLSA { light ARACHPLAS }
+    frame APLSB { light ARACHPLAS }
+    frame APBXA { light ARACHPLAS_X1 }
+    frame APBXB { light ARACHPLAS_X2 }
+    frame APBXC { light ARACHPLAS_X2 }
+    frame APBXD { light ARACHPLAS_X3 }
+    frame APBXE { light ARACHPLAS_X4 }
+}
+
+object ExtremePulseBall
+{
+    frame APLSA { light ARACHPLAS }
+    frame APLSB { light ARACHPLAS }
+    frame APBXA { light ARACHPLAS_X1 }
+    frame APBXB { light ARACHPLAS_X2 }
+    frame APBXC { light ARACHPLAS_X2 }
+    frame APBXD { light ARACHPLAS_X3 }
+    frame APBXE { light ARACHPLAS_X4 }
+}
+
+object PBeamBall
+{
+    frame APBXA { light ARACHPLAS_X1 }
+    frame APBXB { light ARACHPLAS_X2 }
+    frame APBXC { light ARACHPLAS_X3 }
+    frame APBXD { light ARACHPLAS_X4 }
+    frame APBXE { light ARACHPLAS_X4 }
+}
+
+object PBeamBall2
+{
+    frame APBXA { light ARACHPLAS_X1 }
+    frame APBXB { light ARACHPLAS_X2 }
+    frame APBXC { light ARACHPLAS_X3 }
+    frame APBXD { light ARACHPLAS_X4 }
+    frame APBXE { light ARACHPLAS_X4 }
+}
+
+object Beamtrail
+{
+    frame APBXA { light ARACHPLAS_X1 }
+    frame APBXB { light ARACHPLAS_X2 }
+    frame APBXC { light ARACHPLAS_X3 }
+    frame APBXD { light ARACHPLAS_X4 }
+    frame APBXE { light ARACHPLAS_X4 }
+}
+
+object Beamtrail2
+{
+    frame APBXA { light ARACHPLAS_X1 }
+    frame APBXB { light ARACHPLAS_X2 }
+    frame APBXC { light ARACHPLAS_X3 }
+    frame APBXD { light ARACHPLAS_X4 }
+    frame APBXE { light ARACHPLAS_X4 }
+}
+
+object IonBall
+{
+    frame IONBA { light PLASMABALL }
+    frame IONBB { light PLASMA_X1 }
+    frame IONBC { light PLASMA_X1 }
+    frame IONBD { light PLASMA_X1 }
+    frame IONBE { light PLASMA_X2 }
+    frame IONBF { light PLASMA_X2 }
+    frame IONBG { light PLASMA_X2 }
+    frame IONBH { light PLASMA_X3 }
+    frame IONBI { light PLASMA_X3 }
+    frame IONBJ { light PLASMA_X3 }
+    frame IONBK { light PLASMA_X4 }
+    frame IONBL { light PLASMA_X4 }
+}
+
+object ExtremeIonBall
+{
+    frame IONBA { light PLASMABALL }
+    frame IONBB { light PLASMA_X1 }
+    frame IONBC { light PLASMA_X1 }
+    frame IONBD { light PLASMA_X1 }
+    frame IONBE { light PLASMA_X2 }
+    frame IONBF { light PLASMA_X2 }
+    frame IONBG { light PLASMA_X2 }
+    frame IONBH { light PLASMA_X3 }
+    frame IONBI { light PLASMA_X3 }
+    frame IONBJ { light PLASMA_X3 }
+    frame IONBK { light PLASMA_X4 }
+    frame IONBL { light PLASMA_X4 }
+}
+
+
+// Freezethrower
+
+pointlight ICEGLOWER
+{
+    color 0.5 0.5 1.0
+    size 20
+}
+
+object FreezeBall
+{
+frame FBLS { light ICEGLOWER }
+}
+
+
+// BFG
+
+object IDMBFGBall
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+object ExtremeBFGBall
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+
+object IDMBFGExtra
+{
+    frame BFE2A { light BFGBALL    }
+    frame BFE2B { light BFGBALL_X1 }
+    frame BFE2C { light BFGBALL_X4 }
+    frame BFE2D { light BFGBALL_X5 }
+}
+
+
+// BFG10K
+
+pointlight BFG10kShot
+{
+    color 0.0 1.0 0.0
+    size 80
+}
+
+flickerlight BFG10KSHOT_X1
+{
+    color 0.0 1.0 0.0
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight BFG10KSHOT_X2
+{
+    color 0.0 1.0 0.0
+    size 104
+    secondarySize 112
+    chance 0.3
+}
+
+flickerlight BFG10KSHOT_X3
+{
+    color 0.0 1.0 0.0
+    size 120
+    secondarySize 128
+    chance 0.3
+}
+
+object IDMBFG10kShot
+{
+    frame BFE1A0 { light BFG10KSHOT }
+    frame BFE1B0 { light BFG10KSHOT }
+
+    frame BFE1C0 { light BFG10KSHOT_X1 }
+    frame BFE1D0 { light BFG10KSHOT_X2 }
+    frame BFE1E0 { light BFG10KSHOT_X3 }
+}
+
+object BFG10KBall
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+
+object BFG10KBall2
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+
+object BFG10KBall3
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+
+object BFG10KBall4
+{
+    frame BFS1A { light BFGBALL }
+    frame BFS1B { light BFGBALL }
+    frame BFE1A { light BFGBALL_X1 }
+    frame BFE1B { light BFGBALL_X2 }
+    frame BFE1C { light BFGBALL_X3 }
+    frame BFE1D { light BFGBALL_X1 }
+    frame BFE1E { light BFGBALL_X4 }
+    frame BFE1F { light BFGBALL_X5 }
+}
+
+
+// Hellstorm
+
+Object HellstormRocket1
+{
+    frame MISLA { light ROCKET    }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+Object HellstormRocket2
+{
+    frame MISLA { light ROCKET    }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+Object HellstormTracer
+{
+    frame FATBA { light TRACER    }
+    frame FATBB { light TRACER    }
+    frame FBXPA { light TRACER_X1 }
+    frame FBXPB { light TRACER_X2 }
+    frame FBXPC { light TRACER_X3 }
+}
+
+Object HellstormFatShot
+{
+    frame MANFA { light IMPBALL   }
+    frame MANFB { light IMPBALL   }
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+}
+
+Object HellStormImpBall
+{
+    frame BAL1A { light IMPBALL    }
+    frame BAL1B { light IMPBALL    }
+    frame BAL1C { light IMPBALL_X1 }
+    frame BAL1D { light IMPBALL_X2 }
+    frame BAL1E { light IMPBALL_X3 }
+}
+
+Object HellStormCacoBall
+{
+    frame BAL2A { light CACOBALL }
+    frame BAL2B { light CACOBALL }
+    frame BAL2C { light CACOBALL_X1 }
+    frame BAL2D { light CACOBALL_X2 }
+    frame BAL2E { light CACOBALL_X3 }
+}
+
+object HellStormBaronBall
+{
+    frame BAL7A { light BARONBALL    }
+    frame BAL7B { light BARONBALL    }
+    frame BAL7C { light BARONBALL_X1 }
+    frame BAL7D { light BARONBALL_X2 }
+    frame BAL7E { light BARONBALL_X3 }
+}
+
+object HellStormSkull
+{
+    frame SKMSA { light LOSTSOUL    }
+    frame SKMSB { light LOSTSOUL    }
+    frame SKMSC { light LOSTSOUL    }
+    frame SKMSD { light LOSTSOUL    }
+    frame SKMSE { light LOSTSOUL    }
+    frame SKMSF { light LOSTSOUL    }
+    frame SKMSG { light LOSTSOUL    }
+    frame SKMSH { light LOSTSOUL_X1 }
+    frame SKMSI { light LOSTSOUL_X2 }
+    frame SKMSJ { light LOSTSOUL_X3 }
+    frame SKMSK { light LOSTSOUL_X4 }
+}
+
+
+// Unmaker
+
+pointlight UNMAKER
+{
+    color 0.8 0.05 0.05
+    size 56
+}
+
+pointlight UNMAKER2
+{
+    color 0.4 0.0 0.0
+    size 48
+}
+
+flickerlight UNMAKER_X1
+{
+    color 1.0 0.2 0.2
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight UNMAKER_X2
+{
+    color 0.8 0.2 0.2
+    size 80
+    secondarySize 88
+    chance 0.4
+}
+
+flickerlight UNMAKER_X3
+{
+    color 0.5 0.1 0.1
+    size 64
+    secondarySize 72
+    chance 0.4
+}
+
+flickerlight UNMAKER_X4
+{
+    color 0.2 0.0 0.0
+    size 8
+    secondarySize 16
+    chance 0.4
+}
+
+flickerlight UNMAKER_X5
+{
+    color 0.1 0.0 0.0
+    size 4
+    secondarySize 8
+    chance 0.4
+}
+
+object UnmakerRay
+{
+	frame IPLSA { light UNMAKER }
+	frame IPLSB { light UNMAKER }
+	frame IPLEA { light UNMAKER_X1 }
+	frame IPLEB { light UNMAKER_X2 }
+	frame IPLEC { light UNMAKER_X3 }
+	frame IPLED { light UNMAKER_X4 }
+	frame IPLEE { light UNMAKER_X5 }
+}
+
+object UnmakerTrail
+{
+	frame IPLS { light UNMAKER }
+	frame PLS2 { light UNMAKER2 }
+}
+
+
+// Fire Mace
+
+object IDMMaceFX1
+{
+    frame FX02G { light MACEBALL_X1 }
+    frame FX02H { light MACEBALL_X2 }
+    frame FX02I { light MACEBALL_X3 }
+    frame FX02J { light MACEBALL_X4 }
+}
+
+object IDMMaceFX2
+{
+    frame FX02G { light MACEBALL_X1 }
+    frame FX02H { light MACEBALL_X2 }
+    frame FX02I { light MACEBALL_X3 }
+    frame FX02J { light MACEBALL_X4 }
+}
+
+object IDMMaceFX3
+{
+    frame FX02G { light MACEBALL_X1 }
+    frame FX02H { light MACEBALL_X2 }
+    frame FX02I { light MACEBALL_X3 }
+    frame FX02J { light MACEBALL_X4 }
+}
+
+object IDMMaceFX4
+{
+    frame FX02G { light MACEBALL_X1 }
+    frame FX02H { light MACEBALL_X2 }
+    frame FX02I { light MACEBALL_X3 }
+    frame FX02J { light MACEBALL_X4 }
+}
+
+
+// BloodScourge
+
+flickerlight BSBALL
+{
+    color 1.0 0.2 0.0
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+flickerlight BSBALL_X1
+{
+    color 1.0 0.4 0.0
+    size 24
+    secondarySize 28
+    chance 0.3
+}
+
+flickerlight BSBALL_X2
+{
+    color 0.7 0.3 0.0
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+flickerlight BSBALL_X3
+{
+    color 0.5 0.2 0.0
+    size 64
+    secondarySize 72
+    chance 0.3
+}
+
+flickerlight BSBALL_X4
+{
+    color 0.3 0.1 0.0
+    size 40
+    secondarySize 48
+    chance 0.3
+}
+
+object IDMMageStaffFX2
+{
+    frame MSP2A { light BSBALL }
+    frame MSP2B { light BSBALL }
+    frame MSP2C { light BSBALL }
+    frame MSP2D { light BSBALL }
+
+    frame MSP2E { light BSBALL_X1 }
+    frame MSP2F { light BSBALL_X2 }
+    frame MSP2G { light BSBALL_X3 }
+    frame MSP2H { light BSBALL_X4 }
+}
+
+
+// Wraithverge
+
+flickerlight GHOST
+{
+    color 0.5 0.5 0.5
+    size 56
+    secondarySize 52
+    chance 0.7
+    subtractive 1
+}
+
+object IDMHolyMissile
+{
+    frame SPIRP { light GHOST }
+}
+
+object IDMHolySpirit
+{
+    frame SPIRA { light GHOST }
+    frame SPIRB { light GHOST }
+}
+
+
+// Flamethrower
+
+FlickerLight2 FlameThrowerFire
+{
+Offset 0 2 0
+Color 0.15 0.04 0.0
+Size 40
+SecondarySize 60
+Interval 2.0
+}
+
+Object FTFire
+{
+Frame FRFX { Light FlameThrowerFire }
+}
+
+FlickerLight2 DropFlame
+{
+Offset 0 0 0
+Color 0.15 0.04 0.0
+Size 20
+SecondarySize 30
+Interval 2.0
+}
+
+Object DropFire
+{
+Frame FLME { Light DropFlame }
+}
+
+// Pyro Cannon
+
+FlickerLight2 PyroSpawnAB
+{
+Color 1.0 0.7 0.0
+Offset 0 30 0
+Size 50
+SecondarySize 70
+Interval 0.0125
+}
+
+PointLight PyroDeathA
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 70
+}
+
+PointLight PyroDeathB
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 120
+}
+
+PointLight PyroDeathC
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 150
+}
+
+PointLight PyroDeathD
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 180
+}
+
+PointLight PyroDeathE
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 200
+}
+
+PointLight PyroDeathF
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 220
+}
+
+PointLight PyroDeathG
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 230
+}
+
+PointLight PyroDeathH
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 240
+}
+
+PointLight PyroDeathI
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 245
+}
+
+PointLight PyroDeathJ
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 250
+}
+
+PointLight PyroDeathK
+{
+Color 1.0 0.9 0.0
+Offset 0 20 0
+Size 255
+}
+
+PointLight PyroDeathL
+{
+Color 0.95 0.95 0.0
+Offset 0 20 0
+Size 260
+}
+
+PointLight PyroDeathM
+{
+Color 0.9 0.9 0.0
+Offset 0 20 0
+Size 262
+}
+
+PointLight PyroDeathN
+{
+Color 0.9 0.8 0.0
+Offset 0 20 0
+Size 263
+}
+
+PointLight PyroDeathO
+{
+Color 0.9 0.7 0.0
+Offset 0 20 0
+Size 262
+}
+
+PointLight PyroDeathP
+{
+Color 0.95 0.6 0.0
+Offset 0 20 0
+Size 260
+}
+
+PointLight PyroDeathQ
+{
+Color 0.85 0.5 0.0
+Offset 0 20 0
+Size 255
+}
+
+PointLight PyroDeathR
+{
+Color 0.6 0.4 0.0
+Offset 0 20 0
+Size 250
+}
+
+PointLight PyroDeathS
+{
+Color 0.4 0.3 0.0
+Offset 0 20 0
+Size 245
+}
+
+PointLight PyroDeathT
+{
+Color 0.2 0.2 0.0
+Offset 0 20 0
+Size 240
+}
+
+PointLight PyroDeathU
+{
+Color 0.125 0.1 0.0
+Offset 0 20 0
+Size 230
+}
+
+Object PyroShot
+{
+Frame PBALA { Light PyroSpawnAB }
+Frame PBALB { Light PyroSpawnAB }
+Frame PYXPA { Light PyroDeathA }
+Frame PYXPB { Light PyroDeathB }
+Frame PYXPC { Light PyroDeathC }
+Frame PYXPD { Light PyroDeathD }
+Frame PYXPE { Light PyroDeathE }
+Frame PYXPF { Light PyroDeathF }
+Frame PYXPG { Light PyroDeathG }
+Frame PYXPH { Light PyroDeathH }
+Frame PYXPI { Light PyroDeathI }
+Frame PYXPJ { Light PyroDeathJ }
+Frame PYXPK { Light PyroDeathK }
+Frame PYXPL { Light PyroDeathL }
+Frame PYXPM { Light PyroDeathM }
+Frame PYXPN { Light PyroDeathN }
+Frame PYXPO { Light PyroDeathO }
+Frame PYXPP { Light PyroDeathP }
+Frame PYXPQ { Light PyroDeathQ }
+Frame PYXPR { Light PyroDeathR }
+Frame PYXPS { Light PyroDeathS }
+Frame PYXPT { Light PyroDeathT }
+Frame PYXPU { Light PyroDeathU }
+}
+
+Object PyroDropFire
+{
+Frame FLME { Light DropFlame }
+}
+
+/*
+
+// SIGIL
+
+flickerlight ZAPBALL2
+{
+    color 0.8 0.8 1.0
+    size 128
+    secondarySize 144
+    chance 0.5
+}
+
+flickerlight LIGHTNING1
+{
+    color 0.8 0.8 1.0
+    size 72
+    secondarySize 80
+    chance 0.8
+}
+
+flickerlight LGNTAIL
+{
+    color 0.4 0.4 0.5
+    size 72
+    secondarySize 80
+    chance 0.8
+}
+
+flickerlight ARROWZAP1
+{
+    color 0.4 0.4 1.0
+    size 8
+    secondarySize 16
+    chance 0.4
+}
+
+flickerlight ARROWZAP2
+{
+    color 0.45 0.45 1.0
+    size 16
+    secondarySize 24
+    chance 0.4
+}
+
+flickerlight ARROWZAP3
+{
+    color 0.5 0.5 1.0
+    size 24
+    secondarySize 30
+    chance 0.4
+}
+
+flickerlight ARROWZAP4
+{
+    color 0.6 0.6 1.0
+    size 30
+    secondarySize 36
+    chance 0.4
+}
+
+flickerlight ARROWZAP5
+{
+    color 0.7 0.7 1.0
+    size 36
+    secondarySize 40
+    chance 0.4
+}
+
+flickerlight ARROWZAP6
+{
+    color 0.8 0.8 1.0
+    size 40
+    secondarySize 42
+    chance 0.4
+}
+
+object IDMSpectralLightningBigBall1
+{
+    frame ZOT7  { light ZAPBALL2  }
+
+    frame ZAP1A { light ARROWZAP1 }
+    frame ZAP1B { light ARROWZAP2 }
+    frame ZAP1C { light ARROWZAP3 }
+    frame ZAP1D { light ARROWZAP4 }
+    frame ZAP1E { light ARROWZAP5 }
+    frame ZAP1F { light ARROWZAP6 }
+}
+
+object SuperLightningBall
+{
+    frame ZOT7  { light ZAPBALL2  }
+    frame ZAP1A { light ARROWZAP1 }
+    frame ZAP1B { light ARROWZAP2 }
+    frame ZAP1C { light ARROWZAP3 }
+    frame ZAP1D { light ARROWZAP4 }
+    frame ZAP1E { light ARROWZAP5 }
+    frame ZAP1F { light ARROWZAP6 }
+}
+
+object IDMSpectralLightningH3
+{
+    frame ZAP6  { light LIGHTNING1 }
+
+    frame ZAP1A { light ARROWZAP1  }
+    frame ZAP1B { light ARROWZAP2  }
+    frame ZAP1C { light ARROWZAP3  }
+    frame ZAP1D { light ARROWZAP4  }
+    frame ZAP1E { light ARROWZAP5  }
+    frame ZAP1F { light ARROWZAP6  }
+}
+
+object HomingSpectralLightning
+{
+    frame ZAP6  { light LIGHTNING1 }
+
+    frame ZAP1A { light ARROWZAP1  }
+    frame ZAP1B { light ARROWZAP2  }
+    frame ZAP1C { light ARROWZAP3  }
+    frame ZAP1D { light ARROWZAP4  }
+    frame ZAP1E { light ARROWZAP5  }
+    frame ZAP1F { light ARROWZAP6  }
+}
+
+object IDMSpectralLightningHTail
+{
+    frame ZAP6  { light LGNTAIL   }
+
+    frame ZAP1A { light ARROWZAP1 }
+    frame ZAP1B { light ARROWZAP2 }
+    frame ZAP1C { light ARROWZAP3 }
+    frame ZAP1D { light ARROWZAP4 }
+    frame ZAP1E { light ARROWZAP5 }
+    frame ZAP1F { light ARROWZAP6 }
+}
+
+object IDMSpectralLightningBase
+{
+    frame ZAP1A { light ARROWZAP1 }
+    frame ZAP1B { light ARROWZAP2 }
+    frame ZAP1C { light ARROWZAP3 }
+    frame ZAP1D { light ARROWZAP4 }
+    frame ZAP1E { light ARROWZAP5 }
+    frame ZAP1F { light ARROWZAP6 }
+}
+*/
+// Devastator 1000
+
+
+pointlight DEVBALL
+{
+    color 1.0 0.0 0.0
+    size 80
+}
+
+flickerlight DEVBALL_X1
+{
+    color 1.0 0.2 0.2
+    size 80
+    secondarySize 88
+    chance 0.3
+}
+
+flickerlight DEVBALL_X2
+{
+    color 1.0 0.3 0.3
+    size 104
+    secondarySize 112
+    chance 0.3
+}
+
+flickerlight DEVBALL_X3
+{
+    color 1.0 0.5 0.5
+    size 120
+    secondarySize 128
+    chance 0.3
+}
+
+flickerlight DEVBALL_X4
+{
+    color 0.7 0.2 0.2
+    size 56
+    secondarySize 64
+    chance 0.3
+}
+
+flickerlight DEVBALL_X5
+{
+    color 0.3 0.1 0.1
+    size 48
+    secondarySize 56
+    chance 0.3
+}
+
+object DevastatorBall
+{
+    frame DBALA { light DEVBALL }
+    frame DBALB { light DEVBALL }
+    frame DBALA { light DEVBALL_X1 }
+    frame DBALB { light DEVBALL_X2 }
+    frame DBALC { light DEVBALL_X3 }
+    frame DBALD { light DEVBALL_X1 }
+    frame DBALE { light DEVBALL_X4 }
+    frame DBALF { light DEVBALL_X5 }
+}
+
+object DevastatorBall3
+{
+    frame DBALA { light DEVBALL }
+    frame DBALB { light DEVBALL }
+    frame DBALA { light DEVBALL_X1 }
+    frame DBALB { light DEVBALL_X2 }
+    frame DBALC { light DEVBALL_X3 }
+    frame DBALD { light DEVBALL_X1 }
+    frame DBALE { light DEVBALL_X4 }
+    frame DBALF { light DEVBALL_X5 }
+}
+
+object DevastatorBall4
+{
+    frame DBALA { light DEVBALL }
+    frame DBALB { light DEVBALL }
+    frame DBALA { light DEVBALL_X1 }
+    frame DBALB { light DEVBALL_X2 }
+    frame DBALC { light DEVBALL_X3 }
+    frame DBALD { light DEVBALL_X1 }
+    frame DBALE { light DEVBALL_X4 }
+    frame DBALF { light DEVBALL_X5 }
+}
+
+/*
+flickerlight DEVBALL2
+{
+    color 1.0 0.1 0.1
+    size 56
+    secondarySize 64
+    chance 0.5
+}
+
+flickerlight DEVBALL2_X1
+{
+    color 0.9 0.05 0.05
+    size 72
+    secondarySize 80
+    chance 0.25
+}
+
+flickerlight DEVBALL2_X2
+{
+    color 0.6 0.0 0.0
+    size 88
+    secondarySize 96
+    chance 0.25
+}
+
+flickerlight DEVBALL2_X3
+{
+    color 0.3 0.0 0.0
+    size 104
+    secondarySize 112
+    chance 0.25
+}
+
+object DevastatorBall2
+{
+    frame DBA2A { light DEVBALL2 }
+    frame DBA2B { light DEVBALL2 }
+    frame DBA2C { light DEVBALL2_X1 }
+    frame DBA2D { light DEVBALL2_X2 }
+    frame DBA2E { light DEVBALL2_X3 }
+}
+
+flickerlight DEVLIGHTNING1
+{
+    color 1.0 0.8 0.8
+    size 72
+    secondarySize 80
+    chance 0.8
+}
+
+flickerlight DEVZAP1
+{
+    color 1.0 0.4 0.4
+    size 8
+    secondarySize 16
+    chance 0.4
+}
+
+flickerlight DEVZAP2
+{
+    color 1.0 0.45 0.45
+    size 16
+    secondarySize 24
+    chance 0.4
+}
+
+flickerlight DEVZAP3
+{
+    color 1.0 0.5 0.5
+    size 24
+    secondarySize 30
+    chance 0.4
+}
+
+flickerlight DEVZAP4
+{
+    color 1.0 0.6 0.6
+    size 30
+    secondarySize 36
+    chance 0.4
+}
+
+flickerlight DEVZAP5
+{
+    color 1.0 0.7 0.7
+    size 36
+    secondarySize 40
+    chance 0.4
+}
+
+flickerlight DEVZAP6
+{
+    color 1.0 0.8 0.8
+    size 40
+    secondarySize 42
+    chance 0.4
+}
+
+object LiteShot
+{
+    frame DLITA  { light DEVLIGHTNING1 }
+    frame DLITB  { light DEVLIGHTNING1 }
+    frame DLITC  { light DEVLIGHTNING1 }
+
+    frame DLITD { light DEVZAP1  }
+    frame DLITE { light DEVZAP1  }
+    frame DLITF { light DEVZAP2  }
+    frame DLITG { light DEVZAP2  }
+    frame DLITH { light DEVZAP3  }
+    frame DLITI { light DEVZAP3  }
+    frame DLITJ { light DEVZAP4  }
+    frame DLITK { light DEVZAP4  }
+    frame DLITL { light DEVZAP5  }
+    frame DLITM { light DEVZAP5  }
+    frame DLITN { light DEVZAP6  }
+    frame DLITO { light DEVZAP6  }
+}*/

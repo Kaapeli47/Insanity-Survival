@@ -1,0 +1,118 @@
+/// Common Weapon Class
+
+ACTOR IDMWeapon : Weapon
+{
+	-WEAPON.ALLOW_WITH_RESPAWN_INVUL
+}
+
+/// Ammo ///
+
+// Backpack
+
+ACTOR IDMBackpack : Backpack replaces Backpack
+{
+  Height 26
+  Inventory.PickupMessage "Ammo Pack!"
+  Inventory.PickupSound "misc/ammo_pkup"
+  Inventory.RespawnTics 2100
+  Tag "Back Pack"
+}
+
+
+// Big Weapon Ammo
+
+ACTOR IDMMana : Ammo
+{
+  Inventory.Amount 100
+  Inventory.MaxAmount 200
+  Ammo.BackpackAmount 100
+  Ammo.BackpackMaxAmount 400
+  Tag "Mana pickup"
+  Inventory.Icon "MANAJ0"
+  Inventory.PickupMessage "Mana."
+  Inventory.PickupSound "misc/mana_pkup"
+  +FLOATBOB
+  States
+  {
+  Spawn:
+    MANA ABCDEFGHIJKLMNOP 4 Bright
+    Loop
+  }
+}
+
+/*
+ACTOR IDMHellEnergy : Ammo 10091
+{
+  //$Category Ammunition
+  Tag "Hell energy"
+  Inventory.Amount 4
+  Inventory.MaxAmount 12
+  Ammo.BackpackAmount 4
+  Ammo.BackpackMaxAmount 24
+  Inventory.Icon "PLS2A0"
+  Inventory.PickupMessage "Hell energy."
+  Inventory.PickupSound "misc/ammo_pkup"
+  +FLOATBOB
+  States
+  {
+  Spawn:
+	HLEN AB 6 Bright
+	Loop
+  }
+}
+*/
+ACTOR IDMMaceAmmo : Ammo 10092
+{
+  //$Category Ammunition
+  Tag "Mace spheres"
+  Inventory.Amount 150
+  Inventory.MaxAmount 300
+  Ammo.BackPackAmount 150
+  Ammo.BackPackMaxAmount 600
+  Inventory.Icon "FX02C0"
+  Inventory.PickupMessage "Mace spheres."
+  Inventory.PickupSound "misc/ammo_pkup"
+  States
+  {
+  Spawn:
+    AMM1 A -1 Bright
+    Stop
+  }
+}
+
+ACTOR IDMCatAmmo : Ammo 10093
+{
+  //$Category Ammunition
+  Tag "Cat-mag"
+  Inventory.Amount 100
+  Inventory.MaxAmount 100
+  Ammo.BackPackAmount 100
+  Ammo.BackPackMaxAmount 200
+  Inventory.Icon "CLYAA0"
+  Inventory.PickupMessage "Cat-mag."
+  States
+  {
+  Spawn:
+    CLYA ABCDCB 4 Bright
+	Loop
+  }
+}
+
+Actor IDMGas : Ammo 10094
+{
+  //$Category Ammunition
+  Tag "Gas canister"
+  Inventory.PickupSound "misc/ammo_pkup"
+  Inventory.PickupMessage "Gas canister."
+  Inventory.Amount 120
+  Inventory.MaxAmount 240
+  Ammo.BackpackAmount 120
+  Ammo.BackpackMaxAmount 480
+  Inventory.Icon "AGASA0"
+  States
+  {
+  Spawn:
+    AGAS A -1
+	Stop
+  }
+}

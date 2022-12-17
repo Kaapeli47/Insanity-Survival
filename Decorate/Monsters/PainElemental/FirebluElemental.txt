@@ -1,0 +1,50 @@
+ACTOR IDMFirebluElemental : IDMPainElemental
+{
+	Tag "Fireblu Elemental"
+	Obituary "%o was engulfed in fireblu by a fireblu elemental."
+	DamageFactor "Rocket", 0.75
+	DamageFactor "Grenade", 0.75
+	DamageFactor "Fire", 0.75
+	DamageFactor "GreenFire", 0.75
+	DamageFactor "PlayerRocket", 0.75
+	DamageFactor "PlayerGrenade", 0.75
+	States
+	{
+	Spawn:
+	  FBEL AB 10 A_Look
+	  Loop
+	See:
+	  FBEL AABBCCBB 3 A_Chase
+	  Loop
+	Missile:
+	  FBEL DE 5 Bright A_FaceTarget
+	  TNT1 A 0 A_Jump(80,"ProjAtk")
+	  FBEL F 5 Bright A_FaceTarget
+	  TNT1 A 0 A_Jump(80,"BigProjAtk")
+	  TNT1 A 0 A_PainAttack("IDMFirebluSoul")
+	  Goto See
+	ProjAtk:
+	  TNT1 A 0 A_CustomMissile("IDMDarkImpBall",26,0,-12)
+	  TNT1 A 0 A_CustomMissile("IDMDarkImpBall",26,0,-6)
+	  TNT1 A 0 A_CustomMissile("IDMDarkImpBall",26,0,6)
+	  TNT1 A 0 A_CustomMissile("IDMDarkImpBall",26,0,12)
+	  FBEL F 5 Bright A_CustomMissile("IDMDarkImpBall",26)
+	  Goto See
+	BigProjAtk:
+	  FBEL F 5 Bright A_CustomMissile("IDMHumoncubusBall",26)
+	  Goto See
+	Pain:
+	  FBEL G 6
+	  FBEL G 6 A_Pain
+	  Goto See
+	Death:
+	  FBEL H 8 BRIGHT
+	  FBEL I 8 BRIGHT A_Scream
+	  FBEL JK 8 BRIGHT
+	  TNT1 AAAAAAAAAAAAAAAA 0 A_CustomMissile("IDMDarkImpBall",32,0,random(0,359),2,random(-15,15))
+	  TNT1 AAAA 0 A_CustomMissile("IDMHumoncubusBall",32,0,random(0,359),2,random(-15,15))
+	  FBEL L 8 BRIGHT
+	  FBEL M 8 BRIGHT A_PainDie("IDMFirebluSoul")
+	  Stop
+	}
+}

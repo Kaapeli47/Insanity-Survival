@@ -1,0 +1,42 @@
+decal FreezeBlastMelt
+{
+	pic BSMEAR1
+	x-scale 1.1
+	y-scale 1.1
+	shade "DD DD FF"
+	randomflipx
+	animator BloodSmearer
+}
+
+decal RocketImpScorch
+{
+	pic SCORCH2
+	shade "00 00 00"
+	x-scale 0.75
+	y-scale 0.75
+	randomflipx
+	randomflipy
+}
+
+
+decal Phasescorch1
+{
+	pic PHBLA0
+	add 1.0
+	animator GoAway
+	lowerdecal PlasmaScorchLower1
+}
+
+decal Phasescorch2
+{
+	pic PHBLB0
+	add 1.0
+	animator GoAway
+	lowerdecal PlasmaScorchLower2
+}
+
+decalgroup PhaseScorch
+{
+	PhaseScorch1	1
+	PhaseScorch2	1
+}

@@ -1,0 +1,29 @@
+// Blue Armor
+
+ACTOR IDMBlueArmor : BasicArmorPickup 10065
+{
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "Blue Armor!"
+  Inventory.PickupSound "misc/armor_pkup"
+  Inventory.Icon "ARM2A0"
+  Inventory.RespawnTics 2100
+  Armor.SavePercent 66.6667
+  Armor.SaveAmount 300
+  DamageFactor "CybruiserBullet", 0.2
+  DamageFactor "SpiderBullet", 0.2
+  DamageFactor "Bullet", 0.2
+  DamageFactor "Nail", 0.2
+  DamageFactor "Punch", 0.2
+  DamageFactor "Saw", 0.2
+  DamageFactor "Mace", 0.2
+  Tag "Blue Armor"
+  //$Category Health and Armor
+  States
+  {
+  Spawn:
+    ARM2 A 6
+    ARM2 B 6 Bright
+	Loop
+  }
+}

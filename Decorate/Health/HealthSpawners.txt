@@ -1,0 +1,49 @@
+ACTOR HealthSpawner1 : RandomSpawner
+{
+	DropItem "IDMStimpackPickup"
+	DropItem "IDMMedikitPickup"
+}
+
+ACTOR HealthSpawner2 : RandomSpawner
+{
+	DropItem "IDMMedikitPickup"
+	DropItem "IDMMedipackPickup"
+}
+
+ACTOR HealthSpawnActor1 : CustomInventory replaces Stimpack
+{
+	Tag "Health Spawner 1"
+	//$Category Health and Armor
+	//$Sprite STIMA0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("HealthSpawner1")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR HealthSpawnActor2 : CustomInventory replaces Medikit
+{
+	Tag "Health Spawner 2"
+	//$Category Health and Armor
+	//$Sprite MEDIA0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("HealthSpawner2")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}

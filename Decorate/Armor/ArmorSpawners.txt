@@ -1,0 +1,56 @@
+// Armor Spawners
+
+ACTOR LightArmorSpawner : RandomSpawner
+{
+	DropItem "IDMYellowArmor"
+	DropItem "BulletArmor"
+	DropItem "FragArmor"
+	DropItem "TechArmor"
+}
+
+ACTOR HeavyArmorSpawner : RandomSpawner
+{
+	DropItem "IDMBlueArmor"
+	DropItem "IDMRedArmor"
+	DropItem "PurpleArmor"
+	DropItem "SuperArmor"
+}
+
+
+ACTOR LightArmorSpawnActor : CustomInventory replaces GreenArmor
+{
+	Tag "Light Armor Spawner"
+	//$Category Health and Armor
+	//$Sprite ARMYA0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("LightArmorSpawner")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR HeavyArmorSpawnActor : CustomInventory replaces BlueArmor
+{
+	Tag "Heavy Armor Spawner"
+	//$Category Health and Armor
+	//$Sprite ARM2A0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("HeavyArmorSpawner")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}

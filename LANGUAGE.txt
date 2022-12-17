@@ -1,0 +1,123 @@
+[enu default]
+OB_DEFAULT = "%o got %p own dumb ass self killed.";
+OB_MPDEFAULT = "%o was utterly fragged by %k!";
+OB_KILLEDSELF = "%o killed %p own dumb self.";
+OB_SLIME = "%o stood on slime for too long.";
+OB_LAVA = "%o stood on fire for too long.";
+OB_CRUSH = "%o failed at life.";
+OB_EXIT = "%o tried to leave the insanity.";
+OB_SUICIDE = "%o took the sane way out.";
+OB_REFLECTION = "%o tasted %p own medicine from %k's reflection.";
+OB_MPBFG_SPLASH = "%o couldn't hide from %k's BFG Prototype.";
+OB_BFG10K_SELF = "%o blasted %p own dumb ass with %p BFG10K.";
+
+PRESSKEY = "Please press your entire keyboard with a hydraulic press.";
+PRESSYN = "Press Yeah! or Nope! If you can't find them, try slamming your fist on the keyboard.";
+DOSY = "";
+MNU_CHOOSECLASS = "CHOOSE WEAPON:";
+
+TXT_YES = "Yeah!";
+TXT_NO = "Nope!";
+
+// Ammo
+
+GOTCLIP = "Clip of bullets.";
+GOTCLIPBOX = "Box of bullets.";
+GOTSHELLS = "Shells.";
+GOTSHELLBOX = "Box of shells.";
+GOTROCKET = "Rocket.";
+GOTROCKBOX = "Box of rockets.";
+GOTCELL = "Cell.";
+GOTCELLBOX = "Cell pack.";
+
+// Quitting messages
+
+QUITMSG = "Are you sure you're sane enough\nto escape the Insanity?";
+QUITMSG1 = "Admit you're a complete wuss and press Y.\nOr show everyone you never give up and press N!";
+QUITMSG2 = "Well then! I strongly recommend\nyou and your friends\nget on outta here\nbefore I'll have y'all SHOT!";
+QUITMSG3 = "Yeah, I dare you - rage quit!\nC'mon, make us both happy!";
+QUITMSG4 = "Ooh, someone's gone mad!\nYou gonna go play\na baby's game now?";
+QUITMSG5 = "If you quit now,\n\nthey will find you,\n\nand they will kill you!";
+QUITMSG6 = "For glorious gibs and enormous explosions, press N.\nFor charring chores and horrible homework, press Y.";
+QUITMSG7 = "Don't say I didn't warn you about the Insanity!";
+QUITMSG8 = "You're about to quit?\nYou shouldn't do that.\nYou might as well first quit\nbeing such a wussy instead!";
+QUITMSG9 = "Are you sure you want to fire an ICBM on target 'Home'?";
+QUITMSG10 = "Are you sure this WAD has gotten upon your nerves enough?";
+QUITMSG11 = "\cDKaapeli\cV47's\n\nabout to make\n\nyou his b*tch.";
+QUITMSG12 = "If it was a slaugher map you were playing, then I see no problem quitting this fast. It's quite natural.\nBut if it was just stock maps, how in the bloody hell did you get owned this fast?!";
+QUITMSG13 = "There's different people\nwho press Y in this screen:\n\nKids who play battle royales, zoomers who like graphics more than gameplay, Justin Bieber, and other wimps like you.";
+QUITMSG14 = "Are you sure you want to hide under the sheets of your bed to get as far away as possible "
+"from that bruiser demon who just blasted your ass with giant fireballs, tore you apart in small gory red pieces "
+"and thin red paste, tossed you across the entire map, scorched your remains into ashes and then "
+"blew off what was left of the dust from your burned innards?\nInsane, isn't it?";
+QUITMSG15 = "Press Y for more hurtitude.\nPress N for more gibbitude!";
+QUITMSG16 = "You can run back to classic Doom,\nbut there's no escape from the Insanity!";
+QUITMSG17 = "Are you sure you want to detonate the 100 charges of C4 explosives underneath your house?";
+QUITMSG18 = "That must've really hurt! You need a painkiller?\nA band aid? A first aid kit perhaps?";
+QUITMSG19 = "Admit you're a baby and press Y.\nOr prove you're more than just a mouse chased by angry cats and press N!";
+QUITMSG20 = "Press Y to pay respects.\nPress N to rise from the dead!";
+QUITMSG21 = "Trust me. Going back to classic Doom\ndoesn't help your odds much...";
+QUITMSG22 = "Are you sure you want to give orders to 50 Finnish K9 armored howitzers to fire at your current location?";
+QUITMSG23 = "Are you sure you turned the safety off?";
+QUITMSG24 = "Are you su-... oh well alright then!";
+QUITMSG25 = "Press Y for Reality.\nPress N for INSANITY!";
+QUITMSG26 = "Before rage quitting, remember to punch a hole through your monitor and throw it out of the window!";
+QUITMSG27 = "Before you hit that Y key,\njust remember:\n\nYou's a b*tch.";
+QUITMSG28 = "Listen up! I got a feva!\nAnd the only perscription is moar' INSANITY!";
+QUITMSG29 = "Are you sure you want the President of the Republic of Finland to launch a nuclear missile on top of your house?";
+QUITMSG30 = "Are you sure you've been splattered across the arenas by cyberdemons enough?";
+QUITMSG31 = "Are you sure you want to open a portal to hell\nfor the Icon of Insanity to invade the Earth?";
+QUITMSG32 = "You know, hitting ALT+F4 is way faster than doing this...";
+QUITMSG33 = "This is the easy way out.\nIt's also the wussy way out!\n\nYou don't wanna be wussy...";
+QUITMSG34 = "Are you sure you picked up the Big Weapons?\nThere are more powerful weapons, you know!";
+QUITMSG35 = "Have you lost your mind?!";
+
+STSTR_DQDON = "Godmode enabled!";
+STSTR_DQDOFF = "Godmode disabled!";
+STSTR_NCON = "Noclip enabled!";
+STSTR_NCOFF = "Noclip disabled!";
+STSTR_NC2ON = "Noclip enabled!";
+STSTR_CLEV = "Switching map...";
+STSTR_KFAADDED = "Fully Loaded up to the keys!";
+STSTR_FAADDED = "Fully Loaded!";
+TXT_BUDDHAON = "Demigodmode enabled!";
+TXT_BUDDHAOFF = "Demigodmode disabled!";
+
+NETEND = "You can't end the Insanity!";
+LOADNET = "You can't escape the Insanity by loading a game!";
+QLOADNET = "You can't escape the Insanity by quickloading a game!";
+SAVENET = "You can't save the Insanity!";
+
+// Random Gameplay Tips
+
+TIP0 = "\cJRANDOM TIP\n\cFThe Super Shotgunner and Chaingun Major can sometimes drop a Super Chaingun or Super Shotgun!";
+TIP1 = "\cJRANDOM TIP\n\cFThe Plasmagunner and Railgunner can sometimes drop a Plasma Gun or Railgun!";
+TIP2 = "\cJRANDOM TIP\n\cFThe \cPStrogg\cF, \cCCyber\cF, \cGBoss \cFand \cIMiniboss \cFmonsters are 25% more resistant to fire and explosives!";
+TIP3 = "\cJRANDOM TIP\n\cFThe \cIHeat Seeker \cFrockets can be shot down midair!";
+TIP4 = "\cJRANDOM TIP\n\cFThe \cIRage \cFpowerup gives Invulnerability and random additional powerups for 30 seconds!";
+TIP5 = "\cJRANDOM TIP\n\cFThe \cDBullet Armor \cFgives 80% resistance to ballistic & melee damage, and gives some Bullets & Shells!";
+TIP6 = "\cJRANDOM TIP\n\cFThe \cGFrag Armor \cFgives 87.5% resistance to explosive damage, and gives some Rockets!";
+TIP7 = "\cJRANDOM TIP\n\cFThe \cKYellow Armor \cFgives 50% resistance to all damage!";
+TIP8 = "\cJRANDOM TIP\n\cFThe \cCTech Armor \cFgives 80% resistance to plasma damage, and gives full Cells!";
+TIP9 = "\cJRANDOM TIP\n\cFThe \cNBlue Armor \cFgives 80% resistance to ballistic & melee damage!";
+TIP10 = "\cJRANDOM TIP\n\cFThe \cGRed Armor \cFgives 87.5% resistance to explosive damage!";
+TIP11 = "\cJRANDOM TIP\n\cFThe \cTPurple Armor \cFgives 80% resistance to plasma damage!";
+TIP12 = "\cJRANDOM TIP\n\cFSome \cLBig Weapons \cFuse special ammo which can drop from monsters, or randomly spawn in place of Cell Packs!";
+TIP13 = "\cJRANDOM TIP\n\cFThe \cJDoppelganger \cFcan disguise and transform itself into most classic Doom monsters!";
+TIP14 = "\cJRANDOM TIP\n\cFHealth pickups heal up to the Max 200 Health! Health Bonuses can raise your Max Health up to 300!";
+TIP15 = "\cJRANDOM TIP\n\cFThe \cUSuper Armor \cFgives 75% resistance to all damage!";
+TIP16 = "\cJRANDOM TIP\n\cFThe \cKProsperity \cFpowerup can give you the \cDBullet Armor\cF, \cGFrag Armor \cFor \cCTech Armor\cF!";
+TIP17 = "\cJRANDOM TIP\n\cFThe \cEMegaSphere \cFcan give you the \cNBlue Armor\cF, \cGRed Armor\cF, or \cTPurple Armor\cF!";
+TIP18 = "\cJRANDOM TIP\n\cFWhen you pick up armor, taking damage plays a sharp DING sound!";
+TIP19 = "\cJRANDOM TIP\n\cFWhen picking up most powerups, you become invulnerable for 1 second!";
+TIP20 = "\cJRANDOM TIP\n\cFExplosive Barrels are now EXTREMELY explosive! Utilize them well but with caution!";
+TIP21 = "\cJRANDOM TIP\n\cFAll weapons have their powered up versions when used with the \cUStrength \cFpowerup!";
+TIP22 = "\cJRANDOM TIP\n\cFThe \cIRage \cFpowerup has a very low chance of giving you 10 powerups at once!";
+TIP23 = "\cJRANDOM TIP\n\cFIf a monster can gib, it has a tiny chance of spawning a \cJResurrector \cFin the process!";
+TIP24 = "\cJRANDOM TIP\n\cFTry to not go Insane! No, I'm serious, it's already happened to some players here. This is called \cDInsanity Survival \cFafterall!";
+TIP25 = "\cJRANDOM TIP\n\cFThe bigger the monsters are, the more ammo they drop!";
+TIP26 = "\cJRANDOM TIP\n\cFWhen you are killed, there is a small chance you will explode into a dozen funny looking projectiles that can kill surrounding monsters!";
+TIP27 = "\cJRANDOM TIP\n\cFSome monsters have BFG projetile attacks! Be careful!";
+TIP28 = "\cJRANDOM TIP\n\cFThe \cGBoss \cFmonsters have a rare chance to drop a big weapon for another slot than slot 7!";
+/*TIP29 = "\cJRANDOM TIP\n\cF
+TIP30 = "\cJRANDOM TIP\n\cF*/

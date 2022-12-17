@@ -1,0 +1,128 @@
+/// Bishop
+
+ACTOR IDMBishop : Bishop replaces Bishop
+{
+  Health 400
+  Radius 22
+  Height 56
+  Speed 12
+  PainChance 110
+  Monster
+  Mass 800
+  Species "Cacodemon"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  +FLOAT
+  +NOGRAVITY
+  +NOBLOOD
+  -TELESTOMP
+  +DONTOVERLAP
+  +NOTARGETSWITCH
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  SeeSound "BishopSight"
+  AttackSound "BishopAttack"
+  PainSound "BishopPain"
+  DeathSound "BishopDeath"
+  ActiveSound "BishopActiveSounds"
+  Obituary "$OB_BISHOP"
+  Tag "Bishop"
+  BloodColor "Green"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 64, 20
+  DropItem "Clip", 16, 20
+  DropItem "ClipBox", 8, 50
+  DropItem "Shell", 64, 4
+  DropItem "Shell", 16, 20
+  DropItem "ShellBox", 8, 10
+  DropItem "RocketAmmo", 64, 1
+  DropItem "RocketAmmo", 16, 1
+  DropItem "RocketBox", 8, 5
+  DropItem "Cell", 32, 20
+  DropItem "Cell", 8, 20
+  DropItem "Cellpack", 4, 100
+  DropItem "IDMMana", 4
+  DropItem "IDMMana", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMGas", 4
+  DropItem "IDMGas", 4
+  States
+  {
+  Spawn:
+    BISH AB 10 A_Look
+    Loop
+  See:
+    BISH A 2 A_Chase
+    BISH A 2 A_BishopChase
+    BISH A 2
+    BISH B 2 A_BishopChase
+    BISH B 2 A_Chase
+    BISH B 2 A_BishopChase
+    BISH A 1 A_BishopDecide
+    Loop
+  Blur:
+    BISH A 2 A_BishopDoBlur
+    BISH A 4 A_BishopSpawnBlur
+    Wait
+  Pain:
+    BISH C 6 A_Pain
+    BISH CCC 6 A_BishopPainBlur
+    BISH C 0
+    Goto See
+  Missile:
+    BISH A 3 A_FaceTarget
+    BISH DE 3 A_FaceTarget
+    BISH F 3 A_BishopAttack
+    BISH F 2 A_BishopAttack2
+    Wait
+  Death:
+    BISH G 6
+    BISH H 6 Bright A_Scream
+    BISH I 5 Bright A_NoBlocking
+    BISH J 5 Bright A_Explode(random[BishopBoom](50, 80))
+    BISH K 5 Bright
+    BISH LM 4 Bright
+    BISH N 4 A_SpawnItemEx("BishopPuff", 0, 0, 40, 0, 0, 0.5)
+    BISH O 4 A_QueueCorpse
+    BISH P -1
+    Stop
+  Raise:
+    BISH ONMLKJIHG 5
+	Goto See
+  Ice:
+    BISH X 5 A_FreezeDeath
+    BISH X 1 A_FreezeDeathChunks
+    Wait
+  }
+}
+
+ACTOR IDMBishopFX : BishopFX replaces BishopFX
+{
+  Radius 10
+  Height 6
+  Speed 10
+  Damage 3
+  Projectile
+  +SEEKERMISSILE
+  -ACTIVATEIMPACT
+  -ACTIVATEPCROSS
+  -STRIFEDAMAGE
+  RenderStyle Add
+  DeathSound "BishopMissileExplode"
+  DamageType "Plasma"
+  States
+  {
+  Spawn:
+    BPFX AB 1 Bright A_BishopMissileWeave
+    BPFX B 0 Bright A_SeekerMissile(2, 3)
+    Loop
+  Death:
+    BPFX CDEF 4 Bright
+    BPFX GH 3 Bright
+    Stop
+  }
+}

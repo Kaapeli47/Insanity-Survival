@@ -1,0 +1,18 @@
+/// Cacodemon Spawn
+
+ACTOR CacoDemonRandomSpawner : RandomSpawner replaces Cacodemon
+{
+	DropItem "IDMCacoDemon", 256, 16
+	DropItem "IDMCacozerg", 256, 4
+	DropItem "IDMAgathoDemon", 256, 4
+	DropItem "IDMCacoLantern", 256, 4
+	DropItem "IDMCacoBrute", 256, 3
+	DropItem "IDMCybercaco", 256, 4
+	DropItem "IDMAbaddon", 256, 4
+	DropItem "IDMDarkCacoDemon", 256, 4
+	DropItem "IDMBabyCacodemon", 256, 4
+	DropItem "IDMDriller", 256, 3
+	DropItem "IDMWizard", 256, 4
+	DropItem "IDMBishop", 256, 4
+	DropItem "IDMWraith", 256, 4
+}

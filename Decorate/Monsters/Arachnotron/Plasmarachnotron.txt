@@ -1,0 +1,54 @@
+/// Plasmarachnotron
+
+ACTOR IDMPlasmarachnotron : IDMArachnotron
+{
+	Tag "Plasmarachnotron"
+	Obituary "%o was plasmatized by a plasmarachnotron."
+	BloodColor "Blue"
+	States
+	{
+	Spawn:
+	  PBSP AB 10 A_Look
+	  Loop
+	See:
+	  PBSP A 20
+	  PBSP A 3 A_BabyMetal
+	  PBSP ABBCC 3 A_Chase
+	  PBSP D 3 A_BabyMetal
+	  PBSP DEEFF 3 A_Chase
+	  Goto See+1
+	Missile:
+	  PBSP A 20 BRIGHT A_FaceTarget
+	  TNT1 A 0 A_Jump(128,"ScatterAtk")
+	PlasmaAtk:
+	  PBSP G 3 BRIGHT A_CustomMissile("MonsterPlasmaBall",19,4)
+	  PBSP H 2 BRIGHT A_CustomMissile("MonsterPlasmaBall",19,4)
+	  PBSP H 1 BRIGHT A_SpidRefire
+	  Goto PlasmaAtk
+	ScatterAtk:
+	  PBSP HHH 1 BRIGHT A_CustomMissile("MonsterPlasmaBall",19,4,random(-8,8))
+	  PBSP H 4 BRIGHT A_FaceTarget
+	  PBSP G 6 BRIGHT A_FaceTarget
+	  PBSP G 1 BRIGHT A_SpidRefire
+	  Goto ScatterAtk
+	Pain:
+	  PBSP I 3
+	  PBSP I 3 A_Pain
+	  Goto See+1
+	Death:
+	  PBSP J 20 A_Scream
+	  PBSP K 7 A_NoBlocking
+	  PBSP LMNO 7
+	  PBSP P -1 A_BossDeath
+	  Stop
+	Ice:
+	  "####" "#" 5 A_GenericFreezeDeath
+	  TNT1 A 0 A_BossDeath
+	  "----" A 1 A_FreezeDeathChunks
+	  Wait
+    Raise:
+	  PBSP P 5
+	  PBSP ONMLKJ 5
+	  Goto See+1
+	}
+}

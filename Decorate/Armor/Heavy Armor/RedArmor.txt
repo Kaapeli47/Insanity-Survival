@@ -1,0 +1,28 @@
+// Red Armor
+
+ACTOR IDMRedArmor : BasicArmorPickup 10066
+{
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "Red armor!"
+  Inventory.PickupSound "misc/armor_pkup"
+  Inventory.Icon "ARM3A0"
+  Inventory.RespawnTics 2100
+  Armor.SavePercent 75
+  Armor.SaveAmount 300
+  DamageFactor "Fire", 0.125
+  DamageFactor "Rocket", 0.125
+  DamageFactor "Grenade", 0.125
+  DamageFactor "PlayerRocket", 0.125
+  DamageFactor "PlayerGrenade", 0.125
+  DamageFactor "Hellstorm", 0.125
+  Tag "Red Armor"
+  //$Category Health and Armor
+  States
+  {
+  Spawn:
+    ARM3 A 6
+    ARM3 B 6 Bright
+    Loop
+  }
+}

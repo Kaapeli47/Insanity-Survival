@@ -1,0 +1,32 @@
+// Purple Armor
+
+ACTOR PurpleArmor : BasicArmorPickup 10067
+{
+  Radius 20
+  Height 16
+  Inventory.PickupSound "misc/powarmor_pkup"
+  Inventory.PickupMessage "Purple Armor!"
+  Inventory.Icon "ARM5A0"
+  Inventory.RespawnTics 2100
+  Armor.SavePercent 83.3333
+  Armor.SaveAmount 300
+  DamageFactor "Ice", 0.2
+  DamageFactor "Plasma", 0.2
+  DamageFactor "HitPlasma", 0.2
+  DamageFactor "Pulse", 0.2
+  DamageFactor "GreenFire", 0.2
+  DamageFactor "Blaster", 0.2
+  DamageFactor "Railgun", 0.2
+  DamageFactor "BFG", 0.2
+  DamageFactor "BFGSplash", 0.2
+  DamageFactor "BFG10k", 0.2
+  DamageFactor "RedPlasma", 0.2
+  Tag "Purple Armor"
+  //$Category Health and Armor
+  States
+  {
+  Spawn:
+    ARM5 A -1 Bright
+    Stop
+  }
+}

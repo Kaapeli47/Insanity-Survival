@@ -1,0 +1,76 @@
+/// Zombie man
+
+ACTOR IDMZombieMan : Zombieman
+{
+	Health 20
+	GibHealth 20
+	Radius 20
+	Height 56
+	Speed 8
+	PainChance 200
+	Monster
+	+FLOORCLIP
+	+MISSILEMORE
+	+MISSILEEVENMORE
+	SeeSound "grunt/sight"
+	AttackSound "grunt/attack"
+	PainSound "grunt/pain"
+	DeathSound "grunt/death"
+	ActiveSound "grunt/active"
+	DamageType "Bullet"
+	Tag "Zombieman"
+	DropItem "IDMHealthBonusPickup", 64
+	DropItem "IDMArmorBonusPickup", 64
+	DropItem "Clip", 32, 20
+	DropItem "Shell", 32, 4
+	DropItem "RocketAmmo", 32, 1
+	DropItem "Cell", 8, 20
+	States
+	{
+	Spawn:
+		POSS AB 10 A_Look
+		Loop
+	See:
+		POSS AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		POSS E 6 A_FaceTarget
+		POSS E 0 A_PlaySound ("grunt/attack")
+		POSS F 5 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+		POSS E 5
+		Goto See
+	Pain:
+		POSS G 2
+		POSS G 2 A_Pain
+		Goto See
+	Death:
+		POSS H 5
+		POSS I 5 A_Scream
+		POSS J 5 A_NoBlocking
+		POSS K 5
+		POSS L -1
+		Stop
+	XDeath:
+		TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+	XDeath.Massacre:
+		POSS M 5
+		POSS N 5 A_XScream
+		POSS O 5 A_NoBlocking
+		POSS PQRST 5
+		POSS U -1
+		Stop
+	XDeath.Resurrector:
+		POSS M 5
+		POSS N 5 A_XScream
+		TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+		TNT1 A 0 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+		POSS O 5 A_NoBlocking
+		POSS PQRST 5
+		POSS U -1
+		Stop
+	Raise:
+		POSS L 5
+		POSS KJIH 5
+		Goto See
+	}
+}

@@ -1,0 +1,24 @@
+/// decorate/armor.txt by Kaapeli47
+
+/// Heavy Armor ///
+
+Actor SuperArmor : BasicArmorPickup 10068
+{
+  Radius 20
+  Height 16
+  Armor.SavePercent 50
+  Armor.SaveAmount 300
+  Inventory.Icon "ARMXA0"
+  Inventory.PickupMessage "SUPER ARMOR!"
+  Inventory.PickupSound "misc/suparmor_pkup"
+  Inventory.RespawnTics 2100
+  DamageFactor "Normal", 0.2
+  Tag "Super Armor"
+  //$Category Health and Armor
+  States
+  {
+  Spawn:
+    ARMX AB 3 Bright
+    Loop
+  }
+}

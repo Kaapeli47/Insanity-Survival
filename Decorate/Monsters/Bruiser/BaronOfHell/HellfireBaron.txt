@@ -1,0 +1,83 @@
+/// Baron of Hellfire
+
+ACTOR IDMHellfireBaron : IDMBaronOfHell
+{
+	PainChance 10
+	Tag "Baron of Hellfire"
+	Obituary "%o was set on hellfire by a baron of hellfire."
+	HitObituary "%o was squashed by a baron of hellfire."
+	BloodColor "DarkOrange1"
+	States
+	{
+	Spawn:
+		BOHF AB 10 A_Look 
+		Loop
+	See:
+		BOHF AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		TNT1 A 0 A_Jump(64,"GroundAtk")
+		TNT1 A 0 A_Jump(96,"DoubleAtk")
+	Melee:
+		TNT1 A 0 A_Jump(128,"MissileAtk")
+		TNT1 A 0 A_Jump(128,"OtherHand")
+		BOHF EF 8 A_FaceTarget
+		BOHF G 8 A_CustomComboAttack("IDMScorchMissile", 32, 10 * random(1, 8), "baron/melee")
+		TNT1 A 0 A_Jump(128,"See")
+		Goto Melee
+	OtherHand:
+		BOHF PQ 8 A_FaceTarget
+		BOHF R 8 A_CustomComboAttack("IDMScorchMissile", 32, 10 * random(1, 8), "baron/melee")
+		TNT1 A 0 A_Jump(128,"See")
+		Goto Melee
+	GroundAtk:
+		BOHF EF 10 A_FaceTarget
+		BOHF G 5 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("IDMArchMissile", 32, 0, 0)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile", 32, 0, 45)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile", 32, 0, 90)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile", 32, 0, 135)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile", 32, 0, 180)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile", 32, 0, 225)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile", 32, 0, 270)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile", 32, 0, 315)
+		BOHF G 15
+		Goto See
+	DoubleAtk:
+		BOHF EF 6 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("IDMArchMissile", 32, 0, -8)
+		BOHF G 6 A_CustomMissile("IDMArchMissile", 32, 0, 8)
+		BOHF PQ 6 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("IDMArchMissile", 32, 0, -8)
+		BOHF R 6 A_CustomMissile("IDMArchMissile", 32, 0, 8)
+		Goto See
+	MissileAtk:
+		TNT1 A 0 A_Jump(128,"MissileOtherHand")
+		BOHF EF 8 A_FaceTarget
+		BOHF G 8 A_CustomComboAttack("IDMFatShot", 32, 10 * random(1, 8), "baron/melee")
+		TNT1 A 0 A_Jump(128,"See")
+		Goto Melee
+	MissileOtherHand:
+		BOHF PQ 8 A_FaceTarget
+		BOHF R 8 A_CustomComboAttack("IDMFatShot", 32, 10 * random(1, 8), "baron/melee")
+		TNT1 A 0 A_Jump(128,"See")
+		Goto Melee
+	Pain:
+		BOHF H 2
+		BOHF H 2 A_Pain
+		Goto See
+	Death:
+	Death.Massacre:
+		BOHF I 8
+		BOHF J 8 A_Scream
+		BOHF K 8
+		BOHF L 8 A_NoBlocking
+		BOHF MN 8
+		BOHF O -1 A_BossDeath   
+		Stop
+	Raise:
+		BOHF O 8
+		BOHF NMLKJI  8
+		Goto See
+	}
+}

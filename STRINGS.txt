@@ -1,0 +1,181 @@
+[STRINGS]
+OB_DEFAULT = "%o got %p own dumb ass self killed.";
+OB_MPDEFAULT = "%o was utterly fragged by %k!";
+OB_KILLEDSELF = "%o killed %p own dumb self.";
+OB_SLIME = "%o stood on slime for too long.";
+OB_LAVA = "%o stood on fire for too long.";
+OB_CRUSH = "%o failed at life.";
+OB_EXIT = "%o tried to leave the insanity.";
+OB_SUICIDE = "%o took the sane way out.";
+OB_REFLECTION = "%o tasted %p own medicine from %k's reflection.";
+OB_MPBFG_SPLASH = "%o couldn't hide from %k's BFG Prototype.";
+OB_BFG10K_SELF = "%o blasted %p own dumb ass with %p BFG10K.";
+
+PRESSKEY = "Please press your entire keyboard with a hydraulic press.";
+PRESSYN = "Press Yeah! or Nope! If you can't find them, try slamming your fist on the keyboard.";
+DOSY = "";
+MNU_CHOOSECLASS = "CHOOSE WEAPON:";
+
+TXT_YES = "Yeah!";
+TXT_NO = "Nope!";
+
+// Quitting messages
+
+QUITMSG = "Are you sure you're sane enough\nto escape the Insanity?";
+QUITMSG1 = "Admit you're a complete wuss and press Y.\nOr show everyone you never give up and press N!";
+QUITMSG2 = "Well then! I strongly recommend\nyou and your friends\nget on outta here\nbefore I'll have y'all SHOT!";
+QUITMSG3 = "Yeah, I dare you - rage quit!\nC'mon, make us both happy!";
+QUITMSG4 = "Ooh, someone's gone mad!\nYou gonna go play\na baby's game now?";
+QUITMSG5 = "If you quit now,\n\nI will find you,\n\nand I will kill you!";
+QUITMSG6 = "For glorious gibs and enormous explosions, press N.\nFor charring chores and ho-hum homework, press Y.";
+QUITMSG7 = "Don't say I didn't warn you about the Insanity!";
+QUITMSG8 = "You're about to quit?\nYou shouldn't do that.\nYou might as well first quit\nbeing such a wussy instead!";
+QUITMSG9 = "Are you sure you want to fire an ICBM on target 'Home'?";
+QUITMSG10 = "Are you sure this WAD has gotten upon your nerves enough?";
+QUITMSG11 = "\cDKaapeli\cV47's\n\nabout to make\n\nyou his b*tch.";
+QUITMSG12 = "If you're a noobie, press Y!\nIf you're a deathmatch veteran,\nwell, don't let me tell you what to do!";
+QUITMSG13 = "There's different people\nwho press Y in this screen:\n\nKids who play battle royales, zoomers who like graphics more than gameplay, Justin Bieber, and other wimps like you.";
+QUITMSG14 = "Are you sure you want to cower in the corner of your room and get as far away as possible " 
+"from that 'hacker' who is in fact not one and instead just another Deathmatch veteran who "
+"just shows how bad you are as a player and how good you are as a mop for cleaning the arena of "
+"their enemies' gory red pieces and thin red paste including you as the mop?\nInsane, isn't it?";
+QUITMSG15 = "Press Y for more hurtitude.\nPress N for more gibbitude!";
+QUITMSG16 = "You can run back to Vanilla DM,\nbut there's no escape from the Insanity!";
+QUITMSG17 = "Are you sure you want to detonate the 100 charges of C4 explosives underneath your house?";
+QUITMSG18 = "Are you sure you want to drown in sadness forever because of how much you suck in deathmatch?";
+QUITMSG19 = "Admit you're a baby and press Y.\nOr prove you're more than just a target dummy and press N!";
+QUITMSG20 = "Press Y to pay respects.\nPress N to rise from the dead!";
+QUITMSG21 = "Trust me. Going back to Vanilla DM\ndoesn't help your odds much...";
+QUITMSG22 = "Are you sure you want to give orders to 50 Finnish K9 armored howitzers to fire at your current location?";
+QUITMSG23 = "Are you sure you turned the safety off?";
+QUITMSG24 = "Are you su-... oh well alright then!";
+QUITMSG25 = "Press Y for Reality.\nPress N for INSANITY!";
+QUITMSG26 = "Before rage quitting, remember to punch a hole through your monitor and throw it out of the window!";
+QUITMSG27 = "Before you hit that Y key,\njust remember:\n\nYou's a b*tch.";
+QUITMSG28 = "Listen up! I got a feva!\nAnd the only perscription is moar' INSANITY!";
+QUITMSG29 = "Are you sure you want the president of the Republic of Finland to launch a nuclear missile on top of your house?";
+QUITMSG30 = "Are you sure you've been splattered across the arenas by veterans enough?";
+QUITMSG31 = "Are you sure you shot down the Heat Seeker Missiles?\n\nThey can be shot down, you know?";
+QUITMSG32 = "You know, hitting ALT+F4 is way faster than doing this...";
+QUITMSG33 = "This is the easy way out.\nIt's also the wussy way out!\n\nYou don't wanna be wussy...";
+QUITMSG34 = "Are you sure YOU picked up the Big Weapons? Not the enemy?";
+
+STSTR_DQDON = "Godmode enabled!";
+STSTR_DQDOFF = "Godmode disabled!";
+STSTR_NCON = "Noclip enabled!";
+STSTR_NCOFF = "Noclip disabled!";
+STSTR_NC2ON = "Noclip enabled!";
+STSTR_CLEV = "Switching map...";
+STSTR_KFAADDED = "Fully Loaded up to the keys!";
+STSTR_FAADDED = "Fully Loaded!";
+TXT_BUDDHAON = "Demigodmode enabled!";
+TXT_BUDDHAOFF = "Demigodmode disabled!";
+
+NETEND = "You can't end the Insanity!"; 
+LOADNET = "You can't escape the Insanity by loading a game!";
+QLOADNET = "You can't escape the Insanity by quickloading a game!";
+SAVENET = "You can't save the Insanity!";
+
+
+// Random tips
+
+TIP1 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFYou can choose your starting weapon\n\cFfrom \cGPLAYER SETUP \cFin the main menu!";
+TIP2 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cIHeat Seeker \cFmissiles can be shot down midair!";
+TIP3 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cIRage \cFpowerup gives Invulnerability and\n\cFrandom additional powerups for 10 seconds!";
+TIP4 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cDBullet Armor \cFgives 80% resistance to\n\cFballistic & melee damage, and gives full Bullets & Shells!";
+TIP5 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cGFrag Armor \cFgives 87.5% resistance to\n\cFexplosive damage, and gives full Rockets!";
+TIP6 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cCTech Armor \cFgives 80% resistance to\n\cFplasma damage, and gives full Cells!";
+TIP7 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cKYellow Armor \cFgives\n\cF50% resistance to all damage!";
+TIP8 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cNBlue Armor \cFgives\n\cF80% resistance to ballistic & melee damage!";
+TIP9 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cGRed Armor \cFgives\n\cF87.5% resistance to explosive damage!";
+TIP10 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cTPurple Armor \cFgives\n\cF80% resistance to plasma damage!";
+TIP11 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFWeapon, armor, powerup, and ammo\n\cFspawns are random for each match!";
+TIP12 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFYou're always running in \cGInsanity Deathmatch\cF!\n\cFEven if you have 'Always Run' off!";
+TIP13 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFTry to not go Insane!\nNo, I'm serious, it's already happened to some players here.\nThis is called \cGInsanity Deathmatch \cFafterall!";
+TIP14 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFSome \cLBig Weapons \cFuse special ammo\n\cFthat can't be restocked with pickups!";
+TIP15 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cNRailgun \cFis a slow sniping weapon\n\cFthat one-shots players on spawn!";
+TIP16 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cIExplosive weapons (Slot 5) \cFfire slow explosive missiles\n\cFat a slow rate, mostly fragging players in one direct hit!";
+TIP17 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cBBullet weapons (Slot 4) \cFare rapid fire weapons\n\cFwith great ability to deal continuous damage!";
+TIP18 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cAShotgun weapons (Slot 3) \cFdeliver instant damage\n\cFon a wide spread and slow rate of fire!";
+TIP19 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cVPlasma weapons (Slot 6) \cFare uncommon\n\cFbut extremely high damage weapons!";
+TIP20 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFPress F1 for general information on\n\cFhow to play, and for map credits!";
+TIP21 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cIReflection \cFpowerup's reflected damage\n\cFignores the attackers armor!";
+TIP22 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cLBig Weapons \cFare a high risk but a high reward!\n\cFThey may potentially win you a match or two!";
+TIP23 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFHealth pickups heal up to the Max 200 Health!\n\cFHealth Bonuses can raise your Max Health up to 300!";
+TIP24 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cUSuper Armor \cFgives\n\cF75% resistance to all damage!";
+TIP25 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cBPistol \cFis actually useful this time!\n\cFIt deals average damage with average accuracy!";
+TIP26 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cKChainsaw \cFcan mow down people really quickly,\n\cFand hits way faster than your fist!";
+TIP27 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cBMachinegun \cFhas a good balance in\n\cFconstant shots, damage and accuracy!";
+TIP28 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cKYellowboy \cFis a strong sniper starting weapon,\n\cFfragging any player in usually two shots!";
+TIP29 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cKBlaster \cFfires strong and fast plasma shots,\n\cFbut fires slower than the Pistol!";
+TIP30 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cABoomstick \cFis a fast & accurate\n\cFstart shotgun with good damage!";
+TIP31 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cABuckshot \cFis a deadly start weapon that's faster and almost\n\cFstronger than the Shotgun, but consumes 2 Shells!";
+TIP32 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cBChaingun \cFstart weapon offers\n\cFa great output of suppressing shots!";
+TIP33 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cIGrenade Rifle \cFdemands skill, but deals\n\cFthe most damage out of all start weapons!";
+TIP34 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFIf the weapon switch order annoys you, use PWO \n\cFin \cGPLAYER SETUP \cF- \cJWeapons Setup\cF!";
+TIP35 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cKProsperity \cFpowerup can give you\n\cDthe Bullet Armor\cF, \cGFrag Armor \cFor \cCTech Armor\cF!";
+TIP36 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cEMegaSphere \cFcan give you\n\cNthe Blue Armor\cF, \cGRed Armor\cF, or \cTPurple Armor\cF!";
+TIP37 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cUVorpal Blade \cFstart weapon blocks attacks upon each swing,\nand shoots a piercing projectile when fully charged!";
+TIP38 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFYou run faster with the \cJKnife\cF!\n\cFSeriously, that's a starting weapon!";
+TIP39 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFYou can shoot projectiles through teleporters!\n\cF(Unless you're playing a UDMF-format map!)";
+TIP40 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFWhen you pick up armor, taking\n\cFdamage plays a sharp DING sound!";
+TIP41 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFWhen picking up most powerups,\n\cFyou become invulnerable for 1 second!";
+TIP42 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFExplosive Barrels are now EXTREMELY explosive!\n\cFUtilize them well but with caution!";
+TIP43 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFTimed powerups last for 20 or 30 seconds\n\cFand respawn every 90 seconds!";
+TIP44 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe longer the \cIHeat Seeker \cFmissiles fly,\n\cFthe more aggressively they home into targets!";
+TIP45 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFThe \cDLight Armors \cFspawn every 30 seconds.\n\cFThe \cNHeavy Armors \cFspawn every 60 seconds.";
+TIP46 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFAll weapons have their powered up versions\n\cFwhen used with the \cUStrength \cFpowerup!";
+TIP47 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cJRANDOM TIP\n\n\cFUsing Death Camera when dying\n\cFis recommended when playing \cGInsanity Deathmatch\cF!";
+
+// Gibbing "tips"
+
+XTIP1 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKIF YOU HAVE TROUBLE READING THESE TIPS,\n\cKADJUST YOUR TEXT SCALING IN THE HUD OPTIONS!";
+XTIP2 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKJust use WASD to move, and left mouse button to shoot!";
+XTIP3 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKPick up that gun and shoot it!";
+XTIP4 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKProtip: To defeat the Cyberdemon, shoot it until it dies!";
+XTIP5 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKMake sure to also AIM the gun\n\cKbefore shooting it!";
+XTIP6 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKYou know, I can give you some useful\n\cKtips if you stop sucking this much!";
+XTIP7 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKIf you don't get gibbed like this,\n\cKI might actually say something useful!";
+XTIP8 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKWhoever let you play deathmatch\n\cKmade a bad, bad decision...";
+XTIP9 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKGo follow \cDKaapeli\cV47 \cKon \cTTwitch\n\cKto win 100 matches in a row!";
+XTIP10 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKTry pressing ALT+F4 for all weapons & powerups!";
+XTIP11 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cK*INSERT TOTALLY USEFUL PROTIP HERE*";
+XTIP12 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKError 404. Protip Not Found.";
+XTIP13 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKI like you getting gibbed this much!\n\cKThat means I can just keep taunting you!";
+XTIP14 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKTry getting splattered less!";
+XTIP15 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKKABLOOIEEEEEEEEEEE!!!";
+XTIP16 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKIt usually helps to just hold your\n\cKfire button and hope for the best!";
+XTIP17 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKI should've warned that this is\n\cKnot really for the faint of heart...\n\n\cK...or for kids!";
+XTIP18 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKHow'd ya like yer ribs?";
+XTIP19 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKParental Advisory: Explicit INSANITY!";
+XTIP20 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKIf you're playing this keyboard only,\n\cKwell... good luck with that!";
+XTIP21 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKThe cake is a lie.";
+XTIP22 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKy0u'v3 b33n pwnd by 4n 31337 h4x0r!!!1111";
+XTIP23 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cK*INSERT TheMisterCat PLAYING HIS FLUTE HERE*";
+XTIP24 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKYou've 'Sploded!";
+XTIP25 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKBURN ALL THE BRIDGES!!!";
+XTIP26 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKKids - Don't try this at ALL!";
+XTIP27 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKThe Grenade Rifle was originally the Shannon Cannon!\n\cKThat's why it's \cCMajorArlene's \cKfavorite weapon now!";
+XTIP28 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKIf this is your introduction to deathmatch,\n\cKthen I can see that now!";
+XTIP29 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKHOOOOOOOOME RUUUUUUUN!!!";
+XTIP30 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKJust git gud lmao!";
+XTIP31 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKYou can't be anymore dead than that!";
+XTIP32 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKLudicrous Gibs!";
+XTIP33 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKLooks like you pissed off an already angry bull!";
+XTIP34 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKI SPILL'D MAH BURGER!";
+XTIP35 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKIf you really have NO IDEA what you're doing,\n\cFI suggest pressing F1 for a simple 'How to Play'!";
+XTIP36 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKInsanity Deathmatch is just uhh... such a, uh...\n\cKbigger, badder, better version of Deathmatch!";
+XTIP37 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKSOMBODY TOUCHA MA SPAGETT!!!";
+XTIP38 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKNow I know what a TV dinner feels like!";
+XTIP39 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKUAC Marines Tomato Sauce - may contain severed heads,\n\cKgory helmets, and bloody Super Shotguns!";
+XTIP40 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKTurning on Death Camera is EXTREMELY recommended!\n\cKJust to see your head and giblets flying!";
+XTIP41 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKIf deathmatch isn't your thing,\n\cKmaybe a career change is necessary...";
+XTIP42 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKFly me to the moon and let me sing among the gore...";
+XTIP43 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cK'Return to the Bone Zone'\n\cK- Rivi";
+XTIP44 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cK'It slappes mein bratwurst'\n\cK- Jimmy";
+XTIP45 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cK'Guys how can I make a door in slade\n\cK@everyone'\n\n\cK- FUG";
+XTIP46 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKYa know, reading these tips actually might help you\n\cKwhen you don't suck this much!";
+XTIP47 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKSPHERE OF TOME!\n\cK- SystemofaDork";
+XTIP48 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKYou can write off that death\n\cKon your tax forms.";
+XTIP49 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cK'Here is where the jank happens'\n\cK- Remmirath";
+XTIP50 = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\cKYour fortune cookie says:\n\n\cK\"You're shit outta luck!\"";

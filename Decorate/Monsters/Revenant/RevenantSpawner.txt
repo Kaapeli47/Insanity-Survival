@@ -1,0 +1,9 @@
+ACTOR RevenantRandomSpawner : RandomSpawner replaces Revenant
+{
+	DropItem "IDMRevenant"
+	DropItem "IDMGhoul"
+	DropItem "IDMBeast"
+	DropItem "IDMSnake"
+	DropItem "IDMKnight"
+	DropItem "IDMCentaurLeader"
+}

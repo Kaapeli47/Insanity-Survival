@@ -1,0 +1,47 @@
+/// NailgunSpider
+
+actor IDMNailArachnotron : IDMArachnotron
+{
+  obituary "%o was filled with nails by a nail arachnotron."
+  Tag "Nail Arachnotron"
+  decal "bulletchip"
+  states
+  {
+  Spawn:
+    CSPI AB 10 A_Look
+    loop
+  See:
+    CSPI A 20
+    CSPI A 3 A_BabyMetal
+    CSPI ABBCC 3 A_Chase
+    CSPI D 3 A_BabyMetal
+    CSPI DEEFF 3 A_Chase
+    goto See+1
+  Missile:
+    CSPI A 20 bright A_FaceTarget
+	TNT1 A 0 A_Playsound("strogg/attack")
+    CSPI G 4 bright A_CustomMissile("MonsterNail",18,0,random(-6,6))
+	TNT1 A 0 A_Playsound("strogg/attack")
+    CSPI H 4 bright A_CustomMissile("MonsterNail",18,0,random(-6,6))
+    CSPI H 1 bright A_SpidRefire
+    goto Missile+1
+  Pain:
+    CSPI I 3
+    CSPI I 3 A_Pain
+    goto See+1
+  Death:
+    CSPI J 20 A_Scream
+    CSPI K 7 A_NoBlocking
+    CSPI LMNO 7
+    CSPI P -1 A_BossDeath
+    stop
+  Ice:
+	"####" "#" 5 A_GenericFreezeDeath
+	TNT1 A 0 A_BossDeath
+	"----" A 1 A_FreezeDeathChunks
+	Wait
+  Raise:
+    CSPI PONMLKJ 5
+    goto See+1
+  }
+}

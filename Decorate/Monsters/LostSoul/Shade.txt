@@ -1,0 +1,91 @@
+/// Shade
+
+actor IDMShade
+{
+  obituary "%o was slain by a shade."
+  health 50
+  radius 15
+  height 48
+  mass 60
+  speed 10
+  damage 4
+  painchance 32
+  attacksound "skull/melee"
+  painsound "skull/pain"
+  deathsound "skull/death"
+  activesound "skull/active"
+  renderstyle Add
+  alpha 0.9
+  Tag "Shade"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 32, 20
+  DropItem "Shell", 32, 4
+  DropItem "RocketAmmo", 32, 1
+  DropItem "Cell", 8, 20
+  DropItem "IDMMana", 2
+  DropItem "IDMMaceAmmo", 2
+  DropItem "IDMCatAmmo", 2
+  DropItem "IDMGas", 2
+  MONSTER
+  +FLOAT
+  +NOGRAVITY
+  +NOICEDEATH
+  +MISSILEMORE
+  +DONTFALL
+  +NOBLOOD
+  -COUNTKILL
+  states
+  {
+  Spawn:
+    CARL AB 5 bright A_Look
+    loop
+  See:
+    CARL AB 4 bright A_FastChase
+    loop
+  Missile:
+    CARL A 0 A_Jump (32, "Attack2")
+    CARL C 10 bright A_FaceTarget
+    CARL D 4 bright A_SkullAttack
+    CARL CD 4 bright
+    Goto Missile+3
+  Attack2:
+    CARL A 0 A_UnsetShootable
+    CARL ABAB 1 A_FadeOut (0.16)
+    CARL AAAAAAAAA 0 A_Wander
+    CARL A 0 A_SpawnItemEx ("IDMNewShade", 64, 0, 0, 0, 0, 0, Random(0, 360), 0, 192)
+    CARL AAAAAAAAA 0 A_Wander
+    CARL ABAB 1 A_FadeIn (0.16)
+    CARL A 0 A_SetShootable
+    goto see
+  Pain:
+    CARL E 3 bright
+    CARL E 3 bright A_Pain
+    goto See
+  Death:
+    CARL F 6 bright
+    CARL G 6 bright A_Scream
+    CARL H 6 bright
+    CARL I 6 bright A_NoBlocking
+    CARL JK 6
+    stop
+  }
+}
+
+actor IDMNewShade : IDMShade
+{
+  +LOOKALLAROUND
+  renderstyle Add
+  alpha 0.16
+  states
+  {
+  Spawn:
+    CARL A 0
+    CARL ABAB 1 A_FadeIn (0.16)
+    CARL AB 5 A_Look
+    goto Spawn+2
+  Idle:
+    CARL AB 5 A_Look
+    loop
+  }
+}

@@ -1,0 +1,87 @@
+/// Heavy Machinegun guy
+
+ACTOR IDMHeavyMachinegunGuy
+{
+  Health 60
+  GibHealth 60
+  Radius 20
+  Height 56
+  Speed 8
+  PainChance 200
+  MONSTER
+  +FLOORCLIP
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  SeeSound "grunt/sight"
+  PainSound "grunt/pain"
+  DeathSound "grunt/death"
+  ActiveSound "grunt/active"
+  AttackSound "weapons/hmgfire"
+  Obituary "%o was shredded by a heavy machinegunner."
+  Decal BulletChip
+  DamageType "Bullet"
+  Tag "Heavy Machinegunner"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "HeavyMachinegun", 256
+  DropItem "Clip", 16, 20
+  DropItem "Shell", 32, 4
+  DropItem "RocketAmmo", 32, 1
+  DropItem "Cell", 8, 20
+  States
+  {
+  Spawn:
+    RFTR AB 10 A_Look
+    Loop
+  See:
+    RFTR AABBCCDD 4 A_Chase
+    Loop
+  Missile:
+    RFTR E 10 A_FaceTarget
+    RFTR F 3 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 4, "IDMBulletPuff", 0, CBAF_NORANDOM)
+	TNT1 A 0 A_FaceTarget
+    RFTR F 3 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 4, "IDMBulletPuff", 0, CBAF_NORANDOM)
+	TNT1 A 0 A_FaceTarget
+    RFTR F 3 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 4, "IDMBulletPuff", 0, CBAF_NORANDOM)
+	TNT1 A 0 A_FaceTarget
+    RFTR F 3 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 4, "IDMBulletPuff", 0, CBAF_NORANDOM)
+	TNT1 A 0 A_FaceTarget
+    RFTR F 3 Bright A_CustomBulletAttack (22.5, 0, 1, random(1,5) * 4, "IDMBulletPuff", 0, CBAF_NORANDOM)
+    Goto See
+  Pain:
+    RFTR G 2
+    RFTR G 2 A_Pain
+    Goto See
+  Death:
+    RFTR H 5
+    RFTR I 5 A_Scream
+    RFTR J 5 A_Fall
+    RFTR K 5
+    RFTR L -1
+    Stop
+  XDeath:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+  XDeath.Massacre:
+    RFTR M 5
+    RFTR N 5 A_XScream
+    RFTR O 5
+    RFTR P 5 A_Fall
+    RFTR QRST 5
+    RFTR U -1
+    Stop
+  XDeath.Resurrector:
+    RFTR M 5
+    RFTR N 5 A_XScream
+	TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+	TNT1 A 0 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+    RFTR O 5
+    RFTR P 5 A_Fall
+    RFTR QRST 5
+    RFTR U -1
+    Stop
+  Raise:
+    RFTR L 5
+    RFTR KJIH 5
+    Goto See
+  }
+}

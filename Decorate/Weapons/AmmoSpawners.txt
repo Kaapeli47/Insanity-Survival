@@ -1,0 +1,76 @@
+ACTOR SmallAmmoSpawner1 : RandomSpawner 2007
+{
+	DropItem "Clip", 256, 7
+	DropItem "Shell", 256, 1
+	DropItem "RocketAmmo", 256, 1
+	DropItem "Cell", 256, 1
+}
+
+ACTOR SmallAmmoSpawner2 : RandomSpawner 2008
+{
+	DropItem "Clip", 256, 1
+	DropItem "Shell", 256, 7
+	DropItem "RocketAmmo", 256, 1
+	DropItem "Cell", 256, 1
+}
+
+ACTOR SmallAmmoSpawner3 : RandomSpawner 2010
+{
+	DropItem "Clip", 256, 1
+	DropItem "Shell", 256, 1
+	DropItem "RocketAmmo", 256, 7
+	DropItem "Cell", 256, 1
+}
+
+ACTOR SmallAmmoSpawner4 : RandomSpawner 2047
+{
+	DropItem "Clip", 256, 1
+	DropItem "Shell", 256, 1
+	DropItem "RocketAmmo", 256, 1
+	DropItem "Cell", 256, 7
+}
+
+ACTOR BigAmmoSpawner1 : RandomSpawner 2048
+{
+	DropItem "ClipBox", 256, 15
+	DropItem "ShellBox", 256, 2
+	DropItem "RocketBox", 256, 2
+	DropItem "Cellpack", 256, 1
+}
+
+ACTOR BigAmmoSpawner2 : RandomSpawner 2049
+{
+	DropItem "ClipBox", 256, 2
+	DropItem "ShellBox", 256, 15
+	DropItem "RocketBox", 256, 2
+	DropItem "Cellpack", 256, 1
+}
+
+ACTOR BigAmmoSpawner3 : RandomSpawner 2046
+{
+	DropItem "ClipBox", 256, 2
+	DropItem "ShellBox", 256, 2
+	DropItem "RocketBox", 256, 15
+	DropItem "Cellpack", 256, 1
+}
+
+ACTOR BigAmmoSpawner4 : RandomSpawner 17
+{
+	DropItem "Cellpack", 256, 500 //300
+	//DropItem "ClipBox", 256, 100
+	//DropItem "ShellBox", 256, 100
+	//DropItem "RocketBox", 256, 100
+	DropItem "IDMMana", 256, 125 //100
+	DropItem "IDMMaceAmmo", 256, 125 //100
+	DropItem "IDMCatAmmo", 256, 125 //100
+	DropItem "IDMGas", 256, 125 //100
+}
+
+ACTOR RandomBigWeaponAmmoSpawner : RandomSpawner
+{
+	DropItem "Cellpack"
+	DropItem "IDMMana"
+	DropItem "IDMMaceAmmo"
+	DropItem "IDMCatAmmo"
+	DropItem "IDMGas"
+}

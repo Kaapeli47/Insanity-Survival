@@ -1,0 +1,75 @@
+/// Tycoon of Hell
+
+ACTOR IDMTycoonOfHell : IDMBaronOfHell
+{
+	Tag "Tycoon of Hell"
+	Obituary "%o was bruised by a tycoon of hell."
+	HitObituary "%o was ripped open by a tycoon of hell."
+	States
+	{
+	Spawn:
+		TYCO AB 10 A_Look 
+		Loop
+	See:
+		TYCO AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		TYCO EF 6 A_FaceTarget
+		TNT1 A 0 A_Jump(64,"BurstAtk","BigBurstAtk")
+		TNT1 A 0 A_Jump(128,"BigAtk")
+		TYCO G 6 A_CustomComboAttack("IDMBaronBall", 32, 10 * random(1, 8), "baron/melee")
+		TYCO EF 6 A_FaceTarget
+		TYCO G 6 A_CustomComboAttack("IDMBaronBall", 32, 10 * random(1, 8), "baron/melee")
+		Goto See
+	Melee:
+		TYCO EF 6 A_FaceTarget
+		TNT1 A 0 A_Jump(128,"BigAtk")
+		TYCO G 6 A_CustomComboAttack("IDMBaronBall", 32, 10 * random(1, 8), "baron/melee")
+		TYCO EF 6 A_FaceTarget
+		TYCO G 6 A_CustomComboAttack("IDMBaronBall", 32, 10 * random(1, 8), "baron/melee")
+		Goto See
+	BigAtk:
+		TYCO G 6 A_CustomComboAttack("IDMBigBaronBall", 32, 10 * random(1, 8), "baron/melee")
+		TYCO EF 6 A_FaceTarget
+		TYCO G 6 A_CustomComboAttack("IDMBigBaronBall", 32, 10 * random(1, 8), "baron/melee")
+		Goto See
+	BurstAtk:
+		TNT1 A 0 A_FaceTarget
+		TYCO G 3 A_CustomMissile("IDMBaronBall", 32, 0)
+		TYCO G 3 A_CustomMissile("IDMBaronBall", 32, 0)
+		TNT1 A 0 A_FaceTarget
+		TYCO G 3 A_CustomMissile("IDMBaronBall", 32, 0)
+		TYCO G 3 A_CustomMissile("IDMBaronBall", 32, 0)
+		TNT1 A 0 A_FaceTarget
+		TYCO G 3 A_CustomMissile("IDMBaronBall", 32, 0)
+		TYCO G 3 A_CustomMissile("IDMBaronBall", 32, 0)
+		Goto See
+	BigBurstAtk:
+		TNT1 A 0 A_FaceTarget
+		TYCO G 4 A_CustomMissile("IDMBigBaronBall", 32, 0)
+		TNT1 A 0 A_FaceTarget
+		TYCO G 5 A_CustomMissile("IDMBigBaronBall", 32, 0)
+		TNT1 A 0 A_FaceTarget
+		TYCO G 4 A_CustomMissile("IDMBigBaronBall", 32, 0)
+		TNT1 A 0 A_FaceTarget
+		TYCO G 5 A_CustomMissile("IDMBigBaronBall", 32, 0)
+		Goto See
+	Pain:
+		TYCO H 2
+		TYCO H 2 A_Pain
+		Goto See
+	Death:
+	Death.Massacre:
+		TYCO I 8
+		TYCO J 8 A_Scream
+		TYCO K 8
+		TYCO L 8 A_NoBlocking
+		TYCO MN 8
+		TYCO O -1 A_BossDeath   
+		Stop
+	Raise:
+		TYCO O 8
+		TYCO NMLKJI  8
+		Goto See
+	}
+}

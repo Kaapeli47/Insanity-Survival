@@ -1,0 +1,3 @@
+STARTUPTYPE = "Hexen"
+STARTUPTITLE = "Insanity Survival v0.91"
+STARTUPCOLORS = "FFEF00","00AF00"

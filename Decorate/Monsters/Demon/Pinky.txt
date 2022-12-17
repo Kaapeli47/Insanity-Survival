@@ -1,0 +1,143 @@
+/// Pink Demon
+
+ACTOR IDMDemon : Demon
+{
+	Health 150
+	GibHealth 100
+	PainChance 180
+	Speed 10
+	Radius 30
+	Height 56
+	Mass 800
+	Monster
+	Species "Demon"
+	+DONTHARMSPECIES
+	+DONTHURTSPECIES
+	+FLOORCLIP
+	SeeSound "demon/sight"
+	AttackSound "demon/melee"
+	PainSound "demon/pain"
+	DeathSound "demon/death"
+	ActiveSound "demon/active"
+	Obituary "%o was bit by a pinky demon."
+	Tag "Pinky Demon"
+	DropItem "IDMHealthBonusPickup", 64
+	DropItem "IDMArmorBonusPickup", 64
+	DropItem "Clip", 48, 20
+	DropItem "Shell", 48, 4
+	DropItem "RocketAmmo", 48, 1
+	DropItem "Cell", 24, 20
+	DropItem "IDMMana", 4
+	DropItem "IDMMaceAmmo", 4
+	DropItem "IDMCatAmmo", 4
+	DropItem "IDMGas", 4
+	States
+	{
+	Spawn:
+		SARG AB 10 A_Look
+		Loop
+	See:
+		SARG AABBCCDD 2 Fast A_Chase
+		Loop
+	Melee:
+		SARG EF 8 Fast A_FaceTarget
+		SARG G 8 Fast A_CustomMeleeAttack(random(1,10)*4,none,none,"Punch",true)
+		Goto See
+	Pain:
+		SARG H 2 Fast
+		SARG H 2 Fast A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 A_Jump(1,"Death.Doppel","XDeath.Resurrector")
+	DeathEnd:
+		SARG I 8
+		SARG J 8 A_Scream
+		SARG K 4
+		SARG L 4 A_NoBlocking
+		SARG M 4
+		SARG N -1
+		Stop
+	XDeath:
+		TNT1 A 0 A_Jump(1,"XDeath.Doppel","XDeath.Resurrector")
+	XDeath.Massacre:
+		SARG O 5
+		SARG P 5 A_XScream
+		SARG Q 5
+		SARG R 4 A_NoBlocking
+		SARG STUV 4
+		SARG W -1
+		Stop
+	XDeath.Resurrector:
+		SARG O 5
+		SARG P 5 A_XScream
+		TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+		SARG Q 5 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+		SARG R 4 A_NoBlocking
+		SARG STUV 4
+		SARG W -1
+		Stop
+	Death.Doppel:
+		SARG I 1 A_Scream
+		SARG IIIIIIIII 1 A_FadeOut(0.05)
+		TNT1 A 0 A_Playsound("doppel/morph2",CHAN_BODY,1,0,0.5)
+		DOP2 T 2 Bright A_SetTranslucent(0.25)
+		TNT1 A 0 A_SetScale(0.76)
+		DOP2 S 2 Bright A_SetScale(0.8)
+		DOP2 R 2 Bright A_SetScale(0.84)
+		DOP2 Q 2 Bright A_SetScale(0.88)
+		DOP2 P 2 Bright A_SetScale(0.92)
+		DOP2 O 2 Bright A_SetScale(0.96)
+		TNT1 A 0 A_SetScale(1.0,1.0)
+		DOP2 NMLKJIHGFEDCB 2 Bright A_Fadein(0.05)
+		TNT1 A 0 A_NoBlocking
+		DOP2 A 1 A_SpawnItemEx("IDMDoppelganger",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+		Stop
+	XDeath.Doppel:
+		TNT1 A 0 A_Jump(128,"XDeath.Massacre")
+		SARG O 1 A_XScream
+		SARG OOOOOOOOO 1 A_FadeOut(0.05)
+		TNT1 A 0 A_Playsound("doppel/morph2",CHAN_BODY,1,0,0.5)
+		TNT1 A 0 A_SetScale(0.76)
+		DOP2 T 2 Bright A_SetTranslucent(0.25)
+		DOP2 S 2 Bright A_SetScale(0.8)
+		DOP2 R 2 Bright A_SetScale(0.84)
+		DOP2 Q 2 Bright A_SetScale(0.88)
+		DOP2 P 2 Bright A_SetScale(0.92)
+		DOP2 O 2 Bright A_SetScale(0.96)
+		TNT1 A 0 A_SetScale(1.0,1.0)
+		DOP2 NMLKJIHGFEDCB 2 Bright A_Fadein(0.05)
+		TNT1 A 0 A_NoBlocking
+		DOP2 A 1 A_SpawnItemEx("IDMDoppelganger",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+		Stop
+	Raise:
+		SARG N 5
+		SARG MLKJI 5
+		Goto See
+	}
+}
+
+/// Spectre
+
+ACTOR IDMSpectre : IDMDemon
+{
+	+SHADOW
+	RenderStyle OptFuzzy
+	Alpha 0.5
+	SeeSound "spectre/sight"
+	AttackSound "spectre/melee"
+	PainSound "spectre/pain"
+	DeathSound "spectre/death"
+	ActiveSound "spectre/active"
+	HitObituary "$OB_SPECTREHIT"
+	Tag "Spectre"
+	DropItem "IDMHealthBonusPickup", 64
+	DropItem "IDMArmorBonusPickup", 64
+	DropItem "Clip", 48, 20
+	DropItem "Shell", 48, 4
+	DropItem "RocketAmmo", 48, 1
+	DropItem "Cell", 24, 20
+	DropItem "IDMMana", 4
+	DropItem "IDMMaceAmmo", 4
+	DropItem "IDMCatAmmo", 4
+	DropItem "IDMGas", 4
+}

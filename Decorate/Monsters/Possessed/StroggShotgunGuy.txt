@@ -1,0 +1,68 @@
+/// Strogg Shotgunner
+
+ACTOR IDMStroggShotgunGuy : IDMShotgunGuy
+{
+	SeeSound "strogg/sight"
+	PainSound "strogg/pain"
+	DeathSound "strogg/death"
+	ActiveSound "strogg/active"
+	Health 50
+	GibHealth 50
+	Speed 10
+	Mass 250
+	Tag "Strogg Shotgunner"
+	Obituary "%o was pelleted by a strogg shotgunner."
+	DamageFactor "Rocket", 0.75
+	DamageFactor "Grenade", 0.75
+	DamageFactor "Fire", 0.75
+	DamageFactor "PlayerRocket", 0.75
+	DamageFactor "PlayerGrenade", 0.75
+	States
+	{
+	Spawn:
+		STSG AB 10 A_Look
+		Loop
+	See:
+		STSG AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		STSG E 8 A_FaceTarget
+		STSG F 0 bright A_PlaySound("shotguy/attack", CHAN_WEAPON)
+		STSG F 8 bright A_CustomBulletAttack(20, 0, 3, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+		STSG E 8
+		Goto See
+	Pain:
+		STSG G 2
+		STSG G 2 A_Pain
+		Goto See
+	Death:
+		STSG H 5
+		STSG I 5 A_Scream
+		STSG J 5 A_NoBlocking
+		STSG K 5
+		STSG L -1
+		Stop
+	XDeath:
+		TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+	XDeath.Massacre:
+		STSG M 5
+		STSG N 5 A_XScream
+		STSG O 5 A_NoBlocking
+		STSG PQRST 5
+		STSG U -1
+		Stop
+	XDeath.Resurrector:
+		STSG M 5
+		STSG N 5 A_XScream
+	    TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+	    TNT1 A 0 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+		STSG O 5 A_NoBlocking
+		STSG PQRST 5
+		STSG U -1
+		Stop
+	Raise:
+		STSG L 5
+		STSG KJIH 5
+		Goto See
+	}
+}

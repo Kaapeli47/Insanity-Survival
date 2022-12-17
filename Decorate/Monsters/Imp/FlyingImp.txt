@@ -1,0 +1,54 @@
+/// Flying Imp
+
+ACTOR IDMFlyingImp : IDMDoomimp
+{
+  OBITUARY "%o was burned by a flying imp."
+  HITOBITUARY "%o was slashed by a flying imp."
+  Health 70
+  GibHealth 70
+  Mass 200
+  +Float
+  +NoGravity
+  Tag "Flying Imp"
+  states
+  {
+  Spawn:
+    AEIM ABCD 10 A_Look
+    Loop
+  See:
+    AEIM AABBCCDD 3 A_Chase
+    Loop
+  Melee:
+  Missile:
+    AEIM E 4 A_FaceTarget
+    AEIM F 6 A_CustomComboAttack("IDMDoomImpBall", 32, 2, "imp/melee")
+	TNT1 A 0 A_Jump(128,"See")
+    AEIM E 4 A_FaceTarget
+    AEIM F 6 A_CustomComboAttack("IDMDoomImpBall", 32, 2, "imp/melee")
+	TNT1 A 0 A_Jump(128,"See")
+    AEIM E 4 A_FaceTarget
+    AEIM F 6 A_CustomComboAttack("IDMDoomImpBall", 32, 2, "imp/melee")
+    Goto See
+  Pain:
+    AEIM G 2
+    AEIM G 2 A_Pain
+    Goto See
+  Death:
+    AEIM H 8
+    AEIM I 8 A_Scream
+    AEIM J 6
+    AEIM K 6 A_NoBlocking
+    AEIM L 6
+    AEIM M 6
+    AEIM N -1
+    Stop
+  XDeath:
+	TROO N 5
+	TROO O 5 A_XScream
+	TROO P 5
+	TROO Q 5 A_NoBlocking
+	TROO RST 5
+	TROO U -1
+	Stop
+  }
+}

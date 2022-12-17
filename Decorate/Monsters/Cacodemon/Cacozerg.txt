@@ -1,0 +1,111 @@
+/// Cacozerg
+
+ACTOR IDMCacozerg
+{
+	Health 500
+	Radius 31
+	Height 56
+	Mass 800
+	Speed 20
+	PainChance 32
+	Monster
+	Species "Cacodemon"
+	+DONTHURTSPECIES
+	+DONTHARMSPECIES
+	+FLOAT
+	+NOGRAVITY
+	SeeSound "cacozerg/sight"
+	PainSound "cacozerg/pain"
+	DeathSound "cacozerg/death"
+	ActiveSound "cacozerg/active"
+	MissileType "IDMCatharsiBall"
+	MissileHeight 36
+	Meleerange 64
+	MinMissileChance 300
+	Obituary "%o was swarmed by a cacozerg."
+	HitObituary "%o was zerg-rushed by a cacozerg."
+	Tag "Cacozerg"
+	DropItem "IDMHealthBonusPickup", 64
+	DropItem "IDMArmorBonusPickup", 64
+	DropItem "Clip", 64, 20
+	DropItem "Clip", 16, 20
+	DropItem "ClipBox", 8, 50
+	DropItem "Shell", 64, 4
+	DropItem "Shell", 16, 20
+	DropItem "ShellBox", 8, 10
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketAmmo", 16, 1
+	DropItem "RocketBox", 8, 5
+	DropItem "Cell", 32, 20
+	DropItem "Cell", 8, 20
+	DropItem "Cellpack", 4, 100
+	DropItem "IDMMana", 4
+	DropItem "IDMMana", 4
+	DropItem "IDMMaceAmmo", 4
+	DropItem "IDMMaceAmmo", 4
+	DropItem "IDMCatAmmo", 4
+	DropItem "IDMCatAmmo", 4
+	DropItem "IDMGas", 4
+	DropItem "IDMGas", 4
+	States
+	{
+	Spawn:
+		ZERG AB 10 A_Look
+		Loop
+	See:
+		ZERG AABBCCDD 3 Fast A_Chase
+		Loop
+	Missile:
+		TNT1 A 0 A_JumpIfCloser(480,"ChargeAtk")
+		TNT1 A 0 A_JumpIfCloser(640,"CloseMissile")
+		TNT1 A 0 A_JumpIfCloser(960,"NearMissile")
+		TNT1 A 0 A_Jump(16,"ChargeAtk")
+		Goto FireAtk
+	NearMissile:
+		TNT1 A 0 A_Jump(32,"ChargeAtk")
+		Goto FireAtk
+	CloseMissile:
+		TNT1 A 0 A_Jump(64,"ChargeAtk")
+	FireAtk:
+		ZERG E 6 A_FaceTarget
+		ZERG F 6 Bright A_FaceTarget
+		TNT1 A 0 A_FaceTarget
+		ZERG G 4 Bright A_MissileAttack
+		TNT1 A 0 A_FaceTarget
+		ZERG G 4 Bright A_MissileAttack
+		TNT1 A 0 A_FaceTarget
+		ZERG G 4 Bright A_MissileAttack
+		Goto See
+	ChargeAtk:
+		TNT1 A 0 A_Playsound("cacozerg/charge")
+		ZERG AHIJ 4 A_FaceTarget
+		ZERG KL 3 Fast A_SkullAttack(20)
+		ZERG M 5 Fast A_CustomMeleeAttack(6*random(1,10),"imp/melee","cacozerg/swing")
+		ZERG HI 3 Fast A_SkullAttack(20)
+		ZERG J 5 Fast A_CustomMeleeAttack(6*random(1,10),"imp/melee","cacozerg/swing")
+		Goto See
+	Melee:
+		TNT1 A 0 A_Recoil(-3)
+		ZERG HI 3 Fast A_FaceTarget
+		ZERG J 5 Fast A_CustomMeleeAttack(6*random(1,10),"imp/melee","cacozerg/swing")
+		TNT1 A 0 A_Recoil(-3)
+		ZERG KL 3 Fast A_FaceTarget
+		ZERG M 5 Fast A_CustomMeleeAttack(6*random(1,10),"imp/melee","cacozerg/swing")
+		Goto See
+	Pain:
+		ZERG N 8 A_Pain
+		Goto See
+	Death:
+		ZERG O 5 A_NoBlocking
+		ZERG P 5
+		ZERG Q 6 A_Scream
+		ZERG RSTUV 6
+		ZERG W -1 A_SetFloorClip
+		Stop
+	Raise:
+		ZERG T 6 A_UnSetFloorClip
+		ZERG SRQPOMNL 6
+		Goto See
+	}
+}
+	

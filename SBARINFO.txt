@@ -1,0 +1,127 @@
+base Doom;
+height 32;
+monospacefonts true, "0", center;
+InterpolateHealth true, 12;
+InterpolateArmor true, 12;
+LowerHealthCap false;
+
+statusbar fullscreen, fullscreenoffsets // Insanity Deathmatch HUD
+{
+	//health
+	drawnumber 2147483647, HUDFONT_DOOM, untranslated, health, drawshadow, 100, -32;
+
+	//armor
+	drawimage armoricon, 117, -40;
+	drawnumber 2147483647, HUDFONT_DOOM, untranslated, armor, drawshadow, whennotzero, 100, -55;
+
+	//ammo
+	drawimage ammoicon1, -70, -19, centerbottom;
+	drawnumber 2147483647, HUDFONT_DOOM, untranslated, ammo1, drawshadow, -80, -35;
+	
+	//keys
+	drawkeybar 100, horizontal, reverserows, auto, -30, 200, 0, 3, auto;
+	
+	//mugshot
+	drawselectedinventory alternateonempty, INDEXFONT, 105, -39
+	{
+		InInventory "PowerQuadDamage" || "PowerRageInvulnerable" || "PowerPickupProtection"
+		{
+			drawmugshot "STF", 5, disablerampage, disableouch, disablegrin, disablepain, 100, -39;
+		}
+		else
+		{
+			drawmugshot "STF", 5, 100, -39;
+		}
+	}
+}
+
+statusbar normal
+{
+	drawimage "STBAR", 0, 168;
+	drawimage armoricon, 208, 190;
+	drawnumber 3, HUDFONT_DOOM, untranslated, ammo1, 44, 171;
+	drawnumber 3, HUDFONT_DOOM, untranslated, health, 97, 171;
+	drawnumber 3, HUDFONT_DOOM, untranslated, armor, 228, 171;
+
+	//keys
+	drawswitchableimage keyslot 2 && 5, "nullimage", "STKEYS0", "STKEYS3", "STKEYS6", 239, 171;
+	drawswitchableimage keyslot 3 && 6, "nullimage", "STKEYS1", "STKEYS4", "STKEYS7", 239, 181;
+	drawswitchableimage keyslot 1 && 4, "nullimage", "STKEYS2", "STKEYS5", "STKEYS8", 239, 191;
+
+	drawnumber 3, INDEXFONT_DOOM, untranslated, ammo(Clip), 288, 173;
+	drawnumber 3, INDEXFONT_DOOM, untranslated, ammo(Shell), 288, 179;
+	drawnumber 3, INDEXFONT_DOOM, untranslated, ammo(RocketAmmo), 288, 185;
+	drawnumber 3, INDEXFONT_DOOM, untranslated, ammo(Cell), 288, 191;
+
+	drawnumber 3, INDEXFONT_DOOM, untranslated, ammocapacity(Clip), 314, 173;
+	drawnumber 3, INDEXFONT_DOOM, untranslated, ammocapacity(Shell), 314, 179;
+	drawnumber 3, INDEXFONT_DOOM, untranslated, ammocapacity(RocketAmmo), 314, 185;
+	drawnumber 3, INDEXFONT_DOOM, untranslated, ammocapacity(Cell), 314, 191;
+	
+	//weapon slots
+	gamemode cooperative, singleplayer
+	{
+		drawimage "STARMS", 104, 168;
+		drawswitchableimage weaponslot 2, "STGNUM2", "STYSNUM2", 111, 172; 
+		drawswitchableimage weaponslot 3, "STGNUM3", "STYSNUM3", 123, 172;
+		drawswitchableimage weaponslot 4, "STGNUM4", "STYSNUM4", 135, 172;
+		drawswitchableimage weaponslot 5, "STGNUM5", "STYSNUM5", 111, 182;
+		drawswitchableimage weaponslot 6, "STGNUM6", "STYSNUM6", 123, 182;
+		drawswitchableimage weaponslot 7, "STGNUM7", "STYSNUM7", 135, 182;
+	}
+	gamemode cooperative
+	{
+		drawimage translatable "STFBANY", 143, 169;
+	}
+	drawselectedinventory alternateonempty, INDEXFONT, 143, 168
+	{
+		InInventory "PowerQuadDamage" || "PowerRageInvulnerable"
+		{
+			drawmugshot "STF", 5, disablerampage, disableouch, disablegrin, disablepain, 143, 168;
+		}
+		else
+		{
+			drawmugshot "STF", 5, 143, 168;
+		}
+	}
+}
+
+statusbar inventory // Standard bar overlay (ZDoom Addition)
+{
+	drawinventorybar Doom, 7, INDEXFONT, 50, 170;
+}
+
+statusbar inventoryfullscreen, fullscreenoffsets // ZDoom HUD overlay.
+{
+	drawinventorybar Doom, translucent, 7, INDEXFONT, -106+center, -31;
+}
+
+mugshot "Normal", health2
+{
+	{ST00, ST01, ST02} 10;
+}
+
+mugshot "Pain", healthspecial, directional
+{
+	{TR00, KILL0, TL00} 17;
+}
+
+mugshot "Ouch", health
+{
+	OUCH0 35;
+}
+
+mugshot "Grin", health
+{
+	EVL0 35;
+}
+
+mugshot "God"
+{
+	GOD0 -1;
+}
+
+mugshot "Death"
+{
+	DEAD0 -1;
+}

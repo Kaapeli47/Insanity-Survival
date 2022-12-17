@@ -1,0 +1,67 @@
+/// Bronze Spiderdemon
+
+actor IDMBronzeSpiderDemon : IDMSpidermastermind
+{
+  Obituary "%o was electrified by a bronze spiderdemon."
+  BloodColor "00 00 ff"
+  Tag "Bronze Spiderdemon"
+  states
+  {
+  Spawn:
+    BZSM AB 10 A_Look
+    loop
+  See:
+    BZSM A 3 A_Metal
+    BZSM ABBCC 3 A_Chase
+    BZSM D 3 A_Metal
+    BZSM DEEFF 3 A_Chase
+    loop
+  Missile:
+    BZSM A 0 Bright A_Jump(128,"IonAtk","IonScatterAtk","BlasterAtk")
+    BZSM A 20 Bright A_FaceTarget
+    BZSM TU 3 Bright A_CustomMissile("MonsterPlasmaBall",44,0,random(-10,10))
+    BZSM U 0 Bright A_SpidRefire
+    goto Missile+2
+  IonAtk:
+    BZSM A 20 Bright A_FaceTarget
+	TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_Playsound("weapons/ionblasf")
+    BZSM T 6 Bright A_CustomMissile("MonsterIonBall",44)
+    BZSM U 5 Bright
+    BZSM U 1 Bright A_SpidRefire
+    goto IonAtk+1
+  IonScatterAtk:
+    BZSM A 20 Bright A_FaceTarget
+	TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_Playsound("weapons/ionblasf")
+    BZSM T 3 Bright A_CustomMissile("MonsterIonBall",44,0,random(-10,10))
+	TNT1 A 0 A_Playsound("weapons/ionblasf")
+	BZSM U 3 Bright A_CustomMissile("MonsterIonBall",44,0,random(-10,10))
+	TNT1 A 0 A_Playsound("weapons/ionblasf")
+	BZSM T 3 Bright A_CustomMissile("MonsterIonBall",44,0,random(-10,10))
+	TNT1 A 0 A_Playsound("weapons/ionblasf")
+	BZSM U 3 Bright A_CustomMissile("MonsterIonBall",44,0,random(-10,10))
+    goto See
+  BlasterAtk:
+    BZSM A 20 Bright A_FaceTarget
+	TNT1 A 0 A_FaceTarget
+	BZSM G 3 Bright A_CustomMissile("BlasterShot",44)
+	BZSM H 3 Bright
+	TNT1 A 0 A_FaceTarget
+	BZSM G 3 Bright A_CustomMissile("BlasterShot",44)
+	BZSM H 2 Bright
+    BZSM H 1 Bright A_SpidRefire
+	Goto BlasterAtk+2
+  Pain:
+    BZSM I 3
+    BZSM I 3 A_Pain
+    goto See
+  Death:
+    BZSM J 20 Bright A_Scream
+    BZSM K 10 Bright A_NoBlocking
+    BZSM LMNOPQR 10 Bright
+    BZSM S 30
+    BZSM S -1 A_BossDeath
+    stop
+  }
+}

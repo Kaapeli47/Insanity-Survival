@@ -1,0 +1,86 @@
+/// Strogg Eliminator
+
+ACTOR IDMStroggEliminator : IDMStroggChaingunGuy
+{
+	Speed 8
+	Health 120
+	Tag "Strogg Eliminator"
+	Obituary "%o was nailed and perforated by a strogg eliminator."
+	DropItem "IDMHealthBonusPickup", 64
+	DropItem "IDMArmorBonusPickup", 64
+	Dropitem "IDMChaingun", 256
+	Dropitem "Nailgun", 256
+	DropItem "Clip", 16, 20
+	DropItem "Shell", 32, 4
+	DropItem "RocketAmmo", 32, 1
+	DropItem "Cell", 8, 20
+	DamageFactor "Rocket", 0.75
+	DamageFactor "Grenade", 0.75
+	DamageFactor "Fire", 0.75
+	DamageFactor "PlayerRocket", 0.75
+	DamageFactor "PlayerGrenade", 0.75
+	States
+	{
+	Spawn:
+		ELIM AB 10 A_Look
+		Loop
+	See:
+		ELIM AABBCCDD 3 A_Chase
+		Loop
+	Missile:
+		TNT1 A 0 A_Jump(256,"NailAtk","ChaingunAtk","NailChaingunAtk")
+	NailAtk:
+		ELIM E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("strogg/attack",CHAN_5)
+		ELIM F 3 Bright A_CustomMissile("MonsterNail",32,12,random(-15,15))
+		TNT1 A 0 A_FaceTarget
+		ELIM E 3 Bright
+		TNT1 A 0 A_CPosRefire
+		Goto NailAtk+1
+	ChaingunAtk:
+		ELIM J 12 A_FaceTarget
+		ELIM L 3 Bright A_CustomBulletAttack(22.5, 0, 1, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+		ELIM K 3 Bright A_CustomBulletAttack(22.5, 0, 1, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+		TNT1 A 0 A_CPosRefire
+		Goto ChaingunAtk+1
+	NailChaingunAtk:
+		ELIM G 12 A_FaceTarget
+		ELIM I 3 Bright A_CustomBulletAttack(22.5, 0, 1, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+		TNT1 A 0 A_Playsound("strogg/attack",CHAN_5)
+		TNT1 A 0 A_CustomMissile("MonsterNail",32,12,random(-15,15))
+		ELIM H 3 Bright A_CustomBulletAttack(22.5, 0, 1, random(1,5)*3, "IDMBulletPuff", 0, CBAF_NORANDOM)
+		TNT1 A 0 A_CPosRefire
+		Goto NailChaingunAtk+1
+	Pain:
+		ELIM M 2
+		ELIM M 2 A_Pain
+		Goto See
+	Death:
+		ELIM N 5
+		ELIM O 5 A_Scream
+		ELIM P 5 A_NoBlocking
+		ELIM QRS 5
+		ELIM T -1
+		Stop
+	XDeath:
+		ELIM U 5
+		ELIM V 5 A_XScream
+		ELIM W 5 A_NoBlocking
+		ELIM XY 5
+		ELIM Z -1
+		Stop
+	XDeath.Resurrector:
+		ELIM U 5
+		ELIM V 5 A_XScream
+		ELIM W 5 A_NoBlocking
+		TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+		TNT1 A 0 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+		ELIM XY 5
+		ELIM Z -1
+		Stop
+	Raise:
+		ELIM T 5
+		ELIM SRQPON 5
+		Goto See
+	}
+}

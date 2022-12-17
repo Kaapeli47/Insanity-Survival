@@ -1,0 +1,28 @@
+// Demon Spawner
+
+ACTOR DemonRandomSpawner : RandomSpawner replaces Demon
+{
+	DropItem "IDMDemon", 256, 5
+	DropItem "IDMBloodDemon", 256, 5
+	DropItem "IDMCyberPinky", 256, 5
+	DropItem "IDMSerpentDemon", 256, 4
+	DropItem "IDMBullPinky", 256, 2
+	DropItem "IDMClink", 256, 4
+	DropItem "IDMEttin", 256, 4
+	DropItem "IDMCentaur", 256, 4
+	DropItem "IDMMeleeRevenant", 256, 4
+}
+
+ACTOR DemonRandomSpawner2 : RandomSpawner replaces MBFHelperDog
+{
+	DropItem "IDMBloodDemon"
+	DropItem "IDMSerpentDemon"
+}
+
+ACTOR SpectreRandomSpawner : RandomSpawner replaces Spectre
+{
+	DropItem "IDMSpectre", 256, 2
+	DropItem "IDMGhostGuardian", 256, 1
+	DropItem "IDMMummyGhost", 256, 1
+	DropItem "IDMKnightGhost", 256, 1
+}

@@ -1,0 +1,74 @@
+ACTOR IDMHereticDarkImp : IDMHereticImp 
+{
+  Health 90
+  GibHealth 90
+  Speed 15
+  Painchance 50
+  scale 1.2
+  +NOGRAVITY
+  +DONTOVERLAP
+  Tag "Dark Gargoyle"
+  Obituary "%o was scarred by a Dark Gargoyle."
+  HitObituary "%o was hacked by a Dark Gargoyle."
+  States
+  {
+  Spawn:
+    WATC ABCB 10 A_Look
+    Loop
+  See:
+    WATC AABBCCBB 3 A_Chase
+    Loop
+  Melee:
+    WATC DE 4 BRIGHT A_FaceTarget
+    WATC F 4 BRIGHT A_CustomMeleeAttack(random[ImpMeAttack](7,14), "himp/attack")
+    WATC "[\]" 4 BRIGHT A_FaceTarget
+    WATC ] 0 BRIGHT A_CustomMeleeAttack(random[ImpMeAttack](7,14), "himp/attack")     
+    Goto See
+  Missile:
+    TNT1 A 0 A_Jump(50,"beastball")
+    WATC DE 4 BRIGHT A_FaceTarget
+    WATC F 4 BRIGHT A_CustomComboAttack("IDMHereticImpBall", 28, 14, "himp/leaderattack")	
+    WATC "[\]" 4 BRIGHT A_FaceTarget
+    WATC ] 0 BRIGHT A_CustomComboAttack("IDMHereticImpBall", 28, -14, "himp/leaderattack")	
+    WATC DE 4 BRIGHT A_FaceTarget
+    WATC F 4 BRIGHT A_CustomComboAttack("IDMHereticImpBall", 28, 14, "himp/leaderattack")    
+    Goto See
+  Beastball:
+    WATC DE 6 BRIGHT A_FaceTarget
+    WATC F 6 BRIGHT A_CustomComboAttack("IDMBeastBall", 28, random[BeastAttack](1,8)*3, "beast/attack")
+    Goto See
+  Pain:
+    WATC G 3
+    WATC G 3 A_Pain
+    Goto See
+  Death:
+    WATC G 4 A_ImpDeath
+    WATC H 5
+    Wait
+  XDeath:
+	WATC S 1 A_ImpXDeath1
+    WATC S 4 A_Gravity
+    Wait
+  Crash:
+	TNT1 A 0 A_NoBlocking
+    WATC I 7 A_ImpExplode
+    WATC J 7 A_Scream
+    WATC K 7
+    WATC L -1
+    Stop
+  XCrash:
+    WATC T 5 A_XScream
+	WATC U 5
+    WATC V 5
+    WATC W 5
+    WATC X 5
+    WATC Y 5
+    WATC Z -1
+    Stop
+  Raise:
+    WATC L 0
+    WATC L 0 A_RemoveChildren
+    WATC LKJIHG 6
+    Goto See
+  }
+}

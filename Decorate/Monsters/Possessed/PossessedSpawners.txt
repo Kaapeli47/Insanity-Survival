@@ -1,0 +1,69 @@
+/// Zombieman Spawn
+
+ACTOR ZombiemanRandomSpawner : RandomSpawner replaces Zombieman
+{
+	DropItem "IDMZombieman"
+	DropItem "IDMStrogg"
+	DropItem "IDMShotgunGuy"
+	DropItem "IDMStroggShotgunGuy"
+	DropItem "IDMMachinegunGuy"
+	DropItem "IDMChainsawZombie"
+	DropItem "IDMKamikaziGuy"
+	DropItem "IDMChaingunGuy"
+}
+
+/// Shotgunner spawn
+
+ACTOR ShotgunguyRandomSpawner : RandomSpawner replaces ShotgunGuy
+{
+	DropItem "IDMYellowboyZombie"
+	DropItem "IDMShotgunGuy"
+	DropItem "IDMStroggShotgunGuy"
+	DropItem "IDMMachinegunGuy"
+	DropItem "IDMRocketguy"
+	DropItem "IDMNailborg"
+	DropItem "IDMKamikaziGuy"
+	DropItem "IDMChaingunGuy"
+	DropItem "IDMTwoHeadedChaingunGuy"
+}
+
+/// Schutzstaffel spawn
+/*
+ACTOR WolfensteinSSRandomSpawner : RandomSpawner replaces WolfensteinSS
+{
+	DropItem "IDMZombieman", 256, 3
+	DropItem "IDMYellowboyZombie", 256, 3
+	DropItem "IDMShotgunGuy", 256, 3
+	DropItem "IDMMachinegunGuy", 256, 3
+	DropItem "IDMStrogg", 256, 3
+	DropItem "IDMChaingunGuy", 256, 3
+	DropItem "IDMTwoHeadedChaingunGuy", 256, 2
+	DropItem "IDMHeavyMachinegunGuy", 256, 3
+	DropItem "IDMRocketguy", 256, 2
+	DropItem "IDMNailborg", 256, 3
+	DropItem "IDMStroggEnforcer", 256, 1
+	DropItem "IDMRailgunGuy", 256, 1
+	DropItem "IDMChaingunGuy2", 256, 1
+	DropItem "IDMPlasmagunGuy", 256, 1
+	DropItem "IDMSuperShotgunGuy", 256, 1
+	DropItem "IDMKamikaziGuy", 256, 2
+	DropItem "IDMChainsawZombie", 256, 1
+}
+*/
+/// Chaingunner Spawn
+
+ACTOR ChaingunguyRandomSpawner : RandomSpawner replaces ChaingunGuy
+{
+	DropItem "IDMChaingunGuy"
+	DropItem "IDMChaingunGuy2"
+	DropItem "IDMTwoHeadedChaingunGuy"
+	DropItem "IDMHeavyMachinegunGuy"
+	DropItem "IDMRocketGuy"
+	DropItem "IDMPlasmagunGuy"
+	DropItem "IDMRailgunGuy"
+	DropItem "IDMSuperShotgunGuy"
+	DropItem "IDMChaingunMajor"
+	DropItem "IDMStroggChaingunGuy"
+	DropItem "IDMStroggEnforcer"
+	DropItem "IDMStroggEliminator"
+}

@@ -1,0 +1,153 @@
+ListMenu "MainMenu"
+{
+	StaticPatch 92, -30, "M_DOOM"
+	Position 75, 70
+	Font "BigFont", "Green", "Gold"
+	TextItem "Singleplayer", "s", "PlayerclassMenu"
+	TextItem "Multiplayer", "m", "ZA_MultiplayerOptions"
+	TextItem "Player Setup", "p", "PlayerMenu"
+	TextItem "Options", "o", "OptionsMenu"
+	TextItem "Insanity Options", "i", "ISUR_OptionsMenu"
+	TextItem "Load Game", "l", "LoadGameMenu"
+	TextItem "Save Game", "s", "SaveGameMenu"
+	TextItem "Quit", "q", "QuitMenu"
+}
+
+ListMenu "PlayerclassMenu"
+{
+	Font "BigFont", "Green", "Gold"
+	StaticTextCentered 160, 15, "$MNU_CHOOSECLASS"
+	Position 48, 53
+	PlayerDisplay 220, 63, "20 00 00", "80 00 40"
+	MouseWindow 0, 220
+}
+
+ListMenu "SkillMenu"
+{
+	Font "BigFont", "Green", "Gold"
+	StaticTextCentered 160, 10, "CHOOSE LEVEL OF INSANITY:"
+	Position 30, 40
+}
+
+ListMenu "PlayerMenu"
+{
+	StaticTextCentered 160, 0, "$MNU_PLAYERSETUP"
+	Font "SmallFont"
+	Linespacing 14
+	Position 30, 36
+	PlayerNameBox "Name", 0, "Playerbox"
+	Selector "-", -16, -1
+	MouseWindow 0, 220
+	PlayerDisplay 255, 76, "20 00 00", "80 00 40", 1, "PlayerDisplay"
+	Linespacing 10
+	Slider "Red", "Red", 0, 255, 16
+	Slider "Green", "Green", 0, 255, 16
+	Linespacing 20
+	Slider "Blue", "Blue", 0, 255, 16
+	Linespacing 14
+	ValueText "Skin", "Skin"
+	ValueText "Starting Weapon", "Class"
+	ValueText "Gender", "Gender", "Gender"
+	ValueText "Autoaim", "Autoaim", "Autoaim"
+	Slider "Handicap", "Handicap", 0, 200, 5 // [TP]
+	// [TP] This is moved to weapon setup
+	// ValueText "Switch on pickup", "Switch", "OffOn"
+	ValueText "Always Run", "AlwaysRun", "OnOff"
+	TextItem "Weapon Setup", "w", "ZA_WeaponSetup" // [TP]
+	Class "PlayerMenu"
+}
+
+OptionMenu ISUR_OptionsMenu
+{
+	Title		"Insanity Options"
+	StaticText	""
+	StaticText	""
+	StaticText	""
+	StaticText	"CLIENT OPTIONS:", 1
+	StaticText	""
+	Option		"Random gameplay tips",		"isur_tips",		"OnOff"
+	StaticText	""
+	StaticText	""
+	SubMenu		"Server Options",	"ISUR_ServerOptionsMenu"
+}
+
+OptionMenu ISUR_ServerOptionsMenu
+{
+	Title		"Insanity Server Options"
+	StaticText	""
+	StaticText	""
+	StaticText	""
+	StaticText	"GENERAL OPTIONS:", 1
+	StaticText	""
+	Option		"Spider Mastermind spawner",	"isur_spiderdemonspawner",  "OnOff"
+}
+
+// Zandronum menus
+
+OptionMenu ZA_JoinMenu
+{
+	Title		"JOIN THE INSANITY!"
+
+	StaticText	"You are currently a spectating wussy!"
+	StaticText	" "
+	StaticText	"Become a badass by joining the Insanity!"
+	StaticText	" "
+	StaticText	" "
+	StaticText	" "
+	Command		"Join!",			"menu_joingame"
+	StaticText	" "
+	Command		"Player Setup",		"menu_player"
+	StaticText	" "
+	StaticText	" "
+	StaticText	" "
+	Command		"HOW TO PLAY?",			"menu_help"
+}
+
+OptionMenu ZA_JoinTeamMenu
+{
+	Title		"JOIN A TEAM!"
+
+	StaticText	"Select a team."
+	StaticText	" "
+	StaticText	" "
+	StaticText	" "
+	StaticText	" "
+	Command		"Auto-select",		"menu_autoselect"
+	StaticText	" "
+	JoinMenuTeamOption
+	StaticText	" "
+	StaticText	" "
+	Command		"Join!",			"menu_joingame"
+	StaticText	" "
+	Command		"Player Setup",		"menu_player"
+	StaticText	" "
+	StaticText	" "
+	Command		"HOW TO PLAY?",			"menu_help"
+	StaticText	" "
+}
+
+OptionMenu ZA_SelectClassMenu
+{
+	Title		"STARTING WEAPON SELECTION"
+
+	StaticText	" "
+	StaticText	" "
+	StaticText	" "
+	StaticText	"SELECT YOUR STARTING WEAPON!"
+	StaticText	" "
+	StaticText	" "
+	StaticText	" "
+	StaticText	" "
+	StaticText	"You can change your Starting Weapon"
+	StaticText	" "
+	StaticText 	"from the PLAYER SETUP menu."
+	StaticText	" "
+	StaticText	" "
+	StaticText	" "
+	StaticText	" "
+	JoinMenuPlayerClassOption
+	StaticText	" "
+	Command		"Join!",			"menu_joingamewithclass"
+	StaticText	" "
+	Command		"Player Setup",		"menu_player"
+}

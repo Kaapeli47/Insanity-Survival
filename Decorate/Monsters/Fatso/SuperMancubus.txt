@@ -1,0 +1,42 @@
+ACTOR IDMSuperMancubus : IDMFatso
+{
+	Health 900
+	SeeSound "supermanc/sight"
+	PainSound "supermanc/pain"
+	DeathSound "supermanc/death"
+	ActiveSound "supermanc/active"
+	Tag "Super Mancubus"
+	Obituary "%o couldn't avoid the volley of the super mancubus."
+	States
+	{
+	Spawn:
+		SUMA AB 15 A_Look
+		Loop
+	See:
+		SUMA AABBCCDDEEFF 4 A_Chase
+		Loop
+	Missile:
+		TNT1 A 0 A_Playsound("supermanc/attack")
+		SUMA G 20 A_FaceTarget
+		SUMA H 2 Bright A_FatAttack1
+		SUMA H 2 Bright A_FatAttack2
+		SUMA H 10 Bright A_FatAttack3
+		SUMA GI 5 A_FaceTarget
+		SUMA H 2 Bright A_FatAttack1
+		SUMA H 2 Bright A_FatAttack2
+		SUMA H 10 Bright A_FatAttack3
+		SUMA GI 5 A_FaceTarget
+		Goto See
+	Pain:
+		SUMA J 3
+		SUMA J 3 A_Pain
+		Goto See
+	Death:
+		SUMA K 6
+		SUMA L 6 A_Scream
+		SUMA M 6 A_Fall
+		SUMA NOPQRS 6
+		SUMA T -1
+		Stop
+	}
+}

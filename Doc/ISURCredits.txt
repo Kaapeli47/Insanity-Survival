@@ -1,0 +1,1288 @@
+// ---------------------------------------------------------------------------//
+// ------------------- I N S A N I T Y   S U R V I V A L -------------------- //
+// -------------------------------- CREDITS: -------------------------------- //
+
+Softwares used:
+- SLADE 3
+- GIMP 2.0
+- Audacity
+- WDC Endscreen Editor
+
+
+// Decorate by Kaapeli47 with magnificent help from the ZDoom Wiki and the
+   Zandronum Wiki.
+
+
+/// Weapons: ///
+
+- Weapon pickup sound by Valve Software (Deathmatch Classic)
+
+
+Fist:
+- Sprites by id Software (Doom), berserked fist sprites by Kaapeli47.
+- Sounds by id Software (Doom), Raven Software (Hexen & Hexen II), Rogue 
+  Entertainment (Strife), and various Doom II deathmatch map packs including the
+  DWANGO packs.
+
+
+Chainsaw:
+- Sprites by id Software (Doom), Dual Bladed Chainsaw sprites by Xim (Realm667).
+- Sounds by id Software (Doom).
+
+
+Knife:
+- Based on the DECORATE of the Knife by Xim (Realm667).
+- Sprites by Scubasteve, sounds by Valve Software (Counter-Strike: Source).
+
+
+Vorpal Blade:
+- Based on the DECORATE of the Vorpal Blade from Demon Eclipse.
+- Sprites by Eric Ou (Demon Eclipse), Sounds by Raven Software (Hexen), and
+  Monolith Productions (Blood).
+
+
+Pistol:
+- Sprites by id Software (Doom), edited by Kaapeli47.
+- Dual Pistol sprites by JoeyTD (Realm667).
+- Sound from DWANGO map packs.
+
+
+Machinegun:
+- Sprites by id Software (Doom beta releases).
+- Sound by id Software (Quake II).
+
+
+Yellowboy:
+- Sprites by Batandy & That_One_Doom_Mod (Realm667).
+- Sounds from Fistful of Frags and by Croteam (Serious Sam 2).
+- Sound mixing by Kaapeli47.
+
+
+Shotgun:
+- Sprites by id Software (Doom).
+- Sound from DWANGO map packs.
+
+
+Super Shotgun:
+- Sprites by id Software (Doom II), Triple Barrel Shotgun sprites by Seidolon.
+- Sounds by id Software (Quake 4), additional sounds from Action Quake II and
+  pk_doom_sfx_20120224.wad.
+- Sound mixing by Kaapeli47.
+
+
+Riot Shotgun:
+- Sprites by 3D Realms, edited by Mike12.
+- Sounds from Deathmatch Classic and Shadow Warrior.
+
+
+Screwgun:
+- Weapon sprites by Mechadon & TheShooter7 (Realm667), id Software (Doom), and
+  Apogee Software (Rise of the Triad).
+- Projectile sprites by Midway Studios (Doom 64), edited by Mechadon (Realm667).
+- Sounds by id Software (Quake II, Quake III: Arena, Quake 4).
+
+
+Boomstick & Buckshot:
+- Weapon sprites by Midway Studios (Doom 64).
+- World sprites by id Software (Doom 2), edited by Kaapeli47.
+- Sounds by Valve Software (Deathmatch Classic), mixing by Kaapeli47.
+
+
+Chaingun:
+- Sprites by id Software (Doom), Dual Chaingun sprites by Kaapeli47.
+
+
+Super Chaingun:
+- Sprites by Skillsaw (Valiant), Dual Super Chaingun sprites by B.P.R.D.
+  (Equinox).
+- Sounds by id Software (Quake II), additional sounds from Malice Quake TC.
+- Sound mixing by Kaapeli47.
+
+
+Nailgun:
+- Weapon sprites by Lazureus (Realm667).
+- Projectile sprites by Midway Studios (Doom 64), edited by Mechadon (Realm667).
+- Sounds by Epic Games (Unreal Gold), mixing by Kaapeli47.
+
+
+Super Nailgun:
+- Sprites by JazzMaster9.
+- Sounds by Valve Software (Half-Life), mixing by Kaapeli47.
+
+
+Heavy Machinegun:
+- Sprites by Mike12.
+- Sounds by id Software (Quake II & Doom 3) and Action Quake II, mixing by
+  Kaapeli47.
+
+
+Assault Rifle:
+- Sprites by JoeyTD, WildWeasel and Bethesda Softworks (Terminator Rampage).
+- Upgraded Machinegun Cannon sprites by Orka.
+- Sounds by Valve Software (Counter-Strike: Source & Day of Defeat: Source),
+  mixing by Kaapeli47.
+- Upgraded Machinegun Cannon sounds from Spear Resurrection Wolf3D map set.
+
+
+Grenade Rifle:
+- Decorate based on the Grenade Launcher in Knee Deep in ZDoom.
+- Sprites and sounds from Knee Deep in ZDoom.
+
+
+Rocket Launcher:
+- Weapon and projectile sprites by id Software (Doom).
+- Sounds by id Software (Quake II).
+
+
+Barrage Launcher:
+- Sprites by SkeletronMK666, edited by Kaapeli47.
+- Upgraded "Bullet Bill" rocket sprites by SkeletronMK666.
+- Sounds by id Software (Quake II).
+
+
+Grenade Launcher:
+- Weapon and base projectile sprites by the Skulltag Team.
+- Clown grenade sprites by Kaapeli47.
+- Sounds by Valve Software (Deathmatch Classic) and id Software (Quake 4).
+
+
+Heat Seeker:
+- Weapon and projectile sprites from Stronghold.
+- Super Seeker sprites by Rogue Entertainment (Strife).
+- Sounds by id Software (Quake II), People Can Fly (Painkiller) and Hipnotic
+  Entertainment (Quake: Scourge of Armagon).
+
+
+Mini-Bomber:
+- Sprites by Rogue Entertainment (Strife).
+- Sounds by id Software (Quake II & Quake 4) and Westwood Studios (Command &
+  Conquer: Tiberian Sun), mixed by Kaapeli47.
+
+
+Plasma Gun:
+- Weapon and projectile sprites by id Software (Doom).
+- Enhanced plasma sprites by the Skulltag Team.
+- Sounds by id Software (Doom & Quake III: Arena).
+
+
+Plasmachine Gun:
+- Sprites by SkeletronMK666, edited by Kaapeli47.
+- Sounds by id Software (Doom & Quake III: Arena).
+- Charging sound by 3D Realms (Duke Nukem 3D), mixing by Kaapeli47.
+
+
+Pulse Rifle:
+- Sprites by ShadesMaster (Realm667).
+- Sounds from OMG Weapons! Doom mod.
+
+
+Plasma Beam:
+- Sprites by Captain Toenail and id Software (Doom II).
+- Sounds by id Software (Quake II & Quake 4), Rewolf Software (Gunman
+  Chronicles) and Epic Games (Unreal Tournament 2004).
+
+
+Ion Blaster
+- Sprites by Xaser & Vader (Realm667), id Software (Doom) and Apogee Software
+  (Rise of the Triad), edited by Kaapeli47.
+- Sounds by id Software (Doom, Quake, Quake II, Quake III: Arena), mixing by
+  Kaapeli47.
+
+
+Railgun:
+- Sprites by the Skulltag Team.
+- Sounds by id Software (Quake II, Quake III: Arena & Quake 4) and Valve
+  Software (Half-Life 2).
+- Firing sound mixed by Kaapeli47.
+
+Quad Shotgun:
+- Sprites by 1337Spy, Bgraybr & Warhawk (Realm667).
+- Sounds by id Software (Quake 4), additional sounds from Action Quake II and
+  pk_doom_sfx_20120224.wad.
+- Sound mixing by Kaapeli47.
+
+
+Hand Cannon:
+- DECORATE based on the Super Shotgun from Knee Deep in ZDoom.
+- Sprites by Nmn (Realm667).
+- Sounds by Xatrix (Redneck Rampage) and the Freedoom Team, mixing by Kaapeli47.
+
+Minigun:
+- Sprites by the Skulltag Team.
+- Sounds by the Skulltag Team, Croteam (Serious Sam: The First Encounter), Valve
+  Software (Team Fortress 2) and Gray Matter Interactive (Return to Castle
+  Wolfenstein).
+
+Stinger:
+- Sprites by Capstone Software (Corridor 8), id Software (Doom), and KILLA DIO
+  (Realm667).
+- Sounds by id Software (Quake) & Monolith Productions (Blood).
+
+
+Hellstorm Cannon:
+- Weapon sprites from OLDSKOOL ZDoom mod.
+- Projectile sprites by id Software (Doom).
+- Sounds by The Funktasm (Realm667), id Software (Doom II & Quake II) and Epic
+  Games.
+
+
+Devastators:
+- DECORATE based on the Devastators by lolo_is_cool and DBThanatos (Realm667).
+- Sprites and sounds by 3D Realms (Duke Nukem 3D).
+
+
+Barrel Gun:
+- Sprites by id Software (Doom), RIDICULOUS STRETCHING by Kaapeli47!
+
+
+Freezethrower:
+- Sprites by Xim (Realm667).
+- Sounds by 3D Realms (Duke Nukem 3D) and Raven Software (Hexen).
+
+
+W I D E Plasma Gun:
+- Sprites by id Software, edited in TEXTURES.txt by Kaapeli47
+
+
+BFG Prototype:
+- Sprites by Zrrion the Insect & Gothic (Realm667).
+- Sounds from pk_doom_sfx_20120224.wad and by Xatrix Entertainment (Redneck
+  Rampage).
+
+
+BFG10K:
+- Sprites and sounds by the Skulltag Team.
+
+
+Devastator 1000:
+- Sprites by Erik Ou (Demon Eclipse).
+- Sounds by id Software (Doom 3), Midway Studios (Doom 64) and Rogue
+  Entertainment (Strife).
+
+
+Unmaker:
+- Weapon sprites by Scuba Steve (Realm667), edited by Kaapeli47.
+- Projectile sprites by id Software (Doom beta plasma) and bosses.wad (Insanity
+  Spider plasma).
+- Sounds by id Software (Doom II), Raven Software (Hexen), Midway Studios
+  (Doom 64), additional sounds from Russian Overkill 3.0a.
+- Sounds mixed by Kaapeli47.
+
+
+Fire Mace:
+- Sprites & sounds by Raven Software (Heretic).
+
+
+Wraithverge & BloodScourge:
+- Sprites & sounds by Raven Software (Hexen).
+
+
+Meowitzer:
+- DECORATE, Sprites and sounds by TheMisterCat.
+- Additional DECORATE and pickup sprite by Kaapeli47.
+
+
+Flamethrower:
+- DECORATE based on the UTNT Flamethrower by Amuscaria.
+- Sprites by Amuscaria.
+- Sounds by Valve Software (Half-Life) and Blizzard Entertainment (Starcraft).
+
+
+Pyro Cannon:
+- DECORATE based on the UTNT Pyro Cannon by Amuscaria.
+- Sprites by Amuscaria.
+- Sounds by Raven Software (Heretic & Hexen), 3D Realms and Amuscaria.
+
+
+Sigil:
+- Sprites & sounds by Rogue Entertainment (Strife).
+
+
+Redeemer:
+- Sprites from Russian Overkill 2.4 Zandronum 3.0 build (seemingly captured from
+  Unreal Tournament by Epic Games).
+- Main projectile sprite by id Software (Doom), edited by Kaapeli47.
+- Sounds by Epic Games (Unreal Tournament) and from Russian Overkill 2.4
+  Zandronum 3.0 build.
+
+
+/// Items: ///
+
+// Ammo:
+
+- Ammo pickup sound by Valve Software (Deathmatch Classic).
+
+
+Bullets:
+- Clip and Big Box of Bullets sprites by id Software (Doom).
+- Small Box of Bullets sprites by Dreadopp (Realm667).
+
+Shells:
+- Shells and Box of Shells sprites by id Software (Doom).
+- Carton of Shells sprites by Dreadopp (Realm667).
+
+Rockets:
+- Single Rocket and Box of Rockets sprites by id Software (Doom).
+- Bundle of Rockets sprites by Dreadopp (Realm667).
+
+Cells:
+- Cell and Cell Pack sprites by id Software (Doom).
+- Cell Kit sprites by Dreadopp (Realm667).
+
+
+// Health:
+
+- Medikit, Stimpack and Health bonus sprites by id Software (Doom).
+- All Health pickup sounds by Valve Software (Deathmatch Classic).
+- Medipack sprites by Dreadopp.
+
+
+// Armor:
+
+- Armor hitting sound by Hipnotic Entertainment (Quake: Scourge of Armagon)
+
+Starting Armor:
+- Sprites by id Software (Doom).
+
+
+Armor Bonus:
+- Sprites by id Software (Doom).
+- Sound by Valve Software (Deathmatch Classic).
+
+
+Yellow Armor:
+- Sprites from Eon Deathmatch.
+- Sound by Valve Software (Deathmatch Classic).
+
+
+Bullet Armor:
+- Sprite by TOMISURRO (Realm667).
+- Sound by Hipnotic Entertainment (Quake: Scourge of Armagon) and Valve Software
+  (Deathmatch Classic), mixing by Kaapeli47.
+
+
+Frag Armor:
+- Sprite by Captain Toenail (Realm667), edited by Kaapeli47.
+- Sound by Hipnotic Entertainment (Quake: Scourge of Armagon) and Valve Software
+  (Deathmatch Classic), mixing by Kaapeli47.
+
+
+Tech Armor:
+- Sprite by Ghastly_Dragon (Realm667).
+- Sound by id Software (Quake II) and Valve Software (Deathmatch Classic),
+  mixing by Kaapeli47.
+
+
+Blue Armor:
+- Sprites by id Software (Doom).
+- Sound by Valve Software (Deathmatch Classic).
+
+
+Red Armor:
+- Sprites by the Skulltag Team.
+- Sound by Valve Software (Deathmatch Classic).
+
+
+Energy Armor:
+- Sprite by Ghastly_Dragon (Realm667), edited by Kaapeli47.
+- Sound by id Software (Quake II) and Valve Software (Deathmatch Classic),
+  edited by Kaapeli47.
+
+
+Super Armor:
+- Sprites by Tormentor667 (Realm667).
+- Sound by Valve Software (Deathmatch Classic), mixing by Kaapeli47.
+
+
+
+// Powerups:
+
+- All Powerup pickup sounds by Valve Software (Deathmatch Classic).
+
+
+Soulsphere:
+- Sprites by id Software (Doom).
+
+
+Strength:
+- Sprites by Dreadopp (Realm667), edited by Kaapeli47 and SystemofaDork.
+
+
+Megasphere:
+- Sprites by id Software (Doom).
+
+
+Doomsphere:
+- Sprites by the Skulltag Team.
+- Sounds by Valve Software (Deathmatch Classic), mixing by Kaapeli47.
+
+
+GuardSphere:
+- Sprites by the Skulltag Team.
+
+
+Resistance:
+- Sprites by Captain Toenail (Realm667).
+- Hitscan Resistance sprite edits by Kaapeli47.
+
+
+Time Freeze:
+- Sprites by the Skulltag Team.
+- Sounds by People Can Fly (Painkiller).
+
+
+Haste, Regeneration & Rage:
+- Sprites by Scalliano (Realm667).
+
+
+Reflection:
+- Sprites by Banjo Software (Hacx), edited by Captain Toenail (Realm667).
+
+
+Prosperity:
+- Sprites by Dreadopp (Realm667).
+
+
+Spread:
+- Sprites by SkeletronMK666.
+
+
+Drain:
+- Sprites by Kaapeli47.
+
+
+Turbosphere:
+- Sprites by the Skulltag Team.
+
+
+/// Player: ///
+
+- Base player sprites by id Software (Doom).
+- Weapon skins from MarineSkinsV7.wad, Dual Chaingun skin by the Skulltag Team.
+- Skins.wad assembled by Kaapeli47.
+
+- Sounds by id Software (Doom, Quake & Quake II), Raven Software (Heretic &
+  Hexen), Rogue Entertainment (Strife), Monolith Productions (Blood), Valve
+  Software (Team Fortress Classic & Deathmatch Classic), Epic Games (Unreal
+  Tournament) and Ion Storm (Deus Ex).
+
+- Gibbing sounds by id Software, 3D Realms, Xatrix entertainment, Monolith
+  Productions, Valve Software, Epic Games & Croteam, and from various random
+  meme sounds that Kaapeli47 found. ALL Mixed by Kaapeli47.
+
+
+/// Monsters: ///
+
+/// Possessed variants
+
+Yellowboy zombie:
+- Decorate by Skelegant, updated by Kaapeli47.
+- Sprites by David G & Skelegant.
+
+Chainsaw zombie:
+- Decorate by Bouncy & Graf Zahl, updated by Kaapeli47.
+- Sprites by id Software (Doom), origin of edit unknown.
+
+Machinegunner:
+- Decorate by Woolie Wool, updated by Kaapeli47.
+- Sprites by Xim, Woolie Wool, Toke.
+
+Strogg:
+- Decorate by Kaapeli47.
+- Sprites from 150skins.wad.
+- Sounds by id Software (Quake II & Quake 4).
+
+Strogg Nailborg:
+- Decorate by Kaapeli47.
+- Sprites by 3D Realms & Neoworm.
+- Sounds by id Software (Quake II & Quake 4).
+
+Strogg Enforcer:
+- Decorate by Kaapeli47.
+- Sprites by Xim.
+- Sounds by id Software (Quake II & Quake 4).
+
+Strogg Chaingunner:
+- Decorate by Kaapeli47.
+- Sprites by HorrorMovieGuy, Touhou Hisouten - Scarlet Weather Rhapsody.
+- Sounds by id Software (Quake II & Quake 4).
+
+Two-headed Chaingunner:
+- Decorate by Kaapeli47.
+- Sprites from All Hell Is Breaking Loose.
+
+Double Chaingunner:
+- Decorate by Amuscaria, updated by Kaapeli47.
+- Sprites by id Software (Doom) & Amuscaria.
+
+Heavy Machinegunner:
+- Decorate by Graf Zahl, updated by Kaapeli47.
+- Sprites by Nmn & Tormentor667.
+
+Super Shotgunner:
+- Decorate by the Skulltag Team, updated by Kaapeli47.
+- Sprites by the Skulltag Team.
+
+Chaingun Major:
+- Decorate by Vader, edited by Kaapeli47.
+- Sprites by Vader.
+
+Rocket Zombie:
+- Decorate by Graf Zahl, edited by Kaapeli47.
+- Sprites by The Innocent Crew.
+
+Plasmagunner:
+- Decorate by Bouncy, updated by Kaapeli47.
+- Sprites by Tormentor667, Captain Toenail & Ghastly Dragon.
+
+Railgunner:
+- Decorate by Tormentor667, updated by Kaapeli47.
+- Sprites by Ghastly Dragon, Xim, Fuzzballfox, Tormentor667 & MagicWazard.
+
+Beheaded Kamikazi:
+- Decorate by Captain Toenail, updated by Kaapeli47.
+- Sprites by Tormentor667 & Captain Toenail.
+- Sounds by Croteam (Serious Sam)
+
+
+/// Imp variants
+
+Super Imp:
+- Decorate by Graf Zahl, updated by Kaapeli47.
+- Sprites by The Innocent Crew.
+
+Small Imp & Void Imp:
+- Decorate by ItsNatureToDie, updated by Kaapeli47.
+- Sprites by Vader.
+
+Imp Abomination:
+- Decorate by DreadOpp, updated by Kaapeli47.
+- Sprites by Damien Daurio.
+
+Flying Imp:
+- Decorate by Maelstrom, updated by Kaapeli47.
+- Sprites by id Software (Doom), Raven Software (Hexen) & Maelstrom.
+
+Super Flying Imp:
+- Decorate by Maelstrom & Xim, updated by Kaapeli47.
+- Sprites by by id Software (Doom), Raven Software (Hexen), The Innocent Crew,
+  Maelstrom & Xim.
+
+Devil:
+- Decorate by Amuscaria, updated by Kaapeli47.
+- Sprites by Amuscaria.
+- Sounds by Midway Studios (Doom 64).
+
+Super Devil:
+- Decorate by Amuscaria & NaturalTvventy, updated by Kaapeli47.
+- Sprites by Amuscaria, The Innocent Crew & NaturalTvventy.
+- Sounds by Midway Studios (Doom 64).
+
+Dark Imp:
+- Decorate by the Skulltag Team, updated by Kaapeli47.
+- Sprites by the Skulltag Team.
+
+Small Dark Imp:
+- Decorate by the Skulltag Team & Vader, updated by Kaapeli47.
+- Sprites by Vader.
+
+Dark Devil:
+- Decorate by Amuscaria & Skelegant, updated by Kaapeli47.
+- Sprites by Amuscaria & ItsNatureToDie.
+- Sounds by Midway Studios (Doom 64).
+
+Catharsi & Dark Catharsi:
+- Decorate by Tormentor667, updated by Kaapeli47.
+- Sprites by LucasArts & Rottking.
+- Sounds by id Software (Quake III: Arena).
+
+Cyber Imp:
+- Decorate by Virtue, updated by Kaapeli47.
+- Sprites by LilWhiteMouse & Virtue.
+- Sound edits by Virtue.
+
+Rocket Imp:
+- Decorate by Skelegant, updated by Kaapeli47.
+- Sprites by Skelegant.
+
+Stone Imp:
+- Decorate by Espi, Blue Shadow & TheMightyHeracross, updated by Kaapeli47.
+- Missile attacks inspired by the stone imps of Elementalism Phase One, created
+  by Bauul et al.
+
+Hellion:
+- Decorate by Amuscaria, updated by Kaapeli47.
+- Sprites by Amuscaria.
+- GLDEFs by Keksdose.
+- Sounds by id Software.
+
+Vile Apprentice:
+- Decorate by Kaapeli47.
+- Sprites by Amuscaria, edited by Kaapeli47.
+- GLDEFs by Kaapeli47.
+- Sounds by id Software.
+
+Gargoyle:
+- Decorate updated by Kaapeli47.
+- Sprites and sounds by Raven Software (Heretic).
+
+Dark Gargoyle:
+- Decorate by Virtue.
+- Sprites by Virtue.
+- Sprites and sounds by Raven Software (Heretic).
+
+Plague Gargoyle:
+- Decorate by Evil Space Tomato.
+- Sprites by Amuscaria & Evil Space Tomato.
+- Sprites and sounds by Raven Software (Heretic).
+
+Nitrogolem & Ghost Golem:
+- Decorate updated by Kaapeli47.
+- Sprites and sounds by Raven Software (Heretic).
+
+Afrit:
+- Decorate updated by Kaapeli47.
+- Sprites and sounds by Raven Software (Hexen).
+
+Wendigo:
+- Decorate updated by Kaapeli47.
+- Sprites and sounds by Raven Software (Hexen).
+
+
+// Pinky Demon variants
+
+Pinky Demon:
+- Gib sprites by Amuscaria.
+
+Blood Demon:
+- Decorate by the Skulltag Team, updated by Kaapeli47.
+- Sprites by the Skulltag Team.
+- Gib sprites by Amuscaria, edited by Kaapeli47.
+
+Serpent Demon:
+- Decorate by Kaapeli47.
+- Sprites by Amuscaria (made for Eviternity).
+
+Bull Pinky:
+- Decorate by Kaapeli47.
+- Sprites by Tommy Galano.
+- Sounds by id Software (Doom & Quake).
+
+Melee Revenant:
+- Decorate by 00_Zombie_00.
+- Sprites by 00_Zombie_00.
+
+Ghost Guardian:
+- Decorate by 00_Zombie_00 & SkeletronMK666, updated by Kaapeli47.
+- Sprites by SkeletronMK666.
+
+Undead Warrior & Ghost Warrior:
+- Sprites and sounds by Raven Software (Heretic).
+
+Sabreclaw:
+- Decorate updated by Kaapeli47.
+- Sprites and sounds by Raven Software (Heretic).
+
+Ettin:
+- Decorate updated by Kaapeli47.
+- Sprites and sounds by Raven Software (Hexen).
+
+Centaur & Slaughtaur:
+- Decorate updated by Kaapeli47.
+- Sprites and sounds by Raven Software (Hexen).
+
+
+// Lost Soul variants
+
+Nether Skull (Beta Skull):
+- Decorate by Kaapeli47.
+- Sprites by id Software.
+- Sounds by id Software (Doom) & Raven Software (Heretic).
+
+Forgotten Soul:
+- Decorate by Ghastly Dragon, updated by Kaapeli47.
+- Sprites by Captain Toenail.
+
+Phantasm:
+- Decorate by MagicWazard & Bauul, updated by Kaapeli47.
+- Sprites & GLDefs by MagicWazard.
+- Sounds by id Software (Doom) & Midway Studios (Doom 64).
+
+Shade:
+- Decorate by Jaeden, updated by Kaapeli47.
+- Sprites by Jaeden.
+
+Ethereal Soul:
+- Decorate by Neoworm, updated by Kaapeli47.
+- Sprites by Neoworm. Projectile sprites by Vader.
+- Sounds by id Software (Doom) & Raven Software (Hexen).
+
+Fireblu Soul:
+- Decorate by Kaapeli47
+- Sprites by Captain Toenail.
+- Sounds by id Software (Doom) & Midway Studios (Doom 64)
+
+Hades Sphere:
+- Decorate by Amuscaria, Blue Shadow, MagicWazard, edited by Kaapeli47.
+- Sprites by Raven Software (Heretic & Hexen), Amuscaria, Cryptic.
+- Sounds by Raven Software (Heretic & Hexen).
+
+
+// Cacodemon variants:
+
+Cacolantern:
+- Decorate, Sprites and GLDefs by the Skulltag Team.
+
+Abaddon:
+- Decorate, Sprites and GLDefs by the Skulltag Team.
+
+Agathodemon:
+- Decorate by Jimmy, updated by Kaapeli47.
+- Sprites by Jimmy. Projectile sprites by Amuscaria & Vader.
+- GLDefs by Ghastly Dragon.
+
+Cyber Cacodemon:
+- Decorate by Kaapeli47.
+- Sprites by id Software (Doom), Rogue Entertainment (Strife), RGamesINC, Enjay
+  & Craneo.
+
+Cacozerg:
+- Decorate by Kaapeli47.
+- Sprites by Nmn.
+- Sounds by Hipnotic Entertainment (Quake: Scourge of Armagon), Rogue
+  Entertainment (Quake: Dissolution of Eternity), Blizzard Entertainment
+  (Starcraft).
+
+Cacobrute:
+- Decorate by Kaapeli47.
+- Sprites by YukiSenmatsu.
+
+Baby Cacodemon:
+- Decorate by Yuraofthehairfan, edited by Xenaero & Kaapeli47.
+- Sprites by osjclatchford.
+- GLDEFs by MagicWazard.
+- Sounds by Scroton, IMX, MagicWazard, id Software (Doom), Raven Software
+  (Heretic)
+
+Dark Cacodemon:
+- Decorate by Kaapeli47.
+- Sprite color remap by Kaapeli47.
+- GLDEFs by Kaapeli47.
+
+Driller:
+- Decorate by Tarnsman & Xaser.
+- Sprites and sounds by Interplay (Descent).
+
+Wizard:
+- Decorate updated by Kaapeli47.
+- Sprites & sounds by Raven Software (Heretic).
+
+Bishop:
+- Decorate updated by Kaapeli47.
+- Sprites & sounds by Raven Software (Hexen).
+
+Wraith:
+- Decorate updated by Kaapeli47.
+- Sprites & sounds by Raven Software (Hexen).
+
+
+// Revenant variants:
+
+Ghoul:
+- Decorate by Kaapeli47.
+- Sprites by IMX, MagicWazard & DBJ87.
+- GLDefs by DBJ87 & MagicWazard.
+
+Weredragon:
+- Decorate updated by Kaapeli47.
+- Sprites & sounds by Raven Software (Heretic).
+
+Ophidian:
+- Decorate updated by Kaapeli47.
+- Sprites & sounds by Raven Software (Heretic).
+
+Death Incarnate:
+- Decorate by Amuscaria, Blue Shadow, MagicWazard, edited by Kaapeli47.
+- Sprites by id Software (Doom II), Midway Studios (PSX Doom), Raven Software
+  (Heretic & Hexen), Amuscaria.
+- Sounds by Midway Studios (PSX Doom), Rogue Entertainment (Strife), Raven
+  Software (Heretic & Hexen).
+
+
+// Hell Knight variants
+
+Hell Warrior:
+- Decorate by Tormentor667, updated by Kaapeli47.
+- Sprites by Tormentor667.
+
+Hell Squire:
+- Decorate by Woolie Wool, updated by Kaapeli47.
+- Sprites by Vader, Jekyll Grim Payne & Woolie Wool
+- Sounds by Woolie Wool & Kaapeli47.
+
+Cybruiser:
+- Decorate by Amuscaria, updated by Kaapeli47.
+- Sprites by id Software, Raven Software, Wolfendoom & Amuscaria.
+- GLDefs by Dreadopp.
+- Sounds by Amuscaria.
+
+Cybruiser Mk II:
+- Decorate by Kaapeli47, based on the Annihilator from Eviternity but inherited
+  from the Cybruiser above.
+- Machinegun sprite edit by Xaser.
+
+Satyr:
+- Decorate by Vader, updated by Kaapeli47.
+- Sprites and sounds by Vader.
+
+Lord of Heresy:
+- Decorate by Bouncy & Tormentor667.
+- Sprites by Vader & Tormentor667.
+- Sounds by id Software (Quake) & Kaapeli47.
+
+
+// Baron of Hell variants
+
+Tycoon of Hell:
+- Decorate by Kaapeli47.
+- Sprites from Frozen Time (FrozenT.wad).
+
+Hell's Fury:
+- Decorate by Tormentor667, updated by Kaapeli47.
+- Sprites by Tormentor667 & Vader.
+- GLDefs by Ghastly Dragon & Keksdose.
+
+Belphegor:
+- Decorate by the Skulltag Team, updated by Kaapeli47.
+- Sprites by the Skulltag Team.
+
+Cyber Baron:
+- Decorate by Ben2k9, updated by Kaapeli47.
+- Sprites by Ben2k9.
+- GLDefs by Ghastly Dragon.
+
+Archon of Hell:
+- Decorate by Amuscaria.
+- Sprites id Software (Doom), Midway Studios (Doom 64) & Amuscaria.
+- GLDefs by Ghastly Dragon.
+- Sounds by Amuscaria.
+
+Bruiser Demon:
+- Decorate by Vader, updated by Kaapeli47.
+- Sprites by Vader.
+- GLDefs by Ghastly Dragon & Keksdose.
+- Sounds by id Software & Blizzard Entertainment.
+
+Strogg Terminator & Disintegrator:
+- Terminator Decorate by Vader, updated by Kaapeli47.
+- Disintegrator Decorate by Kaapeli47.
+- Sprites by Vader & Amuscaria.
+- GLDefs by Dreadopp & Kaapeli47.
+- Sounds by id Software, Blizzard Entertainment & Vader.
+
+Super Cybruiser:
+- Decorate by Kaapeli47.
+- Sprites by Amuscaria & Faceman2000.
+- Sounds by Kaapeli47.
+
+Baron of Hellfire:
+- Decorate by Kaapeli47.
+- Sprite color remap from Satan's Covenant.
+- Sounds by id Software (Doom) & Raven Software (Hexen).
+
+Baron of Heresy:
+- Decorate by Bouncy & Tormentor667, edited by Kaapeli47.
+- Sprite color remap by Kaapeli47.
+
+Chaos Serpents:
+- Decorate update and additional projectiles by Kaapeli47.
+- Sprites and sounds by Raven Software (Hexen).
+
+Magma Serpent:
+- Decorate by Fury3, edited by Kaapeli47.
+- Sprites by Raven Software (Hexen) & Fury3.
+
+
+// Arachnotron variants:
+
+Arachnotron:
+- Laser projectile Decorate by Kaapeli47.
+- Laser projectile sound by Hipnotic Entertainment (Quake: Scourge of Armagon).
+
+Arachnotron Mk.II:
+- Decorate by Jimmy & ZDude, updated by Kaapeli47.
+- Sprite edit by Jimmy.
+
+Aradicator:
+- Decorate by Kaapeli47, Tormentor667 & Captain Toenail.
+- Sprites by Tormentor667 & Captain Toenail.
+- Sounds by id Software (Doom & Quake II) & Hipnotic Entertainment (Quake:
+  Scourge of Armagon).
+
+Nail Arachnotron:
+- Decorate by Kaapeli47.
+- Sprites by Captain Toenail.
+
+Arachnobaron:
+- Decorate by WhoDaMan, updated by Kaapeli47.
+- Sprites by WhoDaMan.
+
+Two-headed Rider:
+- Decorate by Kaapeli47.
+- Sprites from All Hell Is Breaking Loose.
+
+Plasmarachnotron:
+- Decorate by Kaapeli47.
+- Sprite color remap by Kaapeli47.
+
+Arachno-Shredder:
+- Decorate by Kaapeli47.
+- Sprites by SunMadCat.
+- Sounds by id Software (Doom & Quake II).
+
+Zombie Nailgun Tank:
+- Decorate by Enjay, edited by Kaapeli47.
+- Sprites by id Software (Doom), 3D Realms (Duke Nukem 3D) & Enjay.
+- Sounds by id Software (Doom) & 3D Realms (Duke Nukem 3D).
+
+Zombie Missile Tank:
+- Decorate by Xim, edited by Kaapeli47.
+- Sprites by id Software (Doom), 3D Realms (Duke Nukem 3D), David G & Xim.
+- Sounds by id Software (Doom) & 3D Realms (Duke Nukem 3D).
+
+Zombie Plasma Tank:
+- Decorate by Xim & Enjay, edited by Kaapeli47.
+- Sprites by id Software (Doom), 3D Realms (Duke Nukem 3D), Xim & Enjay.
+- Sounds by id Software (Doom) & 3D Realms (Duke Nukem 3D).
+
+Centroid & Dark Centroid:
+- Decorate by Jimmy, edited by Kaapeli47.
+- Sprites by jaeden.
+- Sounds by Hipnotic Entertainment (Quake: Scourge of Armagon).
+
+Vore:
+- Decorate by Kaapeli47.
+- Sprites by Nmn.
+- Sounds by id Software (Quake).
+
+
+// Mancubus variants
+
+Hectebus:
+- Decorate by AgentSpork & Carnevil, updated by Kaapeli47.
+- Sprites by AgentSpork.
+
+Volacubus & Plasma Volacubus:
+- Decorate by DeVloek, edited by Kaapeli47
+- Sprites by DeVloek.
+- Thruster sounds by d3deville.
+
+Incubus:
+- Decorate by Daniel, Induana & Kaapeli47.
+- Sprites by Banjo Software (HacX), Daniel & Induana.
+- Sounds by Banjo Software (HacX).
+
+Cyber Mancubus:
+- Decorate by Kaapeli47.
+- Sprites by Amuscaria & Craneo.
+- Sound mixing by Kaapeli47.
+
+Harkubus:
+- Decorate by Kaapeli47.
+- Sprites by Nmn.
+- Sounds by Midway Studios (Doom 64).
+
+Super Mancubus:
+- Decorate by Skillsaw, updated by Kaapeli47.
+- Sprites by Xim, Tormentor667, Amuscaria & DBJ87.
+- Sounds from Satan's Covenant.
+
+Iron Lich:
+- Decorate updated by Kaapeli47.
+- Sprites and sounds by Raven Software (Heretic).
+
+
+// Pain Elemental variants
+
+Plasma Elemental:
+- Decorate by The Dark Archon & The Ultimate Doomer, updated by Kaapeli47.
+- Sprites by The Ultimate Doomer.
+
+Hellfire Elemental:
+- Decorate by Kaapeli47.
+- Sprite color remap by Kaapeli47.
+
+Fireblu Elemental:
+- Decorate by Kaapeli47.
+- Sprite color remap by Kaapeli47.
+- Sounds by id Software (Doom 2) & Midway Studios (Doom 64).
+
+Inferno:
+- Decorate by Amuscaria & Tormentor667, updated by Kaapeli47.
+- Sprites by Amuscaria.
+- Sounds by id Software (Doom 2), Midway Studios (Doom 64) & Raven Software
+  (Hexen).
+
+Tortured Soul:
+- Decorate by Xaser, updated by Kaapeli47.
+- Sprites by Assmaster.
+- Sounds by id Software.
+
+Defiler:
+- Decorate by Lord_Z, edited by Kaapeli47.
+- Sprites by Dreadopp.
+
+Phase Elemental:
+- Decorate, sprite color remap, GLDEFs and decals by Kaapeli47.
+
+Afrit:
+- Decorate by Kaapeli & Xenaero, based on the Afrit in Deus Vult 2 by Converted
+  Doomer.
+- Sprites by Espi & Ebola.
+- Sound mixing by Kaapeli47.
+
+Cacomother:
+- Decorate by Kaapeli47:
+- Sprite color remap by Kaapeli47.
+- Sounds mixing by Kaapeli47.
+
+Death Wyvern:
+- Decorate updated by Kaapeli47.
+- Sprites and sounds by Raven Software (Hexen).
+
+
+// Arch-Vile variants:
+
+- Resurrection sounds by id Software (Doom, Quake & Quake II), mixed by
+  Kaapeli47.
+
+Archvile:
+- Ground flame projectile Decorate by Kaapeli47.
+
+Stealth Vile:
+- Decorate by Kaapeli47.
+
+Mini-Vile:
+- Decorate by Kaapeli47.
+- Sprite edit by Kaapeli47.
+- Sound mixing by Kaapeli47.
+
+Divine Shadow:
+- Decorate by Kaapeli47.
+- Sprites by ZZYZX.
+
+Dark-Vile:
+- Decorate by Kaapeli47.
+- Sprites by Cyano.
+
+Scorch-Vile:
+- Decorate by Kaapeli47.
+- Sprite color remap by Kaapeli47.
+
+Diabolist:
+- Decorate by Amuscaria, updated by Kaapeli47.
+- Sprites by Amuscaria.
+- Sounds by id Software (Doom 2), Raven Software (Heretic/Hexen), Rogue
+  Entertainment (Strife) & Amuscaria.
+
+Resurrector:
+- Decorate by Xenaero & Kaapeli47.
+- Sprites edited from Amuscaria's Diabolist by Xenaero.
+
+
+// Cyberdemon variants
+
+Cyberdemon:
+- New Decorate attacks by Kaapeli47.
+- GLDEFs by Kaapeli47.
+
+Dark Cyberdemon:
+- Decorate by Kaapeli47.
+- Sprites by Jimmy.
+- GLDEFs by Kaapeli47.
+
+Insanity Cyberdemon:
+- Decorate by Kaapeli47.
+- Sprites by ibm5155.
+- GLDEFs by Kaapeli47.
+
+Plasma Cyberdemon:
+- Decorate by Kaapeli47.
+- Sprite color remap by Kaapeli47.
+- GLDEFs by Kaapeli47.
+
+Hellfire Cyberdemon:
+- Decorate by Kaapeli47.
+- Sprite color remap by Kaapeli47.
+- Sounds mixed from the 'guy snoring loud' meme.
+- Death sound mixed by Uber, other sounds mixed by Kaapeli47.
+- GLDEFs by Kaapeli47.
+
+Cyber Annihilator:
+- Decorate by Kaapeli47.
+- Sprites by id Software (Doom) & Amuscaria.
+
+Cyber Decimator:
+- Decorate by Kaapeli47.
+- Sprites by HorselessHeadsman, JoeyTD & Minigunner.
+
+Agony Elemental:
+- Decorate by Kaapeli47.
+- Sprites by Midway Studios (Doom 64) & Onslaught Six.
+- Sounds mixed by Kaapeli47.
+
+Hive Mother:
+- Decorate by Kaapeli47.
+- Sprites by TheMisterCat.
+- Alert sound by MajorArlene, additional sounds from freesound.org.
+
+Maulotaur:
+- Decorate updated by Kaapeli47.
+- Sprites & sounds by Raven Software (Heretic/Hexen).
+
+Heresiarch:
+- Decorate updated by Kaapeli47.
+- Sprites & sounds by Raven Software (Hexen).
+
+Korax:
+- New summoning Decorate attack by Kaapeli47.
+- Sprites & sounds by Raven Software (Heretic/Hexen).
+
+
+// Spider Mastermind variants
+
+Spider Mastermind:
+- New Decorate attacks by Kaapeli47.
+- GLDEFs by Kaapeli47.
+
+Cyber Mastermind:
+- Decorate by Nanami, new attacks by Kaapeli47.
+- Sprites by Nanami.
+- GLDEFs by Ghastly Dragon.
+
+Bronze Spiderdemon:
+- Decorate by Kaapeli47.
+- Sprites by Jimmy.
+
+Insanity Spider:
+- Decorate by Xaser, new attacks by Kaapeli47.
+- Sprites by Xaser.
+
+Demolisher:
+- Decorate by Amuscaria, updated by Kaapeli47.
+- Sprites by Amuscaria.
+- GLDEFs by Ghastly Dragon.
+
+Giant Incubus:
+- Decorate by Daniel, Induana & Kaapeli47.
+- Sprites by Banjo Software (HacX), Daniel & Induana.
+- Sounds by Banjo Software (HacX).
+
+Humoncubus:
+- Decorate by Kaapeli47.
+- Sprites by The Dark Archon.
+- Sounds from Satan's Covenant.
+
+Tankubus:
+- Decorate by Kaapeli47.
+- Sprites by Amuscaria.
+- Sounds by 3D Realms (Shadow Warrior), mixed by Amuscaria.
+
+
+/// World Objects: ///
+
+Explosive Barrel:
+- Sprites by id Software (Doom).
+- Sound by Xatrix Entertainment (Redneck Rampage).
+
+Bullet & Nail impacts:
+- Sprites by id Software (Doom) and Midway Studios (Doom 64).
+- Sounds by Valve Software (Half-Life & Deathmatch Classic), id Software
+  (Quake III: Arena & Team Arena), Apogee Software (Rise of the Triad), Rewolf
+  Software (Gunman Chronicles) and Wolfmap (RealRTCW).
+
+Body impacts:
+- Bullet hit and critical hit sounds by Valve Software (Team Fortress 2 &
+  Counter-Strike: Global Offensive).
+- Chainsaw impact sounds by id Software (Quake III: Arena), mixed by Kaapeli47.
+
+Teleport Effect:
+- Sprites from Doomkid's Deathmatch Collection.
+- Sounds by Valve Software (Team Fortress Classic).
+
+Item Respawn Effect:
+- Sprites by id Software (Doom).
+- Sounds by Valve Software (Deathmatch Classic).
+
+
+/// Graphics: ///
+
+Title, title screen, intermission screen, console background, help screens, grin
+mugshot edits, Soul Sphere mugshot, Doom Sphere mugshots and Resistance Sphere
+mugshots by Kaapeli47.
+
+- Godmode mugshots edited from Brian_D's Expressive Mugshot Faces by Kaapeli47.
+
+Statusbar from iDoom QuakeWorld Contest megawad.
+
+
+/// Additional Sprites: ///
+
+- 'You Fail It' sprite by the Skulltag Team (previously the 'Your Skill is Not
+  Enough' sprite)
+- New 'Your Skill is Not Enough' sprite by Kaapeli47.
+
+
+
+// Additional Sounds: //
+
+- id Software (Wolfenstein 3D, Doom II, Quake, Quake II, Quake III: Arena,
+  Quake III: Team Arena, Quake 4)
+- Raven Software (Heretic, Hexen, Hexen II)
+- Rogue Entertainment (Strife)
+- Midway Studios (Doom 64/PSX Doom)
+- Apogee Software / 3D Realms (Rise of the Triad, Duke Nukem 3D, Shadow Warrior)
+- Hipnotic Entertainment (Quake: Scourge of Armagon)
+- Xatrix Entertainment (Redneck Rampage)
+- Monolith Productions (Blood, Blood II: The Chosen)
+- Epic Games (Unreal, Unreal Tournament)
+- Valve Software (Half-Life, Team Fortress Classic, Counter-Strike, Deathmatch
+  Classic, Half-Life 2, Team Fortress 2)
+- Gray Matter Interactive (Return to Castle Wolfenstein)
+- People Can Fly (Painkiller)
+- The Skulltag Team
+- Action Quake II
+
+SNDINFO lumps by Kaapeli47.
+Sound mixing by Kaapeli47 using Audacity.
+Additional player & gibbing sounds mixed by Kaapeli47.
+
+
+// Music: //
+
+Startup, Title & Intermission MIDIs composed by Kaapeli47.
+
+
+// Fonts: //
+
+- ZDoom DBIGFONT edit by Blue Shadow at Realm667.
+- Quake II SMALLFNT by Jimmy at Realm667.
+
+
+// Other: //
+
+- ANIMDEFS, GAMEINFO, GAMEMODE, GLDEFS, KEYCONF, LANGUAGE, MAPINFO by Kaapeli47.
+- Startup Planar screen and ENDOOM screen by Kaapeli47.
+- Existing bots from Skulltag/Zandronum, updated by Kaapeli47.
+- Additional bots by Kaapeli47.
+- Color Palette from Demon Eclipse.
+
+
+							// SPECIAL THANKS: //
+
+Thanks to the ZDoom and Zandronum Wikis for providing all needed info and
+documentation on DECORATE and ACS!
+
+Huge thanks to Hellforge Studios and the Hellforge Discord community for
+the big deathmatch events, which helped tremendously in testing the mod with a
+lot of players and even more in receiving feedback from the players!

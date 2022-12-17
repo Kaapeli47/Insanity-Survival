@@ -1,0 +1,35 @@
+// MegaSphere
+
+ACTOR IDMMegasphere : CustomInventory 10072
+{
+  +FLOAT
+  +FLOATBOB
+  +COUNTITEM
+  +INVENTORY.ALWAYSPICKUP
+  Inventory.PickupMessage "Megasphere!"
+  Inventory.PickupSound "misc/p_pkup"
+  Inventory.PickupAnnouncerEntry "megasphere"
+  Inventory.RespawnTics 2100
+  Tag "Megasphere"
+  //$Category Powerups
+  States
+  {
+  Spawn:
+    MEGA ABCD 6 Bright
+    Loop
+  Pickup:
+	TNT1 A 0 A_Print("\n\n\n\n\nMegasphere!\n\n\n\n300 Health & random Heavy Armor!")
+	TNT1 A 0 A_GiveInventory("SoulSphereHealth")
+ 	TNT1 A 0 A_Jump(256,"BlueArmor", "RedArmor", "PurpleArmor")
+	Stop
+  BlueArmor:
+	TNT1 A 0 A_GiveInventory("IDMBlueArmor")
+	Stop
+  RedArmor:
+	TNT1 A 0 A_GiveInventory("IDMRedArmor")
+	Stop
+  PurpleArmor:
+	TNT1 A 0 A_GiveInventory("PurpleArmor")
+    Stop
+  }
+}

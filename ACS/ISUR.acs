@@ -1,0 +1,86 @@
+#library "isur"
+#include "zcommon.acs"
+
+// Korax's Hexen scripts.
+// Need to be present for compatibility with Korax's Decorate actions.
+Script 249 (void) {}
+Script 250 (void) {}
+Script 251 (void) {}
+Script 252 (void) {}
+Script 253 (void) {}
+Script 254 (void) {}
+Script 255 (void) {}
+
+// Take all big weapons out of the player's inventory when the map starts:
+Script "ISURBigWeaponStrip" ENTER
+{
+	int weaponstripcount = 0;
+	until(weaponstripcount == 5)
+	{
+		TakeInventory("QuadShotgun",1);
+		TakeInventory("HandCannon",1);
+		TakeInventory("IDMMinigun",1);
+		TakeInventory("Stinger",1);
+		TakeInventory("HellStormCannon",1);
+		TakeInventory("Devastator",1);
+		TakeInventory("BarrelGun",1);
+		TakeInventory("FreezeThrower",1);
+		TakeInventory("WidePlasmaGun",1);
+		TakeInventory("IDMBFG9000",1);
+		TakeInventory("IDMBFG10K",1);
+		TakeInventory("Devastator1000",1);
+		TakeInventory("Unmaker",1);
+		TakeInventory("IDMMace",1);
+		TakeInventory("IDMBloodScourge",1);
+		TakeInventory("IDMWraithVerge",1);
+		TakeInventory("Meowitzer",1);
+		TakeInventory("IDMFlamethrower",1);
+		TakeInventory("IDMPyroCannon",1);
+		Delay(1);
+		weaponstripcount++;
+	}
+}
+
+// Give the player the starting armor again when they respawn:
+Script "ISURRespawnArmorCheck" RESPAWN
+{
+	GiveActorInventory(0,"PlayerStartingArmor",1);
+}
+
+// Doppelganger space check, not used currently
+script "DoppelSpaceCheck" (void)
+{
+    int x = GetActorX(0);
+    int y = GetActorY(0);
+    int z = GetActorZ(0);
+	int angle = GetActorAngle(0);
+	if(Spawn("IDMSpiderMastermind",x,y,z,0))
+	{
+		SetResultValue(1);
+	}
+}
+
+// Spider Mastermind spawner toggle result value
+
+Script "SpiderDemonSpawn" (void)
+{
+	if(GetCvar("isur_spiderdemonspawner") == false)
+	{
+		SetResultValue(0);
+	}
+}
+
+// Random Tips
+// Thanks to TheMisterCat for the help with these better scripts for the random tips!
+
+Script "DisplayRandomTip" (void) CLIENTSIDE
+{
+  //if(ConsolePlayerNumber() != PlayerNumber()) { Terminate; }
+  if(GetCVar("isur_tips") == true)
+  {
+    Delay(1);
+	str TipName = StrParam(s:"TIP", i:Random(0,27));
+	SetFont("Smallfont");
+	HudMessage(s:StrParam(l:TipName); HUDMSG_FADEOUT|HUDMSG_LOG, 1, CR_UNTRANSLATED, 1.5, 0.675, 5.0, 1.5);
+  }
+}

@@ -1,0 +1,15 @@
+/// Mancubus Spawn
+
+ACTOR FatsoRandomSpawner : RandomSpawner replaces Fatso
+{
+	DropItem "IDMFatso"
+	DropItem "IDMHectebus"
+	DropItem "IDMIronLich"
+	DropItem "IDMFlyingFatso"
+	DropItem "IDMPlasmaFatso"
+	DropItem "IDMIncubus"
+	DropItem "IDMCyberMancubus"
+	DropItem "IDMHarkubus"
+	DropItem "IDMSuperMancubus"
+	DropItem "IDMGascubus"
+}

@@ -1,0 +1,66 @@
+/// Ghoul
+
+ACTOR IDMGhoul : IDMRevenant
+{
+  HitObituary "%o was smacked by a ghoul."
+  Obituary "%o was dissipated by a ghoul."
+  Tag "Ghoul"
+  States
+  {
+  Spawn:
+    GHUL AB 10 A_Look
+	Loop
+  See:
+    GHUL AABBCCDDEEFF 2 A_Chase
+	Loop
+  Missile:
+    TNT1 A 0 A_Jump(128,"PlasmaAtk","LaserAtk")
+  Melee:
+    GHUL G 1 A_FaceTarget
+    GHUL G 6 A_SkelWhoosh
+    GHUL H 6 A_FaceTarget
+    GHUL I 6 A_CustomComboAttack("IDMBaronBall",32,random(1,10)*8,"skeleton/melee","Punch")
+    Goto See
+  PlasmaAtk:
+    GHUL J 10 Bright A_FaceTarget
+    TNT1 A 0 A_FaceTarget
+    GHUL J 4 Bright A_CustomMissile("ArachnoPulseBall",56,12)
+    TNT1 A 0 A_FaceTarget
+    GHUL J 4 Bright A_CustomMissile("ArachnoPulseBall",56,-12)
+    TNT1 A 0 A_FaceTarget
+    GHUL J 4 Bright A_CustomMissile("ArachnoPulseBall",56,12)
+    TNT1 A 0 A_FaceTarget
+    GHUL J 4 Bright A_CustomMissile("ArachnoPulseBall",56,-12)
+	Goto MissileEnd
+  LaserAtk:
+    GHUL J 10 Bright A_FaceTarget
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_CustomMissile("ArachnoLaserShot",56,-12)
+    GHUL J 3 Bright A_CustomMissile("ArachnoLaserShot",56,12)
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_CustomMissile("ArachnoLaserShot",56,-12)
+    GHUL J 3 Bright A_CustomMissile("ArachnoLaserShot",56,12)
+    TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_CustomMissile("ArachnoLaserShot",56,-12)
+    GHUL J 3 Bright A_CustomMissile("ArachnoLaserShot",56,12)
+	Goto MissileEnd
+  MissileEnd:
+    GHUL K 10 A_FaceTarget
+    Goto See
+  Pain:
+    GHUL L 5
+    GHUL L 5 A_Pain
+    Goto See
+  Death:
+    GHUL LM 7
+    GHUL N 7 A_Scream
+    GHUL O 7 A_NoBlocking
+    GHUL P 7
+    GHUL Q -1
+    Stop
+  Raise:
+    GHUL Q 5
+    GHUL PONML 5
+    Goto See
+  }
+}

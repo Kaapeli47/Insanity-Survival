@@ -1,0 +1,602 @@
+/// Common
+
+weapons/wswitch DSWSWTCH
+
+/// Slot 1
+
+// Fist
+
+weapons/pwall DSPWALL
+$random weapons/punch {punch punch1 punch2 punch3 punch4 punch5 punch6 punch7 punch8 punch9}
+punch DSPUNCH
+punch1 DSPUNCH1
+punch2 DSPUNCH2
+punch3 DSPUNCH3
+punch4 DSPUNCH4
+punch5 DSPUNCH5
+punch6 DSPUNCH6
+punch7 DSPUNCH7
+punch8 DSPUNCH8
+punch9 DSPUNCH9
+
+// Chainsaw
+
+$pitchshiftrange 2
+
+weapons/sawhit DSSAWHIT
+weapons/sawfull DSSAWFUL
+weapons/sawidle DSSAWIDL
+
+$random weapons/chainsawhit {swhit1 swhit2 swhit3 swhit4 swhit5 swhit6 swhit7}
+swhit1 DSSWHIT1
+swhit2 DSSWHIT2
+swhit3 DSSWHIT3
+swhit4 DSSWHIT4
+swhit5 DSSWHIT5
+swhit6 DSSWHIT6
+swhit7 DSSWHIT7
+
+// Knife
+
+$random KnifeHitThing {knifehit1 knifehit2  knifehit3}
+knifehit1 DSKNFHT1
+knifehit2 DSKNFHT2
+knifehit3 DSKNFHT3
+$limit knifehitthing 0
+
+KnifeHitWall	DSKNFWAL
+$limit knifehitwall 0
+KnifeMiss		DSKNFSWG
+KnifeSelect 	DSKNFSEL
+
+$alias MacheteHitThing KnifeHitThing
+MacheteHitWall		DSKNFWAL
+MacheteSwing		DSMACHT1
+$limit machetehitthing 0
+$limit machetehitwall 0
+
+$pitchshiftrange 4
+
+// Vorpal Blade
+
+weapons/vblhit                dsvblhit
+weapons/vblhi2                dsvblhi2
+weapons/vblhi3                dsvblhi3
+weapons/vblwal                dsvblwal
+weapons/vblwa2                dsvblwa2
+weapons/vblswg                dsvblswg
+monster/hamswg                dshamswg
+
+$limit weapons/vblhit 0
+$limit weapons/vblhi2 0
+$limit weapons/vblhi3 0
+$limit weapons/vblwal 0
+$limit weapons/vblwa2 0
+
+
+/// Slot 2
+
+// Machinegun
+
+$random weapons/machinegun {mgun1 mgun2 mgun3 mgun4 mgun5}
+mgun1 DSMGUN1
+mgun2 DSMGUN2
+mgun3 DSMGUN3
+mgun4 DSMGUN4
+mgun5 DSMGUN5
+
+// Blaster
+
+weapons/blasterf DSBLASTR
+$volume weapons/blasterf 0.5
+weapons/blasterx DSBLSHIT
+
+// Yellowboy
+
+$random weapons/wchfire {wch1 wch2 wch3}
+wch1 DSWCHST1
+wch2 DSWCHST2
+wch3 DSWCHST3
+
+weapons/wchlevr DSWCHLVR
+
+
+/// Slot 3
+
+// Boomstick & Buckshot
+
+weapons/bstick DSBSTICK
+weapons/dbstck DSDBSTK
+
+// Combat Shotgun
+
+weapons/shotgf2 DSSHTGN2
+
+// Riot Shotgun
+
+$alias weapons/riotshf weapons/dbstck
+weapons/riotsf2 DSRIOT2F
+weapons/riotrel DSRIOTSR
+weapons/riotrdy DSRSHRDY
+
+// Screwgun
+
+weapons/screwgfr DSSCRGFR
+$alias weapons/screwimpct weapons/nailimpct
+$volume weapons/screwimpct 0.2
+
+
+/// Slot 4
+
+// Super Chaingun
+
+weapons/chngun DSCHAING
+$pitchshift weapons/chngnstrt 0
+weapons/chngnstrt DSCHGNST
+$pitchshift weapons/chngnloop 0
+weapons/chngnloop DSCHGNLP
+$pitchshift weapons/chngnstop 0
+weapons/chngnstop DSCHGSTP
+
+// Heavy Machinegun
+
+weapons/hmgfire DSHMGFIR
+weapons/hmgrel DSHMGREL
+$volume weapons/hmgfire 0.9
+weapons/hmg2fire DSHMG2FR
+
+// Assault Rifle
+
+weapons/akfire DSAKFIRE
+
+// Nailgun
+
+weapons/nailstart DSNAILST
+weapons/nailfire DSNAILFR
+weapons/nailhit DSNAILHT
+$limit weapons/nailhit 0
+weapons/nailfly DSNLFLY
+$limit weapons/nailfly 0
+$volume weapons/nailfly 2.0
+weapons/nailimpct DSNIMPCT
+$limit weapons/nailimpct 0
+weapons/nailstop DSNLSTOP
+
+// SuperNailgun
+
+$random weapons/snailfire {snail1 snail2 snail3}
+snail1 DSSNAIL1
+snail2 DSSNAIL2
+snail3 DSSNAIL3
+
+$volume weapons/snailfire 0.85
+
+
+/// Slot 5
+
+// Explosives
+
+$random weapons/rocklx {exp exp1 exp2 exp3 exp4 exp5 exp6 exp7 exp8 exp9 exp10
+exp11 exp12 exp13 exp14 exp15 exp16 exp17 exp18 exp19}
+exp DSBAREXP
+exp1 DSEXPL1
+exp2 DSEXPL2
+exp3 DSEXPL3
+exp4 DSEXPL4
+exp5 DSEXPL5
+exp6 DSEXPL6
+exp7 DSEXPL7
+exp8 DSEXPL8
+exp9 DSEXPL9
+exp10 DSEXPL10
+exp11 DSEXPL11
+exp12 DSEXPL12
+exp13 DSEXPL13
+exp14 DSEXPL14
+exp15 DSEXPL15
+exp16 DSEXPL16
+exp17 DSEXPL17
+exp18 DSEXPL18
+exp19 DSEXPL19
+
+$limit weapons/rocklx 0
+
+$attenuation weapons/rocklx 0.75
+
+weapons/rocklf2 DSRLAUN2
+
+// Grenade & Mushroom explosions
+
+$alias weapons/grenlx weapons/rocklx
+$alias weapons/mushlx weapons/rocklx
+
+$limit weapons/mushlx 1
+
+$attenuation weapons/grenlx 0.75
+
+// Rocket & Barrage Launcher
+
+weapons/rlfire DSRLAFIR
+weapons/brgfire DSBRGFIR
+weapons/rcketstrt DSRLSTRT /* Is named "rocket start" because it used to play at
+							  the start of the animation. */
+// Grenade launcher
+
+$Limit weapons/grenlf 0
+
+weapons/grbnce DSBOUNCE
+weapons/grbnce2 DSBOUNC2
+
+
+weapons/grenlf2 DSGLAUN2
+
+// Heat Seeker
+
+weapons/heatseekerf DSHSKFIR
+$limit weapons/heatseekerf 0
+weapons/heatreload DSHSKREL
+weapons/seekermislf DSHSKMIS
+$limit weapons/seemermislf 0
+weapons/seekerprime DSMISPRM
+weapons/multimf DSMMSFIR
+$limit weapons/multimf 0
+
+// Grenade Rifle (a.k.a. "Shannon Cannon")
+
+Weapons/ShannonFire	DSGRFIRE
+Weapons/ShannonOpen	DSGROPEN
+Weapons/ShannonLoad	DSGRLOAD
+Weapons/ShannonClose	DSGRCLOS
+
+// Mini-Bomber
+
+weapons/minimf DSMMSFIR
+weapons/minifly DSMMSLNC
+$limit weapons/minifly 0
+
+
+/// Slot 6
+
+// Railgun
+
+weapons/railgun DSRAILGN
+weapons/railgf silent
+weapons/railhit DSRGHIT
+weapons/railclip DSRLCLIP
+weapons/railreload DSRRLOD1
+
+// Plasma Gun
+
+weapons/plasma2f DSPLASM2
+weapons/plasma2x DSPLSX2
+$Limit weapons/plasma2f 0
+$volume weapons/plasmax 0.5
+$Limit weapons/plasmax 0
+$volume weapons/plasma2x 0.5
+$Limit weapons/plasma2x 0
+
+// Plasmachine Gun
+
+weapons/plmgf DSPLASMA
+weapons/plmgchr DSPMGCHR
+$volume weapons/plmgf 0.55
+$Limit weapons/plmgf 0
+$alias weapons/plmg2f weapons/plasma2f
+$volume weapons/plmg2f 0.55
+$Limit weapons/plmg2f 0
+
+// Pulse Rifle
+
+weapons/plsrf DSPULSE
+$Limit weapons/plsrf 0
+$Volume weapons/plsrf 1
+$alias weapons/plsrf2 weapons/plsrf
+$volume weapons/plsrf2 0.4
+weapons/pulsex DSPULSE2
+$Limit weapons/pulsex 0
+
+// Plasma Beam
+
+weapons/plsbmfire DSBEAMFR
+weapons/plsbmloop DSLEECH
+weapons/plsbmloop2 DSLEECH2
+$volume weapons/plsbmloop2 1
+weapons/plsbmwind DSBMWIND
+$volume weapons/plsbmwind 1
+weapons/plsbmstop DSBMSTOP
+$volume weapons/plsbmstop 1
+weapons/bmimpct DSBMIMPT
+$volume weapons/bmimpct 0.4
+$Limit weapons/bmimpct 0
+
+$random weapons/bmhit {bmhit1 bmhit2 bmhit3 bmhit4 bmhit5}
+bmhit1 DSBMHIT1
+bmhit2 DSBMHIT2
+bmhit3 DSBMHIT3
+bmhit4 DSBMHIT4
+bmhit5 DSBMHIT5
+$Limit weapons/bmhit 0
+
+
+// Ion Blaster
+
+weapons/ionblasf DSIONBFR
+weapons/ionblf DSIONBAL
+weapons/ionblx DSIONIMP
+weapons/ionbnce DSIONBNC
+
+
+/// Slot 7
+
+// Quad Shotgun
+
+weapons/qshotf	DSQGAATK
+weapons/qshot2 	DSQGATK2
+weapons/qsopen	DSQBOPN
+weapons/qsload  DSQBLOAD
+weapons/qsclose	DSQBCLS
+
+// Hand Cannon
+
+Weapons/HandCannonFire	DSKSSFIR
+Weapons/HandCannonPrime	DSKSSPRM
+$volume Weapons/HandCannonPrime	0.85
+weapons/hand 			DSHAND
+$limit weapons/hand 0
+
+// Minigun
+
+weapons/minigun DSMINIGN
+$pitchshiftrange 0
+weapons/ministart DSGATLST
+weapons/miniloop DSGATLLP
+weapons/ministop DSGATSTP
+weapons/minigun2 DSMINIG2
+minigun3 DSMINIG3
+minigun4 DSMINIG4
+
+$pitchshiftrange 4
+
+// Stinger
+
+weapons/stingfire 	STNGSHT
+weapons/stingloop	STNGLOOP
+weapons/stingstop	STNGSTOP
+
+$random weapons/minispecial {gatspec gatspc1 gatspc2 gatspc3 gatspc4 gatspc5 gatspc6
+gatspc7 gatspc8 gatspc9 gatspc10}
+
+gatspec DSGTSPEC
+gatspc1 DSGTSPC1
+gatspc2 DSGTSPC2
+gatspc3 DSGTSPC3
+gatspc4 DSGTSPC4
+gatspc5 DSGTSPC5
+gatspc6 DSGTSPC6
+gatspc7 DSGTSPC7
+gatspc8 DSGTSPC8
+gatspc9 DSGTSPC9
+gatspc10 DSGTSP10
+
+// Hellstorm
+
+HellStorm/Fire		HSTMFIRE
+HellStorm/Reload	HSTMRELD
+HellStorm/Hit		HSTMHIT
+HellStorm/Prime		HSTPRIM
+
+$alias weapons/hstx weapons/rocklx
+
+$limit weapons/hstx 1
+
+$limit imp/shotx 1
+
+$Limit HellStorm/Hit 0
+$Volume HellStorm/Hit 0.5
+$attenuation Hellstorm/Hit 0.8
+
+// Devastators
+
+weapons/devshot dsdevsht
+weapons/devlnch dsdevlnc
+weapons/devexpl DSDEVXPL
+$limit weapons/devexpl 30
+$volume weapons/devexpl 0.5
+weapons/devpick DSDEVPCK
+$random weapons/duke {duke1 duke2 duke3 duke4 duke5 duke6 duke7}
+duke1 DSDUKE1
+duke2 DSDUKE2
+duke3 DSDUKE3
+duke4 DSDUKE4
+duke5 DSDUKE5
+duke6 DSDUKE6
+duke7 DSDUKE7
+
+// Freeze Cannon
+
+weapons/freezecnnf DSFRZCAN
+weapons/freezeshot DSFRZBAL
+$Limit weapons/freezeshot 0
+$volume weapons/freezeshot 0.9
+weapons/freezehit DSFRZXPL
+
+// BFG
+
+weapons/bfgblf DSBFGBLL
+weapons/bfgcool DSBFGCLD
+
+$attenuation weapons/bfgx 0.75
+
+weapons/bfg10kf			dsbfg10k
+weapons/bfg10kf2		dsbfgfir
+weapons/bfg10kx         dsbarexp
+weapons/bfg10kcool		ds10kcdn
+weapons/bfg10kidle		ds10kidl
+
+$random weapons/bfgtracer {bfgtr1 bfgtr2 bfgtr3 bfgtr4 bfgtr5 bfgtr6}
+bfgtr1 DSBFGTR1
+bfgtr2 DSBFGTR2
+bfgtr3 DSBFGTR3
+bfgtr4 DSBFGTR4
+bfgtr5 DSBFGTR5
+bfgtr6 DSBFGTR6
+$Limit weapons/bfgtracer 10
+$Volume bfgtr1 0.5
+$Volume bfgtr2 0.5
+$Volume bfgtr3 0.5
+$Volume bfgtr4 0.05
+$Volume bfgtr5 0.05
+$Volume bfgtr6 0.05
+
+// Fire Mace
+
+weapons/maceshoot		lobsht
+$limit weapons/maceshoot 0
+weapons/macebounce		bounce
+$limit weapons/macebounce 0
+weapons/macehit			lobhit
+$limit weapons/macehit 0
+weapons/macestop		pstop
+$limit weapons/macestop 0
+weapons/maceexplode		phohit
+$limit weapons/maceexplode 0
+weapons/macepkup MACEUP
+
+// Bloodscourge
+
+MageStaffFire           mage4
+MageStaffExplode        mageball
+
+// Wraithverge
+
+HolySymbolFire          holy3
+SpiritActive            spirt7
+SpiritAttack            spirt5
+SpiritDie               spirts1
+
+// Unmaker
+
+weapons/unmakerchrg DSUNMCHR
+weapons/unmakerscrm DSUNSCRM
+
+$random weapons/unmakerfire {unmaker1 unmaker2 unmaker3 unmaker4 unmaker5
+unmaker6 unmaker7}
+unmaker1 DSUNMFR1
+unmaker2 DSUNMFR2
+unmaker3 DSUNMFR3
+unmaker4 DSUNMFR4
+unmaker5 DSUNMFR5
+unmaker6 DSUNMFR6
+unmaker7 DSUNMFR7
+
+$limit weapons/unmakerfire 7
+
+weapons/unmakerfly DSUNMFLY
+$limit weapons/unmakerfly 0
+
+weapons/unmakerhit DSUNMHIT
+$volume weapons/unmakerhit 0.5
+
+$limit weapons/unmakerhit 0
+
+$alias weapons/lazorfire weapons/unmakerfire
+$volume weapons/lazorfire 0.5
+$limit weapons/lazorfire 5
+
+$alias weapons/lazorhit weapons/unmakerhit
+$volume weapons/lazorhit 0.5
+$limit weapons/lazorhit 5
+
+$random weapons/unmakeridle {unidle1 unidle2 unidle3 unidle4 unidle5}
+unidle1 DSUNIDL1
+unidle2 DSUNIDL2
+unidle3 DSUNIDL3
+unidle4 DSUNIDL4
+unidle5 DSUNIDL5
+
+// Meowitzer
+
+cataclysm/fire cclyatk
+$limit cataclysm/fire 0
+cataclysm/select cclysel
+cataclysm/boom cclyboom
+$limit cataclysm/boom 6
+cataclysm/flying cclyfly
+$limit cataclysm/flying 0
+$volume cataclysm/flying 0.5
+$attenuation cataclysm/flying 0.5
+
+
+
+// Flamethrower
+
+$pitchshiftrange 0
+
+$random Flamethrower/Equip {FTEquip0 FTEquip1 FTEquip2 FTEquip3 FTEquip4 FTEquip5
+FTEquip6 FTEquip7 FTEquip8 FTEquip9}
+
+FTEquip0 DSFTEQP0
+FTEquip1 DSFTEQP1
+FTEquip2 DSFTEQP2
+FTEquip3 DSFTEQP3
+FTEquip4 DSFTEQP4
+FTEquip5 DSFTEQP5
+FTEquip6 DSFTEQP6
+FTEquip7 DSFTEQP7
+FTEquip8 DSFTEQP8
+FTEquip9 DSFTEQP9
+
+$pitchshiftrange 4
+
+Flamethrower/Start	DSFTSTRT
+Flamethrower/Loop	DSFTLOOP
+Flamethrower/End	DSFTEND
+Flamethrower/Hit	FMTRHIT
+Flamethrower/Flame	FMTRFLAM
+Flamethrower/Fireball DSFTFBAL
+
+// Pyro Cannon
+
+PyroCannon/Fire		PYRCFIRE
+PyroCannon/Hit		PYRCHIT
+PyroCannon/Explosion	PYRCEXPL
+$alias PyroCannon/Boom weapons/rocklx
+
+$Limit PyroCannon/Explosion	0
+$Limit PyroCannon/Boom 3
+
+// Sigil
+
+weapons/sigil		dssigil
+weapons/sigilhit	dssglhit
+weapons/sigilcharge	dssiglup
+
+// Devastator 1000
+
+$pitchshiftrange 0
+weapons/devfir                dsdevfir
+weapons/devbal                dsdevbal
+weapons/devexp                dsdevexp
+weapons/devex2                dsdevex2
+weapons/devlit                dsdevlit
+weapons/devzap                dsdevzap
+weapons/devchr                dsdevchr
+weapons/devfch                dsdevfch
+
+// Redeemer
+
+$pitchshiftrange 4
+
+weapons/redbeep		DSREDBEP
+weapons/redfir		DSREDFIR
+weapons/redup		DSREDUP
+weapons/redmis		DSNUKFLY
+
+$pitchshiftrange 0
+weapons/redaim		DSREDAIM
+weapons/valkyrie	VALKYRIE
+$limit weapons/valkyrie 0
+$attenuation weapons/valkyrie 0
+weapons/redxpl		DSREDXPL
+$limit weapons/redxpl 0
+$attenuation weapons/redxpl 0

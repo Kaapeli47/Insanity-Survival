@@ -1,0 +1,71 @@
+// Haste
+
+ACTOR HasteSphere : CustomInventory 10079
+{
+    +FLOAT
+    +FLOATBOB
+	+COUNTITEM
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+    Inventory.PickupSound "misc/p_pkup"
+	Inventory.Pickupmessage "Haste!"
+	Inventory.PickupAnnouncerEntry "haste"
+	Inventory.RespawnTics 4200
+    Inventory.MaxAmount 0
+	Tag "Haste Sphere"
+    //$Category Powerups
+	States
+	{
+	Spawn:
+	  HAST A 15 Bright
+	  HAST BCB 10 Bright
+	  Loop
+	Pickup:
+	  TNT1 A 0 A_JumpIfInventory("PowerRageInvulnerable",1,"NoProt")
+	  TNT1 A 0 A_GiveInventory("PickupProtection")
+    NoProt:
+	  TNT1 A 0 A_Print("\n\n\n\n\n\nHaste!\n\n\n\n200 Health!\n2x firing speed!\n1.25x movement speed!",4)
+	  TNT1 A 0 Healthing(200,200)
+	  TNT1 A 0 A_GiveInventory("HasteSphereSpeed")
+	  TNT1 A 0 A_GiveInventory("HasteSphereDoubleFire")
+	  Stop
+	}
+}
+
+ACTOR PowerIDMSpeed : PowerSpeed
+{
+	Inventory.Icon "HASTSP1"
+	Speed 1.25
+}
+
+ACTOR HasteSphereSpeed : PowerupGiver
+{
+	Inventory.maxamount 0
+	Powerup.Type "IDMSpeed"
+	Powerup.Duration -30
+	Powerup.Colormap 1.25,1.0,0.15
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR HasteSphereDoubleFire : PowerupGiver
+{
+	Inventory.maxamount 0
+	Powerup.Type DoubleFiringSpeed
+	Powerup.Duration -30
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR HasteSphereHighJump : PowerupGiver
+{
+	Inventory.maxamount 0
+	Powerup.Type HighJump
+	Powerup.Duration -30
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}

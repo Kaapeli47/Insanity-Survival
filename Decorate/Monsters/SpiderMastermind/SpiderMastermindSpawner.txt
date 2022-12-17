@@ -1,0 +1,39 @@
+ACTOR SpiderMastermindSpawnActor : CustomInventory 7
+{
+	Tag "Powerup Spawner 1"
+    //$Category Powerups
+    //$Sprite CSAWA0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1
+	  TNT1 AAAAA 1 A_JumpIf(CallACS("Spiderdemonspawn") == false,"NormalSpawn")
+	  TNT1 A 1 A_SpawnItemEx("SpiderMastermindRandomSpawner")
+	  TNT1 A -1
+	  Stop
+/*	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop*/
+	NormalSpawn:
+	  TNT1 A 1 A_SpawnItemEx("SpiderMastermind")
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR SpiderMastermindRandomSpawner : RandomSpawner //replaces SpiderMastermind
+{
+	DropItem "IDMSpidermastermind"
+	DropItem "IDMBronzeSpiderdemon"
+	DropItem "IDMCyberMastermind"
+	DropItem "IDMInsanitySpider"
+	DropItem "IDMDemolisher"
+	DropItem "IDMGiantIncubus"
+	DropItem "IDMHumoncubus"
+	DropItem "IDMBehemoth"
+	DropItem "IDMHiveMother"
+}

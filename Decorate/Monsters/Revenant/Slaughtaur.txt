@@ -1,0 +1,74 @@
+/// Slaughtaur
+
+ACTOR IDMCentaurLeader : IDMCentaur
+{
+  Health 250
+  Radius 20
+  PainChance 96
+  Speed 15
+  Scale 1.1
+  MeleeThreshold 512
+  Meleerange 64
+  Obituary "$OB_SLAUGHTAUR"
+  HitObituary "$OB_SLAUGHTAURHIT"
+  Species "Revenant"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  -TELESTOMP
+  Tag "Slaughtaur"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 64, 20
+  DropItem "ClipBox", 8, 50
+  DropItem "Shell", 64, 4
+  DropItem "ShellBox", 8, 10
+  DropItem "RocketAmmo", 64, 1
+  DropItem "RocketBox", 8, 5
+  DropItem "Cell", 32, 20
+  DropItem "Cellpack", 4, 100
+  DropItem "IDMMana", 4
+  DropItem "IDMMana", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMGas", 4
+  DropItem "IDMGas", 4
+  States
+  {
+  Pain:
+    CENT G 6 A_Pain
+    CENT E 5 A_FaceTarget
+  Missile:
+    CENT E 1 A_SetInvulnerable
+    CENT E 9 A_FaceTarget
+    CENT F 8 Bright A_CustomMissile("CentaurFX", 45, 0, 0, CMF_AIMOFFSET)
+    CENT E 1 A_UnsetInvulnerable
+    Goto See
+  }
+}
+
+ACTOR IDMCentaurFX : CentaurFX replaces CentaurFX
+{
+  Speed 20
+  Damage 7
+  Projectile
+  +SPAWNSOUNDSOURCE
+  RenderStyle Add
+  SeeSound "CentaurLeaderAttack"
+  DeathSound "CentaurMissileExplode"
+  DamageType "Plasma"
+  States
+  {
+  Spawn:
+    CTFX A -1 Bright
+    Stop
+  Death:
+    CTFX B 4 Bright
+    CTFX C 3 Bright
+    CTFX D 4 Bright
+    CTFX E 3 Bright
+    CTFX F 2 Bright
+    Stop
+  }
+}

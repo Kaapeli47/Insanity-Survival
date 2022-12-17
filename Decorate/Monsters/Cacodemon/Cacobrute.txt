@@ -1,0 +1,90 @@
+/// Cacobrute
+
+ACTOR IDMCacobrute : IDMCacodemon
+{
+	Scale 1.1
+	Health 700
+	Tag "Cacobrute"
+	DropItem "IDMHealthBonusPickup", 64
+	DropItem "IDMArmorBonusPickup", 64
+	DropItem "Clip", 64, 20
+	DropItem "Clip", 24, 20
+	DropItem "ClipBox", 8, 50
+	DropItem "Shell", 64, 4
+	DropItem "Shell", 24, 20
+	DropItem "ShellBox", 8, 10
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketAmmo", 24, 1
+	DropItem "RocketBox", 8, 5
+	DropItem "Cell", 32, 20
+	DropItem "Cell", 12, 20
+	DropItem "Cellpack", 4, 100
+	DropItem "IDMMana", 8
+	DropItem "IDMMana", 8
+	DropItem "IDMMaceAmmo", 8
+	DropItem "IDMMaceAmmo", 8
+	DropItem "IDMCatAmmo", 8
+	DropItem "IDMCatAmmo", 8
+	DropItem "IDMGas", 8
+	DropItem "IDMGas", 8
+	States
+	{
+	Spawn:
+		CACB A 10 A_Look
+		Loop
+	See:
+		CACB A 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		TNT1 A 0 A_Jump(256,"SingleAtk","MultiAtk","VomitAtk")
+	SingleAtk:
+		CACB B 5 A_FaceTarget
+		CACB C 5 A_FaceTarget
+		CACB D 5 BRIGHT A_CustomComboAttack("IDMCacodemonBall", 32, 15 * random(1, 6))
+		Goto See
+	MultiAtk:
+		CACB B 4 A_FaceTarget
+		CACB C 4 A_FaceTarget
+		CACB D 4 BRIGHT A_CustomComboAttack("IDMCacodemonBall", 32, 15 * random(1, 6))
+		CACB B 4 A_FaceTarget
+		CACB C 4 A_FaceTarget
+		CACB D 4 BRIGHT A_CustomComboAttack("IDMCacodemonBall", 32, 15 * random(1, 6))
+		CACB B 4 A_FaceTarget
+		CACB C 4 A_FaceTarget
+		CACB D 4 BRIGHT A_CustomComboAttack("IDMCacodemonBall", 32, 15 * random(1, 6))
+		Goto See
+	VomitAtk:
+		CACB B 5 A_FaceTarget
+		CACB C 5 A_FaceTarget
+		TNT1 A 0 A_FaceTarget
+		CACB DDD 2 Bright A_CustomMissile("IDMCacoBruteBall",32,0,random(-10,10))
+		TNT1 A 0 A_FaceTarget
+		CACB DDD 2 Bright A_CustomMissile("IDMCacoBruteBall",32,0,random(-10,10))
+		TNT1 A 0 A_FaceTarget
+		CACB DDD 2 Bright A_CustomMissile("IDMCacoBruteBall",32,0,random(-10,10))
+		Goto See
+	Pain:
+		CACB F 3
+		CACB F 3 A_Pain
+		CACB E 6
+		Goto See
+	Death:
+		CACB G 8 A_NoBlocking
+		CACB H 8 A_Scream
+		CACB IJK 8
+		CACB L -1 A_SetFloorClip
+		Stop
+	Raise:
+		CACB L 8 A_UnSetFloorClip
+		CACB KJIHG 8
+		Goto See
+	}
+}
+
+ACTOR IDMCacoBruteBall : IDMCacoDemonBall
+{
+	-NOGRAVITY
+	Gravity 0.15
+	Speed 18
+}

@@ -1,0 +1,162 @@
+================================================================================
+IWAD needed				: DOOM2.WAD
+Advanced engine needed  : Zandronum 3.1 or newer - OpenGL renderer recommended
+Primary purpose         : Cooperative & Survival
+================================================================================
+Title                   : Insanity Survival version 0.91
+Filename                : ISUR_v091.pk3
+Release Date			: 8th December, 2022
+Author                  : Kalle "Kaapeli47" Soittila
+Email Address           : kaapeli47@gmail.com
+Other Files By Author	: Insanity Deathmatch
+Misc. Author Info		: A real n00b in Co-op that he had to make this mod!
+
+
+Description: A weapon and item modification for Doom II Co-operative, featuring
+new weapons, armor and powerups as well as new sprites, graphics, sounds and
+music. Further details about the mod below.
+
+For credits, see ISURCredits.txt.
+
+//------------------------------------------------------------------------------
+//-------------------- I N S A N I T Y  S U R V I V A L ------------------------
+//------------------ (C) 2022 Kalle "Kaapeli47" Soittila -----------------------
+//------------------------------------------------------------------------------
+
+DISCLAIMER: This multiplayer PK3 mod is ONLY COMPATIBLE on the Zandronum (3.1 or
+newer) sourceport!
+
+This mod adds and replaces sprites, sounds, weapons, items and playerclasses
+for Doom II.
+Compatibility with another weapon or item mod, like Skulltag or Complex Doom, is
+NOT guaranteed!
+
+BEFORE RUNNING THIS MOD WITH CUSTOM MAPS, MAKE SURE THE MOD IS LOADED
+**AFTER THE MAPS** TO ENSURE FULL COMPATIBILITY!
+
+This is a PK3 mod for multiplayer co-operative of DOOM II recommended at least
+for 4 players. This mod features weapons, ammo, powerups and player classes, as
+well as new sprites, graphics, sounds and music. The mod can be played on any
+map vanilla or Boom mapset for Doom II which have no major monster modifications
+through DeHackEd or Decorate.
+
+/-------------------------- // // FEATURES: // // -------------------------- //
+
+Insanity Survival is a Doom II co-operative mod for Zandronum! Based on the
+weapons and items of Insanity Deathmatch, Insanity Survival replaces your
+standard Doom deathmatch things with random insane weapons, several armor types,
+wacky powerups, over 1100 gibbing sounds, and most important of all, over 160
+different monsters! It can be considered the co-operative 'sequel' to Insanity
+Deathmatch.
+
+// Weapons:
+
+- 50 total weapons! 41 new additions and 9 improved versions from the original
+  Doom II arsenal!
+- All weapons have powered up versions using the Strength Powerup!
+- 10 different starting weapons!
+- 19 total Big Weapons, the strongest of which can randomly spawn on the BFG
+  spot of the map at a time, and the rest can be rarely obtained from cyberdemon
+  and spiderdemon monster variants!
+- Weapon spawns are mostly randomized in their ammo-categorized spawns!
+  (Example: the Rocket Launcher spawn spots now randomly spawn 1 out of 3
+   different rocket weapons.)
+
+// Ammo:
+
+- Monsters have a chance to drop ammo. The bigger the monster, the higher the
+  chance!
+- Some Big Weapons have their own special ammo that can spawn in place of Cell
+  Packs.
+
+// Armor:
+
+- Players start with 100 starting armor protecting the player for 67% against
+  all damage.
+- Several armor types which protect you more or less against different Damage
+  Types (Bullets, Nails, Melee, Explosives, Plasma, Rails, BFG, etc.)
+- Some smaller Armor pickups have weaker protection, but also give you ammo for
+  the weapons they also protect against better.
+
+// Powerups:
+- 15 whacky powerups!
+
+// Monsters:
+
+- Over 160 total monsters! Improved Doom II, Heretic and Hexen monsters, a few
+  throwback monsters from the golden eras of ZDoom and Skulltag, and a handful
+  of new monsters!
+- Randomized monster spawns in their monster-categorized spawns!
+  (Example: Imp spots now randomly spawn different imp variants.)
+- Monsters have a chance to drop ammo, health and armor bonuses, or at a rarer
+  chance, even spawn other monsters! Monsters that can gib can rarely spawn a
+  resurrect-only Archvile!
+
+// New difficulty levels:
+Disclaimer: Monster counts explained depend on the map played.
+
+I'm a trigger happy maniac!
+- Very low or low monster count.
+- You receive 25% damage and quadruple ammo.
+- Monsters have 25% health.
+
+Hey, not too crazy!
+- Low monster count.
+- You receive half damage.
+- Monsters have 50% health.
+
+Hurt my mind plenty! (Standard Hurt me plenty)
+- Normal monster count.
+- You receive full damage.
+- Monsters have 100% health.
+
+Ultra-Madness! (Standard Ultra-Violence)
+- High monster count.
+- You receive full damage.
+- Monsters have 100% health.
+
+Hyper-Madness!
+- High monster count.
+- You receive full damage.
+- Monsters are more aggressive and have 100% health.
+
+Hysteria!
+- High monster count.
+- You receive full damage and double ammo.
+- Monsters are evn more aggressive and have 150% health.
+
+Deathwish!
+- High or very high monster count.
+- You receive full damage and double ammo.
+- Monsters are fast and have 150% health.
+- Monsters respawn only once, after 180 seconds.
+
+NIGHTMARE!
+- High or very high monster count.
+- You receive full damage and triple ammo.
+- Monsters are fast and have 150% health.
+- Monsters respawn every 120 seconds.
+- This difficulty isn't just remotely unfair - it's totally insane!
+
+INSANITY!!!
+- High or very high monster count.
+- You receive double damage and quadruple ammo!
+- Monsters are fast, immune to pain, and have 200% health!
+- Monsters respawn every 30 seconds!
+
+
+/// - OTHER FEATURES:
+
+- Compatibility for singleplayer, co-op and survival!
+- 1100+ different gibbing sounds!
+- Compatible with custom player skins! (IDM_Skinpack_v#.## recommended)
+- New fullscreen HUD included.
+- Compatibility for the HPBar health bar mod, version 25b or above!
+- Explosive barrels are now EXTREMELY explosive! Use with caution!
+- Keys are shown on the automap!
+
+Insanity Survival is still work-in-progress, and in no way complete yet. This is
+just a beta release, and more of the existing as well as brand new stuff is most
+definitely bound to come later!
+However, I hope you like what is implemented thus far, and look forward to the
+next few updates that are coming very Soon(tm)!

@@ -1,0 +1,109 @@
+/// Ethereal Soul
+
+ACTOR IDMEtherealSoul
+{
+  obituary "%o was molested by an ethereal soul."
+  health 75
+  radius 16
+  height 48
+  mass 400
+  speed 5
+  damage 5
+  painchance 128
+  renderstyle Add
+  Alpha 0.8
+  attacksound "skull/melee"
+  PainSound "nightmare/pain"
+  DeathSound "nightmare/death"
+  ActiveSound "nightmare/active"
+  Tag "Ethereal Soul"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 32, 20
+  DropItem "Shell", 32, 4
+  DropItem "RocketAmmo", 32, 1
+  DropItem "Cell", 8, 20
+  DropItem "IDMMana", 2
+  DropItem "IDMMaceAmmo", 2
+  DropItem "IDMCatAmmo", 2
+  DropItem "IDMGas", 2
+  MONSTER
+  +FLOAT
+  +NOGRAVITY
+  +NOICEDEATH
+  +MISSILEMORE
+  +DONTFALL
+  +NOBLOOD
+  -COUNTKILL
+  states
+  {
+  Spawn:
+    ETHS ABCD 10 bright A_Look
+    loop
+  See:
+    ETHS AABBCCDD 3 bright A_Chase
+    loop
+  Missile:
+    ETHS C 0 bright A_Jump(128,"ProjAtk")
+    ETHS C 6 bright A_FaceTarget
+    ETHS EFEF 8 bright A_SkullAttack
+    goto See
+  ProjAtk:
+    ETHS P 3 bright A_FaceTarget
+    ETHS Q 4 bright A_FaceTarget
+    ETHS R 5 bright A_CustomMissile("IDMShadowBall", 0, 0, 0)
+    ETHS E 4 bright
+    goto See
+  Pain:
+    ETHS G 3 bright
+    ETHS G 3 bright A_Pain
+    goto See
+  Death:
+    ETHS F 3 bright
+    ETHS H 3 bright A_ScreamAndUnblock
+    ETHS IJKLMNO 3 bright
+    stop
+  }
+}
+
+ACTOR IDMShadowBall
+{
+	Radius 6
+	Height 8
+	Speed 12
+	Damage 4
+	Projectile
+	+RANDOMIZE
+	RenderStyle "ADD"
+	Alpha 0.75
+	SeeSound "imp/attack"
+	DeathSound "imp/shotx"
+	Decal DoomImpScorch
+	States
+	{
+	Spawn:
+		SBAL ABC 4 BRIGHT A_SpawnItemEx("IDMShadowTrail", 0, 0, 0, 0, 0, 0, 0, 128)
+		Loop
+	Death:
+		SBAL C 5 Bright
+		SBAL DEFGH 4 BRIGHT
+		Stop
+	}
+}
+
+actor IDMShadowTrail
+{
+    Radius 1
+    Height 1
+    Speed 0
+    PROJECTILE
+    RENDERSTYLE ADD
+    ALPHA 0.6
+    +NOCLIP
+    States
+    {
+    Spawn:
+     SHTR ABCDEF 4 Bright
+        Stop
+    }
+}

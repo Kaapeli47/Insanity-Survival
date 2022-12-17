@@ -1,0 +1,140 @@
+/// Tortured Soul
+
+ACTOR IDMTorturedSoul
+{ 
+	//$Category "ZDoom Monster pack"
+	Health 750
+	Speed 12
+	Radius 31
+	Height 56
+	PainChance 64
+	Mass 800
+	REACTIONTIME 8
+	MONSTER 
+	Species "PainElemental"
+	+MISSILEMORE
+	+DONTHURTSPECIES
+	+DONTHARMSPECIES
+	+NOGRAVITY
+	+FLOAT
+	SeeSound "torturedsoul/sight" 
+	PainSound "torturedsoul/pain" 
+	DeathSound "torturedsoul/death" 
+	ActiveSound "torturedsoul/active"
+	Obituary "%o was tormented by a tortured soul."
+	Tag "Tortured Soul"
+	DropItem "IDMHealthBonusPickup", 128
+	DropItem "IDMArmorBonusPickup", 128
+	DropItem "Clip", 64, 20
+	DropItem "Clip", 64, 20
+	DropItem "ClipBox", 32, 50
+	DropItem "Shell", 64, 4
+	DropItem "Shell", 64, 4
+	DropItem "ShellBox", 32, 10
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketBox", 32, 5
+	DropItem "Cell", 32, 20
+	DropItem "Cell", 32, 20
+	DropItem "Cellpack", 16, 100
+	DropItem "IDMMana", 16
+	DropItem "IDMMana", 16
+	DropItem "IDMMaceAmmo", 16
+	DropItem "IDMMaceAmmo", 16
+	DropItem "IDMCatAmmo", 16
+	DropItem "IDMCatAmmo", 16
+	DropItem "IDMGas", 16
+	DropItem "IDMGas", 16
+	States 
+	{
+	Spawn: 
+      TORT AB 10 A_Look 
+      Loop
+	See: 
+      TORT AAABBBCCCBBB 2 A_Chase 
+      Loop 
+	Missile: 
+      TORT D 10 A_FaceTarget 
+      TORT D 0 A_Jump(128,"PoisonAtk") 
+      TORT E 5 A_FaceTarget
+	  TNT1 A 0 A_Jump(96,"MultiAtk")
+      TORT F 4 Bright A_CustomMissile("IDMTorturedSoulBall", 40, 0, random(-8,8))
+      Goto See
+	MultiAtk:
+      TORT FFF 2 Bright A_CustomMissile("IDMTorturedSoulBall", 40, 0, random(-8,8))
+      Goto See
+	PoisonAtk:
+      TORT D 0 A_PlaySound("torturedsoul/poison")
+	  TNT1 A 0 A_PlaySound("gascubus/fart",CHAN_AUTO)
+      TORT DDDDD 2 A_CustomMissile("IDMTorturedSoulPoison", 16, 0, random(-15,15))
+      Goto See
+	Pain:
+      TORT G 3
+      TORT D 0 A_PlaySound("torturedsoul/poison")
+	  TNT1 A 0 A_CustomMissile("IDMTorturedSoulPoison", 16, 0, random(0,359))
+      TORT G 3 A_Pain
+      Goto See 
+	Death:
+      TORT H 8
+      TORT I 8 A_Scream
+      TORT JK 8
+      TORT D 0 A_PlaySound("torturedsoul/poison")
+	  TNT1 AA 0 A_PlaySound("gascubus/fart",CHAN_AUTO)
+      TNT1 AAAAAAAAAAAAAAAAAAAAAAAAA 0 A_CustomMissile("IDMTorturedSoulPoison", 32, 0, random(0,359),2,random(-45,45))
+      TORT L 8
+      TORT M 8 A_NoBlocking
+      TORT N 8
+      Stop
+	}
+}
+
+actor IDMTorturedSoulBall
+{
+    Radius 8
+    Height 6
+    Speed 30
+    Damage 5
+	PoisonDamage 12
+	PoisonDamageType "GreenFire"
+	DamageType "GreenFire"
+    PROJECTILE
+    RENDERSTYLE ADD
+    ALPHA 0.67
+	SeeSound "torturedsoul/attack"
+    DeathSound "imp/shotx" 
+    States 
+    { 
+    Spawn:
+        TRBL AB 4
+        Loop
+    Death: 
+        TRBL CDE 4 
+        Stop 
+    } 
+}
+
+actor IDMTorturedSoulPoison
+{
+    Radius 32
+    Height 6
+    Speed 10
+    Damage 2
+	DamageType "GreenFire"
+	PoisonDamage 4
+	PoisonDamageType "GreenFire"
+    +STRIFEDAMAGE
+    +RIPPER
+	+BLOODLESSIMPACT
+    PROJECTILE 
+    RENDERSTYLE Translucent
+    ALPHA 0.67
+    States
+    {
+    Spawn:
+        TRPS ABCDEFGDEFGDEFGDEFGDEFGDCBA 4
+        Stop
+    Death:
+        TRPS DCBA 4
+        Stop
+    }
+}

@@ -1,0 +1,39 @@
+/// Nether Skull
+
+Actor IDMBetaSkull : IDMLostSoul
+{
+  Obituary "%o was zapped by the magic of a nether skull."
+  AttackSound "dsparil/zap"
+  Species "LostSoul"
+  Tag "Nether Skull"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  -MISSILEMORE
+  States
+  {
+  Spawn:
+    BTSK A 10 A_Look
+    Loop
+  See:
+    BTSK A 5 A_Chase
+    Loop
+  Missile:
+    BTSK BCD 3 A_FaceTarget
+	TNT1 A 0 A_PlaySound("dsparil/zap",CHAN_AUTO,1,0,ATTN_NORM)
+    BTSK EEEE 2 A_CustomRailgun(1 * random(1,4),0,None,"Yellow",RGF_NOPIERCING|RGF_FULLBRIGHT,1,50,"IDMBulletPuff",0,0,8192,10,1.0,0,None,-16)
+    BTSK E 2
+    Goto See
+  Pain:
+    BTSK F 2
+    BTSK F 2 A_Pain
+    Goto See
+  Death:
+    BTSK GHIJ 3
+	BTSK K 3 A_Scream
+	BTSK L 3 Bright
+	BTSK M 4 Bright
+    BTSK N 4 Bright A_NoBlocking
+	BTSK OP 4 Bright
+    Stop
+  }
+}

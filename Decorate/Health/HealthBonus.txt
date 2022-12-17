@@ -1,0 +1,44 @@
+/// Health ///
+
+ACTOR IDMHealthBonusPickup : CustomInventory replaces HealthBonus 10058
+{
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "Health bonus."
+  Inventory.PickupSound "misc/bonus_pkup"
+  Inventory.RespawnTics 2100
+  Tag "Health Bonus"
+  //$Category Health and Armor
+  //$Sprite BON1A0
+  +COUNTITEM
+  States
+  {
+  Spawn:
+    BON1 ABCDDCB 6
+    Loop
+  Pickup:
+	TNT1 A 0 A_JumpIfInventory("PowerSoul",1,"Soulbonus")
+	TNT1 A 0 A_GiveInventory("IDMHealthbonus")
+	Stop
+  Soulbonus:
+	TNT1 A 0 A_GiveInventory("SoulHealthbonus",1)
+	Stop
+  }
+}
+
+ACTOR IDMHealthBonus : MaxHealth
+{
+  +COUNTITEM
+  +INVENTORY.ALWAYSPICKUP
+  Inventory.Amount 2
+  Inventory.MaxAmount 100
+  Health 200
+  Inventory.PickupMessage "Health bonus."
+  Inventory.PickupSound "misc/bonus_pkup"
+  Inventory.RespawnTics 1050
+}
+
+ACTOR SoulHealthBonus : IDMHealthbonus
+{
+  Inventory.Amount 4
+}

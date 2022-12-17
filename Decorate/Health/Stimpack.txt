@@ -1,0 +1,44 @@
+ACTOR IDMStimpackPickup : CustomInventory 10060
+{
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "Stimpack."
+  Inventory.PickupSound "misc/health_pkup"
+  Inventory.RespawnTics 1050
+  Tag "Stimpack"
+  //$Category Health and Armor
+  +COUNTITEM
+  States
+  {
+  Spawn:
+    STIM A -1
+    Stop
+  Pickup:
+	TNT1 A 0 A_JumpIfInventory("PowerSoul",1,"Soulbonus")
+	TNT1 A 0 A_GiveInventory("IDMStimpack")
+	Stop
+  Soulbonus:
+	TNT1 A 0 A_GiveInventory("SoulStimpack",1)
+	Stop
+  }
+}
+
+ACTOR IDMStimpack : Health
+{
+  Inventory.Amount 25
+  Inventory.PickupMessage "Stimpack."
+  Inventory.PickupSound "misc/health_pkup"
+  Health.LowMessage 25, "Ooh, I needed that!"
+  States
+  {
+  Spawn:
+    STIM A -1
+    Stop
+  }
+}
+
+ACTOR SoulStimpack : IDMStimpack
+{
+  Inventory.Amount 50
+  Inventory.MaxAmount 300
+}

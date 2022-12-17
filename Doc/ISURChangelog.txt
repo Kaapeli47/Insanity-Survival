@@ -1,0 +1,164 @@
+=====================
+Insanity Survival
+version 0.91
+=====================
+---------------------
+	  Changelog
+ written by Kaapeli47
+---------------------
+  + Addition
+  - Removal
+  ! Change
+  * Fix
+---------------------
+
+== 0.91 ==
+
+= MODIFIERS/MOD SETTINGS: =
+
++ Added an Insanity Options menu! This menu will contain adjustable settings for
+  the menu, including gameplay tips and enabling/disabling certain spawners for
+  DeHackEd monster compatibility. More settings will be added over the course of
+  future updates!
+
++ Added random gameplay tips when the player dies. These are on by default, and
+  can be disabled from Insanity Options -> Gameplay Tips, or by toggling
+  isur_tips to false in the console.
+
++ Added a server variable to enable or disable the Spider Mastermind spawner of
+  Insanity Survival. This is required for DeHackEd monsters to work in custom
+  maps that replace the Doom Spider Mastermind. The spawner is on by default,
+  and can be disabled from Insanity Options -> Server Options -> Spider
+  Mastermind spawner -> Off, or by toggling isur_spiderdemonspawner to false in
+  the console.
+
+= WEAPONS: =
+
+General:
+
+! Adjusted weapon selection orders.
+
+Big weapons:
+
+! Halved the damage of the Devastator 1000's main projectile.
+
+! Decreased the damage of the Devastator 1000's small plasma projectiles from
+  100-800 to 25-200.
+
+= MONSTERS: =
+
+General:
+
+! Halved all monster's base healths in Decorate, but doubled the MonsterHealth
+  properties in all difficulties. This way, the health values of monsters from
+  other files, like special DeHackEd monsters of certain mapsets, also is
+  doubled.
+
+Possessed variants:
+
+! Decreased the horizontal spread of the Strogg Enforcer's nails from 15 to 12
+  degrees.
+
+Imp variants:
+
+! Increased the health of the Cyber imp from 150 to 180.
+
+! Decreased the health of the Dark Devil from 320 to 300.
+
+Pinky variants:
+
++ Added the Fast property to all frames of the Ghost Golem, except in the Death
+  and XDeath states.
+
+! The Ghost Guardian no longer has dynamics lights on the main actor, and only
+  on its trail.
+
+! Decreased the speed value of the Ghost Golem from 12 to 10.
+
+! The Ghost Golem calls A_Chase twice as often now.
+
+Lost Soul variants:
+
++ Added a new monster to the Lost Soul spawn: The Hades Sphere! A red floating
+  sphere that can teleport closer to the player and violently explodes on
+  proximity or on death.
+
+! Decreased the max speed and acceleration of the Spike Mine by 2.
+
+! Decreased the splash damage and radius of the Spike Mine from 128 to 96.
+
+! Changed the Spike Mine's obituary from 'Victim was blasted by a spike mine.'
+  to 'Victim was in the proximity of a spike mine.'
+
+Cacodemon variants:
+
+! Decreased the health of the Cyber Cacodemon from 900 to 800.
+
+Revenant variants:
+
++ Added a new monster to the Revenant spawn: The Death Incarnate! This dark
+  armored skeleton shoots lasers out of its eyes, has a high chance to resurrect
+  itself if not gibbed, but if gibbed, it will spawn a Hades Sphere!
+
+! Decreased the amount of pulse balls the Ghoul fires from 8 to 4.
+
+! The Ghoul now shoots one pulse ball at a time, instead of two simultaneously.
+
+! Increased the damage of the Slaughtaur projectile from 4-32 to 7-56.
+
+Baron of Hell variants:
+
+* Fixed attenuation on the Cyberbaron's hoof sound.
+
+Arachnotron variants:
+
+! Added a new monster to the Arachnotron spawn: The Arachno-Shredder! This
+  6-legged arachnotron moves fast, is very aggressive and shoots rockets and
+  missiles in addition to the plasma shot by standard arachnotrons!
+
+Mancubus variants:
+
+! Increased the damage of the Iron Lich ice projectile from 2 to 8.
+
+! Increased the speed of the Iron Lich ice projectile from 13 to 20, and
+  fastspeed from 20 to 25.
+  
+! The Iron Lich now uses the same sounds for the ice projectile as the Wendigo.
+  Previously it used no sounds.
+
+Pain Elemental variants:
+
+! The Tortured Soul now fires gas at a random direction in its Pain state.
+
+! The Tortured Soul now farts.
+
+! The Phase Elemental shoots two additional Phase projectiles when attacking.
+
+! Changed the damage of the Phase Elemental projectile from 1-24 to 2-16, now
+  also in multiples of 2.
+
+! Increased the health of the Cacomother from 2800 to 3000.
+
+! Increased the health of the Death Wyvern from 2000 to 2400.
+
+Arch-vile variants:
+
+! Increased the Doppelganger's appearance chance from a pseudo 0.5/256 to
+  1/256.
+
+Cyberdemon variants:
+
+! The Cyber Annihilator no longer shoots Heat Seeker missiles.
+
+! The Cyber Annihilator now shoots one mini missile at a time, instead of two at
+  a time.
+
+Spiderdemon variants:
+
+! Changed the sprite prefix of the Spider Mastermind sprites from SPID to SPMM.
+  This will no longer replace sprites intended for monsters from other files
+  that replace the Spider Mastermind through DeHackEd.
+
+= MISC: =
+
+! Updated WADINFO.txt and ISURCredits.txt

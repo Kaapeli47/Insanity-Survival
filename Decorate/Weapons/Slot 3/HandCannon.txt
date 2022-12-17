@@ -1,0 +1,148 @@
+// Hand Cannon
+
+Actor HandCannon : IDMWeapon 10085
+{
+  Weapon.SelectionOrder 75
+  Weapon.AmmoUse 10
+  Weapon.AmmoGive 100
+  Weapon.AmmoType "Shell"
+  Weapon.Kickback 0
+  Inventory.PickupMessage "Hand Cannon! (Slot 3)"
+  Tag "Hand Cannon"
+  //$Category Weapons
+  Obituary "%o got their ass Handed to them by %k's Hand Cannon!"
+  Decal Scorch
+  Decal BigScorch
+  DamageType "PlayerRocket"
+  +INVENTORY.INTERHUBSTRIP
+  +WEAPON.BFG
+  +WEAPON.NOLMS
+  +WEAPON.NOAUTOAIM
+  +EXTREMEDEATH
+  States
+  {
+  Spawn:
+    KSSG L -1 Bright
+    Stop
+  Ready:
+    KSSG A 1 A_WeaponReady
+    Loop
+  Deselect:
+    KSSG A 1 A_Lower
+    Loop
+  Select:
+	TNT1 A 0 A_PlaySound("weapons/wswitch",CHAN_WEAPON)
+  Sloop:
+    KSSG A 1 A_Raise
+    Loop
+  Fire:
+	KSSG A 4
+	KSSG A 6 A_PlayWeaponSound("Weapons/HandCannonPrime")
+    KSSG A 0 A_GunFlash
+    KSSG A 0 A_PlayWeaponSound("Weapons/HandCannonFire")
+	TNT1 A 0 A_JumpIfInventory("PowerIDMWeaponLevel2",1,"Level2")
+	TNT1 A 0 A_JumpIfInventory("PowerQuadDamage",1,"Quad")
+    KSSG A 3 A_FireBullets(16.8, 3.55, 40, 30, "ExplosivePuff",FBF_NOFLASH)
+    KSSG A 0 A_PlayWeaponSound("Weapons/HandCannonFire")
+    KSSG A 5 A_FireBullets(16.8, 3.55, 40, 30, "ExplosivePuff")
+    KSSG B 5 A_CheckReload
+    KSSG C 5
+    KSSG D 5 A_PlaySound("Weapons/ShannonOpen")
+    KSSG E 5
+    KSSG K 9
+    KSSG F 8
+    KSSG G 8 A_PlaySound("Weapons/ShannonLoad")
+    KSSG H 6
+    KSSG C 6 A_PlaySound("Weapons/ShannonClose")
+    KSSG B 6
+    Goto Ready
+  Quad:
+    TNT1 A 0 A_Playsound("misc/qdmg2",CHAN_5)
+    KSSG A 3 A_FireBullets(16.8, 3.55, 40, 30, "ExplosivePuff")
+    KSSG A 0 A_PlayWeaponSound("Weapons/HandCannonFire")
+    TNT1 A 0 A_Playsound("misc/qdmg2",CHAN_5)
+    KSSG A 5 A_FireBullets(16.8, 3.55, 40, 30, "ExplosivePuff")
+	Goto Fire+9
+  Level2:
+	TNT1 A 0 A_JumpIfInventory("PowerQuadDamage",1,"QuadLevel2")
+	TNT1 AAAAAAAAAAAAAAAAAAA 0 A_FireCustomMissile("Hand",frandom(-16.8,16.8),0,0,0,0,frandom(-3.55,3.55))
+    KSSG A 3 A_FireCustomMissile("Hand",frandom(-16.8,16.8),1,0,0,0,frandom(-3.55,3.55))
+    KSSG A 0 A_PlayWeaponSound("Weapons/HandCannonFire")
+	TNT1 AAAAAAAAAAAAAAAAAAA 0 A_FireCustomMissile("Hand",frandom(-16.8,16.8),0,0,0,0,frandom(-3.55,3.55))
+    KSSG A 5 A_FireCustomMissile("Hand",frandom(-16.8,16.8),1,0,0,0,frandom(-3.55,3.55))
+	Goto Fire+9
+  QuadLevel2:
+    TNT1 A 0 A_Playsound("misc/qdmg2",CHAN_5)
+	TNT1 AAAAAAAAAAAAAAAAAAA 0 A_FireCustomMissile("Hand",frandom(-16.8,16.8),0,0,0,0,frandom(-3.55,3.55))
+    KSSG A 3 A_FireCustomMissile("Hand",frandom(-16.8,16.8),1,0,0,0,frandom(-3.55,3.55))
+    KSSG A 0 A_PlayWeaponSound("Weapons/HandCannonFire")
+    TNT1 A 0 A_Playsound("misc/qdmg2",CHAN_5)
+	TNT1 AAAAAAAAAAAAAAAAAAA 0 A_FireCustomMissile("Hand",frandom(-16.8,16.8),0,0,0,0,frandom(-3.55,3.55))
+    KSSG A 5 A_FireCustomMissile("Hand",frandom(-16.8,16.8),1,0,0,0,frandom(-3.55,3.55))
+	Goto Fire+9
+  Flash:
+    KSSG J 3 Bright A_Light2
+    KSSG I 3 Bright A_Light1
+    Goto LightDone
+  }
+}
+
+ACTOR ExplosivePuff
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +ALLOWPARTICLES
+  +RANDOMIZE
+  +PUFFONACTORS
+  +PUFFGETSOWNER
+  +SKYEXPLODE
+  +EXTREMEDEATH
+  DamageType "Rocket"
+  States
+  {
+  Spawn:
+	TNT1 A 0
+	TNT1 A 0 A_Playsound("weapons/rocklx",CHAN_VOICE,0.5)
+    MISL B 6 Bright A_Explode(128,128,0)
+    MISL C 5 Bright
+    MISL D 4 Bright
+	Stop
+  }
+}
+
+ACTOR Hand
+{
+	Projectile
+	ProjectileKickBack 50
+	Damage 50
+	Speed 60
+	Gravity 0.3
+	BounceType "Doom"
+	BounceCount 20
+	BounceFactor 1.0
+	WallBounceFactor 1.0
+	BounceSound "weapons/hand"
+	Seesound "weapons/hand"
+	Obituary "%o was smacked by %k's Hand Cannon!"
+	+EXTREMEDEATH
+	-NOGRAVITY
+	-NOTELEPORT
+	States
+	{
+	Spawn:
+	  HAND A 1 Bright
+	  Loop
+	Death:
+	  TNT1 A 0 A_Playsound("weapons/rocklx",CHAN_VOICE)
+	  MISL B 6 Bright A_Explode(256,128,0)
+	  MISL C 5 Bright
+	  MISL D 4 Bright
+	  Stop
+	}
+}
+
+ACTOR Hand2 : Hand
+{
+	Obituary "%o was spanked by %k's Hand."
+	DamageType "Meme"
+}

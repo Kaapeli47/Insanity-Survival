@@ -1,0 +1,102 @@
+ACTOR IDMCyberAnnihilator : IDMCyberdemon
+{
+	Tag "Cyber Annihilator"
+	Obituary "%o was annihilated by a cyber annihilator."
+	States
+	{
+	Spawn:
+		ANNI AB 10 A_Look
+		Loop
+	See:
+		ANNI A 3 A_Metal
+		ANNI ABB 3 A_Chase
+		ANNI C 3 A_Metal
+		ANNI CDD 3 A_Chase
+		Loop
+	Missile:
+		ANNI E 12 A_FaceTarget
+		TNT1 A 0 A_JumpIfCloser(320,"CloseMissile")
+		//TNT1 A 0 A_Jump(32,"SeekerAtk")
+		TNT1 A 0 A_Jump(256,"RocketAtk","MiniAtk")
+	CloseMissile:
+		TNT1 A 0 A_Jump(256,"RocketAtk","GrenadeAtk","MiniAtk")
+	RocketAtk:
+		TNT1 A 0 A_Playsound("weapons/rlfire",CHAN_WEAPON,1,0,0.5)
+		TNT1 A 0 A_Playsound("weapons/rlfire",CHAN_5,1,0,0.5)
+		TNT1 A 0 A_CustomMissile("MonsterRocket",48,25)
+		ANNI F 12 Bright A_CustomMissile("MonsterRocket",48,-25)
+		ANNI E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/rlfire",CHAN_WEAPON,1,0,0.5)
+		TNT1 A 0 A_Playsound("weapons/rlfire",CHAN_5,1,0,0.5)
+		TNT1 A 0 A_CustomMissile("MonsterRocket",48,25)
+		ANNI F 12 Bright A_CustomMissile("MonsterRocket",48,-25)
+		Goto See
+	GrenadeAtk:
+		TNT1 A 0 A_CustomMissile("MonsterGrenade",48,25)
+		ANNI F 12 Bright A_CustomMissile("MonsterGrenade",48,-25)
+		ANNI E 12 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("MonsterGrenade",48,25)
+		ANNI F 12 Bright A_CustomMissile("MonsterGrenade",48,-25)
+		Goto See
+ /*	SeekerAtk:
+		TNT1 A 0 A_Playsound("weapons/heatseekerf",CHAN_WEAPON,1,0,0.5)
+		TNT1 A 0 A_Playsound("weapons/heatseekerf",CHAN_5,1,0,0.5)
+		TNT1 A 0 A_CustomMissile("MonsterSuperSeekerMissile",48,25)
+		ANNI F 12 Bright A_CustomMissile("MonsterSuperSeekerMissile",48,-25)
+		Goto See*/
+	MiniAtk:
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI F 3 Bright A_CustomMissile("MonsterMiniMissile",48,25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI E 3 Bright A_CustomMissile("MonsterMiniMissile",48,-25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI F 3 Bright A_CustomMissile("MonsterMiniMissile",48,25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI E 3 Bright A_CustomMissile("MonsterMiniMissile",48,-25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI F 3 Bright A_CustomMissile("MonsterMiniMissile",48,25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI E 3 Bright A_CustomMissile("MonsterMiniMissile",48,-25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI F 3 Bright A_CustomMissile("MonsterMiniMissile",48,25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI E 3 Bright A_CustomMissile("MonsterMiniMissile",48,-25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI F 3 Bright A_CustomMissile("MonsterMiniMissile",48,25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI E 3 Bright A_CustomMissile("MonsterMiniMissile",48,-25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI F 3 Bright A_CustomMissile("MonsterMiniMissile",48,25)
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		ANNI E 3 Bright A_CustomMissile("MonsterMiniMissile",48,-25)
+		TNT1 A 0 A_FaceTarget
+		Goto See
+	Pain:
+		ANNI G 15 A_Pain
+		Goto See
+	Death:
+		ANNI H 10 Bright
+		ANNI I 10 Bright A_Scream
+		ANNI J 10 Bright
+		TNT1 A 0 A_SpawnItemEx("IDMCyberDecimatorArm",40,0,64,3,0,5,random(90,135))
+		TNT1 A 0 A_SpawnItemEx("IDMCyberDecimatorArm",40,0,64,3,0,5,random(225,270))
+		TNT1 A 0 A_SpawnItemEx("IDMCyberDecimatorHead",10,0,72,2,0,5,random(90,135))
+		ANNI KL 10 Bright
+		ANNI M 10 Bright A_NoBlocking
+		ANNI NO 10 Bright
+		ANNI P 30 Bright
+		ANNI P -1 A_BossDeath
+		Stop
+	}
+}

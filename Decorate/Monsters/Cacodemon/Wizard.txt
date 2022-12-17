@@ -1,0 +1,115 @@
+/// Wizard
+
+ACTOR IDMWizard : Wizard replaces Wizard
+{
+  Health 350
+  Radius 16
+  Height 56
+  Mass 800
+  Speed 12
+  PainChance 64
+  Monster
+  Species "Cacodemon"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  +FLOAT
+  +NOGRAVITY
+  +DONTOVERLAP
+  SeeSound "wizard/sight"
+  AttackSound "wizard/attack"
+  PainSound "wizard/pain"
+  DeathSound "wizard/death"
+  ActiveSound "wizard/active"
+  Obituary "$OB_WIZARD"
+  HitObituary "$OB_WIZARDHIT"
+  Tag "Wizard"
+  BloodColor "Purple"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 64, 20
+  DropItem "Clip", 16, 20
+  DropItem "ClipBox", 8, 50
+  DropItem "Shell", 64, 4
+  DropItem "Shell", 16, 20
+  DropItem "ShellBox", 8, 10
+  DropItem "RocketAmmo", 64, 1
+  DropItem "RocketAmmo", 16, 1
+  DropItem "RocketBox", 8, 5
+  DropItem "Cell", 32, 20
+  DropItem "Cell", 8, 20
+  DropItem "Cellpack", 4, 100
+  DropItem "IDMMana", 4
+  DropItem "IDMMana", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMGas", 4
+  DropItem "IDMGas", 4
+  States
+  {
+  Spawn:
+    WZRD AB 10 A_Look
+    Loop
+  See:
+    WZRD A 3 A_Chase
+    WZRD A 4 A_Chase
+    WZRD A 3 A_Chase
+    WZRD A 4 A_Chase
+    WZRD B 3 A_Chase
+    WZRD B 4 A_Chase
+    WZRD B 3 A_Chase
+    WZRD B 4 A_Chase
+    Loop
+  Missile:
+    WZRD C 2 A_WizAtk1
+    WZRD C 2 A_WizAtk2
+    WZRD C 2 A_WizAtk1
+    WZRD C 2 A_WizAtk2
+    WZRD C 2 A_WizAtk1
+    WZRD C 2 A_WizAtk2
+    WZRD C 2 A_WizAtk1
+    WZRD C 2 A_WizAtk2
+    WZRD D 12 A_WizAtk3
+    Goto See
+  Pain:
+    WZRD E 3 A_GhostOff
+    WZRD E 3 A_Pain
+    Goto See
+  Death:
+    WZRD F 6 A_GhostOff
+    WZRD G 6 A_Scream
+    WZRD HI 6
+    WZRD J 6 A_NoBlocking
+    WZRD KL 6
+    WZRD M -1 A_SetFloorClip
+    Stop
+  Raise:
+    WZRD LKJIHGF 5
+	Goto See
+  }
+}
+
+ACTOR IDMWizardFX1 : WizardFX1 replaces WizardFX1
+{
+  Radius 10
+  Height 6
+  Speed 18
+  FastSpeed 24
+  Damage 4
+  Projectile
+  -ACTIVATEIMPACT
+  -ACTIVATEPCROSS
+  RenderStyle Add
+  DeathSound "hknight/hit"
+  DamageType "Plasma"
+  States
+  {
+  Spawn:
+    FX11 AB 6 Bright
+    Loop
+  Death:
+    FX11 CDEFG 5 Bright
+    Stop
+  }
+}

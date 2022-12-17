@@ -1,0 +1,297 @@
+/// Heresiarch
+
+ACTOR IDMHeresiarch : Heresiarch
+{
+  Health 5000
+  PainChance 5
+  Speed 10
+  Radius 40
+  Height 110
+  Mass 10000
+  Damage 9
+  Monster
+  Species "Cyberdemon"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  +FLOORCLIP
+  +BOSS
+  +DONTMORPH
+  -NOTARGET
+  +NOICEDEATH
+  +DEFLECT
+  +QUICKTORETALIATE
+  -NOBLOOD
+  -FULLVOLACTIVE
+  -NORADIUSDMG
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  -TELESTOMP
+  SeeSound "SorcererSight"
+  PainSound "SorcererPain"
+  DeathSound "SorcererDeathScream"
+  ActiveSound "SorcererActive"
+  DamageFactor "CyberDemonBullet", 0.0
+  DamageFactor "Rocket", 0.75
+  DamageFactor "Grenade", 0.75
+  DamageFactor "Fire", 0.75
+  DamageFactor "GreenFire", 0.75
+  DamageFactor "PlayerRocket", 0.75
+  DamageFactor "PlayerGrenade", 0.75
+  Obituary "$OB_HERESIARCH" // "%o had %p bones rolled by the Heresiarch."
+  Tag "Heresiarch"
+  DropItem "IDMHealthBonusPickup", 256
+  DropItem "IDMArmorBonusPickup", 256
+  DropItem "IDMHealthBonusPickup", 128
+  DropItem "IDMArmorBonusPickup", 128
+  DropItem "Clip", 128, 20
+  DropItem "Clip", 128, 20
+  DropItem "ClipBox", 64, 50
+  DropItem "Shell", 128, 4
+  DropItem "Shell", 128, 4
+  DropItem "ShellBox", 64, 10
+  DropItem "RocketAmmo", 128, 1
+  DropItem "RocketAmmo", 128, 1
+  DropItem "RocketBox", 64, 5
+  DropItem "Cell", 128, 20
+  DropItem "Cell", 128, 20
+  DropItem "Cellpack", 64, 100
+  DropItem "IDMMana", 64
+  DropItem "IDMMana", 64
+  DropItem "IDMMaceAmmo", 64
+  DropItem "IDMMaceAmmo", 64
+  DropItem "IDMCatAmmo", 64
+  DropItem "IDMCatAmmo", 64
+  DropItem "IDMGas", 64
+  DropItem "IDMGas", 64
+  DropItem "QuadShotgun", 1
+  DropItem "HandCannon", 1
+  DropItem "IDMMinigun", 1
+  DropItem "Stinger", 1
+  DropItem "HellstormCannon", 1
+  DropItem "Devastator", 1
+  DropItem "BarrelGun", 1
+  DropItem "FreezeThrower", 1
+  DropItem "WidePlasmaGun", 1
+  States
+  {
+  Spawn:
+    SORC AB 10 A_Look
+    Wait
+  See:
+    SORC AABBCCDD 3 A_Chase
+    Loop
+  Pain:
+    SORC G 5
+    SORC G 10 A_Pain
+    Goto See
+  Missile:
+	SORC F 9 Bright A_FaceTarget
+	TNT1 A 0 A_Playsound("SorcererSpellCast",CHAN_VOICE,1,0)
+	TNT1 A 0 A_FaceTarget
+	TNT1 A 0 A_Jump(64,"BounceFireBall","BishopBall")
+	TNT1 A 0 A_Jump(256,"PurpleBalls","WizardBall","BeastBall","SnakeBall")
+  BounceFireBall:
+	TNT1 A 0 A_JumpIfHealthLower(5000,"AngryBounceFireBall")
+    SORC E 10 Bright A_CustomMissile("IDMSorcFX1",56)
+	Goto See
+  AngryBounceFireBall:
+	TNT1 A 0 A_CustomMissile("IDMSorcFX1",56,0,-30)
+    SORC E 10 Bright A_CustomMissile("IDMSorcFX1",56,0,30)
+	Goto See
+  BishopBall:
+	TNT1 A 0 A_JumpIfHealthLower(5000,"AngryBishopBall")
+	TNT1 A 0 A_CustomMissile("IDMSorcFX3",56,0,-30)
+    SORC E 10 Bright A_CustomMissile("IDMSorcFX3",56,0,30)
+	Goto See
+  AngryBishopBall:
+	TNT1 A 0 A_CustomMissile("IDMSorcFX3",56,0)
+	TNT1 A 0 A_CustomMissile("IDMSorcFX3",56,0,-30)
+    SORC E 10 Bright A_CustomMissile("IDMSorcFX3",56,0,30)
+	Goto See
+  PurpleBalls:
+	TNT1 A 0 A_SpawnItemEx("SorcSpark1",0,0,56,random(-2,2),random(-2,2),random(-2,2))
+    SORC E 2 Bright A_CustomMissile("IDMSorcFX4",56,0,random(-8,8))
+	TNT1 A 0 A_SpawnItemEx("SorcSpark1",0,0,56,random(-2,2),random(-2,2),random(-2,2))
+    SORC E 2 Bright A_CustomMissile("IDMSorcFX4",56,0,random(-8,8))
+	TNT1 A 0 A_SpawnItemEx("SorcSpark1",0,0,56,random(-2,2),random(-2,2),random(-2,2))
+    SORC E 2 Bright A_CustomMissile("IDMSorcFX4",56,0,random(-8,8))
+	TNT1 A 0 A_SpawnItemEx("SorcSpark1",0,0,56,random(-2,2),random(-2,2),random(-2,2))
+    SORC E 2 Bright A_CustomMissile("IDMSorcFX4",56,0,random(-8,8))
+	TNT1 A 0 A_SpawnItemEx("SorcSpark1",0,0,56,random(-2,2),random(-2,2),random(-2,2))
+    SORC E 2 Bright A_CustomMissile("IDMSorcFX4",56,0,random(-8,8))
+	TNT1 A 0 A_SpawnItemEx("SorcSpark1",0,0,56,random(-2,2),random(-2,2),random(-2,2))
+    SORC E 2 Bright A_CustomMissile("IDMSorcFX4",56,0,random(-8,8))
+	TNT1 A 0 A_SpawnItemEx("SorcSpark1",0,0,56,random(-2,2),random(-2,2),random(-2,2))
+    SORC E 2 Bright A_CustomMissile("IDMSorcFX4",56,0,random(-8,8))
+	TNT1 A 0 A_SpawnItemEx("SorcSpark1",0,0,56,random(-2,2),random(-2,2),random(-2,2))
+    SORC E 2 Bright A_CustomMissile("IDMSorcFX4",56,0,random(-8,8))
+	Goto See
+  WizardBall:
+    SORC E 3 Bright A_CustomMissile("SorcWizardFX1",56,0,random(-7,7))
+	TNT1 A 0 A_FaceTarget
+    SORC E 3 Bright A_CustomMissile("SorcWizardFX1",56,0,random(-7,7))
+	TNT1 A 0 A_FaceTarget
+    SORC E 3 Bright A_CustomMissile("SorcWizardFX1",56,0,random(-7,7))
+	TNT1 A 0 A_FaceTarget
+    SORC E 3 Bright A_CustomMissile("SorcWizardFX1",56,0,random(-7,7))
+	TNT1 A 0 A_FaceTarget
+    SORC E 3 Bright A_CustomMissile("SorcWizardFX1",56,0,random(-7,7))
+	TNT1 A 0 A_FaceTarget
+    SORC E 3 Bright A_CustomMissile("SorcWizardFX1",56,0,random(-7,7))
+	TNT1 A 0 A_FaceTarget
+    SORC E 3 Bright A_CustomMissile("SorcWizardFX1",56,0,random(-7,7))
+	TNT1 A 0 A_FaceTarget
+    SORC E 3 Bright A_CustomMissile("SorcWizardFX1",56,0,random(-7,7))
+	Goto See
+  BeastBall:
+    SORC E 6 Bright A_CustomMissile("SorcBeastBall",56,0,random(-3,3))
+	TNT1 A 0 A_FaceTarget
+    SORC E 6 Bright A_CustomMissile("SorcBeastBall",56,0,random(-3,3))
+	TNT1 A 0 A_FaceTarget
+    SORC E 6 Bright A_CustomMissile("SorcBeastBall",56,0,random(-3,3))
+	TNT1 A 0 A_FaceTarget
+    SORC E 6 Bright A_CustomMissile("SorcBeastBall",56,0,random(-3,3))
+	TNT1 A 0 A_FaceTarget
+    SORC E 6 Bright A_CustomMissile("SorcBeastBall",56,0,random(-3,3))
+	Goto See
+  SnakeBall:
+    SORC EEEEE 1 Bright A_CustomMissile("SorcSnakeProj",56,0,random(-2,2))
+	TNT1 A 0 A_FaceTarget
+	SORC EEEEE 1 Bright A_CustomMissile("SorcSnakeProj",56,0,random(-2,2))
+	TNT1 A 0 A_FaceTarget
+	SORC EEEEE 1 Bright A_CustomMissile("SorcSnakeProj",56,0,random(-2,2))
+	Goto See
+  Death:
+    SORC H 5 Bright
+    SORC I 5 Bright A_FaceTarget
+    SORC J 5 Bright A_Scream
+    SORC KLMNOPQRST 5 Bright
+    SORC U 5 Bright A_NoBlocking
+    SORC VWXY 5 Bright
+    SORC Z -1 A_BossDeath
+    Stop
+  }
+}
+
+ACTOR IDMSorcFX1 replaces SorcFX1
+{
+  Speed 20
+  Radius 5
+  Height 5
+  Damage 5
+  Projectile
+  -ACTIVATEIMPACT
+  -ACTIVATEPCROSS
+  -NOGRAVITY
+  +FULLVOLDEATH
+  +SEEKERMISSILE
+  +CANBOUNCEWATER
+  +NOWALLBOUNCESND
+  +HEXENBOUNCE
+  BounceFactor 1.0
+  BounceCount 15
+  SeeSound "SorcererBallBounce"
+  DeathSound "SorcererHeadScream"
+  States
+  {
+  Spawn:
+    SBS1 A 2 Bright
+    SBS1 BCD 3 Bright A_SeekerMissile(2,6)
+    Loop
+  Death:
+    FHFX I 4 Bright 
+    FHFX J 4 Bright A_Explode(60, 128)
+    FHFX KLMNOPQR 4 Bright
+    Stop
+  }
+}
+
+ACTOR IDMSorcFX2 : SorcFX2 replaces SorcFX2
+{
+  Speed 15
+  Radius 5
+  Height 5
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +NOTELEPORT
+  States
+  {
+  Spawn:
+    SBS2 A 3 Bright A_SorcFX2Split
+    Loop
+  Orbit:
+    SBS2 A 2 Bright
+    SBS2 BCDEFGHIJKLMNOPA 2 Bright A_SorcFX2Orbit
+    Goto Orbit+1
+  Death:
+    SBS2 A 10
+    Stop
+  }
+}
+
+ACTOR IDMSorcFX3 : SorcFX3 replaces SorcFX3
+{
+  Speed 15
+  Radius 22
+  Height 65
+  +NOBLOCKMAP
+  +MISSILE
+  +NOTELEPORT
+  SeeSound "SorcererBishopSpawn"
+  States
+  {
+  Spawn:
+    SBS3 ABC 2 Bright
+    Loop
+  Death:
+    SBS3 A 4 Bright
+    BISH P 4 Bright A_SorcererBishopEntry
+    BISH ON 4 Bright
+    BISH MLKJIH 3 Bright
+    BISH G 3 Bright A_SpawnBishop
+    Stop
+  }
+}
+
+ACTOR IDMSorcFX4 replaces SorcFX4
+{
+  Speed 30
+  Damage 5
+  Radius 10
+  Height 10
+  Projectile
+  -ACTIVATEIMPACT
+  -ACTIVATEPCROSS
+  DeathSound "SorcererBallExplode"
+  States
+  {
+  Spawn:
+    SBS4 ABC 2 Bright
+    Loop
+  Death:
+    SBS4 D 2 Bright
+    SBS4 E 2 Bright A_Explode(40, 128)
+    SBS4 FGH 2 Bright
+    Stop
+  }
+}
+
+ACTOR SorcWizardFX1 : IDMWizardFX1
+{
+	Speed 30
+	Damage 12
+	Scale 1.2
+}
+
+ACTOR SorcBeastBall : IDMBeastBall
+{
+	Damage 27
+	Scale 1.35
+}
+
+ACTOR SorcSnakeProj : IDMSnakeProjA
+{
+	Speed 32
+	Scale 1.125
+	Damage 4
+}

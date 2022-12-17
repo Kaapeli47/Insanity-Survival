@@ -1,0 +1,80 @@
+ACTOR IDMHellfireCyberdemon : IDMCyberdemon
+{
+	SeeSound "hellcyber/sight"
+	PainSound "hellcyber/pain"
+	DeathSound "hellcyber/death"
+	Tag "Hellfire Cyberdemon"
+	Obituary "%o got grilled & sauced by a hellfire cyberdemon."
+	States
+	{
+	Spawn:
+		HFCY AB 10 A_Look
+		Loop
+	See:
+	Missile:
+		HFCY A 3 A_Hoof
+		HFCY ABB 3 A_Chase
+		HFCY C 3 A_Playsound("hellcyber/metal")
+		HFCY CDD 3 A_Chase
+		Loop
+	Missile:
+		HFCY E 6 A_FaceTarget
+		TNT1 A 0 A_Jump(256,"MancAtk","FlameAtk","RevAtk","LavaAtk")
+	MancAtk:
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFFF 3 Bright A_CustomMissile("IDMFatShot",48,-25,random(-8,8))
+		HFCY E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFFF 3 Bright A_CustomMissile("IDMFatShot",48,-25,random(-8,8))
+		HFCY E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFFF 3 Bright A_CustomMissile("IDMFatShot",48,-25,random(-8,8))
+		Goto See
+	FlameAtk:
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFF 3 Bright A_CustomMissile("IDMArchMissile",48,-25,random(-8,8))
+		HFCY F 3 Bright A_FaceTarget
+		HFCY E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFF 3 Bright A_CustomMissile("IDMArchMissile",48,-25,random(-8,8))
+		HFCY F 3 Bright A_FaceTarget
+		HFCY E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFF 3 Bright A_CustomMissile("IDMArchMissile",48,-25,random(-8,8))
+		HFCY F 3 Bright A_FaceTarget
+		Goto See
+	RevAtk:
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFFF 3 Bright A_CustomMissile("IDMRevenantTracer",48,-25,random(-15,15))
+		HFCY E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFFF 3 Bright A_CustomMissile("IDMRevenantTracer",48,-25,random(-15,15))
+		HFCY E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFFF 3 Bright A_CustomMissile("IDMRevenantTracer",48,-25,random(-15,15))
+		Goto See
+	LavaAtk:
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFF 4 Bright A_CustomMissile("IDMLavaBall",48,-25,random(-5,5))
+		HFCY E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFF 3 Bright A_CustomMissile("IDMLavaBall",48,-25,random(-5,5))
+		HFCY E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("MageStaffFire",CHAN_WEAPON,1,0,0.5)
+		HFCY FFF 3 Bright A_CustomMissile("IDMLavaBall",48,-25,random(-5,5))
+		Goto See
+		
+	Pain:
+		HFCY G 15 A_Pain
+		Goto See
+	Death:
+		HFCY H 10 Bright
+		HFCY I 10 Bright A_Scream
+		HFCY JKL 10 Bright
+		HFCY M 10 Bright A_NoBlocking
+		HFCY NO 10 Bright
+		HFCY P 30 Bright
+		HFCY P -1 A_BossDeath
+		Stop
+	}
+}

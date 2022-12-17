@@ -1,0 +1,141 @@
+/// Snake
+
+ACTOR IDMSnake : Snake
+{
+  Health 300
+  GibHealth 100
+  Radius 20
+  Height 56
+  Speed 12
+  PainChance 48
+  Monster
+  Species "Revenant"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  +FLOORCLIP
+  Mass 300
+  AttackSound "snake/attack"
+  SeeSound "snake/sight"
+  PainSound "snake/pain"
+  DeathSound "snake/death"
+  ActiveSound "snake/active"
+  Obituary "$OB_SNAKE"
+  Tag "Ophidian"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 64, 20
+  DropItem "ClipBox", 8, 50
+  DropItem "Shell", 64, 4
+  DropItem "ShellBox", 8, 10
+  DropItem "RocketAmmo", 64, 1
+  DropItem "RocketBox", 8, 5
+  DropItem "Cell", 32, 20
+  DropItem "Cellpack", 4, 100
+  DropItem "IDMMana", 4
+  DropItem "IDMMana", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMGas", 4
+  DropItem "IDMGas", 4
+  States
+  {
+  Spawn:
+    SNKE AB 10 A_Look
+    Loop
+  See:
+    SNKE AABBCCDD 2 A_Chase
+    Loop
+  Missile:
+    SNKE FF 5 A_FaceTarget
+    SNKE FFFFFF 2 A_CustomMissile("IDMSnakeProjA", 32, 0, 0, CMF_CHECKTARGETDEAD)
+    SNKE FF 5 A_FaceTarget
+    SNKE F 4 A_CustomMissile("IDMSnakeProjB", 32, 0, 0, CMF_CHECKTARGETDEAD)
+    Goto See
+  Pain:
+    SNKE E 3
+    SNKE E 3 A_Pain
+    Goto See
+  Death:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+    SNKE G 5
+    SNKE H 5 A_Scream
+    SNKE IJKL 5
+    SNKE M 5 A_NoBlocking
+    SNKE NO 5
+    SNKE P -1
+    Stop
+  XDeath:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+  XDeath.Massacre:
+    SNKE G 5
+    SNKE H 5 A_XScream
+    SNKE IJKL 5
+    SNKE M 5 A_NoBlocking
+    SNKE NO 5
+    SNKE P -1
+    Stop
+  XDeath.Resurrector:
+    SNKE G 5
+    SNKE H 5 A_XScream
+	TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+    SNKE I 5 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+	SNKE JKL 5
+    SNKE M 5 A_NoBlocking
+    SNKE NO 5
+    SNKE P -1
+    Stop
+  Raise:
+    SNKE PONMLKJIHG 5
+	Goto See
+  }
+}
+
+ACTOR IDMSnakeProjA : SnakeProjA
+{
+  Radius 12
+  Height 8
+  Speed 14
+  FastSpeed 20
+  Damage 3
+  Projectile
+  -NOBLOCKMAP
+  -ACTIVATEIMPACT
+  -ACTIVATEPCROSS
+  +WINDTHRUST
+  +SPAWNSOUNDSOURCE
+  RenderStyle Add
+  SeeSound "snake/attack"
+  DeathSound "hknight/hit"
+  DamageType "Plasma"
+  States
+  {
+  Spawn:
+    SNFX ABCD 5 Bright
+    Loop
+  Death:
+    SNFX EF 5 Bright
+    SNFX G 4 Bright
+    SNFX HI 3 Bright
+    Stop
+  }
+}
+
+ACTOR IDMSnakeProjB : IDMSnakeProjA
+{
+  Damage 8
+  +NOBLOCKMAP
+  -WINDTHRUST
+  States
+  {
+  Spawn:
+    SNFX JK 6 Bright
+    Loop
+  Death:
+    SNFX LM 5 Bright
+    SNFX N 4 Bright
+    SNFX O 3 Bright
+    Stop
+  }
+}

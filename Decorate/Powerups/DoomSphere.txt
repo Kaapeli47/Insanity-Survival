@@ -1,0 +1,62 @@
+// DoomSphere
+
+ACTOR IDMDoomSphere : CustomInventory 10075
+{
+	+FLOAT
+	+FLOATBOB
+	+COUNTITEM
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	Inventory.PickupSound "misc/quad_pkup"
+	Inventory.MaxAmount 0
+	Inventory.PickupMessage "DOOMSPHERE!"
+	Inventory.PickupAnnouncerEntry "doomsphere"
+	Inventory.RespawnTics 4200
+	Tag "Doomsphere"
+    //$Category Powerups
+	States
+	{
+	Spawn:
+	  DOOM A 10 Bright
+	  DOOM B 15 Bright
+	  DOOM C 8 Bright
+	  DOOM D 6 Bright
+	  Loop
+	Pickup:
+	  TNT1 A 0 A_JumpIfInventory("PowerRageInvulnerable",1,"NoProt")
+	  TNT1 A 0 A_GiveInventory("PickupProtection")
+	NoProt:
+	  TNT1 A 0 A_Print("\n\n\n\n\n\nDOOMSPHERE!\n200 Health\n\n\n\n4x Damage!")
+	  TNT1 A 0 Healthing(200,200)
+	  TNT1 A 0 A_GiveInventory("DoomSphereQuadDamage")
+	  TNT1 A 0 A_GiveInventory("DoomsphereIcon")
+	  Stop
+	}
+}
+
+ACTOR DoomSphereIcon : Powerup
+{
+	Inventory.Icon "DOOMSP1"
+	Powerup.Duration -30
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR DoomSphereShortIcon : DoomSphereIcon
+{
+	Powerup.Duration -30
+}
+
+ACTOR DoomSphereQuadDamage : PowerupGiver
+{
+	Powerup.Type "QuadDamage"
+	Inventory.MaxAmount 0
+	Powerup.Color RedMap
+	Powerup.Duration -30
+	Inventory.PickupMessage ""
+	Inventory.PickupSound ""
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}

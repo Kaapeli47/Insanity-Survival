@@ -1,0 +1,155 @@
+ACTOR IDMScorchVile : IDMArchVile
+{
+	Tag "Scorch-Vile"
+	Obituary "%o was scorched to ash by a scorch-vile."
+	States
+	{
+	Spawn:
+		SVIL AB 10 A_Look
+		Loop
+	See:
+		SVIL AABBCCDDEEFF 2 A_VileChase
+		Loop
+	Missile:
+		TNT1 A 0 A_VileStart
+		TNT1 A 0 A_ChangeFlag(NORADIUSDMG,true)
+		TNT1 A 0 A_Jump(80,"GroundAtk","BigGroundAtk")
+		TNT1 A 0 A_Jump(128,"ScatterAtk")
+		SVIL GG 4 BRIGHT A_FaceTarget
+		SVIL H 4 BRIGHT
+		SVIL IJKLMN 4 BRIGHT A_FaceTarget
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,-5,CMF_AIMDIRECTION)
+		SVIL O 4 BRIGHT A_CustomMissile("IDMScorchMissile",28,0,5,CMF_AIMDIRECTION)
+		SVIL P 4 BRIGHT
+		TNT1 A 0 A_ChangeFlag(NORADIUSDMG,false)
+		Goto See
+	ScatterAtk:
+		SVIL GG 4 BRIGHT A_FaceTarget
+		SVIL H 4 BRIGHT
+		SVIL IJKLMN 4 BRIGHT A_FaceTarget
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,-10,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,-5,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,5,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,10,CMF_AIMDIRECTION)
+		SVIL O 4 BRIGHT A_CustomMissile("IDMArchMissile",28,0,0,CMF_AIMDIRECTION)
+		SVIL P 4 BRIGHT
+		TNT1 A 0 A_ChangeFlag(NORADIUSDMG,false)
+		Goto See
+	GroundAtk:
+		SVIL GG 5 BRIGHT A_FaceTarget
+		SVIL H 8 BRIGHT
+		SVIL IJKLMN 8 BRIGHT A_FaceTarget
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,0,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,15,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,30,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,45,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,60,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,75,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,90,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,105,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,120,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,135,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,150,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,165,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,180,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,195,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,210,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,225,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,240,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,255,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,270,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,285,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,300,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,315,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,330,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMArchMissile",28,0,345,CMF_AIMDIRECTION)
+		SVIL O 7 BRIGHT
+		SVIL P 7 BRIGHT
+		TNT1 A 0 A_ChangeFlag(NORADIUSDMG,false)
+		Goto See
+	BigGroundAtk:
+		SVIL GG 5 BRIGHT A_FaceTarget
+		SVIL H 8 BRIGHT
+		SVIL IJKLMN 8 BRIGHT A_FaceTarget
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,0,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,30,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,60,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,90,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,120,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,150,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,180,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,210,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,240,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,270,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,300,CMF_AIMDIRECTION)
+		TNT1 A 0 A_CustomMissile("IDMScorchMissile",28,0,330,CMF_AIMDIRECTION)
+		SVIL O 5 BRIGHT
+		SVIL P 5 BRIGHT
+		TNT1 A 0 A_ChangeFlag(NORADIUSDMG,false)
+		Goto See
+	Heal:
+		SVIL "[\]" 10 BRIGHT
+		Goto See
+	Pain:
+		SVIL Q 5
+		SVIL Q 5 A_Pain
+		Goto See
+	Death:
+		SVIL Q 7
+		SVIL R 7 A_Scream
+		SVIL S 7 A_NoBlocking
+		SVIL TUVWXY 7
+		SVIL Z -1
+		Stop
+	}
+}
+
+
+ACTOR IDMScorchMissile : IDMArchMissile
+{
+	Damage 0
+	Speed 35
+	Projectile
+	Seesound "MageStaffFire"
+	Reactiontime 105
+	+FLOORHUGGER
+	+RIPPER
+	States
+	{
+	Spawn:
+	  TNT1 A 1
+	SpawnLoop:
+	  TNT1 A 0 A_SpawnItem("IDMScorchVileFastFire")
+	  TNT1 A 1 A_CountDown
+	  Loop
+	Death:
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR IDMScorchVileFastFire : IDMArchVileFastFire
+{
+  Scale 0.9
+  Alpha 0.75
+  States
+  {
+  Spawn:
+	TNT1 A 0 A_FireCrackle
+  Spawn1:
+    FIRE A 2 Bright A_Explode(12,48)
+    FIRE B 2 Bright
+	TNT1 A 0 A_FireCrackle
+	TNT1 A 0 A_Jump(128,"Spawn1")
+  Spawn2:
+    FIRE C 2 Bright A_Explode(12,48)
+    FIRE D 2 Bright
+	TNT1 A 0 A_FireCrackle
+	TNT1 A 0 A_Jump(128,"Spawn2")
+  Spawn3:
+    FIRE E 2 Bright A_Explode(12,48)
+    FIRE F 2 Bright
+	TNT1 A 0 A_Jump(128,"Spawn3")
+    Stop
+	}
+}

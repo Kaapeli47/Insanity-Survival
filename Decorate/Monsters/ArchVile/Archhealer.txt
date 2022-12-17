@@ -1,0 +1,148 @@
+ACTOR IDMArchHealer : IDMArchvile
+{
+	Tag "Arch-Healer (NOT ACTUALLY FRIENDLY!)"
+	Obituary "%o didn't receive medicine from an arch-healer."
+	-QUICKTORETALIATE
+	States
+	{
+	Spawn:
+		ARHL AB 10 A_Look
+		Loop
+	See:
+		TNT1 A 0
+		TNT1 A 0 A_ChangeFlag(FRIENDLY,1)
+		ARHL AA 2 A_Chase
+		TNT1 A 0 A_ChangeFlag(FRIENDLY,0)
+		ARHL BB 2 A_VileChase
+		TNT1 A 0 A_ChangeFlag(FRIENDLY,1)
+		ARHL CC 2 A_Chase
+		TNT1 A 0 A_ChangeFlag(FRIENDLY,0)
+		ARHL DD 2 A_VileChase
+		TNT1 A 0 A_ChangeFlag(FRIENDLY,1)
+		ARHL EE 2 A_Chase
+		TNT1 A 0 A_ChangeFlag(FRIENDLY,0)
+		ARHL FF 2 A_VileChase
+		Loop
+	Missile:
+		TNT1 A 0 A_VileStart
+		TNT1 A 0 A_JumpIfInTargetInventory("IDMArchHealerCheck",1,"ProjAtk")
+		TNT1 A 0 A_Chase
+		ARHL G 6 Bright A_FaceTarget
+		ARHL H 4 Bright A_FaceTarget
+		ARHL IJKLMN 4 Bright A_FaceTarget
+		ARHL O 2 Bright A_CustomMissile("IDMArchHealMissile",32,0,random(-15,15))
+		ARHL N 2 Bright
+		ARHL O 2 Bright A_CustomMissile("IDMArchHealMissile",32,0,random(-15,15))
+		ARHL N 2 Bright
+		ARHL O 2 Bright A_CustomMissile("IDMArchHealMissile",32,0,random(-15,15))
+		ARHL N 2 Bright
+		ARHL O 2 Bright A_CustomMissile("IDMArchHealMissile",32,0,random(-15,15))
+		ARHL N 2 Bright
+		ARHL O 2 Bright A_CustomMissile("IDMArchHealMissile",32,0,random(-15,15))
+		ARHL N 2 Bright
+		ARHL O 2 Bright A_CustomMissile("IDMArchHealMissile",32,0,random(-15,15))
+		ARHL P 2 Bright
+		Goto See
+	ProjAtk:
+		TNT1 A 0 A_VileStart
+		ARHL G 8 Bright A_FaceTarget
+		ARHL H 6 Bright A_FaceTarget
+		ARHL IJKLMN 6 Bright A_FaceTarget
+		ARHL ONONO 5 Bright A_CustomMissile("IDMArchHealTracer",32)
+		ARHL P 5 Bright
+		Goto See
+	Heal:
+		ARHL "[\]" 10 Bright
+		Goto See
+	Pain:
+		ARHL Q 5
+		ARHL Q 5 A_Pain
+		Goto See
+	Death:
+		ARHL Q 7
+		ARHL R 7 A_Scream
+		ARHL S 7 A_NoBlocking
+		ARHL TUVWXY 7
+		ARHL Z -1
+		Stop
+	}
+}
+
+ACTOR IDMArchHealMissile
+{
+	Radius 9
+	Height 6
+	Projectile
+	Damage 0
+	Speed 25
+	SeeSound "archhealer/ball"
+	DeathSound "imp/shotx"
+	+SEEKERMISSILE
+	States
+	{
+	Spawn:
+	  AHB1 A 6 Bright
+	  TNT1 A 0 A_Jump(128,"SpawnLoop2")
+	SpawnLoop:
+	  TNT1 A 0 A_SeekerMissile(0,90,SMF_LOOK)
+	  AHB1 AA 1 Bright A_Weave(4,0,3,0)
+	  TNT1 A 0 A_SpawnItemEx("IDMArchHealPuff")
+	  TNT1 A 0 A_SeekerMissile(0,90,SMF_LOOK)
+	  AHB1 AA 1 Bright A_Weave(4,0,3,0)
+	  TNT1 A 0 A_SpawnItemEx("IDMArchHealPuff")
+	  TNT1 A 0 A_SeekerMissile(0,90,SMF_LOOK)
+	  AHB1 BB 1 Bright A_Weave(4,0,3,0)
+	  TNT1 A 0 A_SpawnItemEx("IDMArchHealPuff")
+	  TNT1 A 0 A_SeekerMissile(0,90,SMF_LOOK)
+	  AHB1 BB 1 Bright A_Weave(4,0,3,0)
+	  Loop
+	SpawnLoop2:
+	  TNT1 A 0 A_SeekerMissile(0,90,SMF_LOOK)
+	  AHB1 AA 1 Bright A_Weave(4,0,-3,0)
+	  TNT1 A 0 A_SpawnItemEx("IDMArchHealPuff")
+	  TNT1 A 0 A_SeekerMissile(0,90,SMF_LOOK)
+	  AHB1 AA 1 Bright A_Weave(4,0,-3,0)
+	  TNT1 A 0 A_SpawnItemEx("IDMArchHealPuff")
+	  TNT1 A 0 A_SeekerMissile(0,90,SMF_LOOK)
+	  AHB1 BB 1 Bright A_Weave(4,0,-3,0)
+	  TNT1 A 0 A_SpawnItemEx("IDMArchHealPuff")
+	  TNT1 A 0 A_SeekerMissile(0,90,SMF_LOOK)
+	  AHB1 BB 1 Bright A_Weave(4,0,-3,0)
+	  Loop
+	Death:
+	  AHB1 C 3 Bright A_RadiusGive(Health,64,RGF_MONSTERS,125)
+	  AHB1 DEF 3 Bright
+	  Stop
+	}
+}
+
+ACTOR IDMArchHealPuff
+{
+	Radius 0
+	Height 1
+	Speed 0
+	Renderstyle Add
+	Scale 0.8
+	Alpha 0.85
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+CLIENTSIDEONLY
+	States
+	{
+	Spawn:
+	  AHB1 A 2 Bright
+	  AHB1 B 2 Bright A_SetScale(0.7)
+	  AHB1 A 2 Bright A_SetScale(0.6)
+	  AHB1 B 2 Bright A_SetScale(0.5)
+	  AHB1 A 2 Bright A_SetScale(0.4)
+	  AHB1 B 2 Bright A_SetScale(0.3)
+	  AHB1 A 2 Bright A_SetScale(0.2)
+	  AHB1 B 2 Bright A_SetScale(0.1)
+	  Stop
+	}
+}
+
+ACTOR IDMArchHealerCheck : Inventory
+{
+	Inventory.MaxAmount 1
+}

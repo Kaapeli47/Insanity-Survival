@@ -1,0 +1,47 @@
+ACTOR IDMBlueCard : BlueCard replaces BlueCard
+{
+	Inventory.PickupSound "misc/card_pkup"
+	Inventory.PickupMessage "Blue keycard."
+	Species "BlueCard"
+	Tag "Blue keycard"
+}
+
+ACTOR IDMBlueSkull : BlueSkull replaces BlueSkull 
+{
+	Inventory.PickupSound "misc/skull_pkup"
+	Inventory.PickupMessage "Blue skull."
+	Species "BlueSkull"
+	Tag "Blue skull key"
+}
+
+ACTOR IDMRedCard : RedCard replaces RedCard 
+{
+	Inventory.PickupSound "misc/card_pkup"
+	Inventory.PickupMessage "Red keycard."
+	Species "RedCard"
+	Tag "Red keycard"
+}
+
+ACTOR IDMRedSkull : RedSkull replaces RedSkull 
+{
+	Inventory.PickupSound "misc/skull_pkup"
+	Inventory.PickupMessage "Red skull."
+	Species "RedSkull"
+	Tag "Red skull key"
+}
+
+ACTOR IDMYellowCard : YellowCard replaces YellowCard
+{
+	Inventory.PickupSound "misc/card_pkup"
+	Inventory.PickupMessage "Yellow keycard."
+	Species "YellowCard"
+	Tag "Yellow keycard"
+}
+
+ACTOR IDMYellowSkull : YellowSkull replaces YellowSkull
+{
+	Inventory.PickupSound "misc/skull_pkup"
+	Inventory.PickupMessage "Yellow skull."
+	Species "YellowSkull"
+	Tag "Yellow skull key"
+}

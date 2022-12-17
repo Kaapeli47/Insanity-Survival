@@ -1,0 +1,72 @@
+/// Machinegunner
+
+ACTOR IDMMachinegunGuy : IDMShotgunGuy
+{
+  Obituary "%o was bulleted by a machinegunner."
+  Health 40
+  GibHealth 40
+  Translation "112:127=[146,67,51]:[7,0,0]"
+  AttackSound "weapons/machinegun"
+  DamageType "Bullet"
+  Tag "Machinegunner"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  Dropitem "Machinegun", 256
+  Dropitem "Clip", 32, 20
+  DropItem "Shell", 32, 4
+  DropItem "RocketAmmo", 32, 1
+  DropItem "Cell", 8, 20
+  states
+  {
+  Spawn:
+    PDWP AB 10 A_Look
+    loop
+  See:
+    PDWP AABBCCDD 4 A_Chase
+    Loop
+  Missile:
+    PDWP E 10 A_FaceTarget
+    PDWP F 3 bright A_CustomBulletAttack(22.5,0,1,random(1,5)*3,"BulletPuff")
+    PDWP F 3 bright A_CustomBulletAttack(22.5,0,1,random(1,5)*3,"BulletPuff")
+    PDWP F 3 bright A_CustomBulletAttack(22.5,0,1,random(1,5)*3,"BulletPuff")
+    PDWP E 6 A_FaceTarget
+	TNT1 A 0 A_Jump(128,"See")
+    PDWP F 3 bright A_CustomBulletAttack(22.5,0,1,random(1,5)*3,"BulletPuff")
+    PDWP F 3 bright A_CustomBulletAttack(22.5,0,1,random(1,5)*3,"BulletPuff")
+    PDWP F 3 bright A_CustomBulletAttack(22.5,0,1,random(1,5)*3,"BulletPuff")
+    PDWP E 6 A_FaceTarget
+	Goto See
+  Pain:
+    PDWP G 2
+    PDWP G 2 A_Pain
+    goto See
+  Death:
+	PDWP H 5
+	PDWP I 5 A_Scream
+	PDWP J 5 A_NoBlocking
+	PDWP KLM 5
+	PDWP N -1
+	Stop
+  XDeath:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+  XDeath.Massacre:
+	PDWP O 5
+	PDWP P 5 A_XScream
+	PDWP Q 5 A_NoBlocking
+	PDWP RSTUV 5
+	PDWP W -1
+	Stop
+  XDeath.Resurrector:
+	PDWP O 5
+	PDWP P 5 A_XScream
+	TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+	TNT1 A 0 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+	PDWP Q 5 A_NoBlocking
+	PDWP RSTUV 5
+	PDWP W -1
+	Stop
+  Raise:
+    PDWP NMLKJIH 5
+    goto See
+  }
+}

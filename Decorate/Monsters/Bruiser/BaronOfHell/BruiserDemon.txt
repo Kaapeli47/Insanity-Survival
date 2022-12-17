@@ -1,0 +1,237 @@
+/// Bruiser Demon
+
+Actor IDMBruiserDemon
+{
+  Health 2500
+  Radius 24
+  Height 64
+  Mass 3000
+  Speed 8
+  PainChance 10
+  Monster
+  Species "Bruiser"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  +BOSS
+  +FLOORCLIP
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  MissileType IDMBruiserBall
+  SeeSound "superbaron/scream"
+  PainSound "superbaron/pain"
+  DeathSound "superbaron/death"
+  ActiveSound "superbaron/act"
+  MeleeSound "baron/melee"
+  Obituary "%o was slaughtered by a Bruiserdemon."
+  HitObituary "%o was cremated by a Bruiserdemon."
+  MeleeDamage 20
+  Scale 1.25
+  DamageFactor "CybruiserBullet", 0.0
+  DamageFactor "Rocket", 0.75
+  DamageFactor "Grenade", 0.75
+  DamageFactor "Fire", 0.75
+  DamageFactor "GreenFire", 0.75
+  DamageFactor "PlayerRocket", 0.75
+  DamageFactor "PlayerGrenade", 0.75
+  Tag "Bruiser Demon"
+  DropItem "IDMHealthBonusPickup", 128
+  DropItem "IDMArmorBonusPickup", 128
+  DropItem "IDMHealthBonusPickup", 128
+  DropItem "IDMArmorBonusPickup", 128
+  DropItem "Clip", 64, 20
+  DropItem "Clip", 64, 20
+  DropItem "ClipBox", 32, 50
+  DropItem "Shell", 64, 4
+  DropItem "Shell", 64, 20
+  DropItem "ShellBox", 32, 10
+  DropItem "RocketAmmo", 64, 1
+  DropItem "RocketAmmo", 64, 1
+  DropItem "RocketBox", 32, 5
+  DropItem "Cell", 64, 20
+  DropItem "Cell", 64, 20
+  DropItem "Cellpack", 16, 100
+  DropItem "IDMMana", 16
+  DropItem "IDMMana", 16
+  DropItem "IDMMaceAmmo", 16
+  DropItem "IDMMaceAmmo", 16
+  DropItem "IDMCatAmmo", 16
+  DropItem "IDMCatAmmo", 16
+  DropItem "IDMGas", 16
+  DropItem "IDMGas", 16
+  States
+  {
+  Spawn:
+    BRUS AB 10 Bright A_Look 
+    Loop
+  See:
+    BRUS AABBCCDD 3 Bright A_Chase
+    Loop
+  Melee:
+    BRUS E 6 Bright A_FaceTarget
+    BRUS F 6 Bright A_FaceTarget
+    BRUS G 6 Bright A_ComboAttack
+    Goto See
+  Missile:
+    BRUS E 0 Bright A_Jump(144, 8)
+    BRUS EF 6 Bright A_FaceTarget
+    BRUS G 6 Bright A_MissileAttack
+    BRUS G 0 Bright A_Jump(96, 1)
+    Goto See
+    BRUS HI 6 Bright A_FaceTarget
+    BRUS J 6 Bright A_MissileAttack
+    Goto See
+    BRUS E 0 Bright A_Jump(96, 20)
+    BRUS E 6 Bright A_FaceTarget
+    BRUS F 4 Bright A_FaceTarget
+    BRUS F 2 Bright A_Custommissile("IDMBruiserBall2",56,0,-40,0)
+    BRUS G 1 Bright A_Custommissile("IDMBruiserBall2",56,0,-30,0)
+    BRUS G 1 Bright A_Custommissile("IDMBruiserBall2",56,0,-20,0)
+    BRUS G 1 Bright A_Custommissile("IDMBruiserBall2",56,0,-10,0)
+    BRUS G 1 Bright A_Custommissile("IDMBruiserBall2",56,0,0,0)
+    BRUS G 1 Bright A_Custommissile("IDMBruiserBall2",56,0,10,0)
+    BRUS G 1 Bright A_Custommissile("IDMBruiserBall2",56,0,20,0)
+    BRUS G 0 Bright A_Jump(96, 1)
+    Goto See
+    BRUS H 6 Bright A_FaceTarget
+    BRUS I 4 Bright A_FaceTarget
+    BRUS I 2 Bright A_Custommissile("IDMBruiserBall2",56,0,40,0)
+    BRUS J 1 Bright A_Custommissile("IDMBruiserBall2",56,0,30,0)
+    BRUS J 1 Bright A_Custommissile("IDMBruiserBall2",56,0,20,0)
+    BRUS J 1 Bright A_Custommissile("IDMBruiserBall2",56,0,10,0)
+    BRUS J 1 Bright A_Custommissile("IDMBruiserBall2",56,0,0,0)
+    BRUS J 1 Bright A_Custommissile("IDMBruiserBall2",56,0,-10,0)
+    BRUS J 1 Bright A_Custommissile("IDMBruiserBall2",56,0,-20,0)
+    Goto See
+    BRUS KL 6 Bright A_FaceTarget
+    BRUS M 2 Bright A_Custommissile("IDMBruiserFireSpawner",16,0,-15,0)
+    BRUS M 2 Bright A_Custommissile("IDMBruiserFireSpawner",16,0,0,0)
+    BRUS M 2 Bright A_Custommissile("IDMBruiserFireSpawner",16,0,15,0)
+    Goto See
+  Pain:
+    BRUS N 5 Bright A_Pain
+     Goto See
+  Death:
+  Death.Massacre:
+    BRUD A 6 Bright A_Scream
+    BRUD BCD 4 Bright 
+    BRUD EFG 4 Bright
+    BRUD H 4 Bright A_NoBlocking
+    BRUD IJKLMNOP 4 Bright
+    BRUD QRSTU 4 Bright
+	BRUD V 4 Bright A_BossDeath
+    BRUD W -1
+    Stop
+  }
+}
+
+Actor IDMBruiserBall
+{
+  Radius 16
+  Height 16
+  Speed 18
+  Damage 16
+  DamageType "Fire"
+  Projectile
+  +Randomize
+  RenderStyle "ADD"
+  Alpha 0.9
+  SeeSound "imp/attack"
+  DeathSound "imp/shotx"
+  Decal Scorch
+  States
+  {
+  Spawn: 
+    BRBA AABB 2 Bright A_SpawnItemEx("IDMBruiserBallTrail", 0, 0, 0, 0, 0, 0, 0, 128)
+    Loop
+  Death:
+    BRBA KLMNOPQRSTUVWX 3 Bright
+    Stop
+  }
+}
+
+Actor IDMBruiserBall2
+{
+  Radius 8
+  Height 8
+  Speed 10
+  Damage 8
+  DamageType "Fire"
+  Projectile
+  +Randomize
+  RenderStyle Add
+  Alpha 0.9
+  SeeSound "imp/attack"
+  DeathSound "imp/shotx"
+  Decal BaronScorch
+  States
+  {
+  Spawn: 
+    BRB2 AB 6 Bright 
+    Loop
+  Death:
+    BRB2 CDEFGHI 3 Bright
+    Stop
+  }
+}
+
+Actor IDMBruiserFireSpawner
+{
+  Radius 8
+  Height 8
+  Speed 12
+  Damage 0
+  +Ripper
+  +FloorHugger
+  +BloodlessImpact
+  Projectile
+  States
+  {
+  Spawn: 
+    TNT1 A 3
+    TNT1 A 3 A_CustomMissile("IDMBruiserFire",0,0,0,CMF_TRACKOWNER)
+    Loop
+  Death:
+    TNT1 A 6
+    Stop
+  }
+}
+
+Actor IDMBruiserBallTrail
+{
+  Radius 1
+  Height 1
+  Speed 0
+  Projectile
+  RenderStyle Add
+  Alpha 0.70
+  +NoClip
+  States
+  {
+  Spawn:
+    BRBA CDEFGHIJ 4 Bright
+    Stop       
+  }
+}
+
+Actor IDMBruiserFire
+{
+  Radius 1
+  Height 1
+  Speed 0
+  Damage 3
+  DamageType "Fire"
+  Projectile
+  RenderStyle Add
+  Alpha 0.9
+  +NoClip
+  +FloorHugger
+  SeeSound "weapons/rocklx"
+  States
+  {
+  Spawn:
+    XXBF A 3 Bright
+    XXBF B 3 Bright A_Explode(32,128,0)
+    XXBF CDEFGHIJKLMNOPQRST 3 Bright
+    Stop       
+   }
+}

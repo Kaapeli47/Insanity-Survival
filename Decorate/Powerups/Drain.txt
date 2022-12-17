@@ -1,0 +1,62 @@
+ACTOR DrainSphere : CustomInventory 10083
+{
+	+FLOAT
+	+FLOATBOB
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	+COUNTITEM
+	-INVENTORY.INVBAR
+	Inventory.PickupMessage "Drain!"
+	Inventory.PickupSound "misc/p_pkup"
+	Inventory.PickupAnnouncerEntry "drain"
+	Inventory.RespawnTics 4200
+	Inventory.MaxAmount 0
+	Tag "Drain Sphere"
+    //$Category Powerups
+	States
+	{
+	Spawn:
+      DRAN ABCD 6 Bright
+      Loop
+	Pickup:
+	  TNT1 A 0 A_JumpIfInventory("PowerRageInvulnerable",1,"NoProt")
+	  TNT1 A 0 A_GiveInventory("PickupProtection")
+    NoProt:
+	  TNT1 A 0 A_Print("\n\n\n\n\n\nDrain!\n\n\n\n33% damage resistance!\nYour damage on the enemy heals you!")
+	  TNT1 A 0 A_GiveInventory("DrainSphereDrain")
+	  TNT1 A 0 A_GiveInventory("DrainSphereProtection")
+	  Stop
+	}
+}
+
+ACTOR PowerIDMDrain : PowerDrain
+{
+	Inventory.Icon "DRANSP1"
+}
+
+ACTOR PowerDrainProtection : PowerProtection
+{
+	DamageFactor "Normal", 0.66667
+}
+
+ACTOR DrainSphereProtection : PowerupGiver
+{
+	Powerup.Duration -30
+	Powerup.Type "DrainProtection"
+	Inventory.MaxAmount 0
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}
+
+ACTOR DrainSphereDrain : PowerupGiver
+{
+	Powerup.Duration -30
+	Powerup.Type "IDMDrain"
+	Powerup.Strength 1.0
+	Powerup.ColorMap 0.38,0.72,1.0
+	Inventory.MaxAmount 0
+	+INVENTORY.AUTOACTIVATE
+	+INVENTORY.ALWAYSPICKUP
+	-INVENTORY.INVBAR
+}

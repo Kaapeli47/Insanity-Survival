@@ -1,0 +1,115 @@
+/// Centaur
+
+ACTOR IDMCentaur : Centaur replaces Centaur
+{
+  Health 200
+  GibHealth 100
+  PainChance 108
+  Speed 10
+  Radius 30
+  Height 56
+  Mass 800
+  Monster
+  Meleerange 64
+  Scale 0.95
+  Species "Demon"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  +FLOORCLIP
+  -TELESTOMP
+  +SHIELDREFLECT
+  SeeSound "CentaurSight"
+  AttackSound "CentaurAttack"
+  PainSound "CentaurPain"
+  DeathSound "CentaurDeath"
+  ActiveSound "CentaurActive"
+  HowlSound "PuppyBeat"
+  Obituary "$OB_CENTAUR"
+  Tag "Centaur"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 48, 20
+  DropItem "Shell", 48, 4
+  DropItem "RocketAmmo", 48, 1
+  DropItem "Cell", 24, 20
+  DropItem "IDMMana", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMGas", 4
+  States
+  {
+  Spawn:
+    CENT AB 10 A_Look
+    Loop
+  See:
+    CENT AABBCCDD 2 Fast A_Chase
+    Loop
+  Pain:
+    CENT G 6 Fast A_Pain
+    CENT G 6 Fast A_SetInvulnerable
+    CENT EE 10 Fast A_CentaurDefend
+    CENT E 1 Fast A_UnsetInvulnerable
+    Goto See
+  Melee:
+    CENT H 5 Fast A_FaceTarget
+    CENT I 4 Fast A_FaceTarget
+    CENT J 7 Fast A_CustomMeleeAttack(random[CentaurAttack](1,6)* 10)
+    Goto See
+  Death:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+    CENT K 4
+    CENT L 4 A_Scream
+    CENT MN 4
+    CENT O 4 A_NoBlocking
+    CENT PQ 4
+    CENT R 4 A_QueueCorpse
+    CENT S 4
+    CENT T -1
+    Stop
+  XDeath:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+  XDeath.Massacre:
+    CTXD A 4
+    CTXD B 4 A_NoBlocking
+    CTXD C 0 A_SpawnItemEx("CentaurSword", 0, 0, 45, 1 + random[CentaurDrop](-128,127)*0.03125,
+                           1 + random[CentaurDrop](-128,127)*0.03125, 8 + random[CentaurDrop](0,255)*0.015625, 270)
+    CTXD C 4 A_SpawnItemEx("CentaurShield", 0, 0, 45, 1 + random[CentaurDrop](-128,127)*0.03125,
+                           1 + random[CentaurDrop](-128,127)*0.03125, 8 + random[CentaurDrop](0,255)*0.015625, 90)
+    CTXD D 3 A_XScream
+    CTXD E 4 A_QueueCorpse
+    CTXD F 3
+    CTXD G 4
+    CTXD H 3
+    CTXD I 4
+    CTXD J 3
+    CTXD K -1
+	Stop
+  XDeath.Resurrector:
+    CTXD A 4
+    CTXD B 4 A_NoBlocking
+    CTXD C 0 A_SpawnItemEx("CentaurSword", 0, 0, 45, 1 + random[CentaurDrop](-128,127)*0.03125,
+                           1 + random[CentaurDrop](-128,127)*0.03125, 8 + random[CentaurDrop](0,255)*0.015625, 270)
+    CTXD C 4 A_SpawnItemEx("CentaurShield", 0, 0, 45, 1 + random[CentaurDrop](-128,127)*0.03125,
+                           1 + random[CentaurDrop](-128,127)*0.03125, 8 + random[CentaurDrop](0,255)*0.015625, 90)
+    CTXD D 3 A_XScream
+	TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+	TNT1 A 0 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+    CTXD E 4 A_QueueCorpse
+    CTXD F 3
+    CTXD G 4
+    CTXD H 3
+    CTXD I 4
+    CTXD J 3
+    CTXD K -1
+	Stop
+  Raise:
+	TNT1 A 0
+	TNT1 A 0 A_RemoveChildren
+    CENT SRQPONMLK 4
+	Goto See
+  Ice:
+    CENT U 5 A_FreezeDeath
+    CENT U 1 A_FreezeDeathChunks
+    Wait
+  }
+}

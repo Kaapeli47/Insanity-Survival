@@ -1,0 +1,19 @@
+/// Arachnotron Spawn
+
+ACTOR ArachnotronRandomSpawner : RandomSpawner replaces Arachnotron
+{
+	DropItem "IDMArachnotron"
+	DropItem "IDMArachnotronMK2"
+	DropItem "IDMAradicator"
+	DropItem "IDMNailArachnotron"
+	DropItem "IDMPlasmarachnotron"
+	DropItem "IDMTwoHeadedRider"
+	DropItem "IDMArachnoBaron"
+	DropItem "IDMZombieNailgunTank"
+	DropItem "IDMZombieMissileTank"
+	DropItem "IDMZombiePlasmaTank"
+	DropItem "IDMCentroid"
+	DropItem "IDMDarkCentroid"
+	DropItem "IDMShalrath"
+	DropItem "IDMArachnoShredder"
+}

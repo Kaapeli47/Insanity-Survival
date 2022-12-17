@@ -1,0 +1,176 @@
+/// Undead Warrior
+
+ACTOR IDMKnight : Knight
+{
+  Health 300
+  Radius 20
+  Height 56
+  Mass 1000
+  Speed 10
+  PainChance 100
+  Monster
+  Species "Revenant"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  +FLOORCLIP
+  SeeSound "hknight/sight"
+  AttackSound "hknight/attack"
+  PainSound "hknight/pain"
+  DeathSound "hknight/death"
+  ActiveSound "hknight/active"
+  Obituary "$OB_BONEKNIGHT"
+  HitObituary "$OB_BONEKNIGHTHIT"
+  Tag "Undead Warrior"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 64, 20
+  DropItem "ClipBox", 8, 50
+  DropItem "Shell", 64, 4
+  DropItem "ShellBox", 8, 10
+  DropItem "RocketAmmo", 64, 1
+  DropItem "RocketBox", 8, 5
+  DropItem "Cell", 32, 20
+  DropItem "Cellpack", 4, 100
+  DropItem "IDMMana", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMGas", 4
+  States
+  {
+  Spawn:
+    KNIG AB 10 A_Look
+    Loop
+  See:
+    KNIG AABBCCDD 2 A_Chase
+    Loop
+  Melee:
+  Missile:
+    KNIG E 8 A_FaceTarget
+    KNIG F 6 A_FaceTarget
+	TNT1 A 0 A_Jump(64,"TripleAxe")
+	TNT1 A 0 A_Jump(16,"RedAxe")
+    KNIG G 6 A_CustomComboAttack("IDMKnightAxe",32,6*random(1,10),"hknight/melee","Melee",true)
+	TNT1 A 0 A_Jump(128,"See")
+    KNIG E 8 A_FaceTarget
+    KNIG F 6 A_FaceTarget
+	TNT1 A 0 A_Jump(16,"RedAxe2")
+    KNIG G 6 A_CustomComboAttack("IDMKnightAxe",32,6*random(1,10),"hknight/melee","Melee",true)
+    Goto See
+  RedAxe:
+    KNIG G 6 A_CustomComboAttack("IDMRedAxe",32,6*random(1,10),"hknight/melee","Melee",true)
+	Goto Missile+4
+  RedAxe2:
+    KNIG G 6 A_CustomComboAttack("IDMRedAxe",32,6*random(1,10),"hknight/melee","Melee",true)
+	Goto See
+  TripleAxe:
+	TNT1 A 0 A_Jump(16,"RedTripleAxe")
+	TNT1 A 0 A_CustomMissile("IDMKnightAxe",32,0,-6)
+	TNT1 A 0 A_CustomMissile("IDMKnightAxe",32,0,6)
+    KNIG G 6 A_CustomComboAttack("IDMKnightAxe",32,6*random(1,10),"hknight/melee","Melee",true)
+	Goto See
+  RedTripleAxe:
+	TNT1 A 0 A_CustomMissile("IDMRedAxe",32,0,-6)
+	TNT1 A 0 A_CustomMissile("IDMRedAxe",32,0,6)
+    KNIG G 6 A_CustomComboAttack("IDMRedAxe",32,6*random(1,10),"hknight/melee","Melee",true)
+	Goto See
+  Pain:
+    KNIG H 3
+    KNIG H 3 A_Pain
+    Goto See
+  Death:
+    KNIG I 6
+    KNIG J 6 A_Scream
+    KNIG K 6
+    KNIG L 6 A_NoBlocking
+    KNIG MN 6
+    KNIG O -1
+    Stop
+  Raise:
+    KNIG NMLKJI 5
+	Goto See
+  }
+}
+
+ACTOR IDMKnightAxe : KnightAxe
+{
+  Radius 10
+  Height 8
+  Speed 20
+  FastSpeed 25
+  Damage 10
+  Projectile
+  -NOBLOCKMAP
+  -ACTIVATEIMPACT
+  -ACTIVATEPCROSS
+  +WINDTHRUST
+  +THRUGHOST
+  DeathSound "hknight/hit"
+  States
+  {
+  Spawn:
+    SPAX A 3 Bright A_PlaySound("hknight/axewhoosh")
+    SPAX BC 3 Bright
+    Loop
+  Death:
+    SPAX DEF 6 Bright
+    Stop
+  }
+}
+
+ACTOR IDMRedAxe : RedAxe
+{
+  +NOBLOCKMAP
+  -WINDTHRUST
+  Damage 20
+  States
+  {
+  Spawn:
+    RAXE AB 5 Bright A_DripBlood
+    Loop
+  Death:
+    RAXE CDE 6 Bright
+    Stop
+  }
+}
+
+ACTOR IDMKnightGhost : IDMKnight
+{
+  Health 250
+  Mass 800
+  Species "Demon"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  +SHADOW
+  +GHOST
+  -MISSILEMORE
+  -MISSILEEVENMORE
+  RenderStyle Translucent
+  Alpha 0.4
+  Obituary "%o was axed by an ghost warrior."
+  HitObituary "%o was slain by an ghost warrior."
+  Tag "Ghost Warrior"
+  DropItem "IDMHealthBonusPickup", 32
+  DropItem "IDMArmorBonusPickup", 32
+  DropItem "Clip", 48, 20
+  DropItem "Shell", 48, 4
+  DropItem "RocketAmmo", 48, 1
+  DropItem "Cell", 24, 20
+  DropItem "IDMMana", 2
+  DropItem "IDMMaceAmmo", 2
+  DropItem "IDMCatAmmo", 2
+  DropItem "IDMGas", 2
+  States
+  {
+  Missile:
+    KNIG E 8 A_FaceTarget
+    KNIG F 6 A_FaceTarget
+	TNT1 A 0 A_Jump(16,"RedAxe")
+    KNIG G 6 A_CustomComboAttack("IDMKnightAxe",32,6*random(1,10),"hknight/melee","Melee",true)
+    Goto See
+  RedAxe:
+    KNIG G 6 A_CustomComboAttack("IDMRedAxe",32,6*random(1,10),"hknight/melee","Melee",true)
+	Goto See
+  }
+}

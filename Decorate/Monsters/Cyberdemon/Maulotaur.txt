@@ -1,0 +1,195 @@
+/// Maulotaur
+
+ACTOR IDMMinotaur : Minotaur
+{
+  Health 5000
+  Radius 40
+  Height 100
+  Mass 10000
+  Speed 16
+  Damage 7
+  PainChance 5
+  MeleeDamage 40
+  MeleeRange 64
+  Monster
+  Species "Cyberdemon"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  -DROPOFF
+  +FLOORCLIP
+  +BOSS
+  +DONTMORPH
+  +NOTARGET
+  +NOICEDEATH
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  +QUICKTORETALIATE
+  +BOSSDEATH
+  -NORADIUSDMG
+  SeeSound "minotaur/sight"
+  AttackSound "minotaur/attack1"
+  PainSound "minotaur/pain"
+  DeathSound "minotaur/death"
+  ActiveSound "minotaur/active"
+  DamageFactor "CyberDemonBullet", 0.0
+  DamageFactor "Rocket", 0.75
+  DamageFactor "Grenade", 0.75
+  DamageFactor "Fire", 0.75
+  DamageFactor "GreenFire", 0.75
+  DamageFactor "PlayerRocket", 0.75
+  DamageFactor "PlayerGrenade", 0.75
+  Tag "Maulotaur"
+  DropItem "IDMHealthBonusPickup", 256
+  DropItem "IDMArmorBonusPickup", 256
+  DropItem "Clip", 128, 20
+  DropItem "Clip", 128, 20
+  DropItem "ClipBox", 64, 50
+  DropItem "Shell", 128, 4
+  DropItem "Shell", 128, 4
+  DropItem "ShellBox", 64, 10
+  DropItem "RocketAmmo", 128, 1
+  DropItem "RocketAmmo", 128, 1
+  DropItem "RocketBox", 64, 5
+  DropItem "Cell", 128, 20
+  DropItem "Cell", 128, 20
+  DropItem "Cellpack", 64, 100
+  DropItem "IDMMana", 64
+  DropItem "IDMMana", 64
+  DropItem "IDMMaceAmmo", 64
+  DropItem "IDMMaceAmmo", 64
+  DropItem "IDMCatAmmo", 64
+  DropItem "IDMCatAmmo", 64
+  DropItem "IDMGas", 64
+  DropItem "IDMGas", 64
+  DropItem "QuadShotgun", 1
+  DropItem "HandCannon", 1
+  DropItem "IDMMinigun", 1
+  DropItem "Stinger", 1
+  DropItem "HellstormCannon", 1
+  DropItem "Devastator", 1
+  DropItem "BarrelGun", 1
+  DropItem "FreezeThrower", 1
+  DropItem "WidePlasmaGun", 1
+  Obituary "%o was hammered by a Maulotaur."
+  States
+  {
+  Spawn:
+    MNTR AB 10 A_MinotaurLook
+    Loop
+  Roam:
+    MNTR AABBCCDD 3 A_MinotaurRoam
+    Loop
+  See:
+    MNTR AABBCCDD 3 A_MinotaurChase
+    Loop
+  Melee:
+    MNTR V 10 A_FaceTarget
+    MNTR W 7 A_FaceTarget
+	TNT1 A 0 A_MinotaurAtk1
+    MNTR X 12 A_MeleeAttack
+    Goto See
+  Missile:
+    MNTR V 10 A_MinotaurDecide
+    MNTR Y 4 A_FaceTarget
+    MNTR Z 9 A_MinotaurAtk2
+    Goto See
+  Hammer:
+    MNTR V 10 A_FaceTarget
+    MNTR W 7 A_FaceTarget
+	TNT1 A 0 A_MeleeAttack
+	TNT1 A 0 A_CustomMissile("MinotaurFX2",32,0,8)
+	TNT1 A 0 A_CustomMissile("MinotaurFX2",32,0,-8)
+	MNTR X 12 A_MinotaurAtk3
+    Goto See
+  HammerLoop:
+    MNTR X 12
+    Goto Hammer
+  Charge:
+    MNTR U 2 A_MinotaurCharge
+    Loop
+  Pain:
+    MNTR E 15 A_Pain
+    Goto See
+  Death:
+    MNTR F 6 A_MinotaurDeath
+    MNTR G 5
+    MNTR H 6 A_Scream
+    MNTR I 5
+    MNTR J 6
+    MNTR K 5
+    MNTR L 6
+    MNTR M 5 A_NoBlocking
+    MNTR N 6
+    MNTR O 5
+    MNTR P 6
+    MNTR Q 5
+    MNTR R 6
+    MNTR S 5
+    MNTR T -1 A_BossDeath
+    Stop
+  }
+}
+
+ACTOR IDMMinotaurFX1 : MinotaurFX1 replaces MinotaurFX1
+{
+  Radius 10
+  Height 6
+  Speed 25
+  FastSpeed 30
+  Damage 6
+  DamageType Fire
+  Projectile
+  SeeSound "minotaur/attack2"
+  DeathSound "hknight/hit"
+  -ACTIVATEIMPACT
+  -ACTIVATEPCROSS
+  RenderStyle Add
+  States
+  {
+  Spawn:
+    FX12 AB 6 Bright
+    Loop
+  Death:
+    FX12 CDEFGH 5 Bright
+    Stop
+  }
+}
+ACTOR IDMMinotaurFX2 : MinotaurFX2 replaces MinotaurFX2
+{
+  Radius 5
+  Height 12
+  Speed 14
+  FastSpeed 20
+  Damage (1)
+  +RIPPER
+  +FLOORHUGGER
+  ExplosionDamage 4
+  DeathSound "minotaur/fx2hit"
+  States
+  {
+  Spawn:
+    FX13 A 2 Bright A_MntrFloorFire
+    Loop
+  Death:
+    FX13 I 3 Bright A_Explode
+    FX13 JKLM 3 Bright
+    Stop
+  }
+}
+
+ACTOR IDMMinotaurFX3 : MinotaurFX2 replaces MinotaurFX3
+{
+  Radius 8
+  Height 16
+  Speed 0
+  DeathSound "minotaur/fx3hit"
+  ExplosionDamage 4
+  States
+  {
+  Spawn:
+    FX13 DC 3 Bright
+    FX13 BCDE 4 Bright
+    FX13 FGH 3 Bright
+    Stop
+  }
+}

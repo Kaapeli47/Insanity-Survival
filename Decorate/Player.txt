@@ -1,0 +1,388 @@
+/// Player and playerclasses ///
+
+ACTOR IDMPlayer : DoomPlayer
+{
+  Speed 1
+  Health 100
+  GibHealth 75
+  Radius 16
+  Height 56
+  Mass 100
+  PainChance 255
+  DamageFactor "PlayerRocket", 0.125
+  DamageFactor "PlayerGrenade", 0.125
+  DamageFactor "Meme", 0.0
+  Player.MaxHealth 200
+  Player.MugshotMaxHealth 125
+  Player.FallingScreamSpeed 24.0,32.0
+  Player.ForwardMove 1,1
+  Player.SideMove 1,1
+  Player.GruntSpeed 20
+  Player.CrouchSprite "PLYC"
+  Player.Soundclass "Player"
+  Player.DamageScreenColor "Red", 1.0
+  Player.DamageScreenColor "Cyan", 1.0, "Plasma"
+  Player.DamageScreenColor "Green", 1.0, "HitPlasma"
+  Player.DamageScreenColor "Green", 1.0, "Pulse"
+  Player.DamageScreenColor "Green", 1.0, "GreenFire"
+  Player.DamageScreenColor "Green", 1.0, "BFG"
+  Player.DamageScreenColor "Green", 1.0, "BFGSpray"
+  Player.DamageScreenColor "Green", 1.0, "BFG10k"
+  Player.DamageScreenColor "Blue", 1.0, "Ice"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "IDMPistol"
+  Player.StartItem "IDMFist"
+  Player.StartItem "PlayerStartingArmor"
+  Player.ColorRange 112, 127
+  Player.WeaponSlot 1, IDMFist, Knife, StartingChainsaw, Blade
+  Player.WeaponSlot 2, IDMPistol, IDMBlaster
+  Player.WeaponSlot 3, Boomstick, BuckShot, Yellowboy, IDMShotgun, RiotShotgun, Screwgun, IDMSuperShotgun, QuadShotgun, HandCannon
+  Player.WeaponSlot 4, IDMChaingun, Machinegun, Nailgun, SuperChaingun, HeavyMachinegun, SuperNailgun, IDMMinigun, Stinger
+  Player.WeaponSlot 5, GrenadeRifle, IDMRocketLauncher, IDMGrenadeLauncher, Minibomber, BarrageLauncher, Devastator, HellstormCannon, BarrelGun
+  Player.WeaponSlot 6, IDMPlasmagun, IDMRailgun, PlasMachineGun, PulseRifle, PlasmaBeam, IonBlaster, FreezeThrower, WidePlasmaGun
+  Player.WeaponSlot 7, IDMBFG9000, IDMBFG10K, Devastator1000, Unmaker, IDMFlamethrower, IDMPyroCannon, Meowitzer, IDMMace, IDMWraithverge, IDMBloodscourge
+  -RANDOMIZE
+  -ISMONSTER
+  States
+  {
+  Spawn:
+	PLAY A -1
+    Loop
+  See:
+    PLAY ABCD 5
+    Loop
+  Missile:
+    PLAY E 8
+    Goto Spawn
+  Melee:
+    PLAY F 5 BRIGHT
+    Goto Missile
+  Pain:
+	TNT1 A 0
+	TNT1 A 0 A_JumpIfArmorType("BulletArmorProtection","ArmorPain")
+	TNT1 A 0 A_JumpIfArmorType("FragArmorProtection","ArmorPain")
+	TNT1 A 0 A_JumpIfArmorType("TechArmorProtection","ArmorPain")
+	TNT1 A 0 A_JumpIfArmorType("IDMYellowArmor","ArmorPain")
+	TNT1 A 0 A_JumpIfArmorType("IDMBlueArmor","ArmorPain")
+	TNT1 A 0 A_JumpIfArmorType("IDMRedArmor","ArmorPain")
+	TNT1 A 0 A_JumpIfArmorType("PurpleArmor","ArmorPain")
+	TNT1 A 0 A_JumpIfArmorType("SuperArmor","ArmorPain")
+    PLAY G 8 BRIGHT A_Pain
+    Goto Spawn
+  ArmorPain:
+	TNT1 A 0
+	TNT1 A 0 A_Playsound("misc/armhit",CHAN_ITEM)
+	Goto Pain+9
+  Death.Bullet:
+  Death.Nail:
+  Death.Punch:
+  Death.Fire:
+  Death.Plasma:
+  Death.Pulse:
+	TNT1 A 0 A_Jump(36,"XDeath")
+  Death:
+	TNT1 A 0 A_Jump(24,"ExplDeath")
+  Death.Exit:
+	TNT1 A 0 ACS_NamedExecuteAlways("DisplayRandomTip")
+	TNT1 A 0 A_Jump(64,"Death.Fast","Death.Faster","Death.Slow","Death.Slower")
+    PLAY H 6 Bright A_PlayerScream
+    PLAY I 6 Bright
+    PLAY J 6 Bright A_NoBlocking
+    PLAY K 6 Bright
+	PLAY LM 6 Bright
+    PLAY N -1
+    Stop
+  Death.Fast:
+    PLAY H 5 Bright A_PlayerScream
+    PLAY I 5 Bright
+    PLAY J 5 Bright A_NoBlocking
+    PLAY K 5 Bright
+	PLAY LM 5 Bright
+    PLAY N -1
+    Stop
+  Death.Faster:
+    PLAY H 4 Bright A_PlayerScream
+    PLAY I 4 Bright
+    PLAY J 4 Bright A_NoBlocking
+    PLAY K 4 Bright
+	PLAY LM 4
+    PLAY N -1
+    Stop
+  Death.Slow:
+    PLAY H 7 Bright A_PlayerScream
+    PLAY I 7 Bright
+    PLAY J 7 Bright A_NoBlocking
+    PLAY K 7 Bright
+	PLAY LM 7 Bright
+    PLAY N -1
+    Stop
+  Death.Slower:
+    PLAY H 8 Bright A_PlayerScream
+    PLAY I 8 Bright
+    PLAY J 8 Bright A_NoBlocking
+    PLAY K 8 Bright
+	PLAY LM 8 Bright
+    PLAY N -1
+    Stop
+  XDeath:
+	TNT1 A 0 A_Jump(24,"ExplDeath")
+  XDeath.Exit:
+  XDeath.Suicide:
+  XDeath.InstantDeath:
+	TNT1 A 0 ACS_NamedExecuteAlways("DisplayRandomTip")
+    PLAY O 5 Bright
+    PLAY P 5 Bright A_XScream
+    PLAY Q 5 Bright A_NoBlocking
+    PLAY RSTUV 5 Bright
+    PLAY W -1
+    Stop
+  ExplDeath:
+	PLAY O 5 Bright
+	TNT1 A 0 A_XScream
+	TNT1 A 0 A_Jump(128,"MiniNail","MiniRocket","MiniGrenade","MiniPlasma","MiniPulse","MiniIon","MiniFreeze","MiniCat","MiniBarrel","MiniPyro","MiniPingas","MiniBallOfSteel","MiniBridgeOfSteel","MiniSpam","MiniArnold","MiniHand","MiniBooch","MiniCarrey","MiniGraf","MiniKekW","MiniHL","MiniSparta","MiniPootis","MiniGaben","MiniASDF","MiniCena","MiniAinsley","MiniAlexJones","MiniSbaysce","MiniSchutstaffel","MiniNokia","MiniBimsness")
+    PLAY P 3 Bright A_SpawnItemEx("IDMExplosion",random(-32,32),random(-32,32),random(0,20),0,0,4,0,SXF_ABSOLUTEPOSITION)
+    PLAY Q 3 Bright A_NoBlocking
+    PLAY R 3 Bright A_SpawnItemEx("IDMExplosion",random(-32,32),random(-32,32),random(0,20),0,0,4,SXF_ABSOLUTEPOSITION)
+	PLAY ST 3 Bright A_SpawnItemEx("IDMExplosion",random(-32,32),random(-32,32),random(0,20),0,0,4,SXF_ABSOLUTEPOSITION)
+	PLAY UVW 4 Bright
+    PLAY W -1
+    Stop
+  MiniNail:
+    TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_CustomMissile("BigNail",24,random(0,20),random(0,359),CMF_AIMDIRECTION)
+	Goto MiniDone
+  MiniRocket:
+    TNT1 AAAAAAAA 0 A_CustomMissile("IDMRocket",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	TNT1 AA 0 A_CustomMissile("IDMRocket2",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniGrenade:
+    TNT1 AAAAAAAA 0 A_CustomMissile("IDMGrenade",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	TNT1 AA 0 A_CustomMissile("MushroomGrenade",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniPlasma:
+    TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_CustomMissile("IDMPlasmaBall",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniPulse:
+    TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_CustomMissile("PulseBall",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniIon:
+    TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_CustomMissile("IonBall",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniFreeze:
+    TNT1 AAAAAAAAAAAAAAAAAAAA 0 A_CustomMissile("FreezeBall",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniCat:
+    TNT1 AAAAAAAAAA 0 A_CustomMissile("MeowitzerCat",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	TNT1 AA 0 A_CustomMissile("ChonkyCat",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniBarrel:
+    TNT1 AAAAA 0 A_CustomMissile("BarrelMissile",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniPyro:
+    TNT1 A 0 A_CustomMissile("SlowBigPyroShot",24,random(0,20),0,CMF_AIMDIRECTION,90)
+	Goto MiniDone
+  MiniPingas:
+	TNT1 A 0 A_CustomMissile("PingasGrenade",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniBallOfSteel:
+	TNT1 AAAAAAAA 0 A_CustomMissile("BallofSteel",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniBridgeOfSteel:
+	TNT1 AAAAAAAA 0 A_CustomMissile("BridgeofSteel",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniSpam:
+	TNT1 AAAAA 0 A_CustomMissile("SpamBFGBall",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniArnold:
+	TNT1 AAAAAA 0 A_CustomMissile("ArnoldHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniHand:
+	TNT1 AAAAA 0 A_CustomMissile("Hand2",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniBooch:
+	TNT1 A 0 A_CustomMissile("BoochHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniCarrey:
+	TNT1 A 0 A_CustomMissile("CarreyHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniKekW:
+	TNT1 AAAAA 0 A_CustomMissile("KekWHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniHL:
+	TNT1 AAAAA 0 A_CustomMissile("HLHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniSparta:
+	TNT1 AA 0 A_CustomMissile("SpartaHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniGraf:
+	TNT1 A 0 A_CustomMissile("BigGrafHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	TNT1 AAAAA 0 A_CustomMissile("GrafHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniPootis:
+	TNT1 AA 0 A_CustomMissile("PootisGrenade",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniGaben:
+	TNT1 A 0 A_CustomMissile("GabenHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone/*
+  MiniCacoward:
+	TNT1 AAAAA 0 A_CustomMissile("IDMCacoward",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone*/
+  MiniASDF:
+	TNT1 AA 0 A_CustomMissile("ASDFHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniCena:
+	TNT1 AAAAAAAAAA 0 A_CustomMissile("CenaHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,15))
+	Goto MiniDone
+  MiniAinsley:
+	TNT1 AAAAA 0 A_CustomMissile("AinsleyHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniAlexJones:
+	TNT1 AAAAAA 0 A_CustomMissile("AlexJonesHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniSbaysce:
+	TNT1 AAAAA 0 A_CustomMissile("SbaysceHead",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniNokia:
+	TNT1 AAAAAA 0 A_CustomMissile("NokiaMissile",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniBimsness:
+	TNT1 AAAAAA 0 A_CustomMissile("BimsnessMissile",24,random(0,20),random(0,359),CMF_AIMDIRECTION,random(0,30))
+	Goto MiniDone
+  MiniDone:
+    PLAY P 3 Bright
+    PLAY Q 3 Bright A_NoBlocking
+	PLAY RST 3 Bright
+	PLAY UVW 4 Bright
+    PLAY W -1
+    Stop
+  Ice:
+    "####" "#" 5 A_GenericFreezeDeath
+    "####" "#" 1 A_FreezeDeathChunks
+    Wait
+  }
+}
+
+ACTOR KnifePlayer : IDMPlayer
+{
+  Player.Portrait "SWKNIF"
+  Player.DisplayName "Knife"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "Knife"
+  Player.StartItem "IDMPistol"
+  Player.StartItem "IDMFist"
+  Player.StartItem "Clip", 50
+  Player.StartItem "PlayerStartingArmor"
+}
+
+ACTOR BlasterPlayer : IDMPlayer
+{
+  Player.Portrait "SWBLST"
+  Player.DisplayName "Blaster"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "IDMBlaster"
+  Player.StartItem "IDMPistol"
+  Player.StartItem "IDMFist"
+  Player.StartItem "Cell", 100
+  Player.StartItem "Clip", 40
+  Player.StartItem "PlayerStartingArmor"
+}
+
+ACTOR BoomstickPlayer : IDMPlayer
+{
+  Player.Portrait "SWBOOM"
+  Player.DisplayName "Boomstick"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "Boomstick"
+  Player.StartItem "IDMFist"
+  Player.StartItem "Shell", 16
+  Player.StartItem "Clip", 40
+  Player.StartItem "PlayerStartingArmor"
+}
+
+ACTOR BuckShotPlayer : IDMPlayer
+{
+  Player.Portrait "SWBUCK"
+  Player.DisplayName "Buckshot"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "Buckshot"
+  Player.StartItem "IDMPistol"
+  Player.StartItem "IDMFist"
+  Player.StartItem "Shell", 16
+  Player.StartItem "Clip", 40
+  Player.StartItem "PlayerStartingArmor"
+}
+
+ACTOR MachinegunPlayer : IDMPlayer
+{
+  Player.Portrait "SWMGUN"
+  Player.DisplayName "Machinegun"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "Machinegun"
+  Player.StartItem "IDMPistol"
+  Player.StartItem "IDMFist"
+  Player.StartItem "Clip", 100
+  Player.StartItem "PlayerStartingArmor"
+}
+
+ACTOR YellowboyPlayer : IDMPlayer
+{
+  Player.Portrait "SWYBOY"
+  Player.DisplayName "Yellowboy"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "Yellowboy"
+  Player.StartItem "IDMPistol"
+  Player.StartItem "IDMFist"
+  Player.StartItem "Shell", 8
+  Player.StartItem "Clip", 40
+  Player.StartItem "PlayerStartingArmor"
+}
+
+ACTOR ChaingunPlayer : IDMPlayer
+{
+  Player.Portrait "SWCGUN"
+  Player.DisplayName "Chaingun"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "IDMChaingun"
+  Player.StartItem "IDMPistol"
+  Player.StartItem "IDMFist"
+  Player.StartItem "Clip", 100
+  Player.StartItem "PlayerStartingArmor"
+}
+
+ACTOR NailgunPlayer : IDMPlayer
+{
+  Player.Portrait "SWNAIL"
+  Player.DisplayName "Nailgun"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "Nailgun"
+  Player.StartItem "IDMPistol"
+  Player.StartItem "IDMFist"
+  Player.StartItem "Clip", 100
+  Player.StartItem "PlayerStartingArmor"
+}
+
+ACTOR ChainsawPlayer : IDMPlayer
+{
+  Player.DisplayName "Chainsaw"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "StartingChainsaw"
+  Player.StartItem "IDMFist"
+  Player.StartItem "PlayerStartingArmor"
+}
+
+ACTOR BladePlayer : IDMPlayer
+{
+  Player.DisplayName "Vorpal Blade"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "Blade"
+  Player.StartItem "PlayerStartingArmor"
+}
+
+ACTOR GrenadeRiflePlayer : IDMPlayer
+{
+  Player.DisplayName "Grenade Rifle"
+  Player.StartItem "IDMArchHealerCheck",1
+  Player.StartItem "GrenadeRifle"
+  Player.StartItem "IDMFist"
+  Player.StartItem "RocketAmmo", 15
+  Player.StartItem "PlayerStartingArmor"
+}

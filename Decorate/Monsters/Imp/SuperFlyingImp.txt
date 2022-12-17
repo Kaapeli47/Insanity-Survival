@@ -1,0 +1,23 @@
+/// Super Flying Imp
+
+ACTOR IDMSuperFlyingImp : IDMFlyingImp
+{
+  Tag "Super Flying Imp"
+  OBITUARY "%o was burned by a super flying imp."
+  HITOBITUARY "%o was slashed by a super flying imp."
+  MissileType IDMBaronBall
+  states
+  {
+  Melee:
+  Missile:
+    FAEM E 4 A_FaceTarget
+    FAEM F 6 A_CustomComboAttack("IDMBaronBall", 32, 6*random(1,8), "baron/melee")
+	TNT1 A 0 A_Jump(128,"See")
+    FAEM E 4 A_FaceTarget
+    FAEM F 6 A_CustomComboAttack("IDMBaronBall", 32, 6*random(1,8), "baron/melee")
+	TNT1 A 0 A_Jump(128,"See")
+    FAEM E 4 A_FaceTarget
+    FAEM F 6 A_CustomComboAttack("IDMBaronBall", 32, 6*random(1,8), "baron/melee")
+    Goto See
+  }
+}

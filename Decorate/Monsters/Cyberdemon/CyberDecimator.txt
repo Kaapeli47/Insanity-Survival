@@ -1,0 +1,162 @@
+ACTOR IDMCyberDecimator : IDMCyberdemon
+{
+	Tag "Cyber Decimator"
+	Obituary "%o was decimated by a cyber decimator."
+	States
+	{
+	Spawn:
+		CYDC AB 10 A_Look
+		Loop
+	See:
+		CYDC A 3 A_Hoof
+		CYDC ABB 3 A_Chase
+		CYDC C 3 A_Metal
+		CYDC CDD 3 A_Chase
+		Loop
+	Missile:
+		CYDC E 6 A_FaceTarget
+		TNT1 A 0 A_Jump(256,"RocketAtk","SeekerAtk","MiniAtk")
+	RocketAtk:
+		TNT1 A 0 A_Playsound("weapons/rlfire",CHAN_WEAPON,1,0,0.5)
+		CYDC F 12 Bright A_CustomMissile("MonsterRocket",48)
+		CYDC E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/rlfire",CHAN_WEAPON,1,0,0.5)
+		CYDC F 12 Bright A_CustomMissile("MonsterRocket",48)
+		TNT1 A 0 A_Playsound("weapons/riotrel",CHAN_AUTO,1,0,0.5)
+		CYDC GGGG 4 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotrdy",CHAN_AUTO,1,0,0.5)
+		CYDC GGG 4 A_FaceTarget
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 4, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 4, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 4, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 4, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		CYDC G 12 A_FaceTarget
+		Goto See
+	SeekerAtk:
+		TNT1 A 0 A_Playsound("weapons/heatseekerf",CHAN_WEAPON,1,0,0.5)
+		CYDC F 12 Bright A_CustomMissile("MonsterSeekerMissile",48)
+		CYDC E 12 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/heatseekerf",CHAN_WEAPON,1,0,0.5)
+		CYDC F 12 Bright A_CustomMissile("MonsterSeekerMissile",48)
+		TNT1 A 0 A_Playsound("weapons/riotrel",CHAN_7,1,0,0.5)
+		CYDC GGGG 4 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotrdy",CHAN_7,1,0,0.5)
+		CYDC GGG 4 A_FaceTarget
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 5, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 5, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 5, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 5, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		CYDC G 12 A_FaceTarget
+		Goto See
+	MiniAtk:
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		CYDC F 3 A_CustomMissile("MonsterMiniMissile",48)
+		CYDC E 3 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		CYDC F 3 A_CustomMissile("MonsterMiniMissile",48)
+		CYDC E 3 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		CYDC F 3 A_CustomMissile("MonsterMiniMissile",48)
+		CYDC E 3 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		CYDC F 3 A_CustomMissile("MonsterMiniMissile",48)
+		CYDC E 3 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		CYDC F 3 A_CustomMissile("MonsterMiniMissile",48)
+		CYDC E 3 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/minimf",CHAN_WEAPON,1,0,0.5)
+		CYDC F 3 A_CustomMissile("MonsterMiniMissile",48)
+		CYDC E 3 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotrel",CHAN_7,1,0,0.5)
+		CYDC GGGG 4 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotrdy",CHAN_7,1,0,0.5)
+		CYDC GGG 4 A_FaceTarget
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 5, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 5, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 5, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		TNT1 A 0 A_Playsound("weapons/riotshf",CHAN_WEAPON,1,0,0.5)
+		CYDC I 3 Bright A_CustomBulletAttack(22.5, 0, 5, random(1,5)*3, "CyberDemonBulletPuff", 0, CBAF_NORANDOM)
+		CYDC H 2 Bright A_FaceTarget
+		CYDC G 12 A_FaceTarget
+		Goto See
+	Pain:
+		CYDC J 15 A_Pain
+		Goto See
+	Death:
+		CYDC K 8 Bright
+		CYDC L 8 Bright A_Scream
+		CYDC M 8 Bright
+		TNT1 A 0 A_SpawnItemEx("IDMCyberDecimatorArm",40,0,64,3,0,5,random(90,135))
+		CYDC N 8 Bright A_SpawnItemEx("IDMCyberDecimatorHead",10,0,72,2,0,5,random(90,135))
+		CYDC O 8 Bright
+		CYDC P 8 Bright A_NoBlocking
+		CYDC QR 8 Bright
+		CYDC S 20 Bright
+		CYDC TU 9 Bright
+		CYDC V -1 A_BossDeath
+		Stop
+	}
+}
+
+ACTOR IDMCyberDecimatorHead
+{
+	+NOBLOCKMAP
+	+CLIENTSIDEONLY
+	Gravity 0.25
+	States
+	{
+	Spawn:
+	  CYDH ABCD 7 A_CheckFloor("Hit")
+	  Loop
+	Hit:
+	  CYDH E -1
+	  Stop
+	}
+}
+
+
+ACTOR IDMCyberDecimatorArm
+{
+	+NOBLOCKMAP
+	+CLIENTSIDEONLY
+	Gravity 0.25
+	States
+	{
+	Spawn:
+	  CYAR ABCD 7 A_CheckFloor("Hit")
+	  Loop
+	Hit:
+	  CYAR E -1
+	  Stop
+	}
+}
+
+ACTOR CyberDemonBulletPuff : IDMBulletPuff
+{
+	DamageType "CyberDemonBullet"
+}

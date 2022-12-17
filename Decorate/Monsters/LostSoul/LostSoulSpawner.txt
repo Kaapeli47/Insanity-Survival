@@ -1,0 +1,12 @@
+ACTOR LostSoulRandomSpawner : RandomSpawner replaces LostSoul
+{
+	DropItem "IDMLostSoul"
+	DropItem "IDMForgottenSoul"
+	DropItem "IDMPhantasm"
+	DropItem "IDMBetaSkull"
+	DropItem "IDMShade"
+	DropItem "IDMEtherealSoul"
+	DropItem "IDMFirebluSoul"
+	DropItem "IDMSpikeMine"
+	DropItem "IDMHadesSphere"
+}

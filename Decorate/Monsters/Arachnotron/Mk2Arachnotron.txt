@@ -1,0 +1,54 @@
+/// Augmented Arachnotron
+
+actor IDMArachnotronMK2 : IDMArachnotron
+{
+  Tag "Arachnotron Mk.II"
+  Obituary "%o let an augmented arachnotron toast %h."
+  BloodColor "bf af 00"
+  States
+  {
+  Spawn:
+    BSP2 AB 10 A_Look
+    Loop
+  See:
+    BSP2 A 20
+    BSP2 A 3 A_BabyMetal
+    BSP2 ABBCC 3 A_Chase
+    BSP2 D 3 A_BabyMetal
+    BSP2 DEEFF 3 A_Chase
+    Goto See+1
+  Missile:
+    BSP2 A 20 Bright A_FaceTarget
+	TNT1 A 0 A_Jump(128,"LaserAtk")
+  PulseAtk:
+    BSP2 G 2 Bright A_CustomMissile("ArachnoPulseBall",19,-2) 
+    BSP2 R 2 Bright
+    BSP2 H 2 Bright A_CustomMissile("ArachnoPulseBall",19,7)
+    BSP2 Q 2 Bright A_SpidRefire
+    Goto PulseAtk
+  LaserAtk:
+    BSP2 G 2 Bright A_CustomMissile("ArachnoLaserShot",19,-2) 
+    BSP2 R 2 Bright
+    BSP2 H 2 Bright A_CustomMissile("ArachnoLaserShot",19,7) 
+    BSP2 Q 2 Bright A_SpidRefire
+    Goto LaserAtk
+  Pain:
+    BSP2 I 3
+    BSP2 I 3 A_Pain
+    Goto See+1
+  Death:
+    BSP2 J 20 A_Scream
+    BSP2 K 7 A_NoBlocking
+    BSP2 LMNO 7
+    BSP2 P -1 A_BossDeath
+    Stop
+  Ice:
+	"####" "#" 5 A_GenericFreezeDeath
+	TNT1 A 0 A_BossDeath
+	"----" A 1 A_FreezeDeathChunks
+	Wait
+  Raise:
+    BSP2 PONMLKJ 5
+    Goto See+1
+  }
+}

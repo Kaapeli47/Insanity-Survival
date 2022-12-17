@@ -1,0 +1,476 @@
+
+// W   I   D   E      P   L   A   S   M   A   ! ! !
+
+sprite "WIPLA0", 54, 16
+{
+	xscale 0.5
+	offset 25,20
+	patch "PLASA0", 0, 0
+}
+
+sprite "WPLSA0", 83, 61
+{
+	xscale 0.5
+	offset -41,-107
+	patch "PLSGA0", 0, 0
+}
+
+sprite "WPLSB0", 104, 111
+{
+	xscale 0.5
+	offset 12,-57
+	patch "PLSGB0", 0, 0
+}
+
+sprite "WPLFA0", 83, 75
+{
+	xscale 0.5
+	offset -41,-93
+	patch "PLSFA0", 0, 0
+}
+
+sprite "WPLFB0", 85, 73
+{
+	xscale 0.5
+	offset -40,-95
+	patch "PLSFB0", 0, 0
+}
+
+sprite "WPL2A0", 83, 61
+{
+	xscale 0.25
+	offset 0,-107
+	patch "PLSGA0", 0, 0
+}
+
+sprite "WPL2B0", 104, 111
+{
+	xscale 0.25
+	offset 32,-57
+	patch "PLSGB0", 0, 0
+}
+
+sprite "WP2FA0", 83, 75
+{
+	xscale 0.25
+	offset 0,-93
+	patch "PLSFA0", 0, 0
+}
+
+sprite "WP2FB0", 85, 73
+{
+	xscale 0.25
+	offset 0,-95
+	patch "PLSFB0", 0, 0
+}
+
+
+// Rage Armor
+
+graphic "BLARA1", 32, 32
+{
+	offset 8,14
+	patch "BLDSA0", 0, 0
+}
+
+graphic "BLARA2", 32, 32
+{
+	offset 8,14
+	patch "BLDSB0", 0, 0
+}
+
+graphic "BLARA3", 32, 32
+{
+	offset 8,14
+	patch "BLDSC0", 0, 0
+}
+
+graphic "BLARA4", 32, 32
+{
+	offset 8,14
+	patch "BLDSD0", 0, 0
+}
+
+// Rage Sphere
+
+graphic "RAGESP1", 32, 32
+{
+	offset 8,14
+	patch "BLDSA0", 0, 0
+}
+
+graphic "RAGESP2", 32, 32
+{
+	offset 8,14
+	patch "BLDSB0", 0, 0
+}
+
+graphic "RAGESP3", 32, 32
+{
+	offset 8,14
+	patch "BLDSC0", 0, 0
+}
+
+graphic "RAGESP4", 32, 32
+{
+	offset 8,14
+	patch "BLDSD0", 0, 0
+}
+
+graphic "INVULN1", 32, 32
+{
+	offset 8,14
+	patch "PINVA0", 0, 0
+}
+
+graphic "INVULN2", 32, 32
+{
+	offset 8,14
+	patch "PINVB0", 0, 0
+}
+
+graphic "INVULN3", 32, 32
+{
+	offset 8,14
+	patch "PINVC0", 0, 0
+}
+
+graphic "INVULN4", 32, 32
+{
+	offset 8,14
+	patch "PINVD0", 0, 0
+}
+
+// Time Freeze
+
+graphic "TIMESP1", 32, 32
+{
+	offset 8,14
+	patch "TIMEA0", 0, 0
+}
+
+graphic "TIMESP2", 32, 32
+{
+	offset 8,14
+	patch "TIMEb0", 0, 0
+}
+
+graphic "TIMESP3", 32, 32
+{
+	offset 8,14
+	patch "TIMEc0", 0, 0
+}
+
+graphic "TIMESP4", 32, 32
+{
+	offset 8,14
+	patch "TIMEd0", 0, 0
+}
+
+// Doom Sphere
+
+graphic "DOOMSP1", 32, 32
+{
+	offset 8,14
+	patch "DOOMa0", 0, 0
+}
+
+graphic "DOOMSP2", 32, 32
+{
+	offset 8,14
+	patch "DOOMb0", 0, 0
+}
+
+graphic "DOOMSP3", 32, 32
+{
+	offset 8,14
+	patch "DOOMc0", 0, 0
+}
+
+graphic "DOOMSP4", 32, 32
+{
+	offset 8,14
+	patch "DOOMd0", 0, 0
+}
+
+// Guard Sphere
+
+graphic "GARDSP1", 32, 32
+{
+	offset 8,14
+	patch "GARDa0", 0, 0
+}
+
+graphic "GARDSP2", 32, 32
+{
+	offset 8,14
+	patch "GARDb0", 0, 0
+}
+
+graphic "GARDSP3", 32, 32
+{
+	offset 8,14
+	patch "GARDc0", 0, 0
+}
+
+graphic "GARDSP4", 32, 32
+{
+	offset 8,14
+	patch "GARDd0", 0, 0
+}
+
+graphic "STRENG1", 32, 32
+{
+	offset 8,14
+	patch "BERSa0", 0, 0
+}
+
+graphic "STRENG2", 32, 32
+{
+	offset 8,14
+	patch "BERSb0", 0, 0
+}
+
+graphic "STRENG3", 32, 32
+{
+	offset 8,14
+	patch "BERSc0", 0, 0
+}
+
+graphic "STRENG4", 32, 32
+{
+	offset 8,14
+	patch "BERSd0", 0, 0
+}
+
+graphic "STRENG5", 32, 32
+{
+	offset 8,14
+	patch "BERSE0", 0, 0
+}
+
+graphic "STRENG6", 32, 32
+{
+	offset 8,14
+	patch "BERSF0", 0, 0
+}
+
+graphic "STRENG7", 32, 32
+{
+	offset 8,14
+	patch "BERSG0", 0, 0
+}
+
+graphic "STRENG8", 32, 32
+{
+	offset 8,14
+	patch "BERSH0", 0, 0
+}
+
+graphic "STRENG9", 32, 32
+{
+	offset 8,14
+	patch "BERSI0", 0, 0
+}
+
+// Resistance
+
+graphic "GRESIS1", 32, 32
+{
+	offset 8,14
+	patch "BIOSA0", 0, 0
+}
+
+graphic "GRESIS2", 32, 32
+{
+	offset 8,14
+	patch "BIOSB0", 0, 0
+}
+
+graphic "RRESIS1", 32, 32
+{
+	offset 8,14
+	patch "BIO2A0", 0, 0
+}
+
+graphic "RRESIS2", 32, 32
+{
+	offset 8,14
+	patch "BIO2B0", 0, 0
+}
+
+graphic "BRESIS1", 32, 32
+{
+	offset 8,14
+	patch "BIO3A0", 0, 0
+}
+
+graphic "BRESIS2", 32, 32
+{
+	offset 8,14
+	patch "BIO3B0", 0, 0
+}
+
+// Regeneration
+
+graphic "REGNSP1", 32, 32
+{
+	offset 8,14
+	patch "REGNa0", 0, 0
+}
+
+graphic "REGNSP2", 32, 32
+{
+	offset 8,14
+	patch "REGNb0", 0, 0
+}
+
+graphic "REGNSP3", 32, 32
+{
+	offset 8,14
+	patch "REGNc0", 0, 0
+}
+
+graphic "REGNSP4", 32, 32
+{
+	offset 8,14
+	patch "REGNd0", 0, 0
+}
+
+graphic "HASTSP1", 32, 32
+{
+	offset 8,14
+	patch "HASTa0", 0, 0
+}
+
+graphic "HASTSP2", 32, 32
+{
+	offset 8,14
+	patch "HASTb0", 0, 0
+}
+
+graphic "HASTSP3", 32, 32
+{
+	offset 8,14
+	patch "HASTc0", 0, 0
+}
+
+graphic "REFLSP1", 32, 32
+{
+	offset 8,14
+	patch "LFSSa0", 0, 0
+}
+
+graphic "REFLSP2", 32, 32
+{
+	offset 8,14
+	patch "LFSSb0", 0, 0
+}
+
+graphic "REFLSP3", 32, 32
+{
+	offset 8,14
+	patch "LFSSc0", 0, 0
+}
+
+graphic "REFLSP4", 32, 32
+{
+	offset 8,14
+	patch "LFSSd0", 0, 0
+}
+
+graphic "PROSSP1", 32, 32
+{
+	offset 8,14
+	patch "AMSPa0", 0, 0
+}
+
+graphic "PROSSP2", 32, 32
+{
+	offset 8,14
+	patch "AMSPb0", 0, 0
+}
+
+graphic "PROSSP3", 32, 32
+{
+	offset 8,14
+	patch "AMSPc0", 0, 0
+}
+
+graphic "PROSSP4", 32, 32
+{
+	offset 8,14
+	patch "AMSPd0", 0, 0
+}
+
+graphic "SPRDSP1", 32, 32
+{
+	offset 8,14
+	patch "SPRDa0", 0, 0
+}
+
+graphic "SPRDSP2", 32, 32
+{
+	offset 8,14
+	patch "SPRDb0", 0, 0
+}
+
+graphic "SPRDSP3", 32, 32
+{
+	offset 8,14
+	patch "SPRDc0", 0, 0
+}
+
+graphic "SPRDSP4", 32, 32
+{
+	offset 8,14
+	patch "SPRDd0", 0, 0
+}
+
+graphic "DRANSP1", 32, 32
+{
+	offset 8,14
+	patch "DRANa0", 0, 0
+}
+
+graphic "DRANSP2", 32, 32
+{
+	offset 8,14
+	patch "DRANb0", 0, 0
+}
+
+graphic "DRANSP3", 32, 32
+{
+	offset 8,14
+	patch "DRANc0", 0, 0
+}
+
+graphic "DRANSP4", 32, 32
+{
+	offset 8,14
+	patch "DRANd0", 0, 0
+}
+
+graphic "TURBSP1", 32, 32
+{
+	offset 8, 14
+	patch "turba0", 0, 0
+}
+
+graphic "TURBSP2", 32, 32
+{
+	offset 8, 14
+	patch "turbb0", 0, 0
+}
+graphic "TURBSP3", 32, 32
+
+{
+	offset 8, 14
+	patch "turbc0", 0, 0
+}
+
+graphic "TURBSP4", 32, 32
+{
+	offset 8, 14
+	patch "turbd0", 0, 0
+}

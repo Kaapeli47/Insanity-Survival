@@ -1,0 +1,72 @@
+// Dark Devil
+
+ACTOR IDMDarkDevil : IDMDarkImp
+{
+  Tag "Dark Devil"
+  obituary "%o was scorched by a Dark Devil."
+  hitobituary "%o was shredded by a Dark Devil."
+  health 150
+  GibHealth 100
+  mass 120
+  speed 12
+  painchance 100
+  seesound "monster/dvlsit"
+  painsound "monster/dvlpai"
+  deathsound "monster/dvldth"
+  activesound "monster/dvlact"
+  states
+  {
+  Spawn:
+    DDVL AB 10 A_Look
+    loop
+  See:
+    DDVL AABBCCDD 3 A_Chase
+    loop
+  Missile:
+    DDVL EF 5 A_FaceTarget
+    DDVL GGG 3 A_CustomComboAttack("IDMDarkImpBall",32,6,"imp/melee")
+	DDVL G 0 A_Jump(200,"See")
+	DDVL GGG 3 A_CustomComboAttack("IDMDarkImpBall",32,6,"imp/melee")
+	DDVL G 3
+    goto See
+  Melee:
+    DDVL EF 5 A_FaceTarget
+    DDVL G 6 A_CustomComboAttack("IDMDarkImpBall",32,6,"imp/melee")
+    goto See
+  Pain:
+    DDVL H 2
+    DDVL H 2 A_Pain
+    goto See
+  Death:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+    DDVL I 8
+    DDVL J 8 A_Scream
+    DDVL K 6
+    DDVL L 6 A_NoBlocking
+    DDVL M -1
+    stop
+  XDeath:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+  XDeath.Massacre:
+    DDVL N 5
+    DDVL O 5 A_XScream
+    DDVL P 5
+    DDVL Q 5 A_NoBlocking
+    DDVL RST 5
+    DDVL U -1
+    stop
+  XDeath.Resurrector:
+	DDVL N 5
+	DDVL O 5 A_XScream
+	TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+	DDVL P 5 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+	DDVL Q 5 A_NoBlocking
+	DDVL RST 5
+	DDVL U -1
+	Stop
+  Raise:
+    DDVL ML 8
+    DDVL KJI 6
+    goto See
+  }
+}

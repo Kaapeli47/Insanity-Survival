@@ -1,0 +1,7 @@
+clearplayerclasses
+addplayerclass KnifePlayer
+addplayerclass BlasterPlayer
+addplayerclass BoomstickPlayer
+addplayerclass BuckshotPlayer
+addplayerclass MachinegunPlayer
+addplayerclass ChaingunPlayer

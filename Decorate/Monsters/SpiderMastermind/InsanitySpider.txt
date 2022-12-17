@@ -1,0 +1,53 @@
+
+ACTOR IDMInsanitySpider : IDMSpiderMastermind
+{ 
+	Speed 10
+    Obituary "%o was nuked into oblivion by an insanity spider."
+	Tag "Insanity Spider"
+	-MISSILEMORE
+	-MISSILEEVENMORE
+    States
+    {
+    Spawn:
+        INSP AB 10 A_Look
+        Loop
+    See:
+        INSP A 3 A_Metal
+        INSP ABBCC 3 A_Chase
+		INSP D 3 A_Metal
+        INSP DEEFF 3 A_Chase
+        Loop
+    Missile:
+        INSP A 20 Bright A_FaceTarget
+		TNT1 A 0 A_Jump(128,"LaserAtk")
+	PlasmaAtk:
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("InsanityPlasmaBall", 44, 4, frandom(-12,12))
+        INSP G 3 Bright A_CustomMissile("InsanityPlasmaBall", 44, 4, frandom(-12,12))
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("InsanityPlasmaBall", 44, 4, frandom(-12,12))
+        INSP H 3 Bright A_CustomMissile("InsanityPlasmaBall", 44, 4, frandom(-12,12))
+        INSP G 0 A_SpidRefire
+        Goto PlasmaAtk
+	LaserAtk:
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("MonsterLaserShot", 44, 4, frandom(-10,10))
+        INSP G 2 Bright A_CustomMissile("MonsterLaserShot", 44, 4, frandom(-10,10))
+		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("MonsterLaserShot", 44, 4, frandom(-10,10))
+        INSP H 2 Bright A_CustomMissile("MonsterLaserShot", 44, 4, frandom(-10,10))
+        INSP G 0 A_SpidRefire
+        Goto LaserAtk
+    Pain:
+        INSP I 3
+        INSP I 3 A_Pain
+        Goto See
+    Death:
+        INSP J 20 Bright A_Scream
+        INSP K 10 Bright A_Fall
+        INSP LMNOPQR 10 Bright
+        INSP S 30
+        INSP S -1 A_BossDeath  
+        Stop
+    }
+}

@@ -1,0 +1,165 @@
+include "mapinfo/common.txt"
+
+GameInfo
+{
+	DimColor = "Green"
+	MenuFontColor_Title = "Green"
+	MenuFontColor_Selection = "Gold"
+	MenuFontColor_Label = "Grey"
+	MenuFontColor_Value = "White"
+	MenuFontColor_Action = "Green"
+	MenuFontColor_Header = "Green"
+	MenuFontColor_Highlight = "Gold"
+	MenuSliderColor = "Green"
+	MenuSliderBackColor = "Grey"
+	MenuSliderColor = "Gold"
+	MenuSliderBackColor = "Green"
+	Dimamount = 0.175
+	titlemusic = "D_ISURTL"
+	//intermissionmusic = "D_DM2INT"
+	advisorytime = 10
+	Titlepage = "COOPTITL"
+	Exitpic = "INTERPIC"
+	Norandomplayerclass = true
+	statusbar = "sbarinfo/idmcoop.txt"
+	infopage = "INHLP2", "HELP", "TITLEPIC", "COOPCRED", "CREDIT"
+	quitmessages = "$QUITMSG", "$QUITMSG1", "$QUITMSG2", "$QUITMSG3",
+	"$QUITMSG4", "$QUITMSG5", "$QUITMSG6", "$QUITMSG7", "$QUITMSG8",
+	"$QUITMSG9", "$QUITMSG10", "$QUITMSG11", "$QUITMSG12", "$QUITMSG13",
+	"$QUITMSG14", "$QUITMSG15", "$QUITMSG16", "$QUITMSG17", "$QUITMSG18",
+	"$QUITMSG19", "$QUITMSG20", "$QUITMSG21", "$QUITMSG22", "$QUITMSG23",
+	"$QUITMSG24", "$QUITMSG25", "$QUITMSG26", "$QUITMSG27", "$QUITMSG28",
+	"$QUITMSG29", "$QUITMSG30", "$QUITMSG31", "$QUITMSG32", "$QUITMSG33",
+	"$QUITMSG34", "$QUITMSG35"
+}
+
+GameDefaults
+{
+	Intermission
+	SpawnWithWeaponRaised
+	AllowJump
+	NoCrouch
+	AllowFreelook
+}
+
+clearskills
+
+Skill ITYTD
+{
+	Name = "I'm a trigger happy maniac!"
+	TextColor = "Green"
+	SpawnFilter = Baby
+	DamageFactor = 0.25
+	Monsterhealth = 0.5
+	AmmoFactor = 4.0
+	DropAmmoFactor = 4.0
+	EasyKey
+	EasyBossBrain
+	MustConfirm = "Very low or low monster count. You receive 25% damage and quadruple ammo. Monsters have 25% health."
+}
+
+Skill HNTR
+{
+	Name = "Hey, not too crazy!"
+	TextColor = "Green"
+	SpawnFilter = Easy
+	DamageFactor = 0.5
+	Monsterhealth = 1.0
+	EasyKey
+	EasyBossBrain
+	MustConfirm = "Low monster count. You receive half damage. Monsters have 50% health."
+}
+
+Skill HMP
+{
+	Name = "Hurt my mind plenty!"
+	TextColor = "Green"
+	SpawnFilter = Normal
+	Monsterhealth = 2.0
+	EasyKey
+	MustConfirm = "Normal monster count. You receive full damage. Monsters have 100% health."
+	DefaultSkill
+}
+
+Skill UV
+{
+	Name = "Ultra-Madness!"
+	TextColor = "Green"
+	SpawnFilter = Hard
+	Monsterhealth = 2.0
+	EasyKey
+	MustConfirm = "High monster count. You receive full damage. Monsters have 100% health."
+}
+
+Skill UVPlus
+{
+	Name = "Hyper-Madness!"
+	TextColor = "Green"
+	SpawnFilter = Hard
+	Monsterhealth = 2.0
+	Aggressiveness = 0.25
+	EasyKey
+	MustConfirm = "High monster count. You receive full damage. Monsters are more aggressive and have 100% health."
+}
+
+Skill Hysteria
+{
+	Name = "Hysteria!"
+	TextColor = "Green"
+	SpawnFilter = Hard
+	Aggressiveness = 0.75
+	Monsterhealth = 3.0
+	AmmoFactor = 2.0
+	DropAmmoFactor = 2.0
+	EasyKey
+	MustConfirm = "High monster count. You receive double ammo. Monsters are even more aggressive and have 150% health!"
+}
+
+Skill Deathwish
+{
+	Name = "Deathwish!"
+	TextColor = "Green"
+	SpawnFilter = Nightmare
+	FastMonsters
+	Aggressiveness = 1.0
+	Monsterhealth = 3.0
+	AmmoFactor = 2.0
+	DropAmmoFactor = 2.0
+	RespawnTime = 180
+	RespawnLimit = 1
+	EasyKey
+	MustConfirm = "High or very high monster count. You receive double ammo. Monsters are fast, have 150% health, and respawn once after 180 seconds!"
+}
+
+Skill NM
+{
+	Name = "NIGHTMARE!"
+	TextColor = "Green"
+	SpawnFilter = Nightmare
+	AmmoFactor = 3.0
+	DropAmmoFactor = 3.0
+	Monsterhealth = 3.0
+	FastMonsters
+	Aggressiveness = 1.0
+	RespawnTime = 120
+	EasyKey
+	MustConfirm = "High or very high monster count. You receive triple ammo. Monsters are fast, have 150% health, and respawn every 120 seconds! This difficulty isn't just unfair - it's totally insane!"
+}
+
+Skill INSANITY
+{
+	Name = "INSANITY!!!"
+	TextColor = "Green"
+	SpawnFilter = Nightmare
+	Monsterhealth = 4.0
+	DamageFactor = 2.0
+	AmmoFactor = 4.0
+	DropAmmoFactor = 4.0
+	FastMonsters
+	Aggressiveness = 1.0
+	NoPain
+	DisableCheats
+	RespawnTime = 30
+	EasyKey
+	MustConfirm = "High or very high monster count. You receive quadruple ammo. Monsters are fast, immune to pain, have 200% health, and respawn every 30 seconds! All hope is lost, and you asked for it. Don't say I didn't warn you about the Insanity!"
+}

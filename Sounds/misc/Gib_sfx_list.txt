@@ -1,0 +1,1167 @@
+1 - Left 4 Dead 2 Coach "oh shit"
+2 - Left 4 Dead 2 Coach laugh #1
+3 - TF2 demoman laugh #1
+4 - TF2 scout "you got owned"
+5 - TF2 sniper laugh #1
+6 - Duke Nukem "what a mess"
+7 - Duke Nukem "let god sort 'em out"
+8 - Duke Nukem "your face, your ass, what's the difference"
+9 - Duke Nukem "I'm gonna get medieval on your asses"
+10 - Duke Nukem "Get that crap out of here"
+11 - Lo Wang "like Chinese New Year fireworks"
+12 - Lo Wang laugh #1
+13 - Redneck Rampage - Leonard "Jesus Palavino!"
+14 - Redneck Rampage - Leonard "I reckon that boy bust a gut"
+15 - Redneck Rampage - Leonard "Double-battered & Dixie-firied"
+16 - Redneck Rampage - Leonard "Your ass is grass and I'm the lawnmower"
+17 - TF2 sniper laugh #2
+18 - TF2 Heavy laugh #1
+19 - TF2 Heavy laugh #2
+20 - TF2 Heavy laugh #3
+21 - TF2 Demoman "Oh they're going to have to glue you back to together again in hell"
+22 - TF2 Demoman "They're going to bury what's left of you in a soup can"
+23 - TF2 Medic "You are stupid"
+24 - Left 4 Dead 2 Nick laugh
+25 - Toy Story Woody laugh
+26 - Lo Wang "Cowabunga"
+27 - Lo Wang laugh #2
+28 - Lo Wang laugh #3
+29 - Lo Wang "this is not a charade"
+30 - Lo Wang "it is good day to die"
+31 - Lo Wang "you are tiny grasshopper"
+32 - Lo Wang "I hope you are paying attention"
+33 - Lo Wang "Everybody dead, I like that"
+34 - Lo Wang "How's that for Kung-Fu fighting"
+35 - Lo Wang "Sayonara, scumbag"
+36 - Lo Wang "you look like-a stupid"
+37 - Lo Wang "This is not a tournament"
+38 - Lo Wang "You're coming apart"
+39 - Lo Wang "You move like a pregnant yak"
+40 - Redneck Rampage - Leonard "Now that's an attention-getter"
+41 - Redneck Rampage - Leonard "That boy's blown up real good"
+42 - Redneck Rampage - Leonard "Hot damn"
+43 - Redneck Rampage - Leonard "You like that, boy?"
+44 - Redneck Rampage - Leonard "Die, you son of a bitch"
+45 - Redneck Rampage - Leonard "That boy's 'bout as sharp as a bowling bawl"
+46 - Redneck Rampage - Leonard "Holy shit"
+47 - Duke Nukem "Damnit"
+48 - Duke Nukem "Bitchin'"
+49 - Duke Nukem "Blow it out your ass"
+50 - Duke Nukem "See you in Hell"
+51 - Duke Nukem "Terminated"
+52 - Duke Nukem "I'm gonna put the smack dab on your ass"
+53 - TF2 Demoman "There's a new gravy field angel in Heaven"
+54 - TF2 Demoman laugh #2
+55 - TF2 Demoman laugh #3
+56 - TF2 Demoman laugh #4
+57 - TF2 Demoman laugh #5
+58 - TF2 Demoman laugh #6
+59 - TF2 Demoman laugh #7
+60 - TF2 Engineer "Drunk on the battlefield ain't no way to be, son"
+61 - TF2 Engineer "You just ain't doing it right"
+62 - TF2 Engineer "A real Texan would've dodged that"
+63 - TF2 Engineer "Makin' bacon"
+64 - TF2 Engineer "I told ya, don't touch that darn thing"
+65 - TF2 Engineer "How'd that plan turn out for ya, dummy"
+66 - TF2 Engineer "That's what you get"
+67 - TF2 Engineer "I've seen better sides of beef been run over by a combine"
+68 - TF2 Engineer "Dumber than dirt, ain't ya"
+69 - TF2 Engineer "Y'all gotta run a lot faster than that"
+70 - TF2 Heavy "I have squashed you like bug"
+71 - TF2 Heavy laugh #4
+72 - TF2 Heavy "The burden you feel, it is shame"
+73 - TF2 Heavy "You are dead, not big surprise"
+74 - TF2 Heavy laugh #5
+75 - TF2 Heavy laugh #6
+76 - TF2 Heavy laugh #7
+77 - TF2 Heavy "Let this be lesson for you"
+78 - TF2 Heavy "New gun is unfair to tiny baby enemies"
+79 - TF2 Medic "Oktoberfest"
+80 - TF2 Medic "Did that sting, sorry"
+81 - TF2 Medic "What a bloodbath"
+82 - TF2 Medic "What did you think you were going to kill with that"
+83 - TF2 Scout "Nice try pal"
+84 - TF2 Scout "Dummy"
+85 - TF2 Scout #1
+86 - TF2 Scout #2
+87 - TF2 Scout "Moron"
+88 - TF2 Scout "Dumbass"
+89 - TF2 Scout "Nice aim"
+90 - TF2 Scout "Are you even trying"
+91 - TF2 Scout "You look like you ran through traffic"
+92 - TF2 Scout "Yea I dare ya, rage quit, c'mon make us both happy"
+93 - TF2 Scout "Today ain't your day, pancakes"
+94 - TF2 Sniper "You shouldn't've even gotten out of bed"
+95 - TF2 Sniper "It's only gonna get worse, mate"
+96 - TF2 Sniper "Bloody hell, you're awful"
+97 - TF2 Sniper laugh #3
+98 - TF2 Sniper laugh #4
+99 - Blood - Caleb "Fresh victims for the evergrowing army of the undead"
+100 - Blood - Caleb "Victims, aren't we all"
+101 - Blood - Caleb "That'll teach ya"
+102 - Blood - Caleb "You have to have faith for that to work"
+103 - Blood - Caleb "Lambs to the slaughter"
+104 - Blood - Caleb "Never more"
+105 - Blood - Caleb "It's all in the reflexes"
+106 - Blood - Caleb "When does the hurting stop"
+107 - Blood - Caleb "Boo-hoo, when's the hurting stop"
+108 - Blood - Caleb "This looks extraordinarily bad"
+109 - Blood - Caleb "That wasn't a bit nice"
+110 - Blood - Caleb "That's all, folks"
+111 - Blood - Caleb "Extraordinary use of color, the composition is a bit lacking"
+112 - Blood - Caleb "Rest in pieces"
+113 - Blood - Caleb "I'm not that hungry"
+114 - Blood - Caleb "You are already dead"
+115 - Blood - Caleb "yummy, fresh meat"
+116 - Blood - Caleb laugh #1
+117 - Blood - Caleb laugh #2
+118 - Blood - Caleb laugh #3
+119 - Blood - Caleb laugh #4
+120 - Blood - Caleb laugh #5
+121 - Blood - Caleb laugh #6
+122 - Blood - Caleb laugh #7
+123 - Blood - Caleb laugh #8
+124 - Blood - Caleb "And me, without a spoon"
+125 - Blood - Caleb "You've looked better, but not by much"
+126 - Blood - Caleb laugh #9
+127 - Blood - Caleb laugh #10
+128 - Blood - Caleb laugh #11
+129 - Blood - Caleb laugh #12
+130 - Blood - Caleb laugh #13
+131 - Blood - Caleb laugh #14
+132 - Blood - Caleb laugh #15
+133 - Blood - Caleb "That's right, who's laughing now"
+134 - Blood - Caleb "Your kids shouldn't play so rough..."
+135 - Blood - Caleb "You must've blinked."
+136 - Blood - Caleb "That's a good way to get yourself killed"
+137 - Blood - Caleb "Lucky you, killed by the best"
+138 - Blood - Caleb "What we have here, is a failure to coagulate"
+139 - Blood - Caleb "Now you have a nice day"
+140 - Blood - Caleb "Hey dummy, you got a death wish or something"
+141 - Blood - Caleb "You're not gonna look so good with your face ripped off"
+142 - Blood - Caleb "How'd you like your flesh cooked"
+143 - Blood - Caleb "When you get to Hell, tell 'em I sent you..."
+144 - Blood - Caleb "And I thought I was ugly"
+145 - Redneck Rampage - Leonard "This is like lookin' up a hog's butt for a ham sammich"
+146 - Redneck Rampage - Leonard "There you go, now you makin' bacon"
+147 - Redneck Rampage - Leonard "You screw with the bull, you get the horn"
+148 - Redneck Rampage - Leonard "Slickering cat shit on a flat rock"
+149 - Redneck Rampage - Leonard "What's up, doc"
+150 - TF2 Demoman "Time to get blottered"
+151 - TF2 Demoman "That will teach them"
+152 - TF2 Demoman "Guts and glory, lads"
+153 - TF2 Engineer "The hand is quicker than the eye"
+154 - TF2 Engineer "You shoulda oughta brought more gun, son"
+155 - TF2 Engineer "Never mind the bullets; how much all these coffins cost in ya"
+156 - TF2 Engineer "What in Sam Hill were you thinking, string bean"
+157 - TF2 Engineer "That's what my daddy taught me to do to backstabbers"
+158 - TF2 Engineer laugh #1
+159 - TF2 Engineer laugh #2
+160 - TF2 Engineer laugh #3
+161 - TF2 Engineer laugh #4
+162 - TF2 Medic laugh #1
+163 - TF2 Medic laugh #2
+164 - TF2 Medic "Can you feel the schadenfreude"
+165 - TF2 Medic "Eins, zwei, drei... I do not think we bought enough body bags"
+166 - TF2 Medic "It looks like Dummkopffest!"
+167 - TF2 Medic "My professional opinion, you're dead"
+168 - Left 4 Dead 2 - Ellis laugh
+169 - Team Fortress Classic capture sound
+170 - TF2 Kill Streak sound
+171 - TF2 Domination sound #1
+172 - TF2 Domination sound #2
+173 - TF2 Domination sound #3
+174 - TF2 Medic "Is there a point to your lives"
+175 - TF2 Medic "Welcome to the we-lose-once-again-fest"
+176 - TF2 Medic "Well done"
+177 - TF2 Scout "It's starting to bore me how much you suck"
+178 - TF2 Soldier "You were loud and ugly, and now you're dead, amen"
+179 - TF2 Soldier "Look at you maggot, even your weapon needs a haircut"
+180 - Pure pwnage "Boom, headshot" #1
+181 - Looney Tunes - Yosemite Sam "Adios, you chicken-pluckin' little stinker"
+182 - Homer Simpson laugh
+183 - The Good, The Bad, and the Ugly whistle
+184 - "hihihihi, LOL"
+185 - "You are one pathetic loser"
+186 - TF2 Achievement sound
+187 - TF2 Machina double kill sound
+188 - TF2 Duel sound #1
+189 - TF2 Duel sound #2
+190 - TF2 Demoman "They're going to find you all dead in the alley..."
+191 - TF2 Demoman "Not one of you is gonna survive this"
+192 - TF2 Demoman "You're all bloody dead"
+193 - TF2 Demoman "In your language, eat lead laddies"
+194 - TF2 Engineer "Why don't y'all get along before one of you gets hurt"
+195 - TF2 Heavy "All of you are dead"
+196 - TF2 Heavy "You; Yes you, you are dead"
+197 - TF2 Heavy "Who sent all these babies to fight"
+198 - TF2 Heavy "You're going to need much bigger guns"
+199 - TF2 Medic "auf wiedersehen, dumkopf"
+200 - TF2 Medic "auf wiedersehen, Schweinhunds"
+201 - TF2 Scout "A lot of good that gun did ya"
+202 - TF2 Scout "Oh yeah, you suck"
+203 - TF2 Sniper "I've slept in the corpse of water buffalo tougher than you"
+204 - TF2 Sniper "You bighead wankers"
+205 - TF2 Sniper "That helmet's gonna make a nice bowl for your brains"
+206 - TF2 Soldier "Maggots"
+207 - TF2 Soldier "You are all weak, you are all bleeders"
+208 - TF2 Soldier "Each and every one of you will be sent home to your mama, in a box"
+209 - TF2 Spy "I'll be seeing you"
+210 - TF2 Spy "Well, the moment has passed, back to work"
+211 - TF2 Spy "Why don't we just give up, partner"
+212 - TF2 Spy "You are, all of you, quite out of your depth"
+213 - TF2 Spy "You suck"
+214 - Blood - Caleb "Ding dong, the bitch is dead"
+215 - Blood - Caleb "Now kids, don't try this at home"
+216 - Blood - Caleb "Pathetic insects"
+217 - Blood - Caleb "You gonna bark all day, little doggy, or are you gonna bite"
+218 - Blood - Caleb "Red is definitely your color"
+219 - Blood - Caleb "Be careful now, you'll shoot your eye out"
+220 - Blood - Caleb "Are you just gonna stand there and bleed"
+221 - Blood - Caleb "Ah the suffering, the sweet suffering"
+222 - Blood - Caleb "Your bad day just got worse"
+223 - Half Life - Barney "That's one less horror in the world"
+224 - Half Life - Barney "End of the line for you"
+225 - Half Life - Barney "What do you want on your tombstone"
+226 - Half Life - Barney "Now I wonder if those boys could've made a bigger mess"
+227 - Half Life - Barney "I bet that stings a bit"
+228 - Half Life - Barney "Well sir, I hate to say it, but you're in bad shape"
+229 - Half Life - Scientist "Wouldn't you like to get one of these blood samples under a microscope"
+230 - Mortal Kombat "Toasty!"
+231 - Mortal Kombat "Crispy!"
+232 - The Price is Right fail sound
+233 - "For fuck's sake"
+234 - Beavis and Butthead laughing
+235 - "Due to some violent content, parental discretion is advised"
+236 - Half Life 2 - Father Grigori laugh #1
+237 - Half Life 2 - Father Grigori laugh #2
+238 - Half Life 2 - Father Grigori laugh #3
+239 - Half Life 2 - Father Grigori laugh #4
+240 - Half Life 2 - Father Grigori laugh #5
+241 - Heretic chicken death sound
+242 - DWANGO gib sound
+243 - "Season's over, asshole"
+244 - Spider-Man 2 - Peter Parker Scream
+245 - Some 90s Deathmatch map set chat sound
+246 - Mortal Kombat - Shao Kahn laugh
+247 - Spider-Man 2 - Jay Jonah Jameson laugh
+248 - Left 4 Dead Bill laugh #1
+249 - Left 4 Dead Bill laugh #2
+250 - Left 4 Dead Bill laugh #3
+251 - Left 4 Dead Coach laugh #2
+252 - TF2 Demoman laugh #7
+253 - Left 4 Dead 2 Ellis laugh #2
+254 - Left 4 Dead 2 Ellis laugh #3
+255 - TF2 Soldier laugh #1
+256 - TF2 Soldier laugh #2
+257 - TF2 Soldier laugh #3
+258 - Wolfenstein 3D Fake Hitler laugh
+259 - The Simpsons - Nelson laugh
+260 - Aliens (1986) - "Game over, man, it's game over"
+261 - Ace Ventura - "Alrighty then"
+262 - Half Life - Scientist "As I expected"
+263 - Half Life - Scientist "You can't be serious"
+264 - Half Life - Scientist "I certainly hope you know what you're doing"
+265 - Half Life - Scientist "Another important species revealed in action"
+266 - Half Life - Scientist "I hope that odor isn't coming from you"
+267 - Half Life - Scientist "My, just look at those peculiar markings"
+268 - Half Life - Scientist "Hm, what a peculiar odor"
+269 - Half Life - Scientist "Do you smell something burning"
+270 - Half Life - Scientist "I believe something smells quite foul here"
+271 - Half Life - Scientist "Oh no"
+272 - Scat Man John - Scat Man
+273 - "Gentlemen, welcome to Fight Club"
+274 - Team Fortress Classic - "Happy Birthday to you"
+275 - Team Fortress Classic - "Merry Christmas"
+276 - Half Life - Scientist "My god, what are you doing"
+277 - Half Life - Scientist "You look terrible"
+278 - Half Life - Scientist "It appears that you need medical attention right away"
+279 - Half Life - Scientist "You've been wounded"
+280 - Half Life - Barney "Man, did you see that shot"
+281 - Team Fortress Classic "Excuse me, I'm in need of medical attention"
+282 - Half Life - Otis "I tell ya, wouldn't you just love a cold beer right now? I know I would"
+283 - Half Life - Otis "I'd love to hang that over my fireplace. You know, if I had one"
+284 - Half Life - Otis "How much worse can it get"
+285 - Half Life - Otis "I'm so glad I didn't take the janitor job, yuck"
+286 - Half Life - Otis "That's gonna leave a scar"
+287 - Half Life - Otis "Oh yeah, baby, did you see that"
+288 - Duke Nukem "Gonna rip 'em a new one"
+289 - Duke Nukem "Damn"
+290 - Duke Nukem "Holy cow"
+291 - Duke Nukem "Holy shit"
+292 - Duke Nukem "Yeah, piece of cake"
+293 - Duke Nukem "This sucks"
+294 - Duke Nukem "Ooh, that's gotta hurt"
+295 - Duke Nukem "Die, you son of a bitch"
+296 - Duke Nukem "Shit happens"
+297 - Duke Nukem "Eat shit and die"
+298 - Duke Nukem "Suck it down"
+299 - Duke Nukem "Game over"
+300 - Duke Nukem "Looks like cleanup on aisle 4"
+301 - Duke Nukem "No way I'm eating this shit"
+302 - Duke Nukem "Yippie-ki-ay, motherf*cker"
+303 - Duke Nukem "You guys suck"
+304 - Lo Wang "Banzai"
+305 - Lo Wang "holy cow"
+306 - Lo Wang "holy pieces of cow"
+307 - Lo Wang "No pain, no gain"
+308 - Lo Wang "[speaks in Chinese or Japanese]"
+309 - Lo Wang "holy pile of dynamite"
+310 - Lo Wang "Burn, baby, burn, flames-a get-a higher"
+311 - Lo Wang "There can be only one"
+312 - Lo Wang "Time to get erased"
+313 - Lo Wang "Eat this, pencil-dick"
+314 - Lo Wang "You very bad man"
+315 - Lo Wang "holy shit"
+316 - Lo Wang "You have no honor"
+317 - Lo Wang "It's in all the reflexes"
+318 - Lo Wang "Holy pieces of shit"
+319 - Lo Wang "Revenge is dish best served raw"
+320 - Serious Sam "And I thought I saw the last of you"
+321 - Serious Sam laugh #1
+322 - Serious Sam "Just what the hell was that, anyway"
+323 - Serious Sam "Owned"
+324 - Serious Sam "Seriously, is that the best you can do"
+325 - Serious Sam "They never learn"
+326 - Serious Sam "This is getting serious"
+327 - Serious Sam "Yeah, it's all fun and games until somebody loses an eye"
+328 - Serious Sam "Nice warmup"
+329 - Serious Sam "Give a man a bullet, and he'll want a gun..."
+330 - Serious Sam "Now that's some serious firepower"
+331 - TF2 Demoman "Kill them all"
+332 - TF2 Demoman "Just bought two tickets to the gunshow, and I'm not giving them to you..."
+333 - TF2 Demoman "And that's what you get for touching that"
+334 - TF2 Demoman "How's that feel, you blockhead"
+335 - TF2 Demoman "Let that be a bloody lesson to you"
+336 - TF2 Demoman "Kaboom"
+337 - TF2 Demoman "Kablooey"
+338 - TF2 Engineer "Will you look at that"
+339 - TF2 Engineer "Another satisfied customer"
+340 - TF2 Heavy "Your luck runs out"
+341 - TF2 Heavy "You're not so good as you think"
+342 - TF2 Heavy "I think you should fight someone much, much smaller"
+343 - TF2 Heavy "Next time, pick on someone your own tiny, baby size"
+344 - TF2 Heavy laugh #8
+345 - TF2 Heavy "Kill them all"
+346 - TF2 Scout "No seriously, you all suck"
+347 - TF2 Scout "Pop quiz: How long does it take to beat a moron to death?..."
+348 - TF2 Scout "What's the matter, you freaking stupid?"
+349 - TF2 Scout "Oh, that's a skull fracture for sure"
+350 - TF2 Sniper "Right, then"
+351 - Duck Hunt catch sound
+352 - Duck Hunt laughing dog sound
+353 - Horn/Applause
+354 - Homer Simpson "Outta my way, jerkass"
+355 - "Gotcha"
+356 - The Simpsons - Apu "Please come again"
+357 - Link: The Faces of Evil - Ganon "Die"
+358 - Homer Simpson "D'oh" #1
+359 - Homer Simpson "D'oh" #2
+360 - Homer Simpson "D'oh-nuts"
+361 - "You dumb asshole"
+362 - Evil Dead - Ashley "Groovy"
+363 - You Are an Idiot virus song
+364 - Homer Simpson "That's it, I'm outta here"
+365 - Rage Against the Machine - Killing In the Name
+366 - "It's only a game, why you have to be mad"
+367 - The Simpsons - Krusty "What the hell was that"
+368 - Unreal Tournament "That was nasty"
+369 - Unreal Tournament "Target eliminated"
+370 - Unreal Tournament "You be dead"
+371 - Quake III: Team Arena "Frag bait"
+372 - Quake III: Team Arena "You are such a loser"
+373 - Quake III: Team Arena "You're just a waste of space"
+374 - Quake III: Team Arena "Next time, don't get up"
+375 - Quake III: Team Arena "My mama shoots better"
+376 - Quake III: Team Arena "Thank you sir, may I have another"
+377 - Quake III: Team Arena "Screw you"
+378 - Quake III: Team Arena "Very good"
+379 - Quake III: Team Arena "Wussy"
+380 - Quake III: Team Arena "Where'd you learn that move"
+381 - Gunman Chronicles scientist laugh
+382 - Gunman Chronicles scientist "I'd expect that the vultures are picking his bones clean by now"
+383 - Gunman Chronicles scientist "They get uglier every day"
+384 - "I'll see you in Valhalla"
+385 - DK_SOUND.wad The Good, The Bad, and the Ugly scream
+386 - DK_SOUND.wad "I've got a splitting headache"
+387 - DK_SOUND.wad "Why don't you burn in hell"
+388 - Looney Tunes "What for you bury me in the cold, cold ground"
+389 - "Ya scurvy scum"
+390 - Quake III Arena - Biker taunt
+391 - Half Life - Apprehension grunts laughing
+392 - Redneck Rampage - Leonard laugh #1
+393 - Redneck Rampage - Leonard laugh #2
+394 - Quake III Arena - Razor taunt
+395 - Counter-Strike: Condition Zero - Russian laugh
+396 - TF2 Sniper laugh #1
+397 - TF2 Sniper laugh #2
+398 - TF2 Sniper laugh #3
+399 - Left 4 Dead - Louis laugh #1
+400 - Left 4 Dead - Louis laugh #2
+401 - Left 4 Dead - Louis laugh #3
+402 - Left 4 Dead - Louis laugh #4
+403 - Quake III Arena - Grunt laugh
+404 - Quake III Arena - Keel laugh
+405 - Quake III Arena - Lucy laugh
+406 - TF2 Spy laugh #1
+407 - TF2 Scout laugh #1
+408 - TF2 Spy laugh #2
+409 - TF2 Spy laugh #3
+410 - TF2 Spy laugh #4
+411 - TF2 Spy laugh #5
+412 - Half Life 2 - Rebel "Hacks" #1
+413 - Half Life 2 - Rebel "Hacks" #2
+414 - Half Life 2 - Rebel "Like that?"
+415 - Half Life 2 - Rebel "One for me and one for me"
+416 - Half Life 2 - Rebel "And things were going so well"
+417 - Half Life 2 - Rebel "If you dare say 'that's gotta hurt', I'll kill you"
+418 - Half Life 2 - Rebel "He's done this before, he'll be okay"
+419 - Half Life 2 - Rebel "This is bad, what a way to go"
+420 - Quake III Team Arena - Neptune "My mama shoots better"
+421 - Quake III Team Arena - Neptune "Hey, dumbass, try hitting that barn over there"
+422 - Quake III Team Arena - Megan "I bet your mommy shoots better"
+423 - Quake III Team Arena - Megan "Duck next time"
+424 - Quake III Team Arena - Megan "What a girly man"
+425 - Quake III Team Arena - Megan "Mommy's boy"
+426 - Quake III Team Arena - Megan "Mommy's little baby"
+427 - Unreal Tournament "Burn, baby"
+428 - Unreal Tournament voice laugh
+429 - Unreal Tournament "That had to hurt"
+430 - Unreal Tournament "Squeal, boy, squeal"
+431 - Unreal Tournament "Tag, you're it"
+432 - Unreal Tournament "Learn how to aim"
+433 - Unreal Tournament "Try a bigger gun"
+434 - Unreal Tournament "Try turning the safety off"
+435 - Unreal Tournament "Suck it down"
+436 - James May laugh #1
+437 - James May laugh #2
+438 - James May laugh #3
+439 - James May laugh #4
+440 - James May laugh #5
+441 - James May laugh #6
+442 - James May laugh #7
+443 - James May laugh #8
+444 - SEGA Rally Championship "Game over, yeah"
+445 - DK_SOUND.wad "You got knocked the fuck out, man"
+446 - Wolfenstein 3D - Doctor Schabbs laugh
+447 - Goldeneye death jingle
+448 - TF2 Sniper laugh #4
+449 - TF2 Spy laugh #6
+450 - James May laugh #9
+451 - James May laugh #10
+452 - James May laugh #11
+453 - James May laugh #12
+454 - TF2 Demoman "Thankfully, I already don't remember this"
+455 - TF2 Demoman laugh #8
+456 - TF2 Engineer yell
+457 - TF2 Demoman "I don't think they saw that one coming"
+458 - TF2 Engineer "Good night, Irene"
+459 - Half Life 2 - Father Grigori laugh #6
+460 - Action Jackson "How do you like your ribs"
+461 - Deus Ex - Walton Simons "Quit screwing around"
+462 - Deus Ex - Walton Simons "Jesus Christ, Denton"
+463 - Deus Ex - civilian "Oh, it's horrible; oh lord, have mercy, why"
+464 - Deus Ex - JC Denton "What a shame...I wish there was something more I could say"
+465 - Deus Ex - JC Denton "He was a good man *lip smack* what a rotten way to die"
+466 - Deus Ex - JC Denton "This is terrible"
+467 - Arnold Schwarzenegger "The pavement was his enemy"
+468 - Arnold Schwarzenegger "[in Russian]Hooligan"
+469 - Arnold Schwarzenegger "Bullshit"
+470 - Arnold Schwarzenegger "Chill out, dickwad"
+471 - Arnold Schwarzenegger "Stick around"
+472 - Arnold Schwarzenegger "You're fired"
+473 - Arnold Schwarzenegger "You are stupid"
+474 - Arnold Schwarzenegger "Well, that hit the spot"
+475 - Arnold Schwarzenegger "First time in my life, I'm pissed off"
+476 - Arnold Schwarzenegger "Dickhead"
+477 - Arnold Schwarzenegger "You've just been erased"
+478 - Arnold Schwarzenegger "...rubber baby buggy bumpers"
+479 - Arnold Schwarzenegger "No sequel for you"
+480 - Arnold Schwarzenegger "I'll be back"
+481 - Arnold Schwarzenegger "Hasta la vista, baby"
+482 - "Bitchslap you back to Bangkok"
+483 - "Applesauce, bitch"
+484 - Star Wars: Episode III - Obi Wan Kenobi - "So uncivilized"
+485 - Pineapple Express - "Dinner's gonna be cold tonight, asshole"
+486 - Rush Hour - "Wipe yourself off, man; you're dead"
+487 - Kuffs - "I only know he can add and he can subtract, so who wants to be next here"
+488 - Outrageous Fortune "Nine years of ballet, asshole"
+489 - Home Alone - Johnny laugh
+490 - Last Action Hero "Hello? I've just shot somebody, I did it on purpose"
+491 - Man on Fire "Revenge is a meal best served cold"
+492 - The Spy Who Loved Me "What a helpful chap"
+493 - R.O.T.O.R "Justice served"
+494 - On Her Majesty's Secret Service "He had lots of guts"
+495 - Pitch Black "Did not know who was fucking with"
+496 - The Good, the Bad, and the Ugly "When you have to shoot, shoot; Don't talk"
+497 - Diamonds Are Forever "He certainly left with his tail between his legs"
+498 - Moonraker - "Play it again, Sam"
+499 - Batman (1989) - Joker wheeze
+500 - Half Life - Announcer VOX - "Announcement: You are an idiot"
+501 - Half Life - Scientist "This is madness; I'm getting out of here"
+502 - Half Life: Blue Shift - Dr. Rosenburg "This is madness"
+503 - Half Life: Blue Shift - Dr. Rosenburg "Get out of here"
+504 - Half Life: Blue Shift - Dr. Rosenburg "My god, what are you doing"
+505 - Half Life - Otis "I'll get the leftovers"
+506 - Half Life: Blue Shift - Otis "Looks like we're in for a long day today"
+507 - Half Life: Opposing Force - Medic "Keeping you in one peace is proving to be quite a challenge"
+508 - Half Life: Opposing Force - Soldier "One shot, one kill"
+509 - Half Life: Opposing Force - Soldier "Sniper school sure paid off today"
+510 - Half Life: Opposing Force - Soldier "I'll tag 'em, you bag 'em"
+511 - Mortal Kombat II - Announcer "Fatality"
+512 - Mortal Kombat II "oh"
+513 - Mortal Kombat II - Announcer "Flawless Victory"
+514 - Mortal Kombat II - Shao Kaahn "You weak pathetic fool"
+515 - Street Fighter II "You lose"
+516 - El Risitas laugh [KEKW meme] #1
+517 - El Risitas laugh [KEKW meme] #2
+518 - El Risitas laugh [KEKW meme] #3
+519 - El Risitas laugh [KEKW meme] #4
+520 - El Risitas laugh [KEKW meme] #5
+521 - El Risitas laugh [KEKW meme] #6
+522 - El Risitas laugh [KEKW meme] #7
+523 - El Risitas laugh [KEKW meme] #8
+524 - El Risitas laugh [KEKW meme] #9
+525 - El Risitas laugh [KEKW meme] #10
+526 - El Risitas laugh [KEKW meme] #11
+527 - El Risitas laugh [KEKW meme] #12
+528 - El Risitas laugh [KEKW meme] #13
+529 - El Risitas laugh [KEKW meme] #14
+530 - Stone Temple Pilots - Sex Type Thing
+531 - The Who - Won't Get Fooled Again
+532 - Deep Purple - Maybe I'm a Leo
+533 - Judas Priest - Breaking the Law
+534 - Rage Against the Machine - Bulls on Parade
+535 - Half Life: Opposing Force - Drill Sergeant "You had best get your head on straight, maggot"
+536 - Half Life: Opposing Force - Drill Sergeant "You're gonna have to pick up the pace, dirtbag"
+537 - Half Life: Opposing Force - Drill Sergeant "My beloved corps does not have the patience..."
+538 - Tourette's Guy - "Oh bobsaggit"
+539 - Wizard of Oz Dorothy "My, people come and go so quickly here"
+540 - "Oh my god you cheating loser, what the fuck, how'd you know I was there..."
+541 - "Oh no, he's gonna cry"
+542 - Friday "Damn"
+543 - "Get your ass beat down to brass-knuckle blizzard"
+544 - "I'll scissor-kick his gizzard and break his carotid artery"
+545 - Monty Python and the Holy Grail - "I fart in your general direction"
+546 - Pure pwnage "Fucking lagging piece of shit"
+547 - "Gotcha, bitch"
+548 - Breaking Bad - Jesse Pinkman "I made you my bitch"
+549 - Seinfeld "No soup for you"
+550 - Pulp Fiction - Jules Winnfield "I'm sorry, did I break your concentration"
+551 - Dexter - James Doakes "Surprise, motherfucker"
+552 - Lo Wang "Snatch pebble from hand"
+553 - Lo Wang "Lo Wang kinda hungry now"
+554 - Lo Wang "Eye for an eye; You got one, I got one; We both happy"
+555 - Lo Wang "Smell remind me of old 
+556 - Lo Wang "Bombs away"
+557 - Lo Wang "Torra torra torra"
+558 - Lo Wang "You are weak as a baby fart; go live in fear"
+559 - Lo Wang "Split personality"
+560 - Lo Wang "You little tiny-dick"
+561 - J River Oh no no no laugh #1
+562 - J River Oh no no no laugh #2
+563 - J River Oh no no no laugh #3
+564 - Doom 3 turkey sound
+565 - Super Mario Bros. game over sound
+566 - TF2 Heavy "It is good day to be dead"
+567 - James Brown - I Feel Good
+568 - "Boom, headshot" #2
+569 - Homer Simpson "D'oh" #3
+570 - Dragon Ball Z "It's over 9000"
+571 - "Leroy Jenkins"
+572 - 300 "This is Sparta"
+573 - "What is wrong with you"
+574 - Adventures of Sonic the Hedgehog - Dr. Robotnik "Snooping as usual, I see"
+575 - "PINGAS"
+576 - Billy Mays "It's so easy, even your kids can do laundry"
+577 - Multiple FPS gib sounds
+578 - Half Life - Scientist "Freeman, you fool"
+579 - Half Life - Scientist "Don't just stand there; pick up that gun and shoot it"
+580 - Elder Scrolls IV: Oblivion "Stop; you violated the law; pay the court a fine or serve your sentence"
+581 - Elder Scrolls IV: Oblivion "Then pay with your blood"
+582 - Rusty Cage - The Cuss Word Song
+583 - Phil Swift "Now that's a lot of damage"
+584 - Tuntematon sotilas "Perkele"
+585 - "Perkele" #2
+586 - Finnish man scares a bear away by shouting PERKELE "Perkele, siehen et koske, saatana vie!"
+587 - Doom 3 "Die already"
+588 - Doom 3 "Are you serious"
+589 - Doom 3 "That sucked"
+590 - Frolic - Curb Your Enthusiasm
+591 - Salatut Elämät laugh #1
+592 - Salatut Elämät laugh #2
+593 - "Hey Ron. Hey Billy. That hurt"
+594 - "I've fallen, and I can't get up"
+595 - Half Life - gib and User Fatality sound
+596 - Quake III Arena "Denied"
+597 - Street Fighter 4 Super KO sound
+598 - Futurama - Bender laugh 
+599 - Futurama - Bender "I need mouth-to-ass resuscitation"
+600 - Futurama - Hank Hill "Dangit, Bobby"
+601 - Link: The Faces of Evil - Ganon "You must die"
+602 - Spider-Man (2002) - Norman Osborn "You know how much I sacrificed"
+603 - AVGN "Shit the fuck"
+604 - AVGN "ass"
+605 - AVGN "fuck"
+606 - "DISGUSTANG"
+607 - Duke Nukem "That's one doomed space marine"
+608 - The Office - Michael Scott "No, god"
+609 - Tristan "Eris Falling" Clark laugh
+610 - Terry Toons "Somebody toucha my spaghet"
+611 - Top Gear - Jeremy Clarkson "Oh no! Anyway..."
+612 - Dark Souls 'You Died' sound
+613 - Duke Nukem "Nobody steals our chicks and lives"
+614 - Duke Nukem "I'm not crying over this"
+615 - Duke Nukem "Go ahead, make my day"
+616 - Duke Nukem "Nobody messes with my meat"
+617 - Duke Nukem "Get back to work, you slacker"
+618 - Super Mario 64 Game Over sound
+619 - Super Mario 64 "So long [g]ay Bowser"
+620 - James May laugh #13
+621 - James May and Richard Hammond laugh
+622 - Jeremy Clarkson laugh #1
+623 - Jeremy Clarkson laugh #2
+624 - Jeremy Clarkson laugh #3
+625 - Jeremy Clarkson laugh #4 ["Sorry, I'm suddenly feeling cheered up"]
+626 - Jeremy Clarkson laugh #5
+627 - James May and Jeremy Clarkson laugh
+628 - Bridgeburner laugh
+629 - Hammond, Clarkson, May laughing
+630 - Varasto (Finnish comedy movie) - "Voi vitun vitun vittu"
+631 - The Wire - Clay Davis  "Shieeeet"
+632 - DOOM (2016) player gib sound
+633 - James Paddock "I fisted SexualTension"
+634 - James Paddock "Lord fucking Jesus Christ on a bendybus made of cheese, hurling into the sun..."
+635 - Lamb of God "BLEGH"
+636 - "fuckin BLEGH"
+637 - Regular Warren "Ding"
+638 - Quake III Team Arena - James "loser"
+639 - Quake III Team Arena - James "whoo-hoo"
+640 - "Ah, fuck, I can't believe you've done this"
+641 - Stewie Griffin laugh #1
+642 - Peter Griffin laugh #1
+643 - Peter Griffin laugh #2
+644 - Quagmire "Giggity giggity"
+645 - Spider-Man 2 - Peter scream
+646 - Yes - Roundabout
+647 - Gordon Ramsay - "It's fucking raw"
+648 - Spongebob "My leg"
+649 - Rolf Anton Kreuger - Oregon Spirit [We'll Be Right Back jingle]
+650 - Jontron "Well that was a load of shit"
+651 - Ninja "The fuck you say to me you little shit"
+652 - Blood ambient laugh
+653 - Duke Nukem "It hurts to be you"
+654 - Duke Nukem "Yohoho and a bottle of Jack"
+655 - Duke Nukem "Wasted"
+656 - Portal - GlaDOS "Weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+657 - Markiplier - Meow - "Meow bitch"
+658 - Among us death sound
+659 - Among us kill sound
+660 - Law & Order sting
+661 - Fistful of Dollars jingle
+662 - Portal - GlaDOS - "No one will blame you for giving up..."
+663 - Portal - GlaDOS - "Quit now and CAKE will be served immediately"
+664 - Portal 2 - Wheatley - "Yes! Yes! In your face! I got- oh no"
+665 - King of the Hill - Boomhauer on the internet
+666 - Full Metal Jacket - Sergeant Hartman "Why you little maggot..."
+667 - "I fear you're underestimating the sneakiness"
+668 - South Park - Cartman "Screw you guys I'm going home"
+669 - "There's another fucking loser in the room"
+670 - South Park - "Fucking Windows 98"
+671 - Scooby Doo - "So long"
+672 - Some meme laugh
+673 - Do I smell a noobie
+674 - www.whatthefuck.com
+675 - Portal 2 - Wheatley - "Ha, it bloody worked! I hacked, I hacked it..."
+676 - GTA V Wasted sound
+677 - ???
+678 - "Are you fucking kidding me..."
+679 - "Why are you still crying..."
+680 - Portal 2 - Wheatley - "I tell you: If I was ever against impossible odds..."
+681 - Left 4 Dead 2 - Nick "This is why we got guns"
+682 - Left 4 Dead 2 - Nick "This is all going to hell"
+683 - Left 4 Dead 2 - Nick "Tits"
+684 - Left 4 Dead 2 - Nick "Candy asses"
+685 - Left 4 Dead 2 - Nick "Stick that where the sun don't shine"
+686 - Left 4 Dead 2 - Ellis "Want you to remember that for next time, you sons of bitches"
+687 - Left 4 Dead 2 - Ellis "Uh oh, my trigger finger got tired"
+688 - Left 4 Dead 2 - Coach laugh #3
+689 - Left 4 Dead 2 - Coach laugh #4 "Oh hell yea"
+690 - Powerslave "See ya"
+691 - Powerslave "Who's next"
+692 - Powerslave "That's right"
+693 - Powerslave "C'mon"
+694 - Mortal Kombat - Rayden yell #1
+695 - Mortal Kombat - Rayden yell #2
+696 - Mortal Kombat - Rayden yell #3
+697 - Mortal Kombat - Rayden yell #4
+698 - South Park "Oh my god, they killed Kenny..."
+699 - The Simpsons - Skinner "Oh ye gods, my roast is ruined"
+700 - Rim shot sound + crowd laughter sound
+701 - Redneck Rampage - Leonard "Slower molasses in January"
+702 - Redneck Rampage - Leonard "If I sit here any longer, I'm gonna have one severe case o' ass-teroids"
+703 - Redneck Rampage - Leonard "Hush puppy"
+704 - Redneck Rampage - Leonard "Hold on to your butt"
+705 - Redneck Rampage - Leonard "I'm on you like stink on shit"
+706 - Redneck Rampage - Leonard "I'll barbecue your ass in molasses"
+707 - Redneck Rampage - Leonard "Still going, my ass"
+708 - Redneck Rampage - Leonard "It's a good thing there's a helmet law"
+709 - Redneck Rampage - Leonard "Die, you hideous genetic mutation"
+710 - Redneck Rampage - Leonard "Motherf***ing Jack o' F***ing Lope"
+711 - Redneck Rampage - Leonard "Yeehaw"
+712 - Redneck Rampage - Leonard "City folk"
+713 - Redneck Rampage - Leonard "One shithead at a time"
+714 - Terminator 2 - Chopper Pilot "That's a damn minigun"
+715 - Commando - "Right?..."
+716 - Duck Hunt - Round finished
+717 - Redneck Rampage - Shitface laugh #1
+718 - Redneck Rampage - Leonard "I'm busier than a one-legged man in an ass-kicking contest"
+719 - Redneck Rampage - Leonard "Don't make me break my foot to open your ass"
+720 - Redneck Rampage - Leonard "Run for your lives"
+721 - Redneck Rampage - Leonard "We don't take no shit from no suckers"
+722 - Redneck Rampage - Leonard "My advice to you is to start drinking heavily"
+723 - Redneck Rampage - Leonard "You can't kill me sucker"
+724 - Redneck Rampage - Leonard "C'mon, squeal like a pig"
+725 - Redneck Rampage - Leonard "You are as ugly as a mud fence"
+726 - Redneck Rampage - Leonard "Duck, you peckerhead"
+727 - Redneck Rampage - Shitface laugh #2
+728 - Redneck Rampage - Shitface laugh #3
+729 - Redneck Rampage - Shitface laugh #4
+730 - Silent Night Deadly Night 2 - "GARBAGE DAY"
+731 - Mount & Blade "It's almost harvesting season"
+732 - The Simpsons - Homer "I'm trying to knock you out"
+733 - "Shit"
+734 - TF2 Losing sound "You failed"
+735 - TF2 Kill sound
+736 - Doom: Annihilation "I'm your Ultra Nightmare, motherfuckers"
+737 - Zelda CDI King laugh
+738 - Another meme laugh
+739 - Looney Tunes "That's all, folks"
+740 - Spanish Flee
+741 - Left 4 Dead 2 losing sound
+742 - Left 4 Dead dying sound
+743 - Keyboard Cat
+744 - CYKA BLYAT
+745 - Dawn of the Dead - The Gonk
+746 - The Bonk
+747 - James May "CLARKSOOOOOOOON"
+748 - Gabe Newell "GabeN"
+749 - TF2 Demoman "Imagine if I hadn't been drunk"
+750 - TF2 Demoman "There's a new angel in heaven, in hell"
+751 - TF2 Demoman "How's that doing no harm working out for you then"
+752 - TF2 Demoman "Go to hell, and tell the Devil I'm coming for him next"
+753 - TF2 Demoman "You're like a little bunny scurrying around, eating up your lettuce and berries"
+754 - TF2 Demoman "You're a wee-little miss, you are"
+755 - TF2 Demoman "I'll notify your next of kin... that you sucked"
+756 - TF2 Demoman "That's the spirit"
+757 - TF2 Engineer "Y'all come back now"
+758 - TF2 Engineer "Y'all just got branded"
+759 - TF2 Engineer "You're dumn as a box of rocks"
+760 - TF2 Engineer "Y'all come back now, more where that came from"
+761 - TF2 Engineer "You are a whole herd ugly"
+762 - TF2 Engineer laugh #5
+763 - TF2 Engineer "Boy, this here is just gonna keep happening and happening"
+764 - TF2 Engineer "Shoot, son, y'all as slow as molasses"
+765 - TF2 Engineer "Not fast enough, not by a damn sight"
+766 - TF2 Demoman "Boo"
+767 - TF2 Engineer "Boo"
+768 - TF2 Engineer "Take it like a man, shorty"
+769 - TF2 Heavy "Huaaaaah"
+770 - TF2 Heavy "So much blood"
+771 - TF2 Heavy laugh #9
+772 - TF2 Heavy singing the funeral march
+773 - TF2 Heavy "Come sing with me"
+774 - TF2 Heavy "Go ahead and cry, baby"
+775 - TF2 Heavy "Run home to mama"
+776 - TF2 Heavy "Do I smell soiled baby diaper"
+777 - TF2 Heavy "Killing you is full time job now"
+778 - TF2 Heavy "You did well"
+779 - TF2 Heavy "Boo"
+780 - TF2 Heavy "Stupid, stupid, stupid"
+781 - TF2 Heavy "It's not fair to use gun on such a tiny man"
+782 - TF2 Heavy "POOTIS"
+783 - TF2 Heavy "Very good"
+784 - TF2 Heavy "Bologne is perfect fuel for killing tiny cowards"
+785 - TF2 Heavy "Sandwich and me going to beat your ass"
+786 - TF2 Heavy "That was delicious"
+787 - TF2 Heavy "You drew first"
+788 - TF2 Medic "Gesundheit"
+789 - TF2 Medic "Excellent"
+790 - TF2 Medic "Boo"
+791 - TF2 Medic laugh #3
+792 - TF2 Scout "Wohohoo"
+793 - TF2 Scout "Look at me, ma"
+794 - TF2 Scout laugh #2
+795 - TF2 Scout "Sike"
+796 - TF2 Scout "Oh what's up"
+797 - TF2 Scout "Woo"
+798 - TF2 Scout "Sorry"
+799 - TF2 Scout "Denied"
+800 - TF2 Scout laugh #3
+801 - TF2 Scout "Punk"
+802 - TF2 Scout "Wuss"
+803 - TF2 Scout "Oh yeah"
+804 - TF2 Scout "Hey knucklehead, you ain't gonna win"
+805 - TF2 Scout "Drink it in pal, that's how failure tastes"
+806 - TF2 Scout "Would you look at you, I mean LOOK AT YOU"
+807 - TF2 Scout "You. Are. Terrible"
+808 - TF2 Scout "Is that all you got, moron"
+809 - TF2 Scout "You gonna cry, you gonna cry now"
+810 - TF2 Scout "Diagnosis: You suck"
+811 - TF2 Scout "Repeat after me: Mmmmm, I'm dead"
+812 - TF2 Scout "Boo"
+813 - TF2 Scout "What the hell was that crap"
+814 - TF2 Scout "This is a real freaking embarrasment"
+815 - TF2 Scout "You're like a car crash in slow motion..."
+816 - TF2 Scout "Eat it, fatty"
+817 - TF2 Scout "Bonk"
+818 - TF2 Scout "There's a thinger for you"
+819 - TF2 Scout "Home fricking run"
+820 - TF2 Scout "Nice catch, knucklehead"
+821 - TF2 Scout "Good catch, dummy"
+822 - TF2 Scout "Ding dong"
+823 - TF2 Sniper "Alright"
+824 - TF2 Sniper "Dooday"
+825 - TF2 Sniper "You're gonna keep finding yourself belly up"
+826 - TF2 Sniper "How many times have you died..."
+827 - TF2 Sniper "This is as good as you're gonna do"
+828 - TF2 Sniper "Bloody hell, you're awful"
+829 - TF2 Sniper "What's up, doc"
+830 - TF2 Sniper "That was rubbish"
+831 - Seinfeld theme
+832 - Cucumber harvest meme
+833 - "Damn son, where'd you find this"
+834 - Eddie Wally "Wow"
+835 - Age of Hell Crusader "I'm gonna snort a line of coke"
+836 - The Outlaw Josey Wales "Don't piss down my neck and tell me it's raining"
+837 - Counter-Strike: Global Offensive Kill streak #1
+838 - Counter-Strike: Global Offensive Kill streak #2
+839 - Counter-Strike: Global Offensive Kill streak #3
+840 - Counter-Strike: Global Offensive Domination sound
+841 - Counter-Strike "Counter-Terrorists win"
+842 - Counter-Strike "Terrorists win"
+843 - Counter-Strike Bot "And that's how it's done"
+844 - Counter-Strike Bot "Do not mess with me"
+845 - Counter-Strike Bot "C'mon and fight like a man"
+846 - Counter-Strike Bot "Good one, sir"
+847 - Counter-Strike Bot "Good shot"
+848 - Counter-Strike Bot "Good shot, commander"
+849 - Counter-Strike Bot "I am dangerous"
+850 - Counter-Strike Bot "I am on fire"
+851 - Counter-Strike Bot "I got more where that came from"
+852 - Counter-Strike Bot "Nice shot, commander"
+853 - Counter-Strike Bot "Nice shot"
+854 - Counter-Strike Bot "Yes"
+855 - The Room - Tommy Wiseau "Oh hi Mark"
+856 - Running in the 90s
+857 - Initial D - Deja Vu
+858 - Dunn "Gib sound"
+859 - Neil DeGrasse Tyson
+860 - King of the Hill Boomhauer #1
+861 - King of the Hill Boomhauer #2
+862 - Peanut Butter Jelly Time #1
+863 - Peanut Butter Jelly Time #2
+864 - I like Turtles
+865 - AVGN "Now you're playing with fucking shit..."
+866 - Jimmy "Bastard, bitch, fuck, ass"
+867 - Beavis & Butthead "I am Cornholio"
+868 - Prop Hunt HAAAAAAAAA
+869 - The Shining "Here's Johnny"
+870 - Inglorious Basterds - Hitler "NEINx7"
+871 - Monty Python & The Holy Grail "Go away or I shall taunt you a second time"
+872 - Blade (1998) Late 90s disco loop
+873 - Kenny Chesney - I am the One and Only
+874 - Age of Empires "Wololooooo"
+875 - Loudest profanity ever
+876 - Wilhelm scream
+877 - Darth Vader "You underestimate the power of the Dark Side"
+878 - Blood II - Caleb "Love American style"
+879 - McHammer - You Can't Touch This
+880 - Fokktor "Perrrrkele"
+881 - Fokktor laugh #1
+882 - Fokktor laugh #2
+883 - Fokktor laugh #3
+884 - Fokktor laugh #4
+885 - Fokktor laugh #5 "Perkele"
+886 - Super Mario 64 pain sound
+887 - Super Mario 64 "Mamma mia"
+888 - Super Mario 64 "Oof"
+889 - Super Mario 64 "Thank you so much-a for-to playing my game"
+890 - Super Mario 64 "Eugh"
+891 - Super Mario 64 "Woah"
+892 - Super Mario 64 Thwomp sound
+893 - Star Wars Admiral Ackbar "It's a trap"
+894 - Unreal Tournament 2004 "Holy shit"
+895 - Quake III: Team Arena "Holy shit"
+896 - Quake III: Arena "Humiliation"
+897 - Fokktor "You touch me in the nono zone..."
+898 - Darude - Sandstorm
+899 - Super Hot
+900 - Windows 3.1 & 95 Error sound
+901 - Windows 98 Error sound
+902 - Windows XP Error sound
+903 - Windows XP Alert sound
+904 - Jeff Dunham & Achmed the Dead Terrorist "Silence, I kill you"
+905 - Generic vomit sound in Doom mods
+906 - DCDWANGO pain sound
+907 - Tim Allen "AEUGH"
+908 - Bill Gates "These games are getting really realistic"
+909 - Bill Gates "Don't interrupt me"
+910 - Windows 95 Tada sound
+911 - Windows XP Shutdown sound
+912 - Primus - Tommy the Cat
+913 - Donkey Kong Country Kremling death sound
+914 - Super Mario Bros. Super Show "Oh fuck you Luigi"
+915 - Hotel Mario "Gay Luigi"
+916 - Filthy Frank Pink Guy "Too bad you'll never be rad"
+917 - Filthy Frank Pink Guy "Hey boss"
+918 - Doom comic "DYNAMIIIITE"
+919 - Doom comic "that's your spinal cord, baby"
+920 - Doom comic "RIP AND TEAR YOUR GUTS"
+921 - Doom comic "YOU ARE HUGE, THAT MEANS YOU HAVE HUGE GUTS, RIP AND TEAR"
+922 - TF2 Medic "I CAN'T TAKE ANYMORE OF THIS INSANITY"
+923 - Hungry Pumkin "NO! I don't want that"
+924 - ASDFMovie "Everybody do the flop"
+925 - ASDFMovie "I like trains"
+926 - ASDFMovie "What are you, a man, or a mouse"
+927 - ASDFMovie "HUUYYYYYEEEEEGH" *explosion*
+928 - "Mission Failed, we'll get 'em next time"
+929 - Metal Gear Solid death sound
+930 - Gamecube startup sound
+931 - PSX startup sound
+932 - Beetlejuice "Nice fucking model"
+933 - HeadOn
+934 - PS2 startup sound
+935 - Doomware match end sound
+936 - Windows 7 Tada
+937 - Batman Doom death sound
+938 - Super Smash Bros Brawl - Captain Falcon "PUNCH"
+939 - Super Mario stomp sound
+940 - Homer Simpson laugh
+941 - Just some laugh from Doomware
+942 - Terry wad "SHAAAADAAAAAP"
+943 - Japanese guy yelling
+944 - Foster's home "I like cereal"
+945 - Homer Simpson "Awww crap"
+946 - Pulp Fiction - Jules "This is a tasty burger"
+947 - Scary movie "WHAZAAAAP"
+948 - "What the hell is that shit"
+949 - Full Metal Jacket - Sergeant Hartman "What the fuck is that"
+950 - Full Metal Jacket - Sergeant Hartman "Do you suck dicks"
+951 - Ricochet decapitation sound
+952 - The Matrix - Morpheus "Welcome to the real world"
+953 - Half-Life - Barney "You talk too much"
+954 - AC/DC - Back in Black
+955 - "Attention, chatters, we have another potential asshole in the room..."
+956 - Moo
+957 - Deez Nutz
+958 - Wayne's World - Mike Myers "Denied"
+959 - Beavis & Butthead - Beavis "My liver"
+960 - Beavis & Butthead - Beavis "I think I hurt myself"
+961 - Beavis & Butthead - Beavis scream
+962 - Beavis & Butthead - Beavis being Beavis
+963 - Beavis & Butthead - Butthead "What a bunch of dumbasses"
+964 - Beavis & Butthead - Butthead laugh
+965 - Old man laughing
+966 - Lego Yoda death sound
+967 - Jontron "What, What the fuck"
+968 - Jontron "I have several questions"
+969 - Jontron "That's the way we wash our hands"
+970 - Gabriel Iglesias laugh #1
+971 - Gabriel Iglesias laugh #2
+972 - Gabriel Iglesias laugh #3
+973 - Half-Life 2 - Rebel "The hacks"
+974 - Half-Life 2 - Rebel "Sometimes I dream about cheese"
+975 - Half-Life 2 - Father Grigori "My advice to you is aim for the head"
+976 - Troll 2 "They're eating her..."
+977 - Jontron "Fool me once, I'm mad.."
+978 - Jontron "Fuck you, I ain't havin' that shit"
+979 - JoJo "OHHHH NOOOOO"
+980 - "This ball is long gone, just like the ex-gifriend, who will never return"
+981 - Killer Instinct - "C-C-C-Combo breaker"
+982 - WolfMcBeard "Why is my Fist so W I D E"
+983 - Screaming Goat
+984 - Cryever
+985 - Unreal Tournament 1999 "You have failed to proceed"
+986 - Unreal Tournament 1999 "Last place"
+987 - Unreal Tournament 1999 "Nice catch"
+988 - Unreal Tournament 1999 Xan Kriegor "You die too easily"
+989 - Unreal Tournament 1999 Xan Kriegor "Target lifeform eliminated"
+990 - Unreal Tournament 1999 Xan Kriegor "You are inferior"
+991 - Blade (1998) - "Some motherfuckers are always trying to ice-skate uphill"
+992 - Michael Jordan "Stop it, get some help"
+993 - Unreal Tournament 2004 "Humiliating Defeat"
+994 - Gnome sound
+995 - Spongebob - Patrick "FINLAND"
+996 - Spongebob - Patrick "Leedle leedle..."
+997 - Zelda CDI - King "Mah boi"
+998 - Zelda CDI "You've killed me - good"
+999 - Tyler1 scream
+1000 - James Paddock "Why did I think alcohol was a good idea?"
+1001 - James May "Cheese."
+1002 - Rott!Zone Goddaymit gibbing sound
+1003 - Bababooey
+1004 - Fart echo sound effect
+1005 - Cartoon awkward sound effect
+1006 - *honk* get fucked
+1007 - Cartoon bonk sound effect
+1008 - Cartoon boing sound effect
+1009 - FFFFFFFFUUUUUUUUUUUU sound effect
+1010 - James May "Cock!"
+1011 - James May "Oh cock!"
+1012 - James May "What's the Norwegian for 'Oh cock'?"
+1013 - Jim Lahey falls down stairs
+1014 - "Oh no! Our table! It's broken!"
+1015 - 3D Pinball sound effect #1
+1016 - 3D Pinball sound effect #2
+1017 - Trololo song #1
+1018 - Trololo song #2
+1019 - Trololo song #3
+1020 - Trololo song #4
+1021 - Trololo song #5
+1022 - Trololo song #6
+1023 - Trololo song #7
+1024 - Trololo song #8
+1025 - Trololo song #9
+1026 - Fallout Ron Perlman "Rest in piece, Chosen One."
+1027 - Fallout Ron Perlman "You have perished..."
+1028 - Fallout Ron Perlman "You have died..."
+1029 - Fallout Ron Perlman "You're dead. Again."
+1030 - Fallout Ron Perlman "Here's a picture of your corpse. Not pretty."
+1031 - Fallout Ron Perlman "Boy, are you stupid. And dead."
+1032 - Bridgeburner laugh #2
+1033 - Taco bell ding
+1034 - The Good, The Bad, and The Ugly "The way I figure..."
+1035 - Oh hell no
+1036 - Birdemic clapping scene
+1037 - Chipmunk laugh
+1038 - Chipmunk laugh #2
+1039 - Kaapeli47 "Penisburner." + Dunn & Dunn wheeze
+1040 - Penn & Teller "You need to shut the fuck up."
+1041 - Star Wars Episode 1 "This is impossible!"
+1042 - C&C Red Alert 3 Tim Curry "SBAYSCE!"
+1043 - Kaapeli47 "Meeeeh!"
+1044 - B-17 Bomber
+1045 - Would I Lie to You - "Oh Scheisse!"
+1046 - Not The 9 O'Clock News - Rowan Atkinson "What a load of willies!"
+1047 - Some sound I found browsing the iconic meme sounds Twitter
+1048 - Yeet sound effect
+1049 - The Mask "That's a spicy meatball!"
+1050 - James Paddock "You died. Good."
+1051 - Columbo - Patrick McGoohan & Peter Falk laughing
+1052 - Kojak "Look, uh, Pussycat. Never, ever, ever, talk to me like that..."
+1053 - M. Bison "YES! YES!"
+1054 - Robotnik "NO!"
+1055 - Russian Overkill "WEE!" #1
+1056 - Russian Overkill "WEE!" #2
+1057 - Russian Overkill "WEE!" #3
+1058 - Russian Overkill "WEE!" #4
+1059 - Russian Overkill "WEE!" #5
+1060 - Robotnik "STOP IT!"
+1061 - Velvetic "Look into my balls!"
+1062 - Donkey Kong 64 "Okay!"
+1063 - Donkey Kong 64 "Oh Banana!"
+1064 - Final Fantasy 10 Tidus Laugh
+1065 - 100 More Ways to Die in Garry's Mod "Shut up!"
+1066 - Guy Mitchell - Heartaches By The Number
+1067 - Cartoon springs + cymbals SFX
+1068 - Tom & Jerry scream #1
+1069 - Tom & Jerry scream #2
+1070 - kevansevans "I HAVE NO IDEA HELP."
+1071 - Super Mario World lose life sound
+1072 - Yoshi's Island lose life sound
+1073 - Worms Armageddon - Finnish National Anthem Jingle
+1074 - Chinese DOIT sound effect
+1075 - 5 ways to say Perkele #1
+1076 - 5 ways to say Perkele #2
+1077 - 5 ways to say Perkele #3
+1078 - Bridgeburner scream #1
+1079 - Bridgeburner scream #2
+1080 - Bridgeburner scream #3
+1081 - Bridgeburner "Testicles."
+1082 - Common Reality TV series dramatic sound
+1083 - Harlem Shake
+1084 - Team Fortress Classic bell sound
+1085 - Team Fortress Classic goal sound
+1086 - South Park - Cartman "Excuse me, but I do believe that sucked ass."
+1087 - Homer Simpson "AGH! I mean... HELLO!"
+1088 - Homer Simpson "D'OH! D'OH! D'OH! I mean... Wohoo!"
+1089 - "SAATANA!" from the Finnish Youtube video "Suutu jo!" - Translates to "SATAN!"
+1090 - Popular Finnish Youtube video in military weapon training. "EI, MITÄ VITTUA?! SEIS! SEIS!" - Translates to "NO, WHAT THE FUCK?! STOP! STOP!"
+1091 - "GREETINGS!" from Halo series
+1092 - Star Trek: The Next Generation - Worf laugh
+1093 - Star Trek: The Next Generation - Picard "Not good enough, damnit, not good enough!"
+1094 - Spongebob - Patrick Star "NO! THIS IS PATRICK!"
+1095 - Oh My God vine
+1096 - "WUDDAHEEEEEEL OHHHH MAHHH GOOOOD NOO WAYYYYEYYEH!"
+1097 - Velvetic "Scrumptious."
+1098 - Jeremy Clarkson "HAMMOND! YOU ******* MORON!"
+1099 - Jeremy Clarkson "Hammond, you idiot! You've reversed into the sports lorry!"
+1100 - El Chombo - Chacarron
+1101 - Jeremy Clarkson "Hammond, you blithering idiot!"
+1102 - James Paddock in "Jimmydies.mp4" Twitch clip from Bridgeburner56 stream
+1103 - Bottom Live - "Stupid stupid stupid ass bastard!"
+1104 - Biodegradable laughing
+1105 - A player laughing at the TF2 Eagle Soldier freezecam, taken from @DailyTF2Memes on Twitter.
+1106 - Richard Hammond "What I thought I'd do is put the fire out, and then say..."
+1107 - Top Gear - James May nearly falls of a plank.
+1108 - James May laugh #14
+1109 - James May and Jeremy Clarkson laugh #2 "He missed!"
+1110 - James May and Jeremy Clarkson laugh #3
+1111 - Richard Hammond and Jeremy Clarkson laugh
+1112 - James May and Richard Hammond laugh
+1113 - Robocop "I'd buy that for a dollar!"
+1114 - Columbo - Martin Landau "SHUT UP!" from S2E8 'Double Trouble'
+1115 - Deus Ex Sound menu speech volume test sound "I SPEEL MY DRINK!"
+1116 - Tarnsman laugh
+1117 - I am Big Billy cat video
+1118 - Columbo - Jack Cassidy "SHUT UP!" from S3E5 'Publish or Perish'
+1119 - NES-Retku laughing and coughing
+1120 - "Don't kinkshame me!" from YT video 'priorities in yu-gi-oh'
+1121 - Redneck Rampage - Leonard "Damn, you suck!"
+1122 - Rise of the Triad "You suck."
+1123 - Rise of the Triad "You're toast!"
+1124 - Rise of the Triad "They'll bury you in a lunchbox!"
+1125 - Rise of the Triad "BLEH!"
+1126 - Redneck Rampage - Leonard "Them jack-o-lope innards is just as good as the second date!"
+1127 - Redneck Rampage - Leonard "Swamp gas my ass!"
+1128 - Redneck Rampage - Leonard "Jackpot!"
+1129 - Redneck Rampage - Leonard "If that don't take the ham off the hawg!"
+
+NUKE EFFECTS
+1 - "Imma firing my lazor"
+2 - "Imma firing my pingas"
+3 - The Office "No, God, please no..."
+4 - Duke Nukem "Imma firing my balls of steel"
+5 - Hexen "You have played this game too long, mortal; I think I shall remove you from the board"
+6 - "Oh my god, it's Christmas"
+7 - "Lovely spam, wonderful spaaam"
+8 - Arnold Schwarzenegger - Running Man "I hope you leave enough room for my fist..."
+9 - Strife "Spirit of the One God avenge me..."
+10 - "Imma firing my HAND"
+11 - Dumb and Dumber "Hey, wanna hear the most annoying sound in the world"
+12 - KEKW
+13 - MajorArlene "Imma firing my Shannon Cannon"
+14 - Half-Life - Scientist "Oh my god, we're doomed"
+15 - TF2 Engineer "Erectin' mah dispenser"
+16 - "This is Sparta"
+17 - Bridgeburner "Fuck that's a lot of balls"
+18 - Fist of the North Star "You are already dead"
+19 - AC/DC "Imma firing my TNT"
+20 - "Look at this Graf"
+21 - "Imma firing my POOTIS"
+22 - ASDFMovie "Hey man look at my new dog"
+23 - "Imma firing my JOHN CENA"
+24 - "Imma firing my GABEN"
+25 - Ainsley Harriot "Hehhee boi"
+26 - Worms holy hand grenade "HALLLLELUJAH"
+27 - Kaapeli47 "I'mm a firing my Golden Caco!"
+28 - BridgeBurner "Dodge this you basta-"
+29 - Alex Jones "I'm a pioneer. I'm an explorer. I'm a human, and I'm coming!"
+30 - "I'mm a firing my Schutzstaffel!"
+31 - Red Alert 3 Tim Curry "I'm escaping to the one place..."
+32 - Nokia ring tones explosion
+33 - Gianni Matragrano "BIMSNESS!"
+34 - Star Fox 64 Peppy "DO A BARREL ROLL!"
+35 - Tim Allen Home Improvement grunt
+WTF - "WHAT THE FU- BOOM!"

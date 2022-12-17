@@ -1,0 +1,125 @@
+/// Gargoyle
+
+
+ACTOR IDMHereticImp : HereticImp
+{
+  Health 60
+  GibHealth 60
+  Radius 16
+  Height 36
+  Mass 50
+  Speed 10
+  Damage 3
+  PainChance 200
+  Monster
+  Species "Imp"
+  +DONTHURTSPECIES
+  +DONTHARMSPECIES
+  +FLOAT
+  +NOGRAVITY
+  +DONTOVERLAP
+  +MISSILEMORE
+  +MISSILEEVENMORE
+  -SPAWNFLOAT
+  SeeSound "himp/sight"
+  AttackSound "himp/attack"
+  PainSound "himp/pain"
+  DeathSound "himp/death"
+  ActiveSound "himp/active"
+  Obituary "$OB_HERETICIMP"
+  HitObituary "$OB_HERETICIMPHIT"
+  Tag "Gargoyle"
+  DropItem "IDMHealthBonusPickup", 64
+  DropItem "IDMArmorBonusPickup", 64
+  DropItem "Clip", 32, 20
+  DropItem "Shell", 32, 4
+  DropItem "RocketAmmo", 32, 1
+  DropItem "Cell", 16, 20
+  DropItem "IDMMana", 4
+  DropItem "IDMMaceAmmo", 4
+  DropItem "IDMCatAmmo", 4
+  DropItem "IDMGas", 4
+  States
+  {
+  Spawn:
+    IMPX ABCB 10 A_Look
+    Loop
+  See:
+    IMPX AABBCCBB 3 A_Chase
+    Loop
+  Melee:
+    IMPX DE 6 A_FaceTarget
+    IMPX F 6 A_CustomMeleeAttack(random[ImpMeAttack](5,12), "himp/attack", "himp/attack")
+    Goto See
+  Missile:
+	TNT1 A 0 A_Jump(64,"ChargeAtk")
+    IMPX DE 3 A_FaceTarget
+    IMPX F 3 A_CustomComboAttack("IDMHereticImpBall", 32, random[ImpMsAttack2](5,12), "himp/leaderattack")
+    IMPX DE 3 A_FaceTarget
+    IMPX F 3 A_CustomComboAttack("IDMHereticImpBall", 32, random[ImpMsAttack2](5,12), "himp/leaderattack")
+    Goto See
+  ChargeAtk:
+    IMPX A 10 A_FaceTarget
+    IMPX B 6 A_SkullAttack(12)
+    IMPX CBAB 6
+    Goto ChargeAtk+2
+  Pain:
+    IMPX G 3
+    IMPX G 3 A_Pain
+    Goto See
+  Death:
+    IMPX G 4 A_ImpDeath
+    IMPX H 5
+    Wait
+  XDeath:
+	IMPX S 1 A_ImpXDeath1
+    IMPX S 4 A_Gravity
+    Wait
+  Crash:
+	TNT1 A 0 A_NoBlocking
+    IMPX I 7 A_ImpExplode
+    IMPX J 7 A_Scream
+    IMPX K 7
+    IMPX L -1
+    Stop
+  XCrash:
+    IMPX T 5 A_XScream
+	IMPX U 5
+    IMPX V 5
+    IMPX W 5
+    IMPX X 5
+    IMPX Y 5
+    IMPX Z -1
+    Stop
+  Raise:
+    IMPX L 0
+    IMPX L 0 A_RemoveChildren
+    IMPX LKJIHG 6
+    Goto See
+  }
+}
+
+ACTOR IDMHereticImpBall : HereticImpBall
+{
+  Radius 8
+  Height 8
+  Speed 10
+  FastSpeed 20
+  Damage 2
+  Projectile
+  SeeSound "himp/leaderattack"
+  DeathSound "weapons/macehit"
+  +SPAWNSOUNDSOURCE
+  -ACTIVATEPCROSS
+  -ACTIVATEIMPACT
+  RenderStyle Add
+  States
+  {
+  Spawn:
+    FX10 ABC 6 Bright
+    Loop
+  Death:
+    FX10 DEFG 5 Bright
+    Stop
+  }
+}

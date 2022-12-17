@@ -1,0 +1,201 @@
+// Weapon Spawners
+
+ACTOR WeaponSpawner1 : RandomSpawner
+{
+	DropItem "IDMSuperShotgun"
+	DropItem "RiotShotgun"
+	DropItem "Screwgun"
+}
+
+ACTOR WeaponSpawner2 : RandomSpawner
+{
+	DropItem "IDMShotgun"
+	DropItem "Yellowboy"
+	DropItem "Nailgun"
+	//DropItem "GrenadeRifle"
+}
+
+ACTOR WeaponSpawner3 : RandomSpawner
+{
+	DropItem "SuperNailgun"
+	DropItem "SuperChaingun"
+	DropItem "HeavyMachinegun"
+}
+
+ACTOR WeaponSpawner4 : RandomSpawner
+{
+	DropItem "BarrageLauncher"
+	DropItem "IDMGrenadeLauncher"
+	DropItem "MiniBomber"
+}
+
+ACTOR WeaponSpawner5 : RandomSpawner
+{
+	DropItem "IDMRailgun"
+	DropItem "PlasMachineGun"
+	DropItem "PulseRifle"
+	DropItem "PlasmaBeam"
+	DropItem "IonBlaster"
+}
+
+ACTOR WeaponSpawner6 : RandomSpawner
+{
+	DropItem "IDMBFG9000", 256
+	DropItem "IDMBFG10K", 256
+	DropItem "Devastator1000", 256
+	//DropItem "QuadShotgun", 256
+	//DropItem "HandCannon", 256
+	//DropItem "IDMMinigun", 256
+	//DropItem "Stinger", 256
+	DropItem "IDMBloodScourge", 256
+	DropItem "IDMWraithVerge", 256
+	//DropItem "FreezeThrower", 256
+	//DropItem "WidePlasmaGun", 256
+	DropItem "Unmaker", 256
+	//DropItem "Devastator", 256
+	//DropItem "BarrelGun", 256
+	DropItem "IDMMace", 256
+	DropItem "Meowitzer", 256
+	DropItem "IDMFlamethrower", 256
+	DropItem "IDMPyroCannon", 256
+}
+
+ACTOR WeaponSpawner7 : RandomSpawner
+{
+	DropItem "StartingChainsaw", 256
+	DropItem "Blade", 256
+}
+
+ACTOR WeaponSpawnActor1 : CustomInventory replaces SuperShotgun
+{
+	Tag "Common Weapon Spawner 1"
+	//$Category Weapons
+	//$Sprite SGN2A0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("WeaponSpawner1")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR WeaponSpawnActor2 : CustomInventory replaces Shotgun
+{
+	Tag "Common Weapon Spawner 2"
+	//$Category Weapons
+	//$Sprite SHOTA0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("WeaponSpawner2")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR WeaponSpawnActor3 : CustomInventory replaces Chaingun
+{
+	Tag "Bullet Weapon Spawner"
+	//$Category Weapons
+	//$Sprite MGUNA0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("WeaponSpawner3")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR WeaponSpawnActor4 : CustomInventory replaces RocketLauncher
+{
+	Tag "Explosive Weapon Spawner"
+	//$Category Weapons
+	//$Sprite LAUNA0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("WeaponSpawner4")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR WeaponSpawnActor5 : CustomInventory replaces PlasmaRifle
+{
+	Tag "Plasma Weapon Spawner"
+	//$Category Weapons
+	//$Sprite PLASA0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("WeaponSpawner5")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR WeaponSpawnActor6 : CustomInventory replaces BFG9000
+{
+	Tag "Big Weapon Spawner"
+	//$Category Weapons
+	//$Sprite BFUGA0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 0 A_SpawnItemEx("RandomBigWeaponAmmoSpawner")
+	  TNT1 A 1 A_SpawnItemEx("WeaponSpawner6")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}
+
+ACTOR WeaponSpawnActor7 : CustomInventory replaces Chainsaw
+{
+	Tag "Big Weapon Spawner"
+	//$Category Weapons
+	//$Sprite BFUGA0
+	+NOBLOCKMAP
+	+NOGRAVITY
+	States
+	{
+	Spawn:
+	  TNT1 A 0
+	  TNT1 A 1 A_SpawnItemEx("WeaponSpawner7")
+	Nothing:
+	  TNT1 A 1
+	  TNT1 A -1
+	  Stop
+	}
+}

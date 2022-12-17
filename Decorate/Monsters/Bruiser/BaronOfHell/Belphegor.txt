@@ -1,0 +1,100 @@
+/// Belphegor
+
+ACTOR IDMBelphegor : IDMBaronOfHell
+{
+	Health 1500
+	PainChance 25
+	Obituary "%o was slain by a belphegor."
+	HitObituary "%o was slain by a belphegor."
+	Tag "Belphegor"
+	DropItem "IDMHealthBonusPickup", 128
+	DropItem "IDMArmorBonusPickup", 128
+	DropItem "Clip", 64, 20
+	DropItem "Clip", 64, 20
+	DropItem "ClipBox", 32, 50
+	DropItem "Shell", 64, 4
+	DropItem "Shell", 64, 20
+	DropItem "ShellBox", 32, 10
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketAmmo", 64, 1
+	DropItem "RocketBox", 32, 5
+	DropItem "Cell", 64, 20
+	DropItem "Cell", 64, 20
+	DropItem "Cellpack", 16, 100
+	DropItem "IDMMana", 16
+	DropItem "IDMMana", 16
+	DropItem "IDMMaceAmmo", 16
+	DropItem "IDMMaceAmmo", 16
+	DropItem "IDMCatAmmo", 16
+	DropItem "IDMCatAmmo", 16
+	DropItem "IDMGas", 16
+	DropItem "IDMGas", 16
+	+MISSILEMORE
+	States
+	{
+	Spawn:
+		BOS3 AB 10 A_Look
+		Loop
+	See:
+		BOS3 AABBCCDD 3 A_Chase
+		Loop
+	Pain:
+		BOS3 H 2
+		BOS3 H 2 A_Pain
+		Goto See
+	Melee:
+	Missile:
+		BOS3 EF 5 A_FaceTarget
+		TNT1 A 0 A_Jump(128,"BigAtk","ScatterAtk","BigScatterAtk")
+		BOS3 G 5 A_BasicAttack (10, "baron/melee", "IDMBelphegorBall", 32)
+		BOS3 EF 5 A_FaceTarget
+		BOS3 G 5 A_BasicAttack (10, "baron/melee", "IDMBelphegorBall", 32)
+		BOS3 EF 5 A_FaceTarget
+		BOS3 G 5 A_BasicAttack (10, "baron/melee", "IDMBelphegorBall", 32)
+		Goto See
+	BigAtk:
+		BOS3 G 5 A_BasicAttack (10, "baron/melee", "IDMBigBaronBall", 32)
+		BOS3 EF 5 A_FaceTarget
+		BOS3 G 5 A_BasicAttack (10, "baron/melee", "IDMBigBaronBall", 32)
+		BOS3 EF 5 A_FaceTarget
+		BOS3 G 5 A_BasicAttack (10, "baron/melee", "IDMBigBaronBall", 32)
+		Goto See
+	ScatterAtk:
+		TNT1 A 0 A_CustomMissile("IDMBelphegorBall",32,0,-8)
+		TNT1 A 0 A_CustomMissile("IDMBelphegorBall",32,0,8)
+		BOS3 G 6 A_BasicAttack (10, "baron/melee", "IDMBelphegorBall", 32)
+		BOS3 EF 6 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("IDMBelphegorBall",32,0,-8)
+		TNT1 A 0 A_CustomMissile("IDMBelphegorBall",32,0,8)
+		BOS3 G 6 A_BasicAttack (10, "baron/melee", "IDMBelphegorBall", 32)
+		Goto See
+	BigScatterAtk:
+		TNT1 A 0 A_CustomMissile("IDMBigBaronBall",32,0,-8)
+		TNT1 A 0 A_CustomMissile("IDMBigBaronBall",32,0,8)
+		BOS3 G 6 A_BasicAttack (10, "baron/melee", "IDMBigBaronBall", 32)
+		BOS3 EF 6 A_FaceTarget
+		TNT1 A 0 A_CustomMissile("IDMBigBaronBall",32,0,-8)
+		TNT1 A 0 A_CustomMissile("IDMBigBaronBall",32,0,8)
+		BOS3 G 6 A_BasicAttack (10, "baron/melee", "IDMBigBaronBall", 32)
+		Goto See
+	Death:
+	Death.Massacre:
+		BOS3 I 8
+		BOS3 J 8 A_Scream
+		BOS3 K 8
+		BOS3 L 8 A_NoBlocking
+		BOS3 MN 8
+		BOS3 O -1 A_BossDeath
+		Stop
+	Raise:
+		BOS3 ONMLKJI 8
+		Goto See
+	}
+}
+
+ACTOR IDMBelphegorBall : IDMBaronBall
+{
+	SpawnID 222
+	Speed 20
+	FastSpeed 24
+}

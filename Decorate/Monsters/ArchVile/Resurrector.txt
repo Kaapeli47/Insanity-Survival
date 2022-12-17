@@ -1,0 +1,30 @@
+ACTOR IDMResurrector : IDMArchVile
+{
+	Health 600
+	Speed 10
+	Tag "Resurrector"
+	+NOINFIGHTING
+	States
+	{
+	Spawn:
+		RESU AB 10 A_Look
+		Loop
+	See:
+		RESU AAABBBCCCDDDEEEFFF 1 A_Chase("","",CHF_RESURRECT)
+		Loop
+	Heal:
+		RESU GHI 7 BRIGHT
+		Goto See
+	Pain:
+		RESU J 5
+		RESU J 5 A_Pain
+		Goto See
+	Death:
+		RESU J 7
+		RESU K 7 A_Scream
+		RESU L 7 A_NoBlocking
+		RESU MNOPQR 7
+		RESU S -1
+		Stop
+	}
+}

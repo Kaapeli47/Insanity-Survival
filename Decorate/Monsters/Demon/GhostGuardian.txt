@@ -1,0 +1,60 @@
+/// Ghost guardian
+
+ACTOR IDMGhostGuardian : IDMMeleeRevenant
+{
+  +STEALTH
+  Obituary "%o was stealth punched by a ghost guardian."
+  TAG "Ghost Guardian"
+  States
+  {
+  Spawn:
+    GZKL AB 10 BRIGHT A_Look
+    Loop
+  See:
+    GZKL AABBCCDDEEFF 2 BRIGHT A_Chase
+	TNT1 A 0 A_SpawnItemEx("IDMAFTERIMAGE")
+    Loop
+  Melee:
+    GZKL G 1 BRIGHT A_FaceTarget
+    GZKL G 6 BRIGHT A_SkelWhoosh
+    TNT1 A 0 A_FaceTarget
+	GZKL H 2 BRIGHT A_Recoil(-4)
+    TNT1 A 0 A_FaceTarget
+	GZKL H 2 BRIGHT A_Recoil(-5)
+    TNT1 A 0 A_FaceTarget
+	GZKL H 2 BRIGHT A_Recoil(-5)
+    GZKL I 6 BRIGHT A_SkelFist
+    Goto See
+  Pain:
+    GZKL L 5 BRIGHT
+    GZKL L 5 BRIGHT A_Pain
+    Goto See
+  Death:
+    GZKL LM 7 BRIGHT
+    GZKL N 7 BRIGHT A_Scream
+    GZKL O 7 BRIGHT A_NoBlocking
+    GZKL P 7 BRIGHT
+    GZKD A  -1 BRIGHT
+    Stop
+  Raise:
+    GZKL Q 5 BRIGHT
+    GZKL PONML 5 BRIGHT
+    Goto See
+  }
+}
+
+ACTOR IDMAFTERIMAGE
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  RenderStyle Translucent
+  Alpha 0.6
+  Scale 0.825
+  States
+  {
+  Spawn:
+    GZKL A 16 BRIGHT
+    GZKL A 8 BRIGHT A_SetTranslucent(0.4)
+    Stop
+  }
+}

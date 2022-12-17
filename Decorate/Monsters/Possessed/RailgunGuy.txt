@@ -1,0 +1,75 @@
+/// Railgunner
+
+ACTOR IDMRailgunGuy
+{ 
+    Health 50
+	GibHealth 50
+    Radius 20
+    Height 56
+    Speed 8
+    PainChance 200
+    MONSTER 
+    +FLOORCLIP 
+    Obituary "%o was railed by a railgunner."
+    SeeSound "grunt/sight"
+    PainSound "grunt/pain"
+    DeathSound "grunt/death"
+    ActiveSound "grunt/active"
+    Decal RedRailScorch
+	Tag "Railgunner"
+	DropItem "IDMHealthBonusPickup", 64
+	DropItem "IDMArmorBonusPickup", 64
+    DropItem "IDMRailgun", 128
+	DropItem "Clip", 32, 20
+	DropItem "Shell", 32, 4
+	DropItem "RocketAmmo", 32, 1
+	DropItem "Cell", 8, 20
+    States 
+    { 
+    Spawn: 
+        RPOS AB 10 A_Look
+        Loop
+    See:
+        RPOS AABBCCDD 4 A_Chase 
+        Loop 
+    Missile:
+        RPOS EE 6 A_FaceTarget 
+		TNT1 A 0 A_PlaySound ("weapons/railgun")
+        RPOS F 5 Bright A_CustomRailgun(100, 9, ac1819, CCCCCC,0,0,0,"IDMBulletPuff",0,0,0,35,1.0,1.0,none,-7)
+        RPOS E 4 A_FaceTarget 
+        RPOS AABBCCDD 4 A_Chase("","")
+        Goto See 
+    Pain: 
+        RPOS G 2
+        RPOS G 4 A_Pain 
+        Goto See 
+    Death: 
+        RPOS H 5 
+        RPOS I 5 A_Scream 
+        RPOS J 5 A_Fall 
+        RPOS K 5 
+        RPOS L -1 
+        Stop 
+    XDeath:
+		TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+	XDeath.Massacre:
+        RPOS O 5
+        RPOS P 5 A_XScream
+		TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+		TNT1 A 0 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+        RPOS Q 5 A_Fall
+        RPOS RSTUV 5
+        RPOS W -1
+        Stop
+	XDeath.Resurrector:
+        RPOS O 5
+        RPOS P 5 A_XScream       
+        RPOS Q 5 A_Fall        
+        RPOS RSTUV 5 
+        RPOS W -1 
+        Stop
+    Raise: 
+        RPOS LKJIH 5
+        Goto See 
+    } 
+}

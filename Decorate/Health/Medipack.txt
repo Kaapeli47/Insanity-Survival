@@ -1,0 +1,44 @@
+ACTOR IDMMedipackPickup : CustomInventory 10087
+{
+  Radius 20
+  Height 16
+  Inventory.PickupMessage "Medipack."
+  Inventory.PickupSound "misc/health_pkup"
+  Inventory.RespawnTics 1050
+  Tag "Medipack"
+  //$Category Health and Armor
+  +COUNTITEM
+  States
+  {
+  Spawn:
+    MEDP A -1
+    Stop
+  Pickup:
+	TNT1 A 0 A_JumpIfInventory("PowerSoul",1,"Soulbonus")
+	TNT1 A 0 A_GiveInventory("IDMMedipack")
+	Stop
+  Soulbonus:
+	TNT1 A 0 A_GiveInventory("SoulMedipack",1)
+	Stop
+  }
+}
+
+ACTOR IDMMedipack : Health
+{
+  Inventory.Amount 75
+  Inventory.PickupMessage "Medipack."
+  Inventory.PickupSound "misc/health_pkup"
+  Health.LowMessage 25, "Ooh, I needed that!"
+  States
+  {
+  Spawn:
+    MEDP A -1
+    Stop
+  }
+}
+
+ACTOR SoulMedipack : IDMMedipack
+{
+  Inventory.Amount 100
+  Inventory.MaxAmount 300
+}

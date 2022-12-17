@@ -1,0 +1,90 @@
+/// Void Imp
+
+Actor IDMVoidImp : IDMDoomImp
+{
+	Scale 1.1
+    Health 80
+	GibHealth 80
+    Speed 7
+	Tag "Void Imp"
+    Obituary "%o was burned by a void imp."
+    HitObituary "%o was slashed by a void imp."
+    States
+    {
+    Spawn:
+      TRO4 AB 10 A_Look
+      Loop
+    See:
+      TRO4 AABBCCDD 3 A_Chase
+      Loop
+    Melee:
+    Missile:
+	  TRO4 EF 8 A_FaceTarget
+      TNT1 A 0 A_Jump(128,2)
+      TRO4 G 6 A_CustomComboAttack("IDMDoomImpBall",32,4*random(1,8),"imp/melee")
+      Goto See
+      TRO4 G 6 A_CustomComboAttack("IDMLargeImpBall",32,4*random(1,8),"imp/melee")
+      Goto See
+    Pain:
+      TRO4 H 2
+      TRO4 H 2 A_Pain
+      Goto See
+    Death:
+	  TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+      TRO4 I 8
+      TRO4 J 8 A_Scream
+      TRO4 K 6
+      TRO4 L 6 A_NoBlocking
+      TRO4 M -1
+      Stop
+    XDeath:
+	  TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+	XDeath.Massacre:
+      TROO N 5
+      TROO O 5 A_XScream
+      TROO P 5
+      TROO Q 5 A_NoBlocking
+      TROO RST 5
+      TROO U -1
+      Stop
+	XDeath.Resurrector:
+	  TROO N 5
+	  TROO O 5 A_XScream
+	  TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+	  TROO P 5 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+	  TROO Q 5 A_NoBlocking
+	  TROO RST 5
+	  TROO U -1
+	  Stop
+    Raise:
+      TRO4 ML 8
+      TRO4 KJI 6
+      Goto See
+    }
+}
+
+Actor IDMLargeImpBall
+{
+    Radius 6
+    Scale 1.75
+    Height 8
+    Speed 8
+    FastSpeed 16
+    Damage 4
+    PROJECTILE
+    +RANDOMIZE
+    RenderStyle Add
+    Alpha 1
+    Decal DoomImpScorch
+    SeeSound "imp/attack"
+    DeathSound "imp/shotx"
+    States
+    {
+    Spawn:
+      BAL1 AB 4 bright
+      Loop
+    Death:
+      BAL1 CDE 6 bright
+      Stop
+    }
+}

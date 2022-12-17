@@ -1,0 +1,68 @@
+/// Super Devil
+
+actor IDMSuperDevil : IDMDevil
+{
+  Tag "Super Devil"
+  obituary "%o was destroyed by a super devil."
+  hitobituary "%o was ripped apart by a super devil."
+  states
+  {
+  Spawn:
+    TRN2 AB 10 A_Look
+    loop
+  See:
+    TRN2 AABBCCDD 3 A_Chase
+    loop
+  Melee:
+  Missile:
+    TRN2 EF 6 A_FaceTarget
+    TRN2 G 4 A_CustomComboAttack("IDMBaronBall", 32, 10*random(1,8), "baron/melee")
+    TRN2 B 2
+    TRN2 VW 6 A_FaceTarget
+    TRN2 X 4 A_CustomComboAttack("IDMBaronBall", 32, 10*random(1,8), "baron/melee")
+    TRN2 E 0 A_Jump(200,9)
+    TRN2 D 2
+    TRN2 EF 6 A_FaceTarget
+    TRN2 G 4 A_CustomComboAttack("IDMBaronBall", 32, 10*random(1,8), "baron/melee")
+    TRN2 B 2
+    TRN2 VW 6 A_FaceTarget
+    TRN2 X 4 A_CustomComboAttack("IDMBaronBall", 32, 10*random(1,8), "baron/melee")
+    TRN2 B 0
+    goto See
+  Pain:
+    TRN2 H 2
+    TRN2 H 2 A_Pain
+    goto See
+  Death:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+    TRN2 I 8
+    TRN2 J 8 A_Scream
+    TRN2 K 6
+    TRN2 L 6 A_NoBlocking
+    TRN2 M -1
+    stop
+  XDeath:
+	TNT1 A 0 A_Jump(1,"XDeath.Resurrector")
+  XDeath.Massacre:
+    TRN2 N 5
+    TRN2 O 5 A_XScream
+    TRN2 P 5
+    TRN2 Q 5 A_NoBlocking
+    TRN2 RST 5
+    TRN2 U -1
+    stop
+  XDeath.Resurrector:
+    TRN2 N 5
+    TRN2 O 5 A_XScream
+	TNT1 A 0 A_SpawnItemEx("IDMTeleportFog")
+    TRN2 P 5 A_SpawnItemEx("IDMResurrector",0,0,0,0,0,0,angle,SXF_NOCHECKPOSITION)
+    TRN2 Q 5 A_NoBlocking
+    TRN2 RST 5
+    TRN2 U -1
+    stop
+  Raise:
+    TRN2 ML 8
+    TRN2 KJI 6
+    goto See
+  }
+}

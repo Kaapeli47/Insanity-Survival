@@ -1,0 +1,109 @@
+// ----------------------
+// -- Doom Decorations --
+// ----------------------
+
+// Explosive Barrel
+
+object IDMExplosiveBarrel
+{
+    frame BAR1  { light BARREL    }
+    frame BEXPC { light ROCKET_X1 }
+    frame BEXPD { light ROCKET_X2 }
+    frame BEXPE { light ROCKET_X3 }
+}
+
+
+// ------------------------------
+// - IDM Player & Playerclasses -
+// ------------------------------
+
+object IDMPlayer
+{
+    frame PLAYF { light ZOMBIEATK }
+}
+
+object MachinegunPlayer
+{
+    frame PLAYF { light ZOMBIEATK }
+}
+
+object BoomstickPlayer
+{
+    frame PLAYF { light ZOMBIEATK }
+}
+
+object BuckshotPlayer
+{
+    frame PLAYF { light ZOMBIEATK }
+}
+
+object ChainsawPlayer
+{
+    frame PLAYF { light ZOMBIEATK }
+}
+
+object YellowboyPlayer
+{
+    frame PLAYF { light ZOMBIEATK }
+}
+
+object NailgunPlayer
+{
+    frame PLAYF { light ZOMBIEATK }
+}
+
+object GrenadeRiflePlayer
+{
+    frame PLAYF { light ZOMBIEATK }
+}
+
+// Keys
+
+// Blue Keys
+object IDMBlueCard
+{
+    frame BKEY { light HEALTHPOTION }
+}
+
+object IDMBlueSkull
+{
+    frame BSKU { light HEALTHPOTION }
+}
+
+// Yellow Keys
+pulselight YELLOWKEY
+{
+    color 0.6 0.6 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object IDMYellowCard
+{
+    frame YKEY { light YELLOWKEY }
+}
+
+object IDMYellowSkull
+{
+    frame YSKU { light YELLOWKEY }
+}
+
+// Red Keys
+pulselight REDKEY
+{
+    color 0.6 0.0 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+}
+
+object IDMRedCard
+{
+    frame RKEY { light REDKEY }
+}
+
+object IDMRedSkull
+{
+    frame RSKU { light REDKEY }
+}
